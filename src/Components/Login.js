@@ -1,13 +1,17 @@
-import '../css/main.css';
+import '../css/menu.css';
 import img from '../css/imgs/logo.png'
 import React from 'react';
 
 
 const Login = ({logging}) => {
     return(
-        <div className="container-login ">
-            <div className="row">
-                <img className="logo" src={img} alt="logo" />
+        <div className="container-login">
+            <div className="login-header">
+                Metro POS
+            </div>
+            <div className="row logo-container">
+               <div className="login-message">Please enter your <br /><br /><span className="passcode">passcode</span>
+               </div>
             </div>
             <div className="login-display">
                     <span>&#11044; &#11044; &#11044; &#11044;</span>
@@ -15,25 +19,27 @@ const Login = ({logging}) => {
             <div className="row"></div>
             <div className="row"></div>
             <div className="row"></div>
-            <div className="row ">
-                    <button type="button" className="btn-login">1</button>
-                    <button type="button" className="btn-login">2</button>
-                    <button type="button" className="btn-login">3</button>
-            </div>
-            <div className="row">
-                    <button type="button" className="btn-login">4</button>
-                    <button type="button" className="btn-login">5</button>
-                    <button type="button" className="btn-login">6</button>
-            </div>
-            <div className="row">
-                    <button type="button" className="btn-login">7</button>
-                    <button type="button" className="btn-login">8</button>
-                    <button type="button" className="btn-login">9</button>
-            </div>
-            <div className="row">
-                    <button type="button" className="btn-login">del</button>
-                    <button type="button" className="btn-login">0</button>
-                    <button type="button" className="btn-login" onClick={logging}>OK</button>
+            <div className="ui three column grid center-class ">      
+                <div className="row new-row">
+                        <button type="button" className="btn-login">1</button>
+                        <button type="button" className="btn-login">2</button>
+                        <button type="button" className="btn-login">3</button>
+                </div>
+                <div className="row new-row">
+                        <button type="button" className="btn-login">4</button>
+                        <button type="button" className="btn-login">5</button>
+                        <button type="button" className="btn-login">6</button>
+                </div>
+                <div className="row new-row">
+                        <button type="button" className="btn-login">7</button>
+                        <button type="button" className="btn-login">8</button>
+                        <button type="button" className="btn-login">9</button>
+                </div>
+                <div className="row new-row">
+                        <button type="button" className="btn-login">del</button>
+                        <button type="button" className="btn-login">0</button>
+                        <button type="button" className="btn-login" onClick={logging}>OK</button>
+                </div>
             </div>
         </div>
     );

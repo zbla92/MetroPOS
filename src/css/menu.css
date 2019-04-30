@@ -1,0 +1,90 @@
+body{
+  background-color: #89CAC4;
+  font-family: 'Montserrat', sans-serif;
+  }
+  .container-login{
+    margin-top: 50px!important;
+    width: 420px;
+    margin: 0 auto;
+  }
+  .row{
+    margin:  0 0 0 0!important;
+    margin: 0 auto!important;
+    margin-bottom: 10px!important;
+  }
+  
+  .login-display{
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.404);
+    min-height: 50px;
+    color: #659787;
+    font-size: 130%;
+    background-color: #FFFFFF;
+    letter-spacing: 5px;
+  }
+  
+  .btn-login{
+    padding-top: 1px;
+    min-width: 122.6px;
+    min-height: 70px;
+    margin: 2px!important;
+    background-color: rgba(234, 239, 242, 0); ;
+    border: none!important;
+    font-size: 350%;
+    color: #475C66;
+    outline:none;
+    text-align: center;
+  }
+  .btn-login:active{
+    background-color: rgba(180, 179, 179, 0.404);
+    outline:none;
+    color: rgba(255, 255, 255, 0);
+  }
+
+  .logo{
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
+    padding-bottom: 50px;
+  }
+  .logo-container{
+    background-color: #FFFFFF;
+    margin-bottom: 0px!important;
+    min-height: 200px;
+    font-size: 220%;
+    color:#7D7D7D;
+  }
+
+  .new-row{
+    padding: 0px!important;
+    margin: 0px!important;
+  }
+
+  .center-class{
+    margin: 0 auto!important;
+    padding: 40px 20px 40px!important;
+    background-color: #EAEFF2; 
+  }
+
+  .keypad-container{
+    padding-left: 50px!important;
+    padding-right: 50px!important;
+  }
+.row{
+  margin-bottom: 0px!important;
+}
+
+.login-message{
+  padding-top: 80px;
+  text-align: center!important;
+}
+.container-login{
+  background-color: #36474E;
+}
+.login-header{
+  min-height: 50px;
+  color: #FFFFFF;
+  padding: 15px 15px 5px;
+  font-size: 100%;
+}
