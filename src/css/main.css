@@ -1,0 +1,51 @@
+body{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.445), rgba(0, 0, 0, 0.445)), url('./imgs/MainMenuWallpaper.jpeg');
+  font-family: 'Montserrat', sans-serif;
+  }
+  .container-login{
+    margin-top: 50px!important;
+    width: 380px;
+    margin: 0 auto;
+  }
+  .row{
+    margin:  0 0 0 0!important;
+    margin: 0 auto!important;
+    margin-bottom: 10px!important;
+  }
+  
+  .login-display{
+    margin: 0 auto;
+    text-align: center;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.404);
+    max-width: 93%;
+    min-height: 50px;
+    color:#dfdfdf;
+    font-size: 80%
+    
+  }
+  
+  .btn-login{
+    padding-top: 19px;
+    min-width: 116px;
+    min-height: 116px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.404);
+    
+    font-family: 'Montserrat', sans-serif;
+    font-size: 350%;
+    color: azure;
+    outline:none;
+    text-align: center;
+  }
+  .btn-login:active{
+    background-color: rgba(180, 179, 179, 0.404);
+    outline:none;
+    color: rgb(230, 230, 230);
+  }
+
+  .logo{
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
+    padding-bottom: 50px;
+  }
