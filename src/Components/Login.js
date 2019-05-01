@@ -1,13 +1,14 @@
 import '../css/menu.css';
 import img from '../css/imgs/logo.png'
 import React from 'react';
+import Clock from './Clock';
 
 
 const Login = ({logging}) => {
     return(
         <div className="container-login">
             <div className="login-header">
-                Metro POS
+                Metro POS          <span className="clock"><Clock /></span>
             </div>
             <div className="row logo-container">
                <div className="login-message">Please enter your <br /><br /><span className="passcode">passcode</span>

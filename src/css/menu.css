@@ -81,10 +81,14 @@ body{
 }
 .container-login{
   background-color: #36474E;
+  margin-top: 200px!important;
 }
 .login-header{
   min-height: 50px;
   color: #FFFFFF;
   padding: 15px 15px 5px;
   font-size: 100%;
+}
+.clock{
+  float: right;
 }
