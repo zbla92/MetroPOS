@@ -2,11 +2,13 @@ body {
   background-color: #89cac4;
   font-family: "Montserrat", sans-serif;
 }
+
 .container-login {
   margin-top: 50px !important;
   width: 420px;
   margin: 0 auto;
 }
+
 .row {
   margin: 0 0 0 0 !important;
   margin: 0 auto !important;
@@ -36,6 +38,7 @@ body {
   outline: none;
   text-align: center;
 }
+
 .btn-login:active {
   background-color: rgba(180, 179, 179, 0.404);
   outline: none;
@@ -48,6 +51,7 @@ body {
   margin: 0 auto;
   padding-bottom: 50px;
 }
+
 .logo-container {
   background-color: #ffffff;
   margin-bottom: 0px !important;
@@ -71,6 +75,7 @@ body {
   padding-left: 50px !important;
   padding-right: 50px !important;
 }
+
 .row {
   margin-bottom: 0px !important;
 }
@@ -79,24 +84,22 @@ body {
   padding-top: 80px;
   text-align: center !important;
 }
-<<<<<<< HEAD:src/css/menu.css
+
 .container-login {
   background-color: #36474e;
-=======
-.container-login{
-  background-color: #36474E;
-  margin-top: 200px!important;
-  -webkit-box-shadow: -8px 1px 50px -1px rgba(0,0,0,0.76);
-  -moz-box-shadow: -8px 1px 50px -1px rgba(0,0,0,0.76);
-  box-shadow: -8px 1px 50px -1px rgba(0,0,0,0.76);
->>>>>>> fc3c1379e3fce81d9b35362e6243989421002b4e:src/css/Login.css
+  margin-top: 200px !important;
+  -webkit-box-shadow: -8px 1px 50px -1px rgba(0, 0, 0, 0.76);
+  -moz-box-shadow: -8px 1px 50px -1px rgba(0, 0, 0, 0.76);
+  box-shadow: -8px 1px 50px -1px rgba(0, 0, 0, 0.76);
 }
+
 .login-header {
   min-height: 50px;
   color: #ffffff;
   padding: 15px 15px 5px;
   font-size: 100%;
 }
-.clock{
+
+.clock {
   float: right;
 }
