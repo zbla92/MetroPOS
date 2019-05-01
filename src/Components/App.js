@@ -38,7 +38,6 @@ class App extends React.Component {
   }
 
   codeEntry(e) {
-    console.log(e.target.textContent);
     this.setState({
       keyCode: this.state.keyCode.concat(e.target.textContent)
     });

@@ -4,18 +4,18 @@ import React from "react";
 const Menu = ({ deLogging }) => {
   return (
     <div>
-      <div class="ui grid">
-        <div class="three column row">
-          <div class="column">
+      <div className="ui grid">
+        <div className="three column row">
+          <div className="column">
             <div className="register-btn" />
           </div>
-          <div class="column" />
-          <div class="column" />
+          <div className="column" />
+          <div className="column" />
         </div>
-        <div class="three column row">
-          <div class="column" />
-          <div class="column" />
-          <div class="column" />
+        <div className="three column row">
+          <div className="column" />
+          <div className="column" />
+          <div className="column" />
         </div>
       </div>
     </div>
