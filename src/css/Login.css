@@ -79,12 +79,24 @@ body {
   padding-top: 80px;
   text-align: center !important;
 }
+<<<<<<< HEAD:src/css/menu.css
 .container-login {
   background-color: #36474e;
+=======
+.container-login{
+  background-color: #36474E;
+  margin-top: 200px!important;
+  -webkit-box-shadow: -8px 1px 50px -1px rgba(0,0,0,0.76);
+  -moz-box-shadow: -8px 1px 50px -1px rgba(0,0,0,0.76);
+  box-shadow: -8px 1px 50px -1px rgba(0,0,0,0.76);
+>>>>>>> fc3c1379e3fce81d9b35362e6243989421002b4e:src/css/Login.css
 }
 .login-header {
   min-height: 50px;
   color: #ffffff;
   padding: 15px 15px 5px;
   font-size: 100%;
+}
+.clock{
+  float: right;
 }
