@@ -1,4 +1,4 @@
-import '../css/menu.css';
+import '../css/Login.css';
 import img from '../css/imgs/logo.png'
 import React from 'react';
 import Clock from './Clock';
