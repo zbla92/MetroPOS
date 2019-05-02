@@ -1,0 +1,54 @@
+import '../css/MainMenu.css';
+import React from 'react';
+
+
+const MainMenu = ({loadRegister}) => {
+    return(
+        <div className="main-menu-container">
+            <div className="ui grid ">
+                <div className="three column row">
+                    <div className="column">
+                        <button className="register-btn" onClick={loadRegister} >
+                            <span className="register-icon"><i className="calculator icon"></i></span>
+                            <h3>Register</h3>
+                        </button>
+                    </div>
+                    <div className="column">
+                        <button className="register-btn">
+                            <span className="stats-icon"><i className="chart pie icon"></i></span>
+                                <h3>Store Stats</h3>
+                        </button>
+                    </div>
+                    <div className="column">
+                        <button className="register-btn">
+                                    <span className="users-icon"><i className="users icon"></i></span>
+                                    <h3>Users</h3>
+                        </button>
+                    </div>
+                </div>
+                <div className="three column row">
+                    <div className="column">
+                        <button className="register-btn">
+                            <span className="inventory-icon"><i className="boxes icon"></i></span>
+                            <h3>Inventory</h3>
+                        </button>
+                    </div>
+                    <div className="column">
+                        <button className="register-btn">
+                                <span className="pricebook-icon"><i className="dollar sign icon"></i></span>
+                                <h3>Pricebook</h3>
+                        </button>
+                    </div>
+                    <div className="column">
+                        <button className="register-btn">
+                            <span className="settings-icon"><i className="cogs icon"></i></span>
+                            <h3>Settings</h3>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+
+}
+export default MainMenu;

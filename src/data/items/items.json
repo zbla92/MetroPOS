@@ -4,7 +4,8 @@
                         "id": "1",
                         "name": "CocaCola",
                         "shortName": "Cola",
-                        "price": "1.99" 
+                        "price": "1.99",
+                        "image": "https://i.pinimg.com/280x280_RS/c0/46/d0/c046d0dfa2e9830992151920364399ab.jpg" 
                     },
                     {
                         "id": "2",

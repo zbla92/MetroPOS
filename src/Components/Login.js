@@ -4,7 +4,7 @@ import React from 'react';
 import Clock from './Clock';
 
 
-const Login = ({logging}) => {
+const Login = ({mainMenu}) => {
     return(
         <div className="container-login">
             <div className="login-header">
@@ -39,7 +39,7 @@ const Login = ({logging}) => {
                 <div className="row new-row">
                         <button type="button" className="btn-login">del</button>
                         <button type="button" className="btn-login">0</button>
-                        <button type="button" className="btn-login" onClick={logging}>OK</button>
+                        <button type="button" className="btn-login" onClick={mainMenu}>OK</button>
                 </div>
             </div>
         </div>

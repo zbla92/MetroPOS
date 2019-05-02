@@ -6,6 +6,7 @@ class Clock extends React.Component{
         
         let d = new Date();
         this.state = {
+            intervalID: 0,
             h: d.getHours(),
             m: d.getMinutes(),
             s: d.getSeconds()
@@ -20,6 +21,7 @@ class Clock extends React.Component{
             m: d.getMinutes(),
             s: d.getSeconds()
           })  
+          console.log(this.state.s)
     }
 
     renderTime(e){
@@ -27,7 +29,10 @@ class Clock extends React.Component{
     }
 
     componentWillMount(){
-        setInterval(this.countingSeconds, 1000)
+             this.setState({intervalID: setInterval(this.countingSeconds, 1000)})
+    }
+    componentWillUnmount(){
+            clearInterval(this.state.intervalID)
     }
 
     render(){

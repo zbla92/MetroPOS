@@ -1,0 +1,52 @@
+
+.main-menu-container{
+    padding: 20% 25% 0px;    
+}
+
+
+/************Buttons****************/
+.register-btn{
+    min-width: 220px;
+    min-height: 220px;
+    background-color: #EAEFF2;
+    border: none;
+    -webkit-box-shadow: -8px 1px 20px -1px rgba(0,0,0,0.76);
+    -moz-box-shadow: -8px 1px 20px -1px rgba(0,0,0,0.76);
+    box-shadow: -8px 1px 20px -1px rgba(0,0,0,0.76);  
+    
+}
+.register-btn:active{
+    background-color: rgb(213, 219, 223);
+    -webkit-box-shadow: -8px 1px 25px -1px rgba(0,0,0,0.76);
+    -moz-box-shadow: -8px 1px 25px -1px rgba(0,0,0,0.76);
+    box-shadow: -8px 1px 25px -1px rgba(0,0,0,0.76); 
+}
+.register-btn:focus { outline: none; }
+
+.register-icon, .stats-icon, .users-icon, .inventory-icon, .pricebook-icon, .settings-icon{
+    font-size: 550%;
+}
+.register-icon{
+    color: #fc5c65;
+}
+.stats-icon{
+    color: #fd9644;
+}
+.users.icon{
+    color: #4b7bec;
+}
+.inventory-icon{
+    color: #fed330;
+}
+.pricebook-icon{
+    color:#20bf6b;
+}
+.settings-icon{
+    color: #4b6584;
+}
+
+h3{
+    color: #475C66;
+    margin-top: 0px;
+    padding-top: 10px;
+}

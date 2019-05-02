@@ -1,39 +1,56 @@
 import React from 'react';
 import Login from './Login';
-import Menu from './Menu';
+import MainMenu from './MainMenu';
+import Register from './Register';
 
 class App extends React.Component{
     constructor(props){
         super(props)
         this.logging = this.logging.bind(this);
-        this.deLogging = this.deLogging.bind(this)
-        this.state = {isLoggedIn: false}
+        this.mainMenu = this.mainMenu.bind(this);
+        this.loadRegister = this.loadRegister.bind(this);
+        this.state = {loadedComponent: 'Login'}
     };
-
+// Login Component controller
     logging(){
         this.setState({
-            isLoggedIn: true
+            loadedComponent: 'Login'
         })
     }
-    deLogging(){
+    mainMenu(){
         this.setState({
-            isLoggedIn: false
+            loadedComponent: 'mainMenu'
         })
     }
 
+// MainMenu Component controller-------------
+    loadRegister(){
+        this.setState({
+            loadedComponent: 'Register'
+        })
+    }
+
+
+
     render(){
-        if(!this.state.isLoggedIn){
+        if(this.state.loadedComponent === 'Login'){
             return(
                 <div>
-                    <Login logging={this.logging}/>
+                    <Login mainMenu={this.mainMenu}/>
                 </div>
             );
-        }else{
+        }else if(this.state.loadedComponent === 'mainMenu'){
             return(
                 <div>
-                    <Menu deLogging={this.deLogging}/>
+                    <MainMenu loadRegister={this.loadRegister}/>
                 </div>   
             );
+        }else if(this.state.loadedComponent === 'Register'){
+            return(
+                <div>
+                    <Register />
+                </div>
+            )
         }
     }
 }

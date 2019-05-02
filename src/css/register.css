@@ -1,0 +1,10 @@
+.info-bar{
+    height: 35px;
+    background-color: rgb(54, 71, 78);
+}
+
+.clock{
+    text-align: center;
+    font-size: 110%;
+    color: rgba(234, 239, 242, 0.815);
+}
