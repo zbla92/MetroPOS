@@ -1,35 +1,21 @@
 import React from "react";
 import Login from "./Login";
 import Menu from "./Menu";
-import employees from "../data/emps/people.json";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.logging = this.logging.bind(this);
     this.deLogging = this.deLogging.bind(this);
-    this.codeEntry = this.codeEntry.bind(this);
-    this.delEntry = this.delEntry.bind(this);
     this.state = {
-      isLoggedIn: false,
-      keyCode: ""
+      isLoggedIn: false
     };
   }
 
   logging() {
-    let loggedInEmp = employees.emp.filter(
-      emp => emp.id === parseInt(this.state.keyCode)
-    );
-    if (!loggedInEmp.length) {
-      alert("Key code invalid! Try again.");
-      this.setState({
-        keyCode: ""
-      });
-    } else {
-      this.setState({
-        isLoggedIn: true
-      });
-    }
+    this.setState({
+      isLoggedIn: true
+    });
   }
 
   deLogging() {
@@ -38,27 +24,11 @@ class App extends React.Component {
     });
   }
 
-  codeEntry(e) {
-    this.setState({
-      keyCode: this.state.keyCode.concat(e.target.textContent)
-    });
-  }
-
-  delEntry() {
-    this.setState({
-      keyCode: ""
-    });
-  }
-
   render() {
     if (!this.state.isLoggedIn) {
       return (
         <div>
-          <Login
-            logging={this.logging}
-            codeEntry={this.codeEntry}
-            delEntry={this.delEntry}
-          />
+          <Login logging={this.logging} />
         </div>
       );
     } else {

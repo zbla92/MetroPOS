@@ -1,9 +1,28 @@
 import "../css/Login.css";
 import img from "../css/imgs/logo.png";
-import React from "react";
+import React, { useState } from "react";
 import Clock from "./Clock";
+import employees from "../data/emps/people.json";
 
-const Login = ({ logging, codeEntry, delEntry }) => {
+function Login({ logging }) {
+  const [keyCode, setKeyCode] = useState("");
+
+  const logIn = () => {
+    let loggedInEmp = employees.emp.filter(emp => emp.id === parseInt(keyCode));
+    if (!loggedInEmp.length) {
+      alert("Key code invalid! Try again.");
+      setKeyCode("");
+    }
+  };
+
+  const codeEntry = e => {
+    setKeyCode(keyCode.concat(e.target.textContent));
+  };
+
+  const delEntry = () => {
+    setKeyCode("");
+  };
+
   return (
     <div className="container-login">
       <div className="login-header">
@@ -20,7 +39,7 @@ const Login = ({ logging, codeEntry, delEntry }) => {
         </div>
       </div>
       <div className="login-display">
-        <span>&#11044; &#11044; &#11044;</span>
+        <span />
       </div>
       <div className="row" />
       <div className="row" />
@@ -66,12 +85,19 @@ const Login = ({ logging, codeEntry, delEntry }) => {
           <button type="button" className="btn-login" onClick={codeEntry}>
             0
           </button>
-          <button type="button" className="btn-login" onClick={logging}>
+          <button
+            type="button"
+            className="btn-login"
+            onClick={() => {
+              logging();
+              logIn();
+            }}
+          >
             OK
           </button>
         </div>
       </div>
     </div>
   );
-};
+}
 export default Login;
