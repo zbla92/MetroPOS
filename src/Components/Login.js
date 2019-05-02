@@ -94,13 +94,7 @@ function Login(props) {
           <button type="button" className="btn-login" onClick={codeEntry}>
             0
           </button>
-          <button
-            type="button"
-            className="btn-login"
-            onClick={() => {
-              logIn();
-            }}
-          >
+          <button type="button" className="btn-login" onClick={logIn}>
             OK
           </button>
         </div>
