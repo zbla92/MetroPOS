@@ -4,23 +4,32 @@ import React, { useState } from "react";
 import Clock from "./Clock";
 import employees from "../data/emps/people.json";
 
-function Login({ logging }) {
+function Login(props) {
   const [keyCode, setKeyCode] = useState("");
+  let [loggedInEmp, setLoggedInEmp] = useState(null);
 
   const logIn = () => {
-    let loggedInEmp = employees.emp.filter(emp => emp.id === parseInt(keyCode));
+    setLoggedInEmp(
+      (loggedInEmp = employees.emp.filter(emp => emp.id === parseInt(keyCode)))
+    );
+    console.log(loggedInEmp);
     if (!loggedInEmp.length) {
       alert("Key code invalid! Try again.");
       setKeyCode("");
+    } else {
+      props.logging();
     }
   };
 
   const codeEntry = e => {
     setKeyCode(keyCode.concat(e.target.textContent));
+    document.querySelector(".dots").innerHTML += "* ";
+    /* TODO - figure out how to parse	&#11044; properly */
   };
 
   const delEntry = () => {
     setKeyCode("");
+    document.querySelector(".dots").innerHTML = "";
   };
 
   return (
@@ -39,7 +48,7 @@ function Login({ logging }) {
         </div>
       </div>
       <div className="login-display">
-        <span />
+        <span className="dots" />
       </div>
       <div className="row" />
       <div className="row" />
@@ -89,7 +98,6 @@ function Login({ logging }) {
             type="button"
             className="btn-login"
             onClick={() => {
-              logging();
               logIn();
             }}
           >
