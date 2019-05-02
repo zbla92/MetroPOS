@@ -24,6 +24,8 @@ body {
   font-size: 130%;
   background-color: #ffffff;
   letter-spacing: 5px;
+  text-shadow: -3px 2px 9px #65978770;
+  min-height: 61px !important;
 }
 
 .btn-login {
@@ -58,6 +60,7 @@ body {
   min-height: 200px;
   font-size: 220%;
   color: #7d7d7d;
+  text-shadow: -4px 4px 14px rgba(125, 125, 125, 0.82);
 }
 
 .new-row {
@@ -102,4 +105,30 @@ body {
 
 .clock {
   float: right;
+}
+
+.go {
+  background: #88cbc3;
+  min-width: 30px !important;
+  min-height: 30px !important;
+  border-radius: 50%;
+  font-size: 100%;
+  color: #88cbc3;
+  position: relative;
+}
+.arrow-icon {
+  font-size: 50% !important;
+  position: absolute;
+  top: 13px;
+  left: 12px;
+  color: white;
+}
+i.icon.chevron.right:before {
+  margin-left: 5px !important;
+  margin-top: -5px !important;
+}
+
+.back-btn {
+  height: 30%;
+  width: 30%;
 }

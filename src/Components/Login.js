@@ -1,5 +1,5 @@
 import "../css/Login.css";
-import img from "../css/imgs/logo.png";
+import img from "../css/imgs/back.png";
 import React, { useState } from "react";
 import Clock from "./Clock";
 import employees from "../data/emps/people.json";
@@ -23,7 +23,7 @@ function Login(props) {
 
   const codeEntry = e => {
     setKeyCode(keyCode.concat(e.target.textContent));
-    document.querySelector(".dots").innerHTML += "* ";
+    document.querySelector(".dots").innerHTML += "&#11044; ";
     /* TODO - figure out how to parse	&#11044; properly */
   };
 
@@ -88,14 +88,22 @@ function Login(props) {
           </button>
         </div>
         <div className="row new-row">
-          <button type="button" className="btn-login" onClick={delEntry}>
-            del
+          <button
+            type="button"
+            className="btn-login btn-back"
+            onClick={delEntry}
+          >
+            <img className="back-btn" src={img} />
           </button>
           <button type="button" className="btn-login" onClick={codeEntry}>
             0
           </button>
-          <button type="button" className="btn-login" onClick={logIn}>
-            OK
+          <button type="button" className="btn-login " onClick={logIn}>
+            <span className="go">
+              &nbsp;>
+              <i class="chevron right icon arrow-icon" />
+              &nbsp;
+            </span>
           </button>
         </div>
       </div>
