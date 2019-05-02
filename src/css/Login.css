@@ -1,97 +1,134 @@
-body{
-  background-color: #89CAC4;
-  font-family: 'Montserrat', sans-serif;
-  }
-  .container-login{
-    margin-top: 50px!important;
-    width: 420px;
-    margin: 0 auto;
-  }
-  .row{
-    margin:  0 0 0 0!important;
-    margin: 0 auto!important;
-    margin-bottom: 10px!important;
-  }
-  
-  .login-display{
-    padding: 20px;
-    text-align: center;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.404);
-    min-height: 50px;
-    color: #659787;
-    font-size: 130%;
-    background-color: #FFFFFF;
-    letter-spacing: 5px;
-  }
-  
-  .btn-login{
-    padding-top: 1px;
-    min-width: 122.6px;
-    min-height: 70px;
-    margin: 2px!important;
-    background-color: rgba(234, 239, 242, 0); ;
-    border: none!important;
-    font-size: 350%;
-    color: #475C66;
-    outline:none;
-    text-align: center;
-  }
-  .btn-login:active{
-    background-color: rgba(180, 179, 179, 0.404);
-    outline:none;
-    color: rgba(255, 255, 255, 0);
-  }
-
-  .logo{
-    width: 50%;
-    height: 50%;
-    margin: 0 auto;
-    padding-bottom: 50px;
-  }
-  .logo-container{
-    background-color: #FFFFFF;
-    margin-bottom: 0px!important;
-    min-height: 200px;
-    font-size: 220%;
-    color:#7D7D7D;
-  }
-
-  .new-row{
-    padding: 0px!important;
-    margin: 0px!important;
-  }
-
-  .center-class{
-    margin: 0 auto!important;
-    padding: 40px 20px 40px!important;
-    background-color: #EAEFF2; 
-  }
-
-  .keypad-container{
-    padding-left: 50px!important;
-    padding-right: 50px!important;
-  }
-.row{
-  margin-bottom: 0px!important;
+body {
+  background-color: #89cac4;
+  font-family: "Montserrat", sans-serif;
 }
 
-.login-message{
-  padding-top: 80px;
-  text-align: center!important;
+.container-login {
+  margin-top: 50px !important;
+  width: 420px;
+  margin: 0 auto;
 }
-.container-login{
-  background-color: #36474E;
-  margin-top: 200px!important;
-  -webkit-box-shadow: -8px 1px 50px -1px rgba(0,0,0,0.76);
-  -moz-box-shadow: -8px 1px 50px -1px rgba(0,0,0,0.76);
-  box-shadow: -8px 1px 50px -1px rgba(0,0,0,0.76);
+
+.row {
+  margin: 0 0 0 0 !important;
+  margin: 0 auto !important;
+  margin-bottom: 10px !important;
 }
-.login-header{
+
+.login-display {
+  padding: 20px;
+  text-align: center;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.404);
   min-height: 50px;
-  color: #FFFFFF;
+  color: #659787;
+  font-size: 130%;
+  background-color: #ffffff;
+  letter-spacing: 5px;
+  text-shadow: -3px 2px 9px #65978770;
+  min-height: 61px !important;
+}
+
+.btn-login {
+  padding-top: 1px;
+  min-width: 122.6px;
+  min-height: 70px;
+  margin: 2px !important;
+  background-color: rgba(234, 239, 242, 0);
+  border: none !important;
+  font-size: 350%;
+  color: #475c66;
+  outline: none;
+  text-align: center;
+}
+
+.btn-login:active {
+  background-color: rgba(180, 179, 179, 0.404);
+  outline: none;
+  color: rgba(255, 255, 255, 0);
+}
+
+.logo {
+  width: 50%;
+  height: 50%;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+
+.logo-container {
+  background-color: #ffffff;
+  margin-bottom: 0px !important;
+  min-height: 200px;
+  font-size: 220%;
+  color: #7d7d7d;
+  text-shadow: -4px 4px 14px rgba(125, 125, 125, 0.82);
+}
+
+.new-row {
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
+.center-class {
+  margin: 0 auto !important;
+  padding: 40px 20px 40px !important;
+  background-color: #eaeff2;
+}
+
+.keypad-container {
+  padding-left: 50px !important;
+  padding-right: 50px !important;
+}
+
+.row {
+  margin-bottom: 0px !important;
+}
+
+.login-message {
+  padding-top: 80px;
+  text-align: center !important;
+}
+
+.container-login {
+  background-color: #36474e;
+  margin-top: 200px !important;
+  -webkit-box-shadow: -8px 1px 50px -1px rgba(0, 0, 0, 0.76);
+  -moz-box-shadow: -8px 1px 50px -1px rgba(0, 0, 0, 0.76);
+  box-shadow: -8px 1px 50px -1px rgba(0, 0, 0, 0.76);
+}
+
+.login-header {
+  min-height: 50px;
+  color: #ffffff;
   padding: 15px 15px 5px;
   font-size: 100%;
 }
-.clock{
+
+.clock {
   float: right;
+}
+
+.go {
+  background: #88cbc3;
+  min-width: 30px !important;
+  min-height: 30px !important;
+  border-radius: 50%;
+  font-size: 100%;
+  color: #88cbc3;
+  position: relative;
+}
+.arrow-icon {
+  font-size: 50% !important;
+  position: absolute;
+  top: 13px;
+  left: 12px;
+  color: white;
+}
+i.icon.chevron.right:before {
+  margin-left: 5px !important;
+  margin-top: -5px !important;
+}
+
+.back-btn {
+  height: 30%;
+  width: 30%;
 }
