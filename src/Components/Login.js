@@ -63,7 +63,7 @@ const Login = ({ logging, codeEntry, delEntry }) => {
           <button type="button" className="btn-login" onClick={delEntry}>
             del
           </button>
-          <button type="button" className="btn-login">
+          <button type="button" className="btn-login" onClick={codeEntry}>
             0
           </button>
           <button type="button" className="btn-login" onClick={logging}>

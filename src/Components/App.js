@@ -17,9 +17,10 @@ class App extends React.Component {
   }
 
   logging() {
-    if (
-      this.state.keyCode.length !== 3 /*TODO - validate keycode against json*/
-    ) {
+    let loggedInEmp = employees.emp.filter(
+      emp => emp.id === parseInt(this.state.keyCode)
+    );
+    if (!loggedInEmp.length) {
       alert("Key code invalid! Try again.");
       this.setState({
         keyCode: ""
