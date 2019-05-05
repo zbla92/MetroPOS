@@ -1,11 +1,11 @@
-import "../css/Login.css";
-import img from "../css/imgs/back.png";
-import React, { useState } from "react";
-import Clock from "./Clock";
-import employees from "../data/emps/people.json";
+import '../css/Login.css';
+import img from '../css/imgs/back.png';
+import React, { useState } from 'react';
+import Clock from './Clock';
+import employees from '../data/emps/people.json';
 
 function Login({ mainMenu }) {
-    const [keyCode, setKeyCode] = useState("");
+    const [keyCode, setKeyCode] = useState('');
     let [loggedInEmp, setLoggedInEmp] = useState(null);
     let [dot, setDot] = useState(1);
 
@@ -16,28 +16,26 @@ function Login({ mainMenu }) {
             ))
         );
         if (!loggedInEmp.length) {
-            alert("Key code invalid! Try again.");
-            setKeyCode("");
+            alert('Key code invalid! Try again.');
+            setKeyCode('');
             setDot(1);
             const allDots = document
-                .querySelector(".dots")
-                .getElementsByTagName("span");
+                .querySelector('.dots')
+                .getElementsByTagName('span');
             for (let i = 0; i < allDots.length; i++) {
-                allDots[i].classList = "";
+                allDots[i].classList = '';
             }
         } else {
             mainMenu();
         }
     };
 
-    console.log(keyCode.length);
-
     const codeEntry = e => {
         if (keyCode.length < 4) {
             setKeyCode(keyCode.concat(e.target.textContent));
             document
                 .querySelector(`.dots span:nth-child(${dot})`)
-                .classList.add("dots-full");
+                .classList.add('dots-full');
             setDot(dot + 1);
         }
     };
@@ -47,7 +45,7 @@ function Login({ mainMenu }) {
             setKeyCode(keyCode.slice(0, keyCode.length - 1));
             document
                 .querySelector(`.dots span:nth-child(${dot - 1})`)
-                .classList.remove("dots-full");
+                .classList.remove('dots-full');
             setDot(dot - 1);
         }
     };

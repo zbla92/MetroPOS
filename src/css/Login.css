@@ -1,6 +1,9 @@
 body {
     background-color: #89cac4;
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Montserrat', sans-serif;
+}
+button {
+    outline: none;
 }
 
 .container-login {
@@ -37,7 +40,6 @@ body {
     border: none !important;
     font-size: 350%;
     color: #475c66;
-    outline: none;
     text-align: center;
 }
 
@@ -45,6 +47,10 @@ body {
     background-color: rgba(180, 179, 179, 0.404);
     outline: none;
     color: rgba(255, 255, 255, 0);
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
 }
 
 .logo {
@@ -90,7 +96,7 @@ body {
 
 .container-login {
     background-color: #36474e;
-    margin-top: 200px !important;
+    margin-top: 14% !important;
     -webkit-box-shadow: -8px 1px 50px -1px rgba(0, 0, 0, 0.76);
     -moz-box-shadow: -8px 1px 50px -1px rgba(0, 0, 0, 0.76);
     box-shadow: -8px 1px 50px -1px rgba(0, 0, 0, 0.76);
