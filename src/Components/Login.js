@@ -22,10 +22,7 @@ function Login({ mainMenu }) {
                 .querySelector('.dots')
                 .getElementsByTagName('span');
             for (let i = 0; i < allDots.length; i++) {
-                allDots[i].classList.add('animated');
-                allDots[i].classList.add('flash');
-                allDots[i].style.transitionProperty = 'color';
-                allDots[i].style.transitionDuration = '0.3s';
+                allDots[i].classList.add('animated', 'flash', 'fast');
                 allDots[i].style.color = '#b33a3a';
             }
 
@@ -34,7 +31,7 @@ function Login({ mainMenu }) {
                     allDots[i].style.color = '#c0c0c0';
                     allDots[i].classList = '';
                 }
-            }, 1000);
+            }, 800);
         } else {
             mainMenu();
         }
@@ -164,7 +161,7 @@ function Login({ mainMenu }) {
                         className="btn-login btn-back"
                         onClick={delEntry}
                     >
-                        <img className="back-btn" src={img} />
+                        <img className="back-btn" src={img} alt="" />
                     </button>
                     <button
                         type="button"

@@ -44,9 +44,8 @@ button {
 }
 
 .btn-login:active {
-    background-color: rgba(196, 196, 196, 0.082);
-    color: #475c66;
-    outline: none;
+    background-color: rgb(187, 187, 187);
+    transform: translate(2%, 2%);
 }
 
 body {
