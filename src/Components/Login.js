@@ -16,15 +16,25 @@ function Login({ mainMenu }) {
             ))
         );
         if (!loggedInEmp.length) {
-            alert('Key code invalid! Try again.');
             setKeyCode('');
             setDot(1);
             const allDots = document
                 .querySelector('.dots')
                 .getElementsByTagName('span');
             for (let i = 0; i < allDots.length; i++) {
-                allDots[i].classList = '';
+                allDots[i].classList.add('animated');
+                allDots[i].classList.add('flash');
+                allDots[i].style.transitionProperty = 'color';
+                allDots[i].style.transitionDuration = '0.3s';
+                allDots[i].style.color = '#b33a3a';
             }
+
+            setTimeout(() => {
+                for (let i = 0; i < allDots.length; i++) {
+                    allDots[i].style.color = '#c0c0c0';
+                    allDots[i].classList = '';
+                }
+            }, 1000);
         } else {
             mainMenu();
         }
@@ -33,9 +43,9 @@ function Login({ mainMenu }) {
     const codeEntry = e => {
         if (keyCode.length < 4) {
             setKeyCode(keyCode.concat(e.target.textContent));
-            document
-                .querySelector(`.dots span:nth-child(${dot})`)
-                .classList.add('dots-full');
+            let nthDot = document.querySelector(`.dots span:nth-child(${dot})`);
+            nthDot.classList.add('dots-full');
+            nthDot.style.color = '#0c7942';
             setDot(dot + 1);
         }
     };
@@ -43,9 +53,11 @@ function Login({ mainMenu }) {
     const delEntry = () => {
         if (dot > 1) {
             setKeyCode(keyCode.slice(0, keyCode.length - 1));
-            document
-                .querySelector(`.dots span:nth-child(${dot - 1})`)
-                .classList.remove('dots-full');
+            let nthDot = document.querySelector(
+                `.dots span:nth-child(${dot - 1})`
+            );
+            nthDot.classList.remove('dots-full');
+            nthDot.style.color = '#c0c0c0';
             setDot(dot - 1);
         }
     };

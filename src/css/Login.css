@@ -45,8 +45,8 @@ button {
 
 .btn-login:active {
     background-color: rgba(180, 179, 179, 0.404);
+    color: #475c66;
     outline: none;
-    color: rgba(255, 255, 255, 0);
 }
 
 body {
@@ -142,10 +142,9 @@ i.icon.chevron.right:before {
 .dots {
     font-size: 60%;
     opacity: 0.6;
-    color: grey;
+    color: #c0c0c0;
 }
 
 .dots-full {
-    font-size: 180%;
-    color: #0c7942;
+    font-size: 160%;
 }
