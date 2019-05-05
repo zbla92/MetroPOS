@@ -1,10 +1,104 @@
-.info-bar{
-    height: 35px;
-    background-color: rgb(54, 71, 78);
+/********** GENERAL   *******************/
+body {
+    font-family: 'Open Sans', sans-serif;
 }
 
-.clock{
+.float-left {
+    float: left;
+}
+.flaot-right {
+    float: right;
+}
+/********** INFO BAR *******************/
+
+.info-bar {
+    height: 35px;
+    background-color: #0c0c0c;
+    box-shadow: -1px -2px 6px 0px rgba(175, 172, 172, 0.507);
+    box-shadow: inset -1px -2px 6px 0px rgba(175, 172, 172, 0.042);
+    z-index: 1;
+}
+
+.clock {
     text-align: center;
-    font-size: 110%;
-    color: rgba(234, 239, 242, 0.815);
+    font-size: 100%;
+    color: #d4d4d4;
+    font-weight: 600;
+}
+
+/********** INFO PANEL *******************/
+.info-panel {
+    height: 45px;
+    background-color: #191919;
+}
+
+/********** DISPLAY CONTAINER***************/
+
+.display-container {
+    position: relative;
+    height: 94.96vh;
+    background-color: #2d2d2d;
+    padding-left: 20px !important;
+}
+
+.pos-btn {
+    min-width: 150px;
+    min-height: 70px;
+    border: none;
+    background-color: #515151;
+    color: #f1f1f1;
+    font-size: 130%;
+    box-shadow: -1px -1px 3px 0px rgba(0, 0, 0, 0.37);
+    border-radius: 1px;
+}
+.pos-btn:active {
+    background-color: #585858;
+}
+
+.table-bottom-buttons {
+    left: 5px;
+}
+
+.btn-th {
+    width: 200px;
+    padding-top: 20px;
+}
+
+#checkout-btn {
+    background-color: #b58833;
+}
+
+/*ITEMS-container */
+.th-item {
+    width: 230px;
+    min-width: 230px;
+}
+.qty {
+    text-align: center;
+}
+/********** MENUS CONTAINER***************/
+
+.menus-container {
+    position: relative;
+    min-height: 100%;
+    background-color: #141414;
+}
+
+/********** CHECK CONTAINER***************/
+
+.items-container {
+    min-height: 56vh;
+    min-width: 96%;
+    position: absolute;
+    top: 110px;
+    border: 1px solid red;
+}
+
+.totals-container {
+    margin-top: 61vh;
+    min-height: 250px;
+    min-width: 96%;
+    border: 1px solid green;
+    padding-top: 10px;
+    margin-bottom: 15px;
 }
