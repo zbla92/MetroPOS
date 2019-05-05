@@ -69,12 +69,48 @@ body {
 }
 
 /*ITEMS-container */
-.th-item {
-    width: 230px;
-    min-width: 230px;
+.item-name {
+    width: 250px;
+    min-width: 250px;
+}
+.list-item-name {
+    color: rgb(209, 206, 206);
+}
+.main-head {
+    font-size: 130%;
+    color: #585858;
 }
 .qty {
     text-align: center;
+    margin-left: 10px !important;
+}
+.amount {
+    text-align: center;
+}
+.th-item {
+    color: rgb(209, 206, 206);
+    text-align: center;
+}
+.item-price {
+    text-align: center !important;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/*ITEM Styles*/
+.item-container {
+    background-color: rgba(0, 0, 0, 0.274);
+    margin-top: 10px;
+    margin: 4px;
+    padding: 10px;
+    border-radius: 1px;
+}
+#item-label {
+    padding-left: 10px;
+}
+
+.clicked:active {
+    background-color: rgba(153, 153, 153, 0.534);
 }
 /********** MENUS CONTAINER***************/
 
@@ -91,18 +127,43 @@ body {
     min-width: 96%;
     position: absolute;
     top: 140px;
-    border: 1px solid red;
 }
 
+/******** TOTALS ************/
 .totals-container {
     margin-top: 58.5vh;
     min-height: 19vh;
     min-width: 96%;
-    border: 1px solid green;
     padding-top: 10px;
     margin-bottom: 15px;
+    font-size: 200%;
+    padding: 20px;
+}
+.total-label {
+    font-size: 60% !important;
+    font-weight: 400;
+    color: #f1f1f1bd;
+}
+.table-row {
+    width: 95%;
+}
+.total-value {
+    width: 100%;
+    text-align: right;
+    font-size: 60% !important;
+    font-weight: 400;
+    color: #f1f1f1bd;
+}
+.complete-total {
+    width: 100%;
+    text-align: right;
+    padding-top: 50px;
+    font-size: 200%;
+    font-weight: 600;
+    color: #f1f1f1bd;
 }
 
+/*******************************************************/
 @media screen and (max-height: 950px) {
     .display-container {
         height: 93vh;
@@ -114,10 +175,46 @@ body {
         top: 110px;
     }
     .totals-container {
+        margin-top: 56vh;
+        min-height: 20vh;
+        min-width: 96%;
+        padding-top: 10px;
+        margin-bottom: 15px;
+    }
+    .pos-btn {
+        min-width: 14.7vh;
+        min-height: 6vh;
+        font-size: 100%;
+    }
+}
+
+@media screen and (max-height: 790px) {
+    .info-bar {
+        height: 33px;
+    }
+    .info-panel {
+        height: 35px;
+    }
+
+    .display-container {
+        height: 93vh;
+    }
+
+    .items-container {
+        min-height: 49vh;
+        min-width: 94%;
+        top: 90px;
+    }
+    .totals-container {
         margin-top: 54.5vh;
         min-height: 20vh;
         min-width: 96%;
         padding-top: 10px;
         margin-bottom: 15px;
+    }
+    .pos-btn {
+        min-width: 14.7vh;
+        min-height: 6vh;
+        font-size: 110%;
     }
 }
