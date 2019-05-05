@@ -36,14 +36,14 @@ body {
 
 .display-container {
     position: relative;
-    height: 94.96vh;
+    height: 95vh;
     background-color: #2d2d2d;
     padding-left: 20px !important;
 }
 
 .pos-btn {
-    min-width: 150px;
-    min-height: 70px;
+    min-width: 14vh;
+    min-height: 7vh;
     border: none;
     background-color: #515151;
     color: #f1f1f1;
@@ -87,18 +87,37 @@ body {
 /********** CHECK CONTAINER***************/
 
 .items-container {
-    min-height: 56vh;
+    min-height: 54vh;
     min-width: 96%;
     position: absolute;
-    top: 110px;
+    top: 140px;
     border: 1px solid red;
 }
 
 .totals-container {
-    margin-top: 61vh;
-    min-height: 250px;
+    margin-top: 58.5vh;
+    min-height: 19vh;
     min-width: 96%;
     border: 1px solid green;
     padding-top: 10px;
     margin-bottom: 15px;
+}
+
+@media screen and (max-height: 950px) {
+    .display-container {
+        height: 93vh;
+    }
+
+    .items-container {
+        min-height: 50vh;
+        min-width: 95%;
+        top: 110px;
+    }
+    .totals-container {
+        margin-top: 54.5vh;
+        min-height: 20vh;
+        min-width: 96%;
+        padding-top: 10px;
+        margin-bottom: 15px;
+    }
 }
