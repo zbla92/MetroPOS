@@ -21,7 +21,22 @@ class Register extends React.Component {
                             <div className="column" />
                         </div>
                     </div>
-                    <div className="sixteen wide column info-panel">logout</div>
+                    <div className="info-panel">
+                        <div className="ui grid">
+                            <div className="one wide column">
+                                <button className="logout-btn">Logout</button>
+                            </div>
+                            <div className="two wide column">
+                                <div className="logedin-user">
+                                    <i className="user icon" /> Milan Blaz
+                                </div>
+                            </div>
+                            <div className="four wide column" />
+                            <div className="two wide column">
+                                <div className="info-logo">Metro POS</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div className="ui grid">
                     <div className="five wide column display-container">
