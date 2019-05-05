@@ -227,9 +227,6 @@ body {
     .info-bar {
         height: 33px;
     }
-    .info-panel {
-        height: 35px;
-    }
 
     .display-container {
         height: 93vh;
@@ -251,5 +248,8 @@ body {
         min-width: 14.7vh;
         min-height: 6vh;
         font-size: 110%;
+    }
+    .logout-btn {
+        margin-top: 7px;
     }
 }

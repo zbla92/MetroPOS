@@ -24,7 +24,12 @@ class Register extends React.Component {
                     <div className="info-panel">
                         <div className="ui grid">
                             <div className="one wide column">
-                                <button className="logout-btn">Logout</button>
+                                <button
+                                    className="logout-btn"
+                                    onClick={this.props.logging}
+                                >
+                                    Logout
+                                </button>
                             </div>
                             <div className="two wide column">
                                 <div className="logedin-user">

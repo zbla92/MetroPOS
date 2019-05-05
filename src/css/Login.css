@@ -44,7 +44,7 @@ button {
 }
 
 .btn-login:active {
-    background-color: rgba(180, 179, 179, 0.404);
+    background-color: rgba(196, 196, 196, 0.082);
     color: #475c66;
     outline: none;
 }
@@ -147,4 +147,19 @@ i.icon.chevron.right:before {
 
 .dots-full {
     font-size: 160%;
+}
+@media screen and (max-height: 950px) {
+    .container-login {
+        margin-top: 120px !important;
+        width: 420px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-height: 790px) {
+    .container-login {
+        margin-top: 50px !important;
+        width: 420px;
+        margin: 0 auto;
+    }
 }

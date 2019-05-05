@@ -1,28 +1,28 @@
 body {
-  font-family: "Open Sans", sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 .main-menu-container {
-  padding: 20% 25% 0px;
+    padding: 20% 25% 0px;
 }
 
 /************Buttons****************/
 .register-btn {
-  min-width: 220px;
-  min-height: 220px;
-  background-color: #eaeff2;
-  border: none;
-  -webkit-box-shadow: -8px 1px 20px -1px rgba(0, 0, 0, 0.76);
-  -moz-box-shadow: -8px 1px 20px -1px rgba(0, 0, 0, 0.76);
-  box-shadow: -8px 1px 20px -1px rgba(0, 0, 0, 0.76);
+    min-width: 220px;
+    min-height: 220px;
+    background-color: #eaeff2;
+    border: none;
+    -webkit-box-shadow: -8px 1px 20px -1px rgba(0, 0, 0, 0.76);
+    -moz-box-shadow: -8px 1px 20px -1px rgba(0, 0, 0, 0.76);
+    box-shadow: -8px 1px 20px -1px rgba(0, 0, 0, 0.76);
 }
 .register-btn:active {
-  background-color: rgb(213, 219, 223);
-  -webkit-box-shadow: -8px 1px 25px -1px rgba(0, 0, 0, 0.76);
-  -moz-box-shadow: -8px 1px 25px -1px rgba(0, 0, 0, 0.76);
-  box-shadow: -8px 1px 25px -1px rgba(0, 0, 0, 0.76);
+    background-color: rgb(213, 219, 223);
+    -webkit-box-shadow: -8px 1px 25px -1px rgba(0, 0, 0, 0.76);
+    -moz-box-shadow: -8px 1px 25px -1px rgba(0, 0, 0, 0.76);
+    box-shadow: -8px 1px 25px -1px rgba(0, 0, 0, 0.76);
 }
 .register-btn:focus {
-  outline: none;
+    outline: none;
 }
 
 .register-icon,
@@ -31,29 +31,42 @@ body {
 .inventory-icon,
 .pricebook-icon,
 .settings-icon {
-  font-size: 550%;
+    font-size: 550%;
 }
 .register-icon {
-  color: #fc5c65;
+    color: #fc5c65;
 }
 .stats-icon {
-  color: #fd9644;
+    color: #fd9644;
 }
 .users.icon {
-  color: #4b7bec;
+    color: #4b7bec;
 }
 .inventory-icon {
-  color: #fed330;
+    color: #fed330;
 }
 .pricebook-icon {
-  color: #20bf6b;
+    color: #20bf6b;
 }
 .settings-icon {
-  color: #4b6584;
+    color: #4b6584;
 }
 
 h3 {
-  color: #475c66;
-  margin-top: 0px;
-  padding-top: 10px;
+    color: #475c66;
+    margin-top: 0px;
+    padding-top: 10px;
+}
+
+/*******************************************************/
+@media screen and (max-height: 950px) {
+    .main-menu-container {
+        padding: 12% 25% 0px;
+    }
+}
+
+@media screen and (max-height: 790px) {
+    .main-menu-container {
+        padding: 9% 25% 0px;
+    }
 }
