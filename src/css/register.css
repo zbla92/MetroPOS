@@ -81,6 +81,7 @@ body {
     font-size: 130%;
     box-shadow: -1px -1px 3px 0px rgba(0, 0, 0, 0.37);
     border-radius: 1px;
+    margin-bottom: 5px;
 }
 .pos-btn:active {
     background-color: #4d4d4d;
@@ -157,11 +158,18 @@ body {
 .menu-img {
     position: relative;
     float: left;
-    width: 110% !important;
-    height: 110%;
+    width: 100% !important;
+    height: 100%;
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+#drinks {
+    background-color: #88242c;
+}
+#apetizers {
+    background-color: #1e4242;
 }
 
 /********** CHECK CONTAINER***************/
@@ -229,7 +237,12 @@ body {
         min-width: 14.7vh;
         min-height: 6vh;
         font-size: 100%;
+        margin-bottom: 1px;
+        margin-top: 1px;
     }
+}
+.menuz-container {
+    margin: -5px 20px 1px 0px !important;
 }
 
 @media screen and (max-height: 790px) {
