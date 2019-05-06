@@ -154,6 +154,15 @@ body {
     min-height: 100%;
     background-color: #141414;
 }
+.menu-img {
+    position: relative;
+    float: left;
+    width: 110% !important;
+    height: 110%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 /********** CHECK CONTAINER***************/
 
