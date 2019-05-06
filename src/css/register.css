@@ -133,6 +133,29 @@ body {
     padding-right: 20px;
 }
 
+.item-overlay {
+    margin-top: 60%;
+    position: relative;
+    z-index: 999;
+    height: 40%;
+    background-color: #000000;
+    opacity: 0.6;
+    text-align: center;
+}
+
+.item-overlay > p {
+    width: 90%;
+    height: 100%;
+    color: #ffffff;
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+    padding-top: 10px;
+    font-weight: bold;
+}
+
 /*ITEM Styles*/
 .item-container {
     background-color: rgba(0, 0, 0, 0.274);

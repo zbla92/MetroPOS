@@ -200,24 +200,42 @@ class Register extends React.Component {
                                             className="menu-img"
                                             src={itemList.pizza[1].image}
                                         />
+                                        <div className="item-overlay">
+                                            <p>{itemList.pizza[1].shortName}</p>
+                                        </div>
                                     </div>
                                     <div className="column">
                                         <img
                                             className="menu-img"
                                             src={itemList.salads[0].image}
                                         />
+                                        <div className="item-overlay">
+                                            <p>
+                                                {itemList.salads[0].shortName}
+                                            </p>
+                                        </div>
                                     </div>
                                     <div className="column">
                                         <img
                                             className="menu-img"
                                             src={itemList.salads[1].image}
                                         />
+                                        <div className="item-overlay">
+                                            <p>
+                                                {itemList.salads[1].shortName}
+                                            </p>
+                                        </div>
                                     </div>
                                     <div className="column">
                                         <img
                                             className="menu-img"
                                             src={itemList.salads[2].image}
                                         />
+                                        <div className="item-overlay">
+                                            <p>
+                                                {itemList.salads[2].shortName}
+                                            </p>
+                                        </div>
                                     </div>
                                     <div className="column">
                                         <img
