@@ -3,6 +3,7 @@ import logo from '../css/imgs/logo.png'
 import '../css/register.css'
 import React from 'react'
 import Clock from './Clock'
+import Item from './Item'
 
 class Register extends React.Component {
   constructor (props) {
@@ -46,7 +47,24 @@ class Register extends React.Component {
                   <div className='item-unit'>Unit price</div>
                   <div className='item-amount'>Amount</div>
                 </div>
-              </div>
+              </div>         
+              <Item />
+              <Item />
+              <Item />
+              <Item />
+              <Item />
+              <Item />
+              <Item />
+              <Item />
+              <Item />
+              <Item />
+              <Item />
+              <Item />
+              <Item />
+              
+            </div>
+            <div className="total-prices-box">
+              90.00
             </div>
           </div>
           <div className='main-right-container'>Mian right</div>

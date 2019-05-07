@@ -1,0 +1,30 @@
+/*Items Body*/
+.item-bdy-list{
+    display: flex;
+    margin-top: 0.5vh;
+    margin-bottom: 0.5vh;
+    margin-left: 0.3vw;
+    margin-right: 0.3vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    align-items: center;
+    background-color:  rgba(0, 0, 0, 0.281) ;
+    border-radius: 1px;
+}
+.item-bdy-info{
+    display: flex; 
+}
+.item-bdy-name, .item-bdy-qty, .item-bdy-unit, .item-bdy-amount{
+    font-size: 1.7vh;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.788);
+}
+.item-bdy-name{
+    min-width: 8.5vw;
+    padding-left: 0.7vw;
+    margin-right: 0.8vw;
+}
+.item-bdy-qty, .item-bdy-unit, .item-bdy-amount{
+    min-width: 7vw;
+    text-align: center;
+}

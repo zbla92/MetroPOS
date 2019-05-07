@@ -105,16 +105,16 @@ body {
     background-color: #4d4d4d;
     color: rgb(204, 202, 202);
 }
-
+/*Items header*/
 .item-container{
-    border: 2px solid red;
     height: 60vh;
+    overflow: hidden;
 }
 .item-list-header, .item-info{
     display: flex;
 }
 .item-list-header{
-    padding-top: 1vh;
+    padding-top: 2vh;
     padding-bottom: 1vh;
     padding-left: 1vw;
     padding-right: 1vw;
@@ -125,13 +125,14 @@ body {
     font-weight: 600;
 }
 .item-name{
-    padding-right: 6vw;
+    min-width: 8.5vw;
 }
 .item-qty, .item-unit, .item-amount{
-    padding-left: 2vw;
-    min-width: 6vw;
+    min-width: 7vw;
     text-align: center;
 }
+
+
 /*Menu Info*/
 .main-right-container {
     width: 100vw;
