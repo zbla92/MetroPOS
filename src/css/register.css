@@ -1,6 +1,7 @@
 /********** GENERAL   *******************/
 body {
     font-family: 'Open Sans', sans-serif;
+    height: 100vh !important;
 }
 
 .float-left {
@@ -65,9 +66,10 @@ body {
 
 .display-container {
     position: relative;
-    height: 95vh;
+    height: 93vh;
     background-color: #2d2d2d;
     padding-left: 20px !important;
+    padding-right: 10px !important;
     box-shadow: -1px -2px 6px 0px rgba(204, 204, 204, 0.705);
     box-shadow: inset -1px -2px 6px 0px rgba(34, 34, 34, 0.671);
 }
@@ -129,8 +131,20 @@ body {
 }
 .item-price {
     text-align: center !important;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 0 14px;
+}
+
+.item-row {
+    padding: 0.2rem 0 !important;
+}
+
+.item-button {
+    margin: 0 !important;
+    padding: 0.2rem 0.4rem !important;
+}
+.item-button > img {
+    border-radius: 8px;
+    border: 3px solid #f1f1f1a1;
 }
 
 .item-overlay {
@@ -149,7 +163,7 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -45%);
+    transform: translate(-50%, -50%);
     font-weight: bold;
     display: flex;
     justify-content: center;
@@ -165,7 +179,7 @@ body {
     border-radius: 1px;
 }
 #item-label {
-    padding-left: 10px;
+    padding: 10px;
 }
 
 .clicked:active {
@@ -175,7 +189,7 @@ body {
 
 .menus-container {
     position: relative;
-    min-height: 100%;
+    min-height: 85vh;
     background-color: #141414;
 }
 .menu-img {
@@ -200,13 +214,11 @@ body {
 .items-container {
     min-height: 54vh;
     min-width: 96%;
-    position: absolute;
-    top: 140px;
+    position: relative;
 }
 
 /******** TOTALS ************/
 .totals-container {
-    margin-top: 58.5vh;
     min-height: 19vh;
     min-width: 96%;
     padding-top: 10px;
@@ -240,24 +252,21 @@ body {
 
 /*******************************************************/
 @media screen and (max-height: 950px) {
-    .display-container {
-        height: 93vh;
-    }
-
     .items-container {
         min-height: 50vh;
         min-width: 95%;
-        top: 110px;
+        position: relative;
+        top: 7vh;
     }
     .totals-container {
-        margin-top: 56vh;
-        min-height: 20vh;
+        /* margin-top: 56vh;
+        min-height: 20vh; */
         min-width: 96%;
         padding-top: 10px;
         margin-bottom: 15px;
     }
     .pos-btn {
-        min-width: 14.7vh;
+        min-width: 12.8vh;
         min-height: 6vh;
         font-size: 100%;
         margin-bottom: 1px;
@@ -273,21 +282,13 @@ body {
         height: 33px;
     }
 
-    .display-container {
-        height: 93vh;
-    }
-
     .items-container {
-        min-height: 49vh;
         min-width: 94%;
-        top: 90px;
     }
     .totals-container {
-        margin-top: 54.5vh;
-        min-height: 20vh;
         min-width: 96%;
         padding-top: 10px;
-        margin-bottom: 15px;
+        padding-bottom: 10px;
     }
     .pos-btn {
         min-width: 14.7vh;
