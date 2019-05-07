@@ -38,6 +38,16 @@ class Register extends React.Component {
                   </button>
                   <button className="btn-top">Number</button>
             </div>
+            <div className="item-container">
+              <div className="item-list-header">
+                <div className='item-name'>Item</div>
+                <div className='item-info'>
+                  <div className='item-qty'>Qty</div>
+                  <div className='item-unit'>Unit price</div>
+                  <div className='item-amount'>Amount</div>
+                </div>
+              </div>
+            </div>
           </div>
           <div className='main-right-container'>Mian right</div>
         </div>

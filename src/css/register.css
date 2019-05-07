@@ -106,6 +106,32 @@ body {
     color: rgb(204, 202, 202);
 }
 
+.item-container{
+    border: 2px solid red;
+    height: 60vh;
+}
+.item-list-header, .item-info{
+    display: flex;
+}
+.item-list-header{
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+.item-name, .item-qty, .item-unit, .item-amount{
+    color: #585858;
+    font-size: 2vh;
+    font-weight: 600;
+}
+.item-name{
+    padding-right: 6vw;
+}
+.item-qty, .item-unit, .item-amount{
+    padding-left: 2vw;
+    min-width: 6vw;
+    text-align: center;
+}
 /*Menu Info*/
 .main-right-container {
     width: 100vw;
