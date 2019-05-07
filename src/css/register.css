@@ -1,302 +1,114 @@
-/********** GENERAL   *******************/
+html {
+    margin: 0px;
+    padding: 0%;
+}
 body {
-    font-family: 'Open Sans', sans-serif;
-    height: 100vh !important;
+    margin: 0px;
+    padding: 0%;
 }
 
-.float-left {
+.floater-left {
     float: left;
 }
-.flaot-right {
-    float: right;
-}
-/********** INFO BAR *******************/
 
+/***************TOP  CONTAINER******************/
+
+/*top wide container*/
+.top-wide-container {
+    width: 100vw;
+    height: 6vh;
+    background-color: #191919;
+}
 .info-bar {
-    height: 35px;
+    height: 2vh;
     background-color: #0c0c0c;
     box-shadow: -1px -2px 6px 0px rgba(175, 172, 172, 0.507);
     box-shadow: inset -1px -2px 6px 0px rgba(175, 172, 172, 0.042);
     z-index: 1;
-}
-
-.clock {
     text-align: center;
-    font-size: 100%;
+    font-size: 1.5vh;
     color: #d4d4d4;
     font-weight: 600;
 }
-
-/********** INFO PANEL *******************/
 .info-panel {
-    height: 45px;
-    background-color: #191919;
-    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+
 }
+.logout-btn-container{
+    padding-left: 1vw;
+}
+.logedin-user{
+    display: flex;
+    justify-content: flex-end;
+     padding-right: 1vw;
+     font-size: 1.8vh;
+     font-weight: 500;
+     color: #d4d4d4;
+
+}
+
 .logout-btn {
     border: 2px solid #f1f1f1af;
-    min-height: 4vh;
+    min-height: 3.4vh;
     background-color: #0c0c0c00;
-    min-width: 9vh;
+    min-width: 5vw;
     color: #f1f1f1af;
-    margin-top: 4px;
+    margin-top: 0.3vh;
     border-radius: 2px;
-    margin-left: 15px;
-    font-size: 115%;
+    font-size: 1.7vh;
 }
 .logout-btn:active {
     color: #f1f1f1;
     background-color: #5c5c5c71;
 }
 
-.logedin-user {
-    font-size: 130%;
-    color: #f1f1f1af;
-    margin-top: 13px;
-    padding-left: 20px;
-}
-
-.info-logo {
-    font-size: 190%;
+.info-logo{
+    font-size:3vh;
     color: #f1f1f1a1;
-    text-align: center;
-    padding-top: 10px;
 }
-/********** DISPLAY CONTAINER***************/
+/***************Bottom  CONTAINER******************/
+.bottom-wide-container {
+    width: 100vw;
+    height: 94vh;
+    background-color: blue;
+}
 
-.display-container {
-    position: relative;
-    height: 93vh;
+/*Check Info*/
+.main-left-container {
+    width: 30vw;
+    height: 94vh;
     background-color: #2d2d2d;
-    padding-left: 20px !important;
-    padding-right: 10px !important;
-    box-shadow: -1px -2px 6px 0px rgba(204, 204, 204, 0.705);
-    box-shadow: inset -1px -2px 6px 0px rgba(34, 34, 34, 0.671);
 }
-
-.pos-btn {
-    min-width: 14vh;
-    min-height: 7vh;
+.upper-buttons-container{
+    display: flex;
+    height: 6vh;
+    width:30vw;
+    padding-top: 1vh;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+    align-items: center;
+    justify-content: space-around
+}
+.btn-top{
+    min-width: 7vw;
+    min-height: 5vh;
     border: none;
     background-color: #515151;
     color: #f1f1f1;
-    font-size: 130%;
+    font-size: 1.9vh;
     box-shadow: -1px -1px 3px 0px rgba(0, 0, 0, 0.37);
     border-radius: 1px;
-    margin-bottom: 5px;
 }
-.pos-btn:active {
+.btn-top:active{
     background-color: #4d4d4d;
     color: rgb(204, 202, 202);
 }
 
-.table-bottom-buttons {
-    left: 5px;
-}
-
-.btn-th {
-    width: 200px;
-    padding-top: 20px;
-}
-
-#checkout-btn {
-    background-color: #b58833;
-}
-#checkout-btn:active {
-    background-color: #9b7530;
-}
-
-/*ITEMS-container */
-.item-name {
-    width: 250px;
-    min-width: 250px;
-}
-.list-item-name {
-    color: rgb(209, 206, 206);
-}
-.main-head {
-    font-size: 130%;
-    color: #585858;
-}
-.qty {
-    text-align: center;
-    margin-left: 10px !important;
-}
-.amount {
-    text-align: center;
-}
-.th-item {
-    color: rgb(209, 206, 206);
-    text-align: center;
-}
-.item-price {
-    text-align: center !important;
-    padding: 0 14px;
-}
-
-.item-row {
-    padding: 0.2rem 0 !important;
-}
-
-.item-button {
-    margin: 0 !important;
-    padding: 0.2rem 0.4rem !important;
-}
-.item-button > img {
-    border-radius: 8px;
-    border: 3px solid #f1f1f1a1;
-}
-
-.item-overlay {
-    margin-top: 60%;
-    position: relative;
-    z-index: 999;
-    height: 40%;
-    background-color: #00000070;
-    text-align: center;
-}
-
-.item-overlay > p {
-    width: 90%;
-    height: 100%;
-    color: #e4e0e0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/*ITEM Styles*/
-.item-container {
-    background-color: rgba(0, 0, 0, 0.274);
-    margin-top: 10px;
-    margin: 4px;
-    padding: 10px;
-    border-radius: 1px;
-}
-#item-label {
-    padding: 10px;
-}
-
-.clicked:active {
-    background-color: rgba(153, 153, 153, 0.534);
-}
-/********** MENUS CONTAINER***************/
-
-.menus-container {
-    position: relative;
-    min-height: 85vh;
-    background-color: #141414;
-}
-.menu-img {
-    position: relative;
-    float: left;
-    width: 100% !important;
-    height: 100%;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-#drinks {
-    background-color: #88242c;
-}
-#apetizers {
-    background-color: #1e4242;
-}
-
-/********** CHECK CONTAINER***************/
-
-.items-container {
-    min-height: 54vh;
-    min-width: 96%;
-    position: relative;
-}
-
-/******** TOTALS ************/
-.totals-container {
-    min-height: 19vh;
-    min-width: 96%;
-    padding-top: 5vh !important;
-    margin-bottom: 15px !important;
-    font-size: 200%;
-    padding: 20px;
-}
-.total-label {
-    font-size: 60% !important;
-    font-weight: 400;
-    color: #f1f1f1bd;
-}
-.table-row {
-    width: 95%;
-}
-.total-value {
-    width: 100%;
-    text-align: right;
-    font-size: 60% !important;
-    font-weight: 400;
-    color: #f1f1f1bd;
-}
-.complete-total {
-    width: 100%;
-    text-align: right;
-    padding-top: 50px;
-    font-size: 200%;
-    font-weight: 600;
-    color: #f1f1f1bd;
-}
-
-/*******************************************************/
-@media screen and (max-height: 950px) {
-    .items-container {
-        min-height: 50vh;
-        min-width: 95%;
-        position: relative;
-        top: 7vh;
-    }
-    .totals-container {
-        /* margin-top: 56vh;
-        min-height: 20vh; */
-        min-width: 96%;
-        padding-top: 10px;
-        margin-bottom: 15px;
-    }
-    .pos-btn {
-        min-width: 12.8vh;
-        min-height: 6vh;
-        font-size: 100%;
-        margin-bottom: 1px;
-        margin-top: 1px;
-    }
-}
-.menuz-container {
-    margin: -5px 20px 1px 0px !important;
-    padding-bottom: 8vh !important;
-}
-
-@media screen and (max-height: 790px) {
-    .info-bar {
-        height: 33px;
-    }
-
-    .items-container {
-        min-width: 94%;
-    }
-    .totals-container {
-        min-width: 96%;
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-    .pos-btn {
-        min-width: 14.7vh;
-        min-height: 6vh;
-        font-size: 110%;
-    }
-    .logout-btn {
-        margin-top: 7px;
-    }
+/*Menu Info*/
+.main-right-container {
+    width: 100vw;
+    height: 94vh;
+    background-color: rgb(87, 110, 87);
 }
