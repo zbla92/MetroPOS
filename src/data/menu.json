@@ -88,12 +88,12 @@
             "image": "http://static.food2fork.com/2490037c37.jpg"
         }
     ],
-    "pizza": [
+    "pizzas": [
         {
             "id": "1",
-            "name": "Cauliflower Pizza Crust (with BBQ Chicken Pizza)",
+            "name": "Cauliflower pizza crust",
             "shortName": "Clfwr Pizza",
-            "price": "21.00",
+            "price": "21.01",
             "image": "http://static.food2fork.com/BBQChickenPizzawithCauliflowerCrust5004699695624ce.jpg"
         },
         {

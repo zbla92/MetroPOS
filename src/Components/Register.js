@@ -1,9 +1,11 @@
-import itemList from '../data/items/items.json'
 import logo from '../css/imgs/logo.png'
+import emps from '../data/emps/people.json'
 import '../css/register.css'
 import React from 'react'
 import Clock from './Clock'
 import Item from './Item'
+import TotalPrice from './TotalPrice';
+import LoadSubmenu from './LoadSubmenu';
 
 class Register extends React.Component {
   constructor (props) {
@@ -25,13 +27,13 @@ class Register extends React.Component {
             </div>
             <div className='info-logo'>Metro POS</div>
             <div className='logedin-user'>
-              <i className='user icon'></i> Milan Blaz
+              <i className='user icon'></i> {emps.emp[0].name}
             </div>
           </div>
         </div>
         <div className='bottom-wide-container'>
           <div className='main-left-container floater-left'>
-            <div className="upper-buttons-container">
+            <div className="display-buttons-container">
                   <button className="btn-top">To go</button>
                   <button className="btn-top">Tab</button>
                   <button className="btn-top">
@@ -64,10 +66,18 @@ class Register extends React.Component {
               
             </div>
             <div className="total-prices-box">
-              90.00
+              <TotalPrice />
+            </div>
+            <div className="display-buttons-container ">
+                  <button className="btn-top">Cancel</button>
+                  <button className="btn-top">More</button>
+                  <button className="btn-top">Send</button>
+                  <button id="checkout-btn" className="btn-top">Checkout</button>
             </div>
           </div>
-          <div className='main-right-container'>Mian right</div>
+          <div className='main-right-container'>
+            <LoadSubmenu />
+          </div>
         </div>
       </div>
     )

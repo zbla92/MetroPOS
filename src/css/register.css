@@ -81,9 +81,9 @@ body {
     height: 94vh;
     background-color: #2d2d2d;
 }
-.upper-buttons-container{
+.display-buttons-container{
     display: flex;
-    height: 6vh;
+    height: 7vh;
     width:30vw;
     padding-top: 1vh;
     padding-left: 0.5vw;
@@ -93,7 +93,7 @@ body {
 }
 .btn-top{
     min-width: 7vw;
-    min-height: 5vh;
+    min-height: 6.6vh;
     border: none;
     background-color: #515151;
     color: #f1f1f1;
@@ -132,10 +132,26 @@ body {
     text-align: center;
 }
 
+/*PriceB-Box*/
+.total-prices-box{
+    padding-top: 2vh;
+    height: 18vh;
+    color: #B5B5B5;
+    font-weight: 600;
+    margin-bottom: 1vh;
+}
+#checkout-btn {
+    background-color: #b58833;
+}
+#checkout-btn:active {
+    background-color: #9b7530;
+}
 
 /*Menu Info*/
 .main-right-container {
     width: 100vw;
     height: 94vh;
-    background-color: rgb(87, 110, 87);
+    background-color: #141414;
 }
+
+

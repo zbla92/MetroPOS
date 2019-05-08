@@ -5,8 +5,7 @@
     margin-bottom: 0.5vh;
     margin-left: 0.3vw;
     margin-right: 0.3vw;
-    padding-top: 1vh;
-    padding-bottom: 1vh;
+    min-height: 5vh;
     align-items: center;
     background-color:  rgba(0, 0, 0, 0.281) ;
     border-radius: 1px;
