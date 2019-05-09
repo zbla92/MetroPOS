@@ -33,20 +33,18 @@ body {
 .info-panel {
     display: flex;
     justify-content: space-between;
-    align-items: center
-
+    align-items: center;
 }
-.logout-btn-container{
+.logout-btn-container {
     padding-left: 1vw;
 }
-.logedin-user{
+.logedin-user {
     display: flex;
     justify-content: flex-end;
-     padding-right: 1vw;
-     font-size: 1.8vh;
-     font-weight: 500;
-     color: #d4d4d4;
-
+    padding-right: 1vw;
+    font-size: 1.8vh;
+    font-weight: 500;
+    color: #d4d4d4;
 }
 
 .logout-btn {
@@ -64,8 +62,8 @@ body {
     background-color: #5c5c5c71;
 }
 
-.info-logo{
-    font-size:3vh;
+.info-logo {
+    font-size: 3vh;
     color: #f1f1f1a1;
 }
 /***************Bottom  CONTAINER******************/
@@ -81,17 +79,17 @@ body {
     height: 94vh;
     background-color: #2d2d2d;
 }
-.display-buttons-container{
+.display-buttons-container {
     display: flex;
     height: 7vh;
-    width:30vw;
+    width: 30vw;
     padding-top: 1vh;
     padding-left: 0.5vw;
     padding-right: 0.5vw;
     align-items: center;
-    justify-content: space-around
+    justify-content: space-around;
 }
-.btn-top{
+.btn-top {
     min-width: 7vw;
     min-height: 6.6vh;
     border: none;
@@ -101,42 +99,48 @@ body {
     box-shadow: -1px -1px 3px 0px rgba(0, 0, 0, 0.37);
     border-radius: 1px;
 }
-.btn-top:active{
+.btn-top:active {
     background-color: #4d4d4d;
     color: rgb(204, 202, 202);
 }
 /*Items header*/
-.item-container{
+.item-container {
     height: 60vh;
     overflow: hidden;
 }
-.item-list-header, .item-info{
+.item-list-header,
+.item-info {
     display: flex;
 }
-.item-list-header{
+.item-list-header {
     padding-top: 2vh;
     padding-bottom: 1vh;
     padding-left: 1vw;
     padding-right: 1vw;
 }
-.item-name, .item-qty, .item-unit, .item-amount{
+.item-name,
+.item-qty,
+.item-unit,
+.item-amount {
     color: #585858;
     font-size: 2vh;
     font-weight: 600;
 }
-.item-name{
+.item-name {
     min-width: 8.5vw;
 }
-.item-qty, .item-unit, .item-amount{
+.item-qty,
+.item-unit,
+.item-amount {
     min-width: 7vw;
     text-align: center;
 }
 
 /*PriceB-Box*/
-.total-prices-box{
+.total-prices-box {
     padding-top: 2vh;
     height: 18vh;
-    color: #B5B5B5;
+    color: #b5b5b5;
     font-weight: 600;
     margin-bottom: 1vh;
 }
@@ -153,26 +157,32 @@ body {
     height: 94vh;
     background-color: #141414;
 }
-.submenu-injection-container{
+.submenu-injection-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     width: 69vw;
     margin-left: 30.5vw;
     height: 78.6vh;
     overflow: scroll;
 }
 
-.submenu-selection-container{
+.submenu-injection-container::-webkit-scrollbar {
+    display: none;
+}
+
+.submenu-selection-container {
     width: 69vw;
     margin-left: 30.5vw;
     height: 14vh;
-    margin-top: 1vh
+    margin-top: 1vh;
 }
-.button-row{
+.button-row {
     margin-top: 0.2vh;
     margin-left: 0.5vw;
     margin-right: 0.5vw;
-    display:flex;
+    display: flex;
     justify-content: space-around;
-    
 }
 .button-row > button {
     margin-top: 0.1vh;
@@ -181,23 +191,58 @@ body {
     margin-right: 0.1vw;
     width: 8vw;
 }
-#drinks-btn{background-color: #37c09b}
-#apetizers-btn{background-color: #88242c}
-#salads-btn{background-color: #4a133a}
-#sandwitch-btn{background-color: #2b645d}
-#burgers-btn{background-color: #134385}
-#pizzas-btn{background-color: #902f74}
-#soup-btn{background-color: #1f4143}
-#kids-menu-btn{background-color: #a15d2c}
-#cake-btn{background-color: #505050}
+#drinks-btn {
+    background-color: #37c09b;
+}
+#apetizers-btn {
+    background-color: #88242c;
+}
+#salads-btn {
+    background-color: #4a133a;
+}
+#sandwitch-btn {
+    background-color: #2b645d;
+}
+#burgers-btn {
+    background-color: #134385;
+}
+#pizzas-btn {
+    background-color: #902f74;
+}
+#soup-btn {
+    background-color: #1f4143;
+}
+#kids-menu-btn {
+    background-color: #a15d2c;
+}
+#cake-btn {
+    background-color: #505050;
+}
 
-#flat-bread-btn{background-color: #91924c}
-#dinner-plates-btn{background-color: #68a19b}
-#dessert-btn{background-color: #786fa6}
-#vegetarian-btn{background-color: #ff4181}
-#pasta-btn{background-color: #e8c972}
-#alchocol-btn{background-color: #11976f }
-#chicken-btn{background-color: #f3a683}
-#steak-btn{background-color: #b2f2ff}
-#palstic-btn{background-color: #ffac12}
-
+#flat-bread-btn {
+    background-color: #91924c;
+}
+#dinner-plates-btn {
+    background-color: #68a19b;
+}
+#dessert-btn {
+    background-color: #786fa6;
+}
+#vegetarian-btn {
+    background-color: #ff4181;
+}
+#pasta-btn {
+    background-color: #e8c972;
+}
+#alchocol-btn {
+    background-color: #11976f;
+}
+#chicken-btn {
+    background-color: #f3a683;
+}
+#steak-btn {
+    background-color: #b2f2ff;
+}
+#palstic-btn {
+    background-color: #ffac12;
+}

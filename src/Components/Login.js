@@ -19,7 +19,7 @@ function Login({ mainMenu }) {
             setKeyCode('');
             setDot(1);
             const allDots = document
-                .querySelector('.dots')
+                .querySelector('.middle-dots')
                 .getElementsByTagName('span');
             for (let i = 0; i < allDots.length; i++) {
                 allDots[i].classList.add('animated', 'flash', 'fast');
@@ -40,8 +40,10 @@ function Login({ mainMenu }) {
     const codeEntry = e => {
         if (keyCode.length < 4) {
             setKeyCode(keyCode.concat(e.target.textContent));
-            let nthDot = document.querySelector(`.dots span:nth-child(${dot})`);
-            nthDot.classList.add('dots-full');
+            let nthDot = document.querySelector(
+                `.middle-dots span:nth-child(${dot})`
+            );
+            nthDot.classList.add('middle-dots-full');
             nthDot.style.color = '#0c7942';
             setDot(dot + 1);
         }
@@ -51,139 +53,197 @@ function Login({ mainMenu }) {
         if (dot > 1) {
             setKeyCode(keyCode.slice(0, keyCode.length - 1));
             let nthDot = document.querySelector(
-                `.dots span:nth-child(${dot - 1})`
+                `.middle-dots span:nth-child(${dot - 1})`
             );
-            nthDot.classList.remove('dots-full');
+            nthDot.classList.remove('middle-dots-full');
             nthDot.style.color = '#c0c0c0';
             setDot(dot - 1);
         }
     };
 
     return (
-        <div className="container-login">
-            <div className="login-header">
-                Metro POS
-                <span className="clock">
+        <div className="main-container">
+            <div className="header-container">
+                <div className="header-logo">Metro POS</div>
+                <div className="header-clock">
                     <Clock />
-                </span>
-            </div>
-            <div className="row logo-container">
-                <div className="login-message">
-                    Please enter your <br />
-                    <br />
-                    <span className="passcode">passcode</span>
                 </div>
             </div>
-            <div className="login-display">
-                <span className="dots">
+            <div className="middle-container">
+                <div className="middle-message">Please enter your passcode</div>
+                <div className="middle-dots">
                     <span>&#11044; </span>
                     <span>&#11044; </span>
                     <span>&#11044; </span>
                     <span>&#11044; </span>
-                </span>
+                </div>
             </div>
-            <div className="row" />
-            <div className="row" />
-            <div className="row" />
-            <div className="ui three column grid center-class ">
-                <div className="row new-row">
-                    <button
-                        type="button"
-                        className="btn-login"
-                        onClick={codeEntry}
-                    >
-                        1
-                    </button>
-                    <button
-                        type="button"
-                        className="btn-login"
-                        onClick={codeEntry}
-                    >
-                        2
-                    </button>
-                    <button
-                        type="button"
-                        className="btn-login"
-                        onClick={codeEntry}
-                    >
-                        3
-                    </button>
-                </div>
-                <div className="row new-row">
-                    <button
-                        type="button"
-                        className="btn-login"
-                        onClick={codeEntry}
-                    >
-                        4
-                    </button>
-                    <button
-                        type="button"
-                        className="btn-login"
-                        onClick={codeEntry}
-                    >
-                        5
-                    </button>
-                    <button
-                        type="button"
-                        className="btn-login"
-                        onClick={codeEntry}
-                    >
-                        6
-                    </button>
-                </div>
-                <div className="row new-row">
-                    <button
-                        type="button"
-                        className="btn-login"
-                        onClick={codeEntry}
-                    >
-                        7
-                    </button>
-                    <button
-                        type="button"
-                        className="btn-login"
-                        onClick={codeEntry}
-                    >
-                        8
-                    </button>
-                    <button
-                        type="button"
-                        className="btn-login"
-                        onClick={codeEntry}
-                    >
-                        9
-                    </button>
-                </div>
-                <div className="row new-row">
-                    <button
-                        type="button"
-                        className="btn-login btn-back"
-                        onClick={delEntry}
-                    >
-                        <img className="back-btn" src={img} alt="" />
-                    </button>
-                    <button
-                        type="button"
-                        className="btn-login"
-                        onClick={codeEntry}
-                    >
-                        0
-                    </button>
-                    <button
-                        type="button"
-                        className="btn-login "
-                        onClick={logIn}
-                    >
-                        <span className="go">
-                            &nbsp;>
-                            <i className="chevron right icon arrow-icon" />
-                            &nbsp;
-                        </span>
-                    </button>
-                </div>
+            <div className="keypad-container">
+                <button type="button" className="btn-login" onClick={codeEntry}>
+                    1
+                </button>
+                <button type="button" className="btn-login" onClick={codeEntry}>
+                    2
+                </button>
+                <button type="button" className="btn-login" onClick={codeEntry}>
+                    3
+                </button>
+                <button type="button" className="btn-login" onClick={codeEntry}>
+                    4
+                </button>
+                <button type="button" className="btn-login" onClick={codeEntry}>
+                    5
+                </button>
+                <button type="button" className="btn-login" onClick={codeEntry}>
+                    6
+                </button>
+                <button type="button" className="btn-login" onClick={codeEntry}>
+                    7
+                </button>
+                <button type="button" className="btn-login" onClick={codeEntry}>
+                    8
+                </button>
+                <button type="button" className="btn-login" onClick={codeEntry}>
+                    9
+                </button>
+                <button
+                    type="button"
+                    className="btn-login btn-back"
+                    onClick={delEntry}
+                >
+                    <img className="back-btn" src={img} alt="" />
+                </button>
+                <button type="button" className="btn-login" onClick={codeEntry}>
+                    0
+                </button>
+                <button type="button" className="btn-login " onClick={logIn}>
+                    <div className="btn-login go">
+                        {/* <i className="chevron right icon arrow-icon" /> */}
+                    </div>
+                </button>
             </div>
         </div>
     );
 }
+//     </div>
+//         </div>
+//         <div className="row logo-container">
+//             <div className="login-message">
+//                 Please enter your <br />
+//                 <br />
+//                 <span className="passcode">passcode</span>
+//             </div>
+//         </div>
+//         <div className="login-display">
+//             <span className="dots">
+// <span>&#11044; </span>
+// <span>&#11044; </span>
+// <span>&#11044; </span>
+// <span>&#11044; </span>
+//             </span>
+//         </div>
+//         <div className="row" />
+//         <div className="row" />
+//         <div className="row" />
+//         <div className="ui three column grid center-class ">
+//             <div className="row new-row">
+//                 <button
+//                     type="button"
+//                     className="btn-login"
+//                     onClick={codeEntry}
+//                 >
+//                     1
+//                 </button>
+//                 <button
+//                     type="button"
+//                     className="btn-login"
+//                     onClick={codeEntry}
+//                 >
+//                     2
+//                 </button>
+//                 <button
+//                     type="button"
+//                     className="btn-login"
+//                     onClick={codeEntry}
+//                 >
+//                     3
+//                 </button>
+//             </div>
+//             <div className="row new-row">
+//                 <button
+//                     type="button"
+//                     className="btn-login"
+//                     onClick={codeEntry}
+//                 >
+//                     4
+//                 </button>
+//                 <button
+//                     type="button"
+//                     className="btn-login"
+//                     onClick={codeEntry}
+//                 >
+//                     5
+//                 </button>
+//                 <button
+//                     type="button"
+//                     className="btn-login"
+//                     onClick={codeEntry}
+//                 >
+//                     6
+//                 </button>
+//             </div>
+//             <div className="row new-row">
+//                 <button
+//                     type="button"
+//                     className="btn-login"
+//                     onClick={codeEntry}
+//                 >
+//                     7
+//                 </button>
+//                 <button
+//                     type="button"
+//                     className="btn-login"
+//                     onClick={codeEntry}
+//                 >
+//                     8
+//                 </button>
+//                 <button
+//                     type="button"
+//                     className="btn-login"
+//                     onClick={codeEntry}
+//                 >
+//                     9
+//                 </button>
+//             </div>
+//             <div className="row new-row">
+//                 <button
+//                     type="button"
+//                     className="btn-login btn-back"
+//                     onClick={delEntry}
+//                 >
+//                     <img className="back-btn" src={img} alt="" />
+//                 </button>
+//                 <button
+//                     type="button"
+//                     className="btn-login"
+//                     onClick={codeEntry}
+//                 >
+//                     0
+//                 </button>
+//                 <button
+//                     type="button"
+//                     className="btn-login "
+//                     onClick={logIn}
+//                 >
+//                     <span className="go">
+//                         &nbsp;>
+//                         <i className="chevron right icon arrow-icon" />
+//                         &nbsp;
+//                     </span>
+//                 </button>
+//             </div>
+//         </div>
+//     </div>
+// );
+// }
 export default Login;

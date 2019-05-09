@@ -1,8 +1,113 @@
-body {
-    background-color: #89cac4;
-    font-family: 'Montserrat', sans-serif;
+html {
+    margin: 0px;
+    padding: 0%;
 }
-button {
+body {
+    margin: 0px;
+    padding: 0%;
+    background-color: #89cac4;
+    font-family: 'Open Sans', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 30vw;
+    height: 84vh;
+    background-color: #36474e;
+    -webkit-box-shadow: -8px 1px 50px -1px rgba(0, 0, 0, 0.76);
+    -moz-box-shadow: -8px 1px 50px -1px rgba(0, 0, 0, 0.76);
+    box-shadow: -8px 1px 50px -1px rgba(0, 0, 0, 0.76);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 7vh;
+    padding: 1vh 1vw;
+    color: #ffffff;
+}
+
+.middle-container {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    height: 33vh;
+}
+
+.middle-message {
+    height: 25vh;
+    width: 30vw;
+    padding: 0 6vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    font-size: 220%;
+    color: #7d7d7d;
+    text-shadow: -4px 4px 14px rgba(125, 125, 125, 0.82);
+    text-align: center;
+    line-height: 3rem;
+}
+
+.middle-dots {
+    background-color: cyan;
+    height: 8vh;
+    width: 30vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.404);
+    background-color: #ffffff;
+    letter-spacing: 1rem;
+    text-shadow: -3px 2px 9px #65978770;
+}
+
+.middle-dots > span {
+    color: #c0c0c048;
+    font-size: 2vh;
+}
+
+.middle-dots-full > span {
+    font-size: 4vh;
+}
+
+.keypad-container {
+    height: 44vh;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: #eaeff2;
+}
+
+.btn-login {
+    height: 11vh;
+    width: 10vw;
+    background-color: rgba(234, 239, 242, 0);
+    border: none;
+    font-size: 350%;
+    color: #475c66;
+}
+
+.btn-login:active {
+    background-color: rgb(187, 187, 187);
+    transform: translate(2%, 2%);
+}
+
+.back-btn {
+    height: 30%;
+    width: 20%;
+}
+
+/* button {
     outline: none;
 }
 
@@ -22,7 +127,6 @@ button {
     padding: 20px;
     text-align: center;
     border-bottom: 2px solid rgba(255, 255, 255, 0.404);
-    min-height: 50px;
     color: #659787;
     font-size: 130%;
     background-color: #ffffff;
@@ -161,4 +265,4 @@ i.icon.chevron.right:before {
         width: 420px;
         margin: 0 auto;
     }
-}
+} */
