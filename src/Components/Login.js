@@ -44,7 +44,7 @@ function Login({ mainMenu }) {
                 `.middle-dots span:nth-child(${dot})`
             );
             nthDot.classList.add('middle-dots-full');
-            nthDot.style.color = '#0c7942';
+            nthDot.style.color = '#659787';
             setDot(dot + 1);
         }
     };
