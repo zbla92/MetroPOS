@@ -1,16 +1,16 @@
 import item from '../data/menu.json';
-import '../css/ItemToInject.css';
+import '../css/itemToInject.css';
 import React from 'react';
 import submenu from '../data/menu.json';
 
-function ItemToInject() {
+function ItemToInject({ name, image }) {
     return (
         <div className="img-container">
             <div className="img-div">
-                <img src={submenu.pizzas[0].image} />
+                <img src={image} />
             </div>
             <div className="img-overlay">
-                <p>{submenu.salads[3].name}</p>
+                <p>{name}</p>
             </div>
         </div>
     );
