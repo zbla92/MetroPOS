@@ -85,35 +85,7 @@ class Register extends React.Component {
                         </div>
                     </div>
                     <div className="main-right-container">
-                        <div className="submenu-injection-container">
-                            <LoadSubmenu />
-                            <LoadSubmenu />
-                            <LoadSubmenu />
-                            <LoadSubmenu />
-                            <LoadSubmenu />
-                            <LoadSubmenu />
-                            <LoadSubmenu />
-                            <LoadSubmenu />
-                            <LoadSubmenu />
-                            <LoadSubmenu />
-                            <LoadSubmenu />
-                            <LoadSubmenu />
-                            <LoadSubmenu />
-                            <LoadSubmenu />
-                            <LoadSubmenu />
-                            <LoadSubmenu />
-                            <LoadSubmenu />
-                            <LoadSubmenu />
-                            <LoadSubmenu />
-                            <LoadSubmenu />
-                            <LoadSubmenu />
-                            <LoadSubmenu />
-                            <LoadSubmenu />
-                            <LoadSubmenu />
-                            <LoadSubmenu />
-                            <LoadSubmenu />
-                            <LoadSubmenu />
-                        </div>
+                        <LoadSubmenu />
                         <div className="submenu-selection-container">
                             <MenuButtons setActiveMenu={this.setActiveMenu} />
                         </div>
