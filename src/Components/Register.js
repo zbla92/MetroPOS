@@ -11,6 +11,13 @@ import MenuButtons from './MenuButtons';
 class Register extends React.Component {
     constructor(props) {
         super(props);
+
+        this.setActiveMenu = this.setActiveMenu.bind(this);
+        this.state = { activeMenu: 'drinks-btn' };
+    }
+
+    setActiveMenu(e) {
+        this.setState({ activeMenu: e });
     }
 
     render() {
@@ -109,7 +116,7 @@ class Register extends React.Component {
                             <LoadSubmenu />
                         </div>
                         <div className="submenu-selection-container">
-                            <MenuButtons />
+                            <MenuButtons setActiveMenu={this.setActiveMenu} />
                         </div>
                     </div>
                 </div>
