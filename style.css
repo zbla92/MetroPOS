@@ -1,0 +1,115 @@
+body,
+html {
+    color: #fff;
+    text-align: center;
+    background: white;
+    font-family: Helvetica, sans-serif;
+    margin: 0;
+}
+
+.items {
+    display: flex;
+    margin: 50px;
+    width: 80vw;
+}
+.items.active {
+    background: rgba(255, 255, 255, 0item3);
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+    transform: scale(1);
+}
+.item {
+    min-width: 20vw;
+    min-height: 80vh;
+}
+.item1 {
+    background-color: red;
+}
+.item2 {
+    background-color: green;
+}
+.item3 {
+    background-color: blue;
+}
+.item4 {
+    background-color: yellow;
+}
+.item5 {
+    background-color: red;
+}
+.item6 {
+    background-color: green;
+}
+.item7 {
+    background-color: blue;
+}
+.item8 {
+    background-color: yellow;
+}
+.item9 {
+    background-color: red;
+}
+.item10 {
+    background-color: green;
+}
+.item11 {
+    background-color: blue;
+}
+.item12 {
+    background-color: yellow;
+}
+.item13 {
+    background-color: red;
+}
+.item14 {
+    background-color: green;
+}
+.item15 {
+    background-color: blue;
+}
+.item16 {
+    background-color: yellow;
+}
+.item17 {
+    background-color: red;
+}
+.item18 {
+    background-color: green;
+}
+.item19 {
+    background-color: blue;
+}
+.item20 {
+    background-color: yellow;
+}
+.item21 {
+    background-color: red;
+}
+.item22 {
+    background-color: green;
+}
+.item23 {
+    background-color: blue;
+}
+.item24 {
+    background-color: yellow;
+}
+.item {
+    display: inline-block;
+    background: skyblue;
+    min-height: 250px;
+    min-width: 400px;
+    margin: 2em 1em;
+}
+.items {
+    position: relative;
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    transition: all 0.2s;
+    transform: scale(0.98);
+    will-change: transform;
+    user-select: none;
+    cursor: pointer;
+}

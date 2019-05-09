@@ -1,4 +1,3 @@
-import logo from '../css/imgs/logo.png';
 import emps from '../data/emps/people.json';
 import '../css/register.css';
 import React from 'react';

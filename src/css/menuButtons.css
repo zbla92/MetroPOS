@@ -1,0 +1,62 @@
+.button-row > button {
+    margin-top: 0.1vh;
+    margin-bottom: 0.1vh;
+    margin-left: 0.1vw;
+    margin-right: 0.1vw;
+    width: 8vw;
+}
+#drinks-btn {
+    background-color: #37c09b;
+}
+#apetizers-btn {
+    background-color: #88242c;
+}
+#salads-btn {
+    background-color: #4a133a;
+}
+#sandwitch-btn {
+    background-color: #2b645d;
+}
+#burgers-btn {
+    background-color: #134385;
+}
+#pizzas-btn {
+    background-color: #902f74;
+}
+#soup-btn {
+    background-color: #1f4143;
+}
+#kids-menu-btn {
+    background-color: #a15d2c;
+}
+#cake-btn {
+    background-color: #505050;
+}
+
+#flat-bread-btn {
+    background-color: #91924c;
+}
+#dinner-plates-btn {
+    background-color: #68a19b;
+}
+#dessert-btn {
+    background-color: #786fa6;
+}
+#vegetarian-btn {
+    background-color: #ff4181;
+}
+#pasta-btn {
+    background-color: #e8c972;
+}
+#alchocol-btn {
+    background-color: #11976f;
+}
+#chicken-btn {
+    background-color: #f3a683;
+}
+#steak-btn {
+    background-color: #b2f2ff;
+}
+#palstic-btn {
+    background-color: #ffac12;
+}
