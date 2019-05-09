@@ -6,7 +6,9 @@ function LoadSubmenu() {
     return (
         <div>
             <div className="img-container">
-                <img src={submenu.pizzas[0].image} />
+                <div className="img-div">
+                    <img src={submenu.pizzas[0].image} />
+                </div>
                 <div className="img-overlay">
                     <p>{submenu.salads[3].name}</p>
                 </div>
