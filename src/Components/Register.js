@@ -3,6 +3,7 @@ import '../css/register.css';
 import React from 'react';
 import Clock from './Clock';
 import Item from './Item';
+import submenu from '../data/menu.json';
 import TotalPrice from './TotalPrice';
 import LoadSubmenu from './LoadSubmenu';
 import MenuButtons from './MenuButtons';
@@ -12,7 +13,7 @@ class Register extends React.Component {
         super(props);
 
         this.setActiveMenu = this.setActiveMenu.bind(this);
-        this.state = { activeMenu: 'drinks-btn' };
+        this.state = { activeMenu: submenu.pizzas };
     }
 
     setActiveMenu(e) {
@@ -85,7 +86,7 @@ class Register extends React.Component {
                         </div>
                     </div>
                     <div className="main-right-container">
-                        <LoadSubmenu />
+                        <LoadSubmenu submenuName={this.state.activeMenu}/>
                         <div className="submenu-selection-container">
                             <MenuButtons setActiveMenu={this.setActiveMenu} />
                         </div>

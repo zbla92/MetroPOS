@@ -1,6 +1,6 @@
-import menus from '../data/menu.json';
 import '../css/menuButtons.css';
 import React from 'react';
+import submenu from '../data/menu.json';
 
 function MenuButtons({ setActiveMenu }) {
     return (
@@ -8,9 +8,10 @@ function MenuButtons({ setActiveMenu }) {
             <div className="button-row">
                 <button
                     id="drinks-btn"
-                    className="btn-top"
+                    className="btn-top" 
+                    submenu='drinks'
                     onClick={e => {
-                        setActiveMenu(e.target.id);
+                        setActiveMenu(submenu.beverages);
                     }}
                 >
                     Drinks
@@ -18,8 +19,9 @@ function MenuButtons({ setActiveMenu }) {
                 <button
                     id="apetizers-btn"
                     className="btn-top"
+                    submenu='pizzas'
                     onClick={e => {
-                        setActiveMenu(e.target.id);
+                        setActiveMenu(submenu.pizzas);
                     }}
                 >
                     Apetizers
@@ -27,8 +29,9 @@ function MenuButtons({ setActiveMenu }) {
                 <button
                     id="salads-btn"
                     className="btn-top"
+                    submenu='salads'
                     onClick={e => {
-                        setActiveMenu(e.target.id);
+                        setActiveMenu(submenu.salads);
                     }}
                 >
                     Salads
