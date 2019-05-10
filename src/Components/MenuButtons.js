@@ -58,7 +58,7 @@ function MenuButtons({ setActiveMenu }) {
                     id="pizzas-btn"
                     className="btn-top"
                     onClick={e => {
-                        setActiveMenu(e.target.id);
+                        setActiveMenu(submenu.pizzas);
                     }}
                 >
                     Pizza
