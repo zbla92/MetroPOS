@@ -447,7 +447,7 @@
         },
         {
             "id": "8",
-            "name": "Avocado Breakfast Pizza with Fried Egg",
+            "name": "Avocado  Pizza",
             "shortName": "Avocado Pizza",
             "price": "19.50",
             "image": "http://static.food2fork.com/Avocado2Band2BFried2BEgg2BBreakfast2BPizza2B5002B296294dcea8a.jpg"
@@ -475,66 +475,66 @@
         },
         {
             "id": "12",
-            "name": "Pizza margherita",
-            "shortName": "Pizza margherita",
+            "name": "breakfast pizza",
+            "shortName": "breakfast pizza",
             "price": "23.00",
             "image": "http://static.food2fork.com/4683_MEDIUM544c.jpg"
         },
         {
-            "id": "2",
-            "name": "Homemade Pizza",
-            "shortName": "Hmmd Pizza",
-            "price": "23.00",
-            "image": "http://static.food2fork.com/pizza292x2007a259a79.jpg"
+            "id": "13",
+            "name": "Caramelized Onion Pizza",
+            "shortName": "Caramel Pizza",
+            "price": "21.00",
+            "image": "http://static.food2fork.com/4420552280_bb575420043571.jpg"
         },
         {
-            "id": "2",
-            "name": "Homemade Pizza",
-            "shortName": "Hmmd Pizza",
-            "price": "23.00",
-            "image": "http://static.food2fork.com/pizza292x2007a259a79.jpg"
+            "id": "14",
+            "name": "BBQ Chicken Pizza",
+            "shortName": "BBQ Pizza",
+            "price": "27.00",
+            "image": "http://static.food2fork.com/4433733640_8b0a5d19fbace0.jpg"
         },
         {
-            "id": "2",
-            "name": "Homemade Pizza",
-            "shortName": "Hmmd Pizza",
-            "price": "23.00",
-            "image": "http://static.food2fork.com/pizza292x2007a259a79.jpg"
+            "id": "15",
+            "name": "Superhealthy pizza",
+            "shortName": "Healthy Pizza",
+            "price": "31.09",
+            "image": "http://static.food2fork.com/10117_MEDIUMb4ba.jpg"
         },
         {
-            "id": "2",
-            "name": "Homemade Pizza",
-            "shortName": "Hmmd Pizza",
-            "price": "23.00",
-            "image": "http://static.food2fork.com/pizza292x2007a259a79.jpg"
+            "id": "16",
+            "name": "Strawberrie Pizza",
+            "shortName": "Swt Pizza",
+            "price": "16.00",
+            "image": "http://static.food2fork.com/strawberrybasilbalsamicpizzarecipe703d.jpg"
         },
         {
-            "id": "2",
-            "name": "Homemade Pizza",
-            "shortName": "Hmmd Pizza",
+            "id": "17",
+            "name": "Gardener's Pizza",
+            "shortName": "Grdnr Pizza",
             "price": "23.00",
-            "image": "http://static.food2fork.com/pizza292x2007a259a79.jpg"
+            "image": "http://static.food2fork.com/395569cf8a.jpg"
         },
         {
-            "id": "2",
-            "name": "Homemade Pizza",
-            "shortName": "Hmmd Pizza",
-            "price": "23.00",
-            "image": "http://static.food2fork.com/pizza292x2007a259a79.jpg"
+            "id": "18",
+            "name": "Apple Crisp Pizza",
+            "shortName": "iPizza",
+            "price": "15.90",
+            "image": "http://static.food2fork.com/Apple2BCrisp2BPizza2Bwith2BCaramel2BSauce2B5002B866415672f3c.jpg"
         },
         {
-            "id": "2",
-            "name": "Homemade Pizza",
-            "shortName": "Hmmd Pizza",
-            "price": "23.00",
-            "image": "http://static.food2fork.com/pizza292x2007a259a79.jpg"
+            "id": "19",
+            "name": "Alsatian Pizza",
+            "shortName": "Alsatian Pizza",
+            "price": "18.00",
+            "image": "http://static.food2fork.com/366190ab36.jpg"
         },
         {
-            "id": "2",
-            "name": "Homemade Pizza",
-            "shortName": "Hmmd Pizza",
+            "id": "20",
+            "name": "Spicy prawn pizzas",
+            "shortName": "Spicy Pizza",
             "price": "23.00",
-            "image": "http://static.food2fork.com/pizza292x2007a259a79.jpg"
+            "image": "http://static.food2fork.com/2875678_MEDIUM5e0c.jpg"
         }
     ]
 }
