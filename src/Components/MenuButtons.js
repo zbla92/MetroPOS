@@ -76,7 +76,7 @@ function MenuButtons({ setActiveMenu }) {
                     id="kids-menu-btn"
                     className="btn-top"
                     onClick={e => {
-                        setActiveMenu(e.target.id);
+                        setActiveMenu(submenu.kidsMenu);
                     }}
                 >
                     Kids menu

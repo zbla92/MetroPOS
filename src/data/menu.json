@@ -971,5 +971,133 @@
             "price": "8.50",
             "image": "http://static.food2fork.com/Grilled2BChicken2BClub2BSandwich2Bwith2BPesto2BMayo2B5002B59588e29d3eb.jpg"
         }
+    ],
+    "kidsMenu": [
+        {
+            "id": "1",
+            "name": "Sweet Potato Baked",
+            "shortName": "slw ckd chckn soup",
+            "price": "7.49",
+            "image": "http://static.food2fork.com/sweetpotatofriesa300x200177a9e27.jpg"
+        },
+        {
+            "id": "2",
+            "name": "Perfect French Fries",
+            "shortName": "cheddar soup",
+            "price": "9.00",
+            "image": "http://static.food2fork.com/fries4d41.jpg"
+        },
+        {
+            "id": "3",
+            "name": "Cakespy: Pie Fries",
+            "shortName": "coconut soup",
+            "price": "5.99",
+            "image": "http://static.food2fork.com/11fd31.21.2010piefries.jpg"
+        },
+        {
+            "id": "4",
+            "name": "Crispy Baked Portobello",
+            "shortName": "chckn tortilla soup",
+            "price": "10.00",
+            "image": "http://static.food2fork.com/Crispy2BBaked2BPortobello2BMushroom2BFries2B5002B528055b36987.jpg"
+        },
+        {
+            "id": "5",
+            "name": "Battered Crispy Pickle Fries",
+            "shortName": "cauliflower soup",
+            "price": "5.00",
+            "image": "http://static.food2fork.com/Beer2BBattered2BCrispy2BBaked2BPickle2BFries2B5002B1479c5c9de6d.jpg"
+        },
+        {
+            "id": "6",
+            "name": "Chocolate cornflake cakes",
+            "shortName": "broccoli cheese soup",
+            "price": "6.50",
+            "image": "http://static.food2fork.com/2451649_MEDIUMdedc.jpg"
+        },
+        {
+            "id": "7",
+            "name": "Cooking with kids: Fajitas",
+            "shortName": "lentil soup",
+            "price": "6.99",
+            "image": "http://static.food2fork.com/2451648_MEDIUM59f6.jpg"
+        },
+        {
+            "id": "8",
+            "name": "Spaghetti & meatballs",
+            "shortName": "pork brgr",
+            "price": "8.00",
+            "image": "http://static.food2fork.com/2451637_MEDIUM54ae.jpg"
+        },
+        {
+            "id": "9",
+            "name": "Spinach Quiche",
+            "shortName": "mini brgr",
+            "price": "1.99",
+            "image": "http://static.food2fork.com/648445591.jpg"
+        },
+        {
+            "id": "10",
+            "name": "Sweet and Sour Chicken Sauce",
+            "shortName": "roasted soup",
+            "price": "7.40",
+            "image": "http://static.food2fork.com/8141875245.jpg"
+        },
+        {
+            "id": "11",
+            "name": "Mini Veggie Pizzas",
+            "shortName": "thai  pumpkin soup",
+            "price": "9.99",
+            "image": "http://static.food2fork.com/06June201101plucky410x292819d.jpg"
+        },
+        {
+            "id": "12",
+            "name": "Chocolate-Covered Gingerbread",
+            "shortName": "juicy lucy",
+            "price": "5.00",
+            "image": "http://static.food2fork.com/mare_chocolate_covered_gingerbread_kids_ve32a.jpg"
+        },
+        {
+            "id": "13",
+            "name": "Fruit Pizza",
+            "shortName": "tofu brgr",
+            "price": "7.99",
+            "image": "http://static.food2fork.com/FruitPizza410x2623937.jpg"
+        },
+        {
+            "id": "14",
+            "name": "Toast with a Twist",
+            "shortName": "brgr delux",
+            "price": "4.99",
+            "image": "http://static.food2fork.com/toast410x307598a.jpg"
+        },
+        {
+            "id": "15",
+            "name": "Baked Chicken Nuggets",
+            "shortName": "chile brgr",
+            "price": "8.00",
+            "image": "http://static.food2fork.com/9880830335.jpg"
+        },
+        {
+            "id": "12",
+            "name": "Herbed Chicken Nuggets",
+            "shortName": "quinoa brgr",
+            "price": "14.99",
+            "image": "http://static.food2fork.com/5230324097.jpg"
+        },
+        {
+            "id": "13",
+            "name": "Baked Chicken Nuggets",
+            "shortName": "chckn brgr",
+            "price": "10.99",
+            "image": "http://static.food2fork.com/bakedchickennuggets8410x614df40.jpg"
+        },
+        {
+            "id": "14",
+            "name": "Nuggets with Honey Mustard",
+            "shortName": "lamb brgr",
+            "price": "12.00",
+            "image": "http://static.food2fork.com/IMGP3543eb84.JPG"
+        }
     ]
 }
