@@ -40,7 +40,7 @@ function MenuButtons({ setActiveMenu }) {
                     id="sandwitch-btn"
                     className="btn-top"
                     onClick={e => {
-                        setActiveMenu();
+                        setActiveMenu(submenu.sandwiches);
                     }}
                 >
                     Sandwitches
@@ -67,7 +67,7 @@ function MenuButtons({ setActiveMenu }) {
                     id="soup-btn"
                     className="btn-top"
                     onClick={e => {
-                        setActiveMenu(e.target.id);
+                        setActiveMenu(submenu.soups);
                     }}
                 >
                     Soups
