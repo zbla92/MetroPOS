@@ -85,7 +85,7 @@ function MenuButtons({ setActiveMenu }) {
                     id="cake-btn"
                     className="btn-top"
                     onClick={e => {
-                        setActiveMenu(e.target.id);
+                        setActiveMenu(submenu.desserts);
                     }}
                 >
                     Cake
