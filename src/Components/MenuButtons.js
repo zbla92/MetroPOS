@@ -21,7 +21,7 @@ function MenuButtons({ setActiveMenu }) {
                     className="btn-top"
                     submenu='pizzas'
                     onClick={e => {
-                        setActiveMenu(submenu.pizzas);
+                        setActiveMenu(submenu.appetizers);
                     }}
                 >
                     Apetizers
