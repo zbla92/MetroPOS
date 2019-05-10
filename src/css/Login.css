@@ -73,12 +73,13 @@ body {
     align-items: center;
     border-bottom: 2px solid rgba(255, 255, 255, 0.404);
     background-color: #ffffff;
-    letter-spacing: 1rem;
+    letter-spacing: 0.5rem;
     text-shadow: -3px 2px 9px #65978770;
 }
 
 .middle-dots {
     font-size: 2vh;
+    color: #c0c0c0;
 }
 
 .middle-dots-full {

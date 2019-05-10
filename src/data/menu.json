@@ -10,7 +10,7 @@
         {
             "id": "2",
             "name": "Pepsi",
-            "shortName": "Pepso",
+            "shortName": "Pepsi",
             "price": "1.99",
             "image": "https://i.pinimg.com/280x280_RS/c0/46/d0/c046d0dfa2e9830992151920364399ab.jpg"
         },
@@ -220,179 +220,102 @@
             "image": "http://static.food2fork.com/2490037c37.jpg"
         },
         {
-            "id": "2",
-            "name": "Asian Noodle Salad",
-            "shortName": "Noodle Sld",
+            "id": "7",
+            "name": "NY Style Chopped Salad",
+            "shortName": "NY Style Sld",
             "price": "5.00",
-            "image": "http://static.food2fork.com/AsianNoodleSalad1754.jpg"
+            "image": "http://static.food2fork.com/choppedsalad7709.jpg"
         },
         {
-            "id": "3",
-            "name": "Layered Salad ",
-            "shortName": "Layered sld",
+            "id": "8",
+            "name": "Ginger Steak Salad",
+            "shortName": "Ginger Steak Sld",
             "price": "19.80",
-            "image": "http://static.food2fork.com/4940301746_c16a4e7edf_o72c2.jpg"
+            "image": "http://static.food2fork.com/3327439142_56c49630a69bee.jpg"
         },
         {
-            "id": "4",
-            "name": "Chipotle Steak Salad",
-            "shortName": "Steak Sld",
+            "id": "9",
+            "name": "Antipasto Pasta Salad",
+            "shortName": "Antipasto Sld",
             "price": "15.20",
-            "image": "http://static.food2fork.com/5993877556_42ba110c20_o990e.jpg"
+            "image": "http://static.food2fork.com/6556885926.jpg"
         },
         {
-            "id": "5",
-            "name": "Thai Grilled Chicken Satay Salad",
-            "shortName": "Thai Sld",
+            "id": "10",
+            "name": "Asparagus Shrimp Salad",
+            "shortName": "Shrimp Sld",
             "price": "14.50",
-            "image": "http://static.food2fork.com/Thai2BGrilled2BChicken2BSatay2BSalad2B12B800d1f4ee96.jpg"
+            "image": "http://static.food2fork.com/asparagusshrimpsalada300x200d319b17b.jpg"
         },
         {
-            "id": "6",
-            "name": "Strawberry Avocado Salad",
-            "shortName": "Strwbry Sld",
+            "id": "11",
+            "name": "Vietnameese Banh Mi Salad",
+            "shortName": "Banh Mi Sld",
             "price": "11.00",
-            "image": "http://static.food2fork.com/2490037c37.jpg"
+            "image": "http://static.food2fork.com/IMG_28181180x1807551.jpg"
         },
         {
-            "id": "2",
-            "name": "Asian Noodle Salad",
-            "shortName": "Noodle Sld",
+            "id": "12",
+            "name": "Bacon Ranch Pasta Salad",
+            "shortName": "Bacon Sld",
             "price": "5.00",
-            "image": "http://static.food2fork.com/AsianNoodleSalad1754.jpg"
+            "image": "http://static.food2fork.com/580466da88.jpg"
         },
         {
-            "id": "3",
-            "name": "Layered Salad ",
-            "shortName": "Layered sld",
+            "id": "13",
+            "name": "Buffalo Chicken Salad",
+            "shortName": "Buffalo Chkn Sld",
             "price": "19.80",
-            "image": "http://static.food2fork.com/4940301746_c16a4e7edf_o72c2.jpg"
+            "image": "http://static.food2fork.com/buffalo8b3e.jpg"
         },
         {
-            "id": "4",
-            "name": "Chipotle Steak Salad",
-            "shortName": "Steak Sld",
+            "id": "14",
+            "name": "Tzatziki Potato Salad",
+            "shortName": "Tzatziki Sld",
             "price": "15.20",
-            "image": "http://static.food2fork.com/5993877556_42ba110c20_o990e.jpg"
+            "image": "http://static.food2fork.com/7263078304_1bda2e03f17187.jpg"
         },
         {
-            "id": "5",
-            "name": "Thai Grilled Chicken Satay Salad",
-            "shortName": "Thai Sld",
+            "id": "15",
+            "name": "Breakfast Salad",
+            "shortName": "Brkfst Sld",
             "price": "14.50",
-            "image": "http://static.food2fork.com/Thai2BGrilled2BChicken2BSatay2BSalad2B12B800d1f4ee96.jpg"
+            "image": "http://static.food2fork.com/IMG_88441180x1806444.jpg"
         },
         {
-            "id": "6",
-            "name": "Strawberry Avocado Salad",
-            "shortName": "Strwbry Sld",
+            "id": "16",
+            "name": "Cobb Salad",
+            "shortName": "Cobb Sld",
             "price": "11.00",
-            "image": "http://static.food2fork.com/2490037c37.jpg"
+            "image": "http://static.food2fork.com/649156e4fb.jpg"
         },
         {
-            "id": "2",
-            "name": "Asian Noodle Salad",
-            "shortName": "Noodle Sld",
+            "id": "17",
+            "name": "Avocado Chicken Salad",
+            "shortName": "Avocado Chkn Sld",
             "price": "5.00",
-            "image": "http://static.food2fork.com/AsianNoodleSalad1754.jpg"
+            "image": "http://static.food2fork.com/ivmZbM35Mc8dd.jpg"
         },
         {
-            "id": "3",
-            "name": "Layered Salad ",
-            "shortName": "Layered sld",
+            "id": "18",
+            "name": "Cowboy Caviar",
+            "shortName": "Cowboy Caviar",
             "price": "19.80",
-            "image": "http://static.food2fork.com/4940301746_c16a4e7edf_o72c2.jpg"
+            "image": "http://static.food2fork.com/978891971a.jpg"
         },
         {
-            "id": "4",
-            "name": "Chipotle Steak Salad",
-            "shortName": "Steak Sld",
+            "id": "19",
+            "name": "Summer Green Bean Salad",
+            "shortName": "Summer Salad",
             "price": "15.20",
-            "image": "http://static.food2fork.com/5993877556_42ba110c20_o990e.jpg"
+            "image": "http://static.food2fork.com/contigo_greenbean_salad7e71.jpg"
         },
         {
-            "id": "5",
-            "name": "Thai Grilled Chicken Satay Salad",
-            "shortName": "Thai Sld",
+            "id": "20",
+            "name": "Amy's Summer Salad",
+            "shortName": "Amy's Salad",
             "price": "14.50",
-            "image": "http://static.food2fork.com/Thai2BGrilled2BChicken2BSatay2BSalad2B12B800d1f4ee96.jpg"
-        },
-        {
-            "id": "6",
-            "name": "Strawberry Avocado Salad",
-            "shortName": "Strwbry Sld",
-            "price": "11.00",
-            "image": "http://static.food2fork.com/2490037c37.jpg"
-        },
-        {
-            "id": "2",
-            "name": "Asian Noodle Salad",
-            "shortName": "Noodle Sld",
-            "price": "5.00",
-            "image": "http://static.food2fork.com/AsianNoodleSalad1754.jpg"
-        },
-        {
-            "id": "3",
-            "name": "Layered Salad ",
-            "shortName": "Layered sld",
-            "price": "19.80",
-            "image": "http://static.food2fork.com/4940301746_c16a4e7edf_o72c2.jpg"
-        },
-        {
-            "id": "4",
-            "name": "Chipotle Steak Salad",
-            "shortName": "Steak Sld",
-            "price": "15.20",
-            "image": "http://static.food2fork.com/5993877556_42ba110c20_o990e.jpg"
-        },
-        {
-            "id": "5",
-            "name": "Thai Grilled Chicken Satay Salad",
-            "shortName": "Thai Sld",
-            "price": "14.50",
-            "image": "http://static.food2fork.com/Thai2BGrilled2BChicken2BSatay2BSalad2B12B800d1f4ee96.jpg"
-        },
-        {
-            "id": "6",
-            "name": "Strawberry Avocado Salad",
-            "shortName": "Strwbry Sld",
-            "price": "11.00",
-            "image": "http://static.food2fork.com/2490037c37.jpg"
-        },
-        {
-            "id": "2",
-            "name": "Asian Noodle Salad",
-            "shortName": "Noodle Sld",
-            "price": "5.00",
-            "image": "http://static.food2fork.com/AsianNoodleSalad1754.jpg"
-        },
-        {
-            "id": "3",
-            "name": "Layered Salad ",
-            "shortName": "Layered sld",
-            "price": "19.80",
-            "image": "http://static.food2fork.com/4940301746_c16a4e7edf_o72c2.jpg"
-        },
-        {
-            "id": "4",
-            "name": "Chipotle Steak Salad",
-            "shortName": "Steak Sld",
-            "price": "15.20",
-            "image": "http://static.food2fork.com/5993877556_42ba110c20_o990e.jpg"
-        },
-        {
-            "id": "5",
-            "name": "Thai Grilled Chicken Satay Salad",
-            "shortName": "Thai Sld",
-            "price": "14.50",
-            "image": "http://static.food2fork.com/Thai2BGrilled2BChicken2BSatay2BSalad2B12B800d1f4ee96.jpg"
-        },
-        {
-            "id": "6",
-            "name": "Strawberry Avocado Salad",
-            "shortName": "Strwbry Sld",
-            "price": "11.00",
-            "image": "http://static.food2fork.com/2490037c37.jpg"
+            "image": "http://static.food2fork.com/864255f2d6.jpg"
         }
     ],
     "pizzas": [
@@ -475,8 +398,8 @@
         },
         {
             "id": "12",
-            "name": "breakfast pizza",
-            "shortName": "breakfast pizza",
+            "name": "Breakfast pizza",
+            "shortName": "Breakfast pizza",
             "price": "23.00",
             "image": "http://static.food2fork.com/4683_MEDIUM544c.jpg"
         },
@@ -503,7 +426,7 @@
         },
         {
             "id": "16",
-            "name": "Strawberrie Pizza",
+            "name": "Strawberry Pizza",
             "shortName": "Swt Pizza",
             "price": "16.00",
             "image": "http://static.food2fork.com/strawberrybasilbalsamicpizzarecipe703d.jpg"
