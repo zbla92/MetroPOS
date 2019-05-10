@@ -40,7 +40,7 @@ function MenuButtons({ setActiveMenu }) {
                     id="sandwitch-btn"
                     className="btn-top"
                     onClick={e => {
-                        setActiveMenu(e.target.id);
+                        setActiveMenu();
                     }}
                 >
                     Sandwitches
@@ -49,7 +49,7 @@ function MenuButtons({ setActiveMenu }) {
                     id="burgers-btn"
                     className="btn-top"
                     onClick={e => {
-                        setActiveMenu(e.target.id);
+                        setActiveMenu(submenu.burgers);
                     }}
                 >
                     Burgers
