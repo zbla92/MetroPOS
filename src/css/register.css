@@ -171,11 +171,19 @@ body {
     display: none;
 }
 
-.submenu-selection-container {
+.submenu-selection-container > div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
     width: 69vw;
     margin-left: 30.5vw;
     height: 14vh;
     margin-top: 1vh;
+}
+.submenu-selection-container > div > button{
+margin-left: 0.1vw;
+margin-right: 0.1vw;
 }
 .button-row {
     margin-top: 0.2vh;

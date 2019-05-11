@@ -1,5 +1,5 @@
 {
-    "beverages": [
+    "Beverages": [
         {
             "id": "1",
             "name": "Coke",
@@ -155,7 +155,7 @@
             "image": "https://www.freesites.com.au/login/members/imagemanager/images/df12ecd077efc8c23881028604dbb8cc/fresh-coconut.jpg"
         }
     ],
-    "salads": [
+    "Salads": [
         {
             "id": "1",
             "name": "Cesar's Salad",
@@ -297,7 +297,7 @@
             "image": "http://static.food2fork.com/864255f2d6.jpg"
         }
     ],
-    "pizzas": [
+    "Pizzas": [
         {
             "id": "1",
             "name": "Cauliflower pizza crust",
@@ -1226,6 +1226,15 @@
             "shortName": "lamb brgr",
             "price": "12.00",
             "image": "http://static.food2fork.com/897704ea.jpg"
+        }
+    ],
+    "testSubmenu": [
+        {
+            "id": "1",
+            "name": "Test Item",
+            "shortName": "slw ckd chckn soup",
+            "price": "7.49",
+            "image": "https://media.licdn.com/dms/image/C4D03AQEsD7vgguIQiA/profile-displayphoto-shrink_200_200/0?e=1562198400&v=beta&t=qQkWWlL4n76ett6FQ_InzMBM9waZ5dDP8tQhVypcPiA"
         }
     ]
 }
