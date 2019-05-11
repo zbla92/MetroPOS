@@ -1,4 +1,3 @@
-import submenu from '../data/menu.json';
 import React from 'react';
 
 function MakeThatButton ({setActiveMenu, btnName, id, submenu}){
