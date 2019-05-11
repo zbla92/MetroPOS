@@ -439,7 +439,7 @@
             "image": "http://static.food2fork.com/2875678_MEDIUM5e0c.jpg"
         }
     ],
-    "appetizers": [
+    "Appetizers": [
         {
             "id": "1",
             "name": "Holiday Bacon Appetizers",
@@ -546,7 +546,7 @@
             "image": "http://static.food2fork.com/9804818671.jpg"
         }
     ],
-    "burgers": [
+    "Burgers": [
         {
             "id": "1",
             "name": "Black Bean Burger",
@@ -688,7 +688,7 @@
             "image": "http://static.food2fork.com/3597299dbe.jpg"
         }
     ],
-    "soups": [
+    "Soups": [
         {
             "id": "1",
             "name": "Slow Cooked Chckn Soup",
@@ -830,7 +830,7 @@
             "image": "http://static.food2fork.com/29342_basic_lentil_soup_2_620d9ef.jpg"
         }
     ],
-    "sandwiches": [
+    "Sandwiches": [
         {
             "id": "1",
             "name": "Avocado Salad Sandwich",
@@ -972,7 +972,7 @@
             "image": "http://static.food2fork.com/Grilled2BChicken2BClub2BSandwich2Bwith2BPesto2BMayo2B5002B59588e29d3eb.jpg"
         }
     ],
-    "kidsMenu": [
+    "Kids": [
         {
             "id": "1",
             "name": "Sweet Potato Baked",
@@ -1100,7 +1100,7 @@
             "image": "http://static.food2fork.com/IMGP3543eb84.JPG"
         }
     ],
-    "desserts": [
+    "Desserts": [
         {
             "id": "1",
             "name": "Strawberry Angel Food Dessert",
@@ -1231,7 +1231,7 @@
     "testSubmenu": [
         {
             "id": "1",
-            "name": "Test Item",
+            "name": "Mmm Mmm Best item on Metro POS",
             "shortName": "slw ckd chckn soup",
             "price": "7.49",
             "image": "https://media.licdn.com/dms/image/C4D03AQEsD7vgguIQiA/profile-displayphoto-shrink_200_200/0?e=1562198400&v=beta&t=qQkWWlL4n76ett6FQ_InzMBM9waZ5dDP8tQhVypcPiA"

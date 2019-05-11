@@ -7,7 +7,7 @@ const LoadSubmenu = ({submenuName}) => {
     
     // Ovdje sam radio destructuring na props
     const renderedList = submenuName.map(e => {
-        return <ItemToInject name={e.name} image={e.image} />;
+        return <ItemToInject name={e.name} image={e.image} price={e.price} />;
     });
 
     return <div className="submenu-injection-container">{renderedList}</div>;
