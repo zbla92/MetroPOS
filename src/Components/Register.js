@@ -21,6 +21,7 @@ class Register extends React.Component {
     }
 
     render() {
+        console.log(this.props);
         return (
             <div>
                 <div className="top-wide-container">
@@ -50,7 +51,10 @@ class Register extends React.Component {
                             <button className="btn-top">Delivery</button>
                             <button className="btn-top">Number</button>
                         </div>
-                        <div id="item-injection-place" className="item-container">
+                        <div
+                            id="item-injection-place"
+                            className="item-container"
+                        >
                             <div className="item-list-header">
                                 <div className="item-name">Item</div>
                                 <div className="item-info">
@@ -59,10 +63,9 @@ class Register extends React.Component {
                                     <div className="item-amount">Amount</div>
                                 </div>
                             </div>
-                           
                         </div>
                         <div className="total-prices-box">
-                            <TotalPrice />
+                            <TotalPrice prices={this.props.prices} />
                         </div>
                         <div className="display-buttons-container ">
                             <button className="btn-top">Cancel</button>
@@ -74,7 +77,10 @@ class Register extends React.Component {
                         </div>
                     </div>
                     <div className="main-right-container">
-                        <LoadSubmenu submenuName={this.state.activeMenu}/>
+                        <LoadSubmenu
+                            submenuName={this.state.activeMenu}
+                            setOrderedItem={this.props.setOrderedItem}
+                        />
                         <div className="submenu-selection-container">
                             <MenuButtons setActiveMenu={this.setActiveMenu} />
                         </div>

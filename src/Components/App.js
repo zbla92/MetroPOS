@@ -7,11 +7,12 @@ import FloatingScreen from './FloatingScreen';
 class App extends React.Component {
     constructor(props) {
         super(props);
+        this.setOrderedItem = this.setOrderedItem.bind(this);
         this.logging = this.logging.bind(this);
         this.mainMenu = this.mainMenu.bind(this);
         this.loadRegister = this.loadRegister.bind(this);
         this.floatingLogo = this.floatingLogo.bind(this);
-        this.state = { loadedComponent: 'Register' };
+        this.state = { loadedComponent: 'Register', orderedItems: [] };
     }
     // Login Component controller
     logging() {
@@ -35,6 +36,13 @@ class App extends React.Component {
         });
     }
 
+    //------------ Setting Ordered Items so they dont delete everytime emp logs out
+    setOrderedItem(e) {
+        this.setState({
+            orderedItems: [...this.state.orderedItems, e]
+        });
+    }
+
     render() {
         if (this.state.loadedComponent === 'Login') {
             return (
@@ -51,7 +59,11 @@ class App extends React.Component {
         } else if (this.state.loadedComponent === 'Register') {
             return (
                 <div>
-                    <Register logging={this.logging} />
+                    <Register
+                        logging={this.logging}
+                        setOrderedItem={this.setOrderedItem}
+                        prices={this.state.orderedItems}
+                    />
                 </div>
             );
         } else if (this.state.loadedComponent === 'FloatingScreen') {
