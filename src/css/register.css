@@ -106,7 +106,10 @@ body {
 /*Items header*/
 .item-container {
     height: 60vh;
-    overflow: hidden;
+    overflow: scroll;
+}
+.item-container::-webkit-scrollbar {
+    display: none;
 }
 .item-list-header,
 .item-info {
@@ -192,3 +195,4 @@ margin-right: 0.1vw;
     display: flex;
     justify-content: space-around;
 }
+
