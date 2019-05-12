@@ -11,7 +11,7 @@ function TotalPrice({ prices }) {
     });
 
     function calcTax(total) {
-        tax = total / 14.1;
+        tax = total * 0.0875;
         return tax;
     }
     calcTax(total);

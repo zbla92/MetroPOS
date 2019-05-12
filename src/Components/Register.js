@@ -13,7 +13,7 @@ class Register extends React.Component {
         super(props);
 
         this.setActiveMenu = this.setActiveMenu.bind(this);
-        this.state = { activeMenu: Object.values(submenu)[3] };
+        this.state = { activeMenu: Object.values(submenu)[2] };
     }
 
     setActiveMenu(e) {

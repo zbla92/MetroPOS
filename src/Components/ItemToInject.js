@@ -1,6 +1,5 @@
 import '../css/itemToInject.css';
 import React from 'react';
-import itemList from '../data/menu.json';
 
 function ItemToInject({ name, image, price, setOrderedItem }) {
     const calculateAmount = (price, qty) => {
@@ -10,15 +9,15 @@ function ItemToInject({ name, image, price, setOrderedItem }) {
     const itemCheck = () => {
         const qty = 2;
         const html = `<div class="item-bdy-list">
-            <div class="item-bdy-name">${name}</div>
-            <div class="item-bdy-info">
-                <div class="item-bdy-qty">${qty}</div>
-                <div class="item-bdy-unit">${price}</div>
-                <div class="item-bdy-amount">
-                    ${calculateAmount(price, qty).toFixed(2)}
-                </div>
-            </div>
-        </div>`;
+                            <div class="item-bdy-name">${name}</div>
+                            <div class="item-bdy-info">
+                                <div class="item-bdy-qty">${qty}</div>
+                                <div class="item-bdy-unit">${price}</div>
+                                <div class="item-bdy-amount">
+                                    ${calculateAmount(price, qty).toFixed(2)}
+                                </div>
+                            </div>
+                        </div>`;
 
         const injectionPlace = document.getElementById('item-injection-place');
         injectionPlace.insertAdjacentHTML('beforeend', html);
