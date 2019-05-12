@@ -18,6 +18,6 @@ function MenuButtons({ setActiveMenu }) {
         );
     });
 
-    return <div>{renderButton}</div>;
+    return renderButton;
 }
 export default MenuButtons;
