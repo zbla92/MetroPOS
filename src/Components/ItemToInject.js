@@ -2,34 +2,12 @@ import '../css/itemToInject.css';
 import React from 'react';
 
 function ItemToInject({ name, image, price, setOrderedItem }) {
-    const calculateAmount = (price, qty) => {
-        return price * qty;
-    };
-
-    const itemCheck = () => {
-        const qty = 2;
-        const html = `<div class="item-bdy-list">
-                            <div class="item-bdy-name">${name}</div>
-                            <div class="item-bdy-info">
-                                <div class="item-bdy-qty">${qty}</div>
-                                <div class="item-bdy-unit">${price}</div>
-                                <div class="item-bdy-amount">
-                                    ${calculateAmount(price, qty).toFixed(2)}
-                                </div>
-                            </div>
-                        </div>`;
-
-        const injectionPlace = document.getElementById('item-injection-place');
-        injectionPlace.insertAdjacentHTML('beforeend', html);
-
-        setOrderedItem(parseFloat(calculateAmount(price, qty)));
-    };
-
+    const arr = [name, image, price];
     return (
         <div
             className="img-container"
             onClick={() => {
-                itemCheck();
+                setOrderedItem(arr);
             }}
         >
             <div className="img-div">

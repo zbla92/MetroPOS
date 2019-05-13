@@ -1,13 +1,14 @@
 import '../css/totalPrice.css';
 import React from 'react';
 
-function TotalPrice({ prices }) {
+function TotalPrice({ items }) {
     let total = 0;
     let tax = 0;
     let subtotal = 0;
 
-    prices.map(e => {
-        total = total + e;
+    items.map(e => {
+        let tempValue = parseFloat(e[2]);
+        total = total + tempValue;
     });
 
     function calcTax(total) {
@@ -20,6 +21,7 @@ function TotalPrice({ prices }) {
     tax = tax.toFixed(2);
     total = total.toFixed(2);
     subtotal = subtotal.toFixed(2);
+
     return (
         <div>
             <div className="subtotal-container">

@@ -7,6 +7,7 @@ import submenu from '../data/menu.json';
 import TotalPrice from './TotalPrice';
 import LoadSubmenu from './LoadSubmenu';
 import MenuButtons from './MenuButtons';
+import ItemToCheck from './ItemToCheck.js';
 
 class Register extends React.Component {
     constructor(props) {
@@ -63,9 +64,10 @@ class Register extends React.Component {
                                     <div className="item-amount">Amount</div>
                                 </div>
                             </div>
+                            <ItemToCheck items={this.props.items} />
                         </div>
                         <div className="total-prices-box">
-                            <TotalPrice prices={this.props.prices} />
+                            <TotalPrice items={this.props.items} />
                         </div>
                         <div className="display-buttons-container ">
                             <button className="btn-top">Cancel</button>

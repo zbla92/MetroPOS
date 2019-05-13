@@ -62,7 +62,7 @@ class App extends React.Component {
                     <Register
                         logging={this.logging}
                         setOrderedItem={this.setOrderedItem}
-                        prices={this.state.orderedItems}
+                        items={this.state.orderedItems}
                     />
                 </div>
             );
