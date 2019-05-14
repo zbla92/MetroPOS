@@ -43,10 +43,20 @@ class App extends React.Component {
     }
 
     //------------ Setting Ordered Items so they dont delete everytime emp logs out
-    setOrderedItem(e) {
-        this.setState({
-            orderedItems: [...this.state.orderedItems, e]
-        });
+    setOrderedItem(objArray, newObj) {
+        let controller = false;
+        let setter = objArray;
+        for (let i = 0; i < setter.length; i++) {
+            if (newObj.name === setter[i].name) {
+                setter[i].qty = objArray[i].qty + 1;
+                this.setState({ orderedItems: setter });
+                controller = true;
+            }
+        }
+        if (!controller) {
+            setter.push(newObj);
+            this.setState({ orderedItems: setter });
+        }
     }
 
     //------ Clear transaction ------//

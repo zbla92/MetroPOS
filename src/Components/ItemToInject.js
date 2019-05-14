@@ -1,13 +1,14 @@
 import '../css/itemToInject.css';
 import React from 'react';
 
-function ItemToInject({ name, image, price, setOrderedItem }) {
-    const arr = [name, image, price];
+function ItemToInject({ name, image, price, setOrderedItem, items }) {
+    const arr = { name: name, image: image, price: parseFloat(price), qty: 1 };
     return (
         <div
             className="img-container"
             onClick={() => {
-                setOrderedItem(arr);
+                setOrderedItem(items, arr);
+                console.log(items, arr);
             }}
         >
             <div className="img-div">

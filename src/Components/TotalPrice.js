@@ -7,7 +7,7 @@ function TotalPrice({ items }) {
     let subtotal = 0;
 
     items.map(e => {
-        let tempValue = parseFloat(e[2]);
+        let tempValue = e.price * e.qty;
         total = total + tempValue;
     });
 

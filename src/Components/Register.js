@@ -14,7 +14,7 @@ class Register extends React.Component {
         super(props);
 
         this.setActiveMenu = this.setActiveMenu.bind(this);
-        this.state = { activeMenu: Object.values(submenu)[2] };
+        this.state = { activeMenu: Object.values(submenu)[1] };
     }
 
     setActiveMenu(e) {
@@ -88,6 +88,7 @@ class Register extends React.Component {
                         <LoadSubmenu
                             submenuName={this.state.activeMenu}
                             setOrderedItem={this.props.setOrderedItem}
+                            items={this.props.items}
                         />
                         <div className="submenu-selection-container">
                             <MenuButtons setActiveMenu={this.setActiveMenu} />
