@@ -8,6 +8,7 @@ class App extends React.Component {
     constructor(props) {
         super(props);
         this.setOrderedItem = this.setOrderedItem.bind(this);
+        this.voidCheck = this.voidCheck.bind(this);
         this.logging = this.logging.bind(this);
         this.mainMenu = this.mainMenu.bind(this);
         this.loadRegister = this.loadRegister.bind(this);
@@ -43,6 +44,13 @@ class App extends React.Component {
         });
     }
 
+    //------ Clear transaction ------//
+    voidCheck() {
+        this.setState({
+            orderedItems: []
+        });
+    }
+
     render() {
         if (this.state.loadedComponent === 'Login') {
             return (
@@ -63,6 +71,7 @@ class App extends React.Component {
                         logging={this.logging}
                         setOrderedItem={this.setOrderedItem}
                         items={this.state.orderedItems}
+                        voidCheck={this.voidCheck}
                     />
                 </div>
             );

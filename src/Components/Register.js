@@ -70,7 +70,12 @@ class Register extends React.Component {
                             <TotalPrice items={this.props.items} />
                         </div>
                         <div className="display-buttons-container ">
-                            <button className="btn-top">Cancel</button>
+                            <button
+                                className="btn-top"
+                                onClick={this.props.voidCheck}
+                            >
+                                Cancel
+                            </button>
                             <button className="btn-top">More</button>
                             <button className="btn-top">Send</button>
                             <button id="checkout-btn" className="btn-top">
