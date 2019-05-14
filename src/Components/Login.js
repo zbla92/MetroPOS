@@ -4,18 +4,16 @@ import React, { useState } from 'react';
 import Clock from './Clock';
 import employees from '../data/emps/people.json';
 
-function Login({ mainMenu }) {
+function Login({ mainMenu, setLoggedInEmp }) {
     const [keyCode, setKeyCode] = useState('');
-    let [loggedInEmp, setLoggedInEmp] = useState(null);
     let [dot, setDot] = useState(1);
 
     const logIn = () => {
-        setLoggedInEmp(
-            (loggedInEmp = employees.emp.filter(
-                emp => emp.id === parseInt(keyCode)
-            ))
+        let loggedIn = employees.emp.filter(
+            emp => emp.id === parseInt(keyCode)
         );
-        if (!loggedInEmp.length) {
+        setLoggedInEmp(loggedIn);
+        if (!loggedIn.length) {
             setKeyCode('');
             setDot(1);
             const allDots = document

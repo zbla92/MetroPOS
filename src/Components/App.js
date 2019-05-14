@@ -8,12 +8,17 @@ class App extends React.Component {
     constructor(props) {
         super(props);
         this.setOrderedItem = this.setOrderedItem.bind(this);
+        this.setLoggedInEmp = this.setLoggedInEmp.bind(this);
         this.voidCheck = this.voidCheck.bind(this);
         this.logging = this.logging.bind(this);
         this.mainMenu = this.mainMenu.bind(this);
         this.loadRegister = this.loadRegister.bind(this);
         this.floatingLogo = this.floatingLogo.bind(this);
-        this.state = { loadedComponent: 'Register', orderedItems: [] };
+        this.state = {
+            loadedComponent: 'Register',
+            orderedItems: [],
+            loggedInEmp: ' '
+        };
     }
     // Login Component controller
     logging() {
@@ -51,11 +56,22 @@ class App extends React.Component {
         });
     }
 
+    //------- Set logged in employee -------//
+    setLoggedInEmp(e) {
+        this.setState({
+            loggedInEmp: e
+        });
+    }
+
     render() {
         if (this.state.loadedComponent === 'Login') {
             return (
                 <div>
-                    <Login mainMenu={this.mainMenu} />
+                    <Login
+                        mainMenu={this.mainMenu}
+                        loggedInEmp={this.state.loggedInEmp}
+                        setLoggedInEmp={this.setLoggedInEmp}
+                    />
                 </div>
             );
         } else if (this.state.loadedComponent === 'mainMenu') {
@@ -72,6 +88,7 @@ class App extends React.Component {
                         setOrderedItem={this.setOrderedItem}
                         items={this.state.orderedItems}
                         voidCheck={this.voidCheck}
+                        loggedInEmp={this.state.loggedInEmp}
                     />
                 </div>
             );

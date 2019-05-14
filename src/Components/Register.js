@@ -40,7 +40,8 @@ class Register extends React.Component {
                         </div>
                         <div className="info-logo">Metro POS</div>
                         <div className="logedin-user">
-                            <i className="user icon" /> {emps.emp[0].name}
+                            <i className="user icon" />{' '}
+                            {this.props.loggedInEmp[0].name}
                         </div>
                     </div>
                 </div>
