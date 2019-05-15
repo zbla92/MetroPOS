@@ -1,7 +1,7 @@
-import '../css/menuButtons.css';
+import '../../css/menuButtons.css';
 import React from 'react';
-import submenu from '../data/menu.json';
-import MakeThatButton from '../Components/MakeThatButton';
+import submenu from '../../data/menus/menu.json';
+import MakeThatButton from '../Register/MakeThatButton';
 
 function MenuButtons({ setActiveMenu }) {
     const obj = Object.keys(submenu);

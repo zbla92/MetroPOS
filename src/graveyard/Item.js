@@ -1,5 +1,5 @@
 import '../css/item.css';
-import itemList from '../data/menu.json';
+import itemList from '../data/menus/menu.json';
 import React from 'react';
 
 function Item() {

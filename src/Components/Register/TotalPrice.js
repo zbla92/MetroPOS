@@ -1,4 +1,4 @@
-import '../css/totalPrice.css';
+import '../../css/totalPrice.css';
 import React from 'react';
 
 function TotalPrice({ items }) {

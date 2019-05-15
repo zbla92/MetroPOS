@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../css/item.css';
 
 function ItemToCheck({ items }) {
     const renderList = items.map(e => {

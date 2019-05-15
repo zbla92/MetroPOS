@@ -1,4 +1,4 @@
-import '../css/loadSubmenu.css';
+import '../../css/loadSubmenu.css';
 import React from 'react';
 import ItemToInject from './ItemToInject';
 
