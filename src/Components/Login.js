@@ -70,12 +70,12 @@ function Login({ mainMenu, setLoggedInEmp }) {
             <div className="middle-container">
                 <div className="middle-message">Please enter your passcode</div>
                 <div className="middle-dots-container">
-                    <span className="middle-dots">
+                    <div className="middle-dots">
                         <span>&#11044; </span>
                         <span>&#11044; </span>
                         <span>&#11044; </span>
                         <span>&#11044; </span>
-                    </span>
+                    </div>
                 </div>
             </div>
             <div className="keypad-container">

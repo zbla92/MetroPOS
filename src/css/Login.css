@@ -73,17 +73,25 @@ body {
     align-items: center;
     border-bottom: 2px solid rgba(255, 255, 255, 0.404);
     background-color: #ffffff;
-    letter-spacing: 0.5rem;
     text-shadow: -3px 2px 9px #65978770;
+    padding-left: 20%;
+    padding-right: 20%;
 }
 
 .middle-dots {
-    font-size: 2vh;
+    font-size: 1.9vh;
     color: #c0c0c0;
+    letter-spacing: 0.4vw;
+}
+.middle-dots > span {
+    text-align: center;
+    vertical-align: middle;
 }
 
 .middle-dots-full {
-    font-size: 3vh;
+    font-size: 2.4vh;
+
+    letter-spacing: 0.3vw;
 }
 
 /********** KEYPAD AND BUTTONS **********/
@@ -101,13 +109,16 @@ body {
     width: 10vw;
     background-color: rgba(234, 239, 242, 0);
     border: none;
-    font-size: 350%;
-    color: #475c66;
+    font-size: 6vh;
+    color: #475c66e7;
+    outline: none;
 }
 
 .btn-login:active {
-    background-color: rgb(187, 187, 187);
+    background-color: rgba(170, 177, 180, 0.055);
     transform: translate(2%, 2%);
+    border-radius: 50%;
+    color: #475c66;
 }
 
 .btn-go {

@@ -98,6 +98,7 @@ body {
     font-size: 1.9vh;
     box-shadow: -1px -1px 3px 0px rgba(0, 0, 0, 0.37);
     border-radius: 1px;
+    outline: none;
 }
 .btn-top:active {
     background-color: #4d4d4d;
