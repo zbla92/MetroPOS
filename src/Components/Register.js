@@ -29,17 +29,13 @@ class Register extends React.Component {
                     </div>
                     <div className="info-panel">
                         <div className="logout-btn-container">
-                            <button
-                                className="logout-btn"
-                                onClick={this.props.logging}
-                            >
+                            <button className="logout-btn" onClick={this.props.logging}>
                                 Logout
                             </button>
                         </div>
                         <div className="info-logo">Metro POS</div>
                         <div className="logedin-user">
-                            <i className="user icon" />{' '}
-                            {this.props.loggedInEmp[0].name}
+                            <i className="user icon" /> {this.props.loggedInEmp[0].name}
                         </div>
                     </div>
                 </div>
@@ -51,10 +47,7 @@ class Register extends React.Component {
                             <button className="btn-top">Delivery</button>
                             <button className="btn-top">Number</button>
                         </div>
-                        <div
-                            id="item-injection-place"
-                            className="item-container"
-                        >
+                        <div id="item-injection-place" className="item-container">
                             <div className="item-list-header">
                                 <div className="item-name">Item</div>
                                 <div className="item-info">
@@ -69,10 +62,7 @@ class Register extends React.Component {
                             <TotalPrice items={this.props.items} />
                         </div>
                         <div className="display-buttons-container ">
-                            <button
-                                className="btn-top"
-                                onClick={this.props.voidCheck}
-                            >
+                            <button className="btn-top" onClick={this.props.voidCheck}>
                                 Cancel
                             </button>
                             <button className="btn-top">More</button>
