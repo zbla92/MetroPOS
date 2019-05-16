@@ -6,17 +6,23 @@ import TotalPrice from './Register/TotalPrice';
 import LoadSubmenu from './Register/LoadSubmenu';
 import MenuButtons from './Register/MenuButtons';
 import ItemToCheck from './Register/ItemToCheck';
+import Checkout from './Register/Checkout';
 
 class Register extends React.Component {
     constructor(props) {
         super(props);
 
         this.setActiveMenu = this.setActiveMenu.bind(this);
-        this.state = { activeMenu: Object.values(submenu)[1] };
+        this.goCheckout = this.goCheckout.bind(this);
+        this.state = { activeMenu: Object.values(submenu)[1], checkoutOpen: false };
     }
 
     setActiveMenu(e) {
         this.setState({ activeMenu: e });
+    }
+
+    goCheckout() {
+        this.state.checkoutOpen ? this.setState({ checkoutOpen: false }) : this.setState({ checkoutOpen: true });
     }
 
     render() {
@@ -67,9 +73,10 @@ class Register extends React.Component {
                             </button>
                             <button className="btn-top">More</button>
                             <button className="btn-top">Send</button>
-                            <button id="checkout-btn" className="btn-top">
+                            <button id="checkout-btn" className="btn-top" onClick={this.goCheckout}>
                                 Checkout
                             </button>
+                            {this.state.checkoutOpen ? <Checkout /> : null}
                         </div>
                     </div>
                     <div className="main-right-container">
