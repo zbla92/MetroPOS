@@ -116,9 +116,10 @@ body {
 
 .btn-login:active {
     background-color: rgba(170, 177, 180, 0.055);
-    transform: translate(2%, 2%);
+    transform: translate(0.4%, 0.4%);
     border-radius: 50%;
     color: #475c66;
+    transition: all 0.2s;
 }
 
 .btn-go {

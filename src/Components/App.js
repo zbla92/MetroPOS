@@ -42,18 +42,25 @@ class App extends React.Component {
         });
     }
 
-    //------------ Setting Ordered Items so they dont delete everytime emp logs out
-    setOrderedItem(objArray, newObj) {
-        let controller = false;
-        let setter = objArray;
-        for (let i = 0; i < setter.length; i++) {
-            if (newObj.name === setter[i].name) {
-                setter[i].qty = objArray[i].qty + 1;
-                this.setState({ orderedItems: setter });
-                controller = true;
+    getCurrentIndexOfObject(objArray, newObj) {
+        for (let i = 0; i < objArray.length; i++) {
+            if (newObj.name === objArray[i].name) {
+                return i;
             }
         }
-        if (!controller) {
+
+        return -1;
+    }
+
+    //------------ Setting Ordered Items so they dont delete everytime emp logs out
+    setOrderedItem(objArray, newObj) {
+        const currentIndex = this.getCurrentIndexOfObject(objArray, newObj);
+        let setter = objArray;
+
+        if (currentIndex > -1) {
+            setter[currentIndex].qty = objArray[currentIndex].qty + 1;
+            this.setState({ orderedItems: setter });
+        } else {
             setter.push(newObj);
             this.setState({ orderedItems: setter });
         }
