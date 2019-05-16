@@ -151,6 +151,7 @@ body {
 }
 #checkout-btn {
     background-color: #b58833;
+    z-index: 999;
 }
 #checkout-btn:active {
     background-color: #9b7530;
