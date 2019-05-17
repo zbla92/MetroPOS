@@ -4,8 +4,8 @@
     align-items: center;
     justify-content: center;
     top: 0;
-    left: 30vw;
-    width: 70vw;
+    left: 0;
+    width: 100vw;
     height: 100vh;
     z-index: 997;
     background-color: #0000009a;
@@ -13,10 +13,47 @@
 
 .checkout-container {
     background-color: #000000be;
+    color: #ffffff;
     height: 70vh;
     width: 52vw;
     z-index: 998;
     top: 10vh;
     left: 4vw;
     border-radius: 5px;
+}
+
+.checkout-header {
+    height: 6vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.checkout-header > div > i {
+    font-size: 200%;
+    padding-top: 1vh;
+    padding-right: 2vw;
+}
+
+.hidden-icon {
+    visibility: hidden;
+}
+
+.checkout-body {
+    display: flex;
+    align-items: top;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.checkout-left {
+    background: red;
+    height: 95%;
+    width: 25vw;
+}
+
+.checkout-right {
+    background: green;
+    height: 95%;
+    width: 25vw;
 }

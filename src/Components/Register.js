@@ -76,7 +76,7 @@ class Register extends React.Component {
                             <button id="checkout-btn" className="btn-top" onClick={this.goCheckout}>
                                 Checkout
                             </button>
-                            {this.state.checkoutOpen ? <Checkout /> : null}
+                            {this.state.checkoutOpen ? <Checkout goCheckout={this.goCheckout} /> : null}
                         </div>
                     </div>
                     <div className="main-right-container">

@@ -19,24 +19,36 @@ export class Checkout extends Component {
 
     render() {
         return (
-            <div class="screen-overlay">
-                <div class="checkout-container">
-                    <div class="checkout-header">
-                        <span>Tender</span>
-                        <span>Cancel</span>
+            <div className="screen-overlay">
+                <div className="checkout-container">
+                    <div className="checkout-header">
+                        <div>
+                            <i className="x icon hidden-icon" />
+                        </div>
+                        <div>Tender</div>
+                        <div>
+                            <i className="x icon cancel-icon" onClick={this.props.goCheckout} />
+                        </div>
                     </div>
-                    <div class="checkout-total" />
-                    <div class="checkout-tip">
-                        <span>Tip:</span>
-                        <input type="text" value={this.state.tip} onSubmit={this.addTip} />
-                    </div>
-                    <div class="checkout-tender">
-                        <button type="button" className="cash-btn">
-                            Cash
-                        </button>
-                        <button type="button" className="credit-btn">
-                            Credit
-                        </button>
+                    <div className="checkout-body">
+                        <div className="checkout-left">
+                            <div className="bill-total" />
+                            <div className="balance-due" />
+                        </div>
+                        <div className="checkout-right">
+                            <button type="button" className="cash-btn">
+                                Cash
+                            </button>
+                            <button type="button" className="credit-btn">
+                                Credit
+                            </button>
+                            <button type="button" className="credit-btn">
+                                Tip Adjust
+                            </button>
+                            <button type="button" className="credit-btn">
+                                Print Receipt
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
