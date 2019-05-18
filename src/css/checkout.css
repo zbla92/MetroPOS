@@ -14,11 +14,10 @@
 .checkout-container {
     background-color: #000000be;
     color: #ffffff;
-    height: 70vh;
-    width: 52vw;
+    height: 80vh;
+    width: 28vw;
+    margin-left: 30vw;
     z-index: 998;
-    top: 10vh;
-    left: 4vw;
     border-radius: 5px;
 }
 
@@ -30,9 +29,9 @@
 }
 
 .checkout-header > div > i {
-    font-size: 200%;
+    font-size: 180%;
     padding-top: 1vh;
-    padding-right: 2vw;
+    padding-left: 2vw;
 }
 
 .hidden-icon {
@@ -41,19 +40,37 @@
 
 .checkout-body {
     display: flex;
-    align-items: top;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
     height: 100%;
 }
 
-.checkout-left {
-    background: red;
-    height: 95%;
-    width: 25vw;
+.checkout-totals {
+    display: flex;
+    justify-content: space-evenly;
+    height: 15%;
+    width: 100%;
+    background-color: red;
 }
 
-.checkout-right {
-    background: green;
-    height: 95%;
-    width: 25vw;
+.totals-box {
+    height: 100%;
+    width: 30%;
+    background-color: green;
+    text-align: center;
+}
+
+.checkout-keypad {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    height: 55%;
+    width: 100%;
+    background-color: blue;
+}
+
+.checkout-btn {
+    height: 25%;
+    width: 7vw;
 }
