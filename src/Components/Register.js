@@ -22,7 +22,11 @@ class Register extends React.Component {
     }
 
     goCheckout() {
-        this.state.checkoutOpen ? this.setState({ checkoutOpen: false }) : this.setState({ checkoutOpen: true });
+        this.props.items.length > 0
+            ? this.state.checkoutOpen
+                ? this.setState({ checkoutOpen: false })
+                : this.setState({ checkoutOpen: true })
+            : console.log('ring some items motherfucker');
     }
 
     render() {

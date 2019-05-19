@@ -93,6 +93,10 @@
     width: 100%;
 }
 
+.checkout-tender {
+    height: 25vh;
+}
+
 .checkout-btn {
     height: 23%;
     width: 6.6vw;
