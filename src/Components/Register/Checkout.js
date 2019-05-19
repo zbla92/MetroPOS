@@ -84,11 +84,7 @@ export class Checkout extends Component {
                             </div>
                         </div>
                         <div className="checkout-keypad">
-                            <button
-                                type="button"
-                                className="checkout-btn"
-                                onClick={() => console.log(this.props.checkItems)}
-                            >
+                            <button type="button" className="checkout-btn">
                                 9
                             </button>
                             <button type="button" className="checkout-btn">
