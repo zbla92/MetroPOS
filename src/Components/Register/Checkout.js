@@ -29,15 +29,15 @@ export class Checkout extends Component {
                     <div className="checkout-body">
                         <div className="checkout-totals">
                             <div className="totals-box">
-                                <div>Balance Due:</div>
+                                <div className="totals-box-description">Balance Due:</div>
                                 <div className="totals-balance-due">$5.00</div>
                             </div>
                             <div className="totals-box">
-                                <div>Amount Tendered:</div>
+                                <div className="totals-box-description">Amount Tendered:</div>
                                 <div className="totals-amount">$0.00</div>
                             </div>
                             <div className="totals-box">
-                                <div>Tip:</div>
+                                <div className="totals-box-description">Tip:</div>
                                 <div className="totals-tip">$5.00</div>
                             </div>
                         </div>
