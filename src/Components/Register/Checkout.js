@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import '../../css/checkout.css';
 
 export class Checkout extends Component {
@@ -7,7 +8,11 @@ export class Checkout extends Component {
 
         this.addTip = this.addTip.bind(this);
         this.state = {
-            tip: 0.0
+            tip: 0.0,
+            checks: [],
+            checkItems: [],
+            id: 0,
+            checkToImport: {}
         };
     }
 
@@ -16,6 +21,43 @@ export class Checkout extends Component {
             tip: this.state.tip + e.target.value
         });
     }
+
+    // coded by milanblaz from here
+    componentDidMount() {
+        //Parsing total value of the check
+        const totalValue = document.getElementById('total-value').innerHTML;
+        const taxValue = document.getElementById('total-tax').innerHTML;
+
+        // Building object to inject
+        this.createObj(this.props.checkItems, this.state.id, totalValue, 'amex', this.props.loggedInEmp, taxValue);
+
+        this.state.checkItems = this.props.checkItems;
+        let url = 'http://localhost:3001/checks';
+        axios.get(url).then(res => {
+            this.setState({ checks: res.data, id: res.data.length });
+        });
+    }
+
+    postToServer(object) {
+        let url = 'http://localhost:3001/checks';
+        axios.post(url, object).then(res => {
+            console.log(res.data + 'has been posted');
+        });
+    }
+
+    createObj(itemList, id, total = 0.0, tenderOption = 'Cash', closedBy = 'Jane Doe') {
+        this.setState({
+            checkToImport: {
+                id: id,
+                closedBy: closedBy,
+                tenderOption: tenderOption,
+                items: itemList,
+                total: total
+            }
+        });
+    }
+
+    // coded by milanblaz to here
 
     render() {
         return (
@@ -88,7 +130,13 @@ export class Checkout extends Component {
                             <button type="button" className="checkout-btn">
                                 0
                             </button>
-                            <button type="button" className="checkout-btn">
+                            <button
+                                type="button"
+                                className="checkout-btn"
+                                onClick={e => {
+                                    this.postToServer(this.state.checkToImport);
+                                }}
+                            >
                                 Del
                             </button>
                             <button type="button" className="checkout-btn">

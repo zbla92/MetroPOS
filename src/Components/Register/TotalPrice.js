@@ -34,10 +34,14 @@ function TotalPrice({ items }) {
             </div>
             <div className="tax-container">
                 <div className="total-label">Tax:</div>
-                <div className="total-value">{tax}</div>
+                <div id="total-tax" className="total-value">
+                    {tax}
+                </div>
             </div>
             <div className="complete-total-container">
-                <div className="complete-value">{total}</div>
+                <div id="total-value" className="complete-value">
+                    {total}
+                </div>
             </div>
         </div>
     );

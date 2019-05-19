@@ -26,7 +26,6 @@ class Register extends React.Component {
     }
 
     render() {
-        console.log(this.props);
         return (
             <div>
                 <div className="top-wide-container">
@@ -62,7 +61,7 @@ class Register extends React.Component {
                                     <div className="item-amount">Amount</div>
                                 </div>
                             </div>
-                            <ItemToCheck items={this.props.items} />
+                            <ItemToCheck items={this.props.items} key={this.props.items.name} />
                         </div>
                         <div className="total-prices-box">
                             <TotalPrice items={this.props.items} />
@@ -77,7 +76,11 @@ class Register extends React.Component {
                                 Checkout
                             </button>
                             {this.state.checkoutOpen ? (
-                                <Checkout goCheckout={this.goCheckout} checkItems={this.props.items} />
+                                <Checkout
+                                    goCheckout={this.goCheckout}
+                                    checkItems={this.props.items}
+                                    loggedInEmp={this.props.loggedInEmp}
+                                />
                             ) : null}
                         </div>
                     </div>
