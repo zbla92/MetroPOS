@@ -6,10 +6,10 @@ function TotalPrice({ items }) {
     let tax = 0;
     let subtotal = 0;
 
-    items.map(e => {
-        let tempValue = e.price * e.qty;
-        total = total + tempValue;
-    });
+    for (let i = 0; i < items.length; i++) {
+        let tempValue = items[i].price * items[i].qty;
+        total += tempValue;
+    }
 
     function calcTax(total) {
         tax = total * 0.0875;
