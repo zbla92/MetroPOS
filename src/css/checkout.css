@@ -11,6 +11,8 @@
     background-color: #0000009a;
 }
 
+/***** MAIN CONTAINER *****/
+
 .checkout-container {
     background-color: #161617;
     color: #e9e9e9;
@@ -20,6 +22,8 @@
     z-index: 998;
     border-radius: 5px;
 }
+
+/***** HEADER *****/
 
 .checkout-header {
     height: 6vh;
@@ -38,6 +42,8 @@
     visibility: hidden;
 }
 
+/***** BODY *****/
+
 .checkout-body {
     display: flex;
     align-items: center;
@@ -45,6 +51,8 @@
     flex-direction: column;
     height: 100%;
 }
+
+/****** TOTAL BOXES ON TOP ******/
 
 .checkout-totals {
     display: flex;
@@ -83,6 +91,8 @@
     text-align: right;
 }
 
+/******* KEYPAD *******/
+
 .checkout-keypad {
     display: flex;
     align-items: flex-start;
@@ -93,9 +103,17 @@
     width: 100%;
 }
 
+/******** BOTTOM CONTAINER ********/
+
 .checkout-tender {
-    height: 25vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 18vh;
+    width: 100%;
 }
+
+/******* BUTTONS ********/
 
 .checkout-btn {
     height: 23%;
@@ -105,4 +123,28 @@
     font-size: 150%;
     border: 1px solid #6b6b6b;
     border-radius: 5px;
+    outline: none;
+}
+
+.bottom-btn {
+    height: 6vh;
+    width: 10vw;
+    border: none;
+    background-color: #515151;
+    color: #f1f1f1;
+    box-shadow: -1px -1px 3px 0px rgba(0, 0, 0, 0.37);
+    border-radius: 1px;
+    outline: none;
+}
+
+.bottom-btn:active {
+    background-color: #4d4d4d;
+    color: rgb(204, 202, 202);
+}
+
+#tender-btn {
+    background-color: #b58833;
+}
+#tender-btn:active {
+    background-color: #9b7530;
 }
