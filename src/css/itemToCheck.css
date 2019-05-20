@@ -5,11 +5,20 @@
     margin-bottom: 0.5vh;
     margin-left: 0.3vw;
     margin-right: 0.3vw;
-    min-height: 5vh;
+    min-height: 6vh;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.281);
     border-radius: 1px;
+    color: rgba(255, 255, 255, 0.788);
 }
+
+.active-itm {
+    background-color: rgba(245, 245, 245, 0.425);
+    border-left: 2px solid rgba(219, 12, 12, 0.89);
+    color: rgba(0, 0, 0, 0.801);
+    transition: all 0.3s;
+}
+
 .item-bdy-info {
     display: flex;
 }
@@ -19,7 +28,6 @@
 .item-bdy-amount {
     font-size: 1.7vh;
     font-weight: 500;
-    color: rgba(255, 255, 255, 0.788);
 }
 .item-bdy-name {
     min-width: 8.5vw;

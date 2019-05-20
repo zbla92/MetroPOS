@@ -1,8 +1,22 @@
 import React from 'react';
 
-function RenderItemToCheck({ name, qty, price, amount }) {
+function RenderItemToCheck({ name, qty, price, amount, id }) {
+    function checkForId(e) {
+        if (e.target.parentNode.parentNode.id.length > 1 && e.target.parentNode.parentNode.id.length < 10) {
+            return document.getElementById(e.target.parentNode.parentNode.id);
+        } else if (e.target.parentNode.id.length > 1 && e.target.parentNode.id.length < 10) {
+            return document.getElementById(e.target.parentNode.id);
+        } else return document.getElementById(e.target.id);
+    }
     return (
-        <div className="item-bdy-list">
+        <div
+            id={`itm-${id}`}
+            className="item-bdy-list"
+            onClick={e => {
+                let item = checkForId(e);
+                item.classList.toggle('active-itm');
+            }}
+        >
             <div className="item-bdy-name">{name}</div>
             <div className="item-bdy-info">
                 <div className="item-bdy-qty">{qty}</div>
