@@ -7,11 +7,13 @@ export class Checkout extends Component {
         super(props);
 
         this.enterAmount = this.enterAmount.bind(this);
+        this.delDigit = this.delDigit.bind(this);
+        this.delAll = this.delAll.bind(this);
         this.addTip = this.addTip.bind(this);
         this.state = {
             totalValue: document.getElementById('total-value').innerHTML,
             taxValue: document.getElementById('total-tax').innerHTML,
-            tendered: 0,
+            tendered: '',
             tip: 0.0,
             checks: [],
             checkItems: [],
@@ -24,9 +26,18 @@ export class Checkout extends Component {
         this.setState({
             tendered: this.state.tendered + e.target.innerHTML
         });
-        // : this.setState({
-        //       tendered: (this.state.tendered + e.target.innerHTML).substring(1, this.state.tendered.length - 1)
-        //   });
+    }
+
+    delDigit() {
+        this.setState({
+            tendered: this.state.tendered.substring(0, this.state.tendered.length - 1)
+        });
+    }
+
+    delAll() {
+        this.setState({
+            tendered: ''
+        });
     }
 
     addTip(e) {
@@ -96,7 +107,7 @@ export class Checkout extends Component {
                             </div>
                             <div className="totals-box">
                                 <div className="totals-box-description">Amount Tendered:</div>
-                                <div className="totals-amount">${parseInt(this.state.tendered) / 100}</div>
+                                <div className="totals-amount">${parseFloat(this.state.tendered / 100).toFixed(2)}</div>
                             </div>
                             <div className="totals-box">
                                 <div className="totals-box-description">Tip:</div>
@@ -114,7 +125,7 @@ export class Checkout extends Component {
                                 7
                             </button>
                             <button type="button" className="checkout-btn">
-                                TIP 15%
+                                $5.00
                             </button>
                             <button type="button" className="checkout-btn" onClick={this.enterAmount}>
                                 6
@@ -126,7 +137,7 @@ export class Checkout extends Component {
                                 4
                             </button>
                             <button type="button" className="checkout-btn">
-                                TIP 20%
+                                $10.00
                             </button>
                             <button type="button" className="checkout-btn" onClick={this.enterAmount}>
                                 3
@@ -138,29 +149,30 @@ export class Checkout extends Component {
                                 1
                             </button>
                             <button type="button" className="checkout-btn">
-                                TIP 25%
+                                $20.00
                             </button>
-                            <button type="button" className="checkout-btn">
+                            <button type="button" className="checkout-btn" onClick={this.delAll}>
                                 C
                             </button>
                             <button type="button" className="checkout-btn" onClick={this.enterAmount}>
                                 0
                             </button>
+                            <button type="button" className="checkout-btn" onClick={this.delDigit}>
+                                Del
+                            </button>
+                            <button type="button" className="checkout-btn">
+                                TIP
+                            </button>
+                        </div>
+                        <div className="checkout-tender">
                             <button
                                 type="button"
-                                className="checkout-btn"
+                                className="bottom-btn"
+                                id="tender-btn"
                                 onClick={e => {
                                     this.postToServer(this.state.checkToImport);
                                 }}
                             >
-                                Del
-                            </button>
-                            <button type="button" className="checkout-btn">
-                                CUSTOM TIP
-                            </button>
-                        </div>
-                        <div className="checkout-tender">
-                            <button type="button" className="bottom-btn" id="tender-btn">
                                 TENDER
                             </button>
                             <button type="button" className="bottom-btn" id="receipt-btn">
