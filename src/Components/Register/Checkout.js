@@ -8,6 +8,8 @@ export class Checkout extends Component {
 
         this.addTip = this.addTip.bind(this);
         this.state = {
+            totalValue: document.getElementById('total-value').innerHTML,
+            taxValue: document.getElementById('total-tax').innerHTML,
             tip: 0.0,
             checks: [],
             checkItems: [],
@@ -72,7 +74,7 @@ export class Checkout extends Component {
                         <div className="checkout-totals">
                             <div className="totals-box">
                                 <div className="totals-box-description">Balance Due:</div>
-                                <div className="totals-balance-due">$5.00</div>
+                                <div className="totals-balance-due">${this.state.totalValue}</div>
                             </div>
                             <div className="totals-box">
                                 <div className="totals-box-description">Amount Tendered:</div>
@@ -139,7 +141,14 @@ export class Checkout extends Component {
                                 CUSTOM TIP
                             </button>
                         </div>
-                        <div className="checkout-tender" />
+                        <div className="checkout-tender">
+                            <button type="button" className="bottom-btn" id="tender-btn">
+                                TENDER
+                            </button>
+                            <button type="button" className="bottom-btn" id="receipt-btn">
+                                PRINT RECEIPT
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>

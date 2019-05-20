@@ -103,7 +103,6 @@ body {
 .btn-top:active {
     background-color: #4d4d4d;
     color: rgb(204, 202, 202);
-    transition: all 0.15s;
 }
 /*Items header*/
 .item-container {
