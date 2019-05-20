@@ -1,8 +1,10 @@
 import React from 'react';
+import RenderItemToCheck from './RenderItemToCheck';
 import '../../css/item.css';
 
 function ItemToCheck({ items }) {
     const renderList = items.map(e => {
+        let id = items.indexOf(e) + 1;
         const name = e.name;
         let price = e.price;
         const qty = e.qty;
@@ -10,16 +12,7 @@ function ItemToCheck({ items }) {
         amount = amount.toFixed(2);
         price = price.toFixed(2);
 
-        return (
-            <div className="item-bdy-list" onClick={e => console.log(items)}>
-                <div className="item-bdy-name">{name}</div>
-                <div className="item-bdy-info">
-                    <div className="item-bdy-qty">{qty}</div>
-                    <div className="item-bdy-unit">{price}</div>
-                    <div className="item-bdy-amount">{amount}</div>
-                </div>
-            </div>
-        );
+        return <RenderItemToCheck key={id} name={name} price={price} qty={qty} amount={amount} />;
     });
     return renderList;
 }

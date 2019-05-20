@@ -14,7 +14,7 @@ class Register extends React.Component {
 
         this.setActiveMenu = this.setActiveMenu.bind(this);
         this.goCheckout = this.goCheckout.bind(this);
-        this.state = { activeMenu: Object.values(submenu)[1], checkoutOpen: false };
+        this.state = { activeMenu: Object.values(submenu)[4], checkoutOpen: false };
     }
 
     setActiveMenu(e) {
