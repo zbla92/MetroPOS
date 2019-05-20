@@ -29,7 +29,7 @@ export class Checkout extends Component {
         const taxValue = document.getElementById('total-tax').innerHTML;
 
         // Building object to inject
-        this.createObj(this.props.checkItems, this.state.id, totalValue, 'amex', this.props.loggedInEmp, taxValue);
+        this.createObj(this.props.checkItems, this.state.id, totalValue, 'amex', this.props.loggedInEmp[0].name, taxValue);
 
         this.state.checkItems = this.props.checkItems;
         let url = 'http://localhost:3001/checks';

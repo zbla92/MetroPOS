@@ -2,97 +2,25 @@
   "checks": [
     {
       "id": 1,
-      "closedBy": "Jane Doe",
+      "closedBy": "Leanne Graham",
       "tenderOption": "amex",
       "items": [
-        {
-          "name": "Bacon Ranch Pasta Salad",
-          "image": "http://static.food2fork.com/580466da88.jpg",
-          "price": 5,
-          "qty": 1,
-          "flagged": false
-        },
-        {
-          "name": "NY Style Chopped Salad",
-          "image": "http://static.food2fork.com/choppedsalad7709.jpg",
-          "price": 5,
-          "qty": 1,
-          "flagged": false
-        },
         {
           "name": "Cobb Salad",
           "image": "http://static.food2fork.com/649156e4fb.jpg",
           "price": 11,
-          "qty": 1,
+          "qty": 2,
           "flagged": false
         },
         {
-          "name": "Sparkling Whater",
-          "image": "https://media.mercola.com/assets/images/foodfacts/sparkling-water.jpg",
-          "price": 1.99,
-          "qty": 1,
+          "name": "Vietnameese Banh Mi Salad",
+          "image": "http://static.food2fork.com/IMG_28181180x1807551.jpg",
+          "price": 11,
+          "qty": 2,
           "flagged": false
         }
       ],
-      "total": "22.99"
-    },
-    {
-      "id": 2,
-      "closedBy": [
-        {
-          "id": 2000,
-          "name": "Ervin Howell",
-          "username": "Antonette",
-          "email": "Shanna@melissa.tv",
-          "address": {
-            "street": "Victor Plains",
-            "suite": "Suite 879",
-            "city": "Wisokyburgh",
-            "zipcode": "90566-7771"
-          },
-          "phone": "010-692-6593 x09125"
-        }
-      ],
-      "tenderOption": "amex",
-      "items": [
-        {
-          "name": "Bacon Ranch Pasta Salad",
-          "image": "http://static.food2fork.com/580466da88.jpg",
-          "price": 5,
-          "qty": 1,
-          "flagged": false
-        }
-      ],
-      "total": "5.00"
-    },
-    {
-      "id": 3,
-      "closedBy": [
-        {
-          "id": 2000,
-          "name": "Ervin Howell",
-          "username": "Antonette",
-          "email": "Shanna@melissa.tv",
-          "address": {
-            "street": "Victor Plains",
-            "suite": "Suite 879",
-            "city": "Wisokyburgh",
-            "zipcode": "90566-7771"
-          },
-          "phone": "010-692-6593 x09125"
-        }
-      ],
-      "tenderOption": "amex",
-      "items": [
-        {
-          "name": "Summer Green Bean Salad",
-          "image": "http://static.food2fork.com/contigo_greenbean_salad7e71.jpg",
-          "price": 15.2,
-          "qty": 1,
-          "flagged": false
-        }
-      ],
-      "total": "15.20"
+      "total": "44.00"
     }
   ]
 }
