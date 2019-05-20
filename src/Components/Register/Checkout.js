@@ -6,16 +6,27 @@ export class Checkout extends Component {
     constructor(props) {
         super(props);
 
+        this.enterAmount = this.enterAmount.bind(this);
         this.addTip = this.addTip.bind(this);
         this.state = {
             totalValue: document.getElementById('total-value').innerHTML,
             taxValue: document.getElementById('total-tax').innerHTML,
+            tendered: 0,
             tip: 0.0,
             checks: [],
             checkItems: [],
             id: 0,
             checkToImport: {}
         };
+    }
+
+    enterAmount(e) {
+        this.setState({
+            tendered: this.state.tendered + e.target.innerHTML
+        });
+        // : this.setState({
+        //       tendered: (this.state.tendered + e.target.innerHTML).substring(1, this.state.tendered.length - 1)
+        //   });
     }
 
     addTip(e) {
@@ -31,7 +42,14 @@ export class Checkout extends Component {
         const taxValue = document.getElementById('total-tax').innerHTML;
 
         // Building object to inject
-        this.createObj(this.props.checkItems, this.state.id, totalValue, 'amex', this.props.loggedInEmp[0].name, taxValue);
+        this.createObj(
+            this.props.checkItems,
+            this.state.id,
+            totalValue,
+            'amex',
+            this.props.loggedInEmp[0].name,
+            taxValue
+        );
 
         this.state.checkItems = this.props.checkItems;
         let url = 'http://localhost:3001/checks';
@@ -78,7 +96,7 @@ export class Checkout extends Component {
                             </div>
                             <div className="totals-box">
                                 <div className="totals-box-description">Amount Tendered:</div>
-                                <div className="totals-amount">$0.00</div>
+                                <div className="totals-amount">${parseInt(this.state.tendered) / 100}</div>
                             </div>
                             <div className="totals-box">
                                 <div className="totals-box-description">Tip:</div>
@@ -86,37 +104,37 @@ export class Checkout extends Component {
                             </div>
                         </div>
                         <div className="checkout-keypad">
-                            <button type="button" className="checkout-btn">
+                            <button type="button" className="checkout-btn" onClick={this.enterAmount}>
                                 9
                             </button>
-                            <button type="button" className="checkout-btn">
+                            <button type="button" className="checkout-btn" onClick={this.enterAmount}>
                                 8
                             </button>
-                            <button type="button" className="checkout-btn">
+                            <button type="button" className="checkout-btn" onClick={this.enterAmount}>
                                 7
                             </button>
                             <button type="button" className="checkout-btn">
                                 TIP 15%
                             </button>
-                            <button type="button" className="checkout-btn">
+                            <button type="button" className="checkout-btn" onClick={this.enterAmount}>
                                 6
                             </button>
-                            <button type="button" className="checkout-btn">
+                            <button type="button" className="checkout-btn" onClick={this.enterAmount}>
                                 5
                             </button>
-                            <button type="button" className="checkout-btn">
+                            <button type="button" className="checkout-btn" onClick={this.enterAmount}>
                                 4
                             </button>
                             <button type="button" className="checkout-btn">
                                 TIP 20%
                             </button>
-                            <button type="button" className="checkout-btn">
+                            <button type="button" className="checkout-btn" onClick={this.enterAmount}>
                                 3
                             </button>
-                            <button type="button" className="checkout-btn">
+                            <button type="button" className="checkout-btn" onClick={this.enterAmount}>
                                 2
                             </button>
-                            <button type="button" className="checkout-btn">
+                            <button type="button" className="checkout-btn" onClick={this.enterAmount}>
                                 1
                             </button>
                             <button type="button" className="checkout-btn">
@@ -125,7 +143,7 @@ export class Checkout extends Component {
                             <button type="button" className="checkout-btn">
                                 C
                             </button>
-                            <button type="button" className="checkout-btn">
+                            <button type="button" className="checkout-btn" onClick={this.enterAmount}>
                                 0
                             </button>
                             <button
