@@ -13,9 +13,8 @@
 }
 
 .active-itm {
-    background-color: rgba(245, 245, 245, 0.425);
-    border-left: 2px solid rgba(219, 12, 12, 0.89);
-    color: rgba(0, 0, 0, 0.801);
+    background-color: rgba(245, 245, 245, 0.075);
+    border-left: 2px solid rgba(219, 78, 12, 0.89);
     transition: all 0.3s;
 }
 

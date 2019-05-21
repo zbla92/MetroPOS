@@ -29,6 +29,12 @@ class Register extends React.Component {
             : console.log('ring some items motherfucker');
     }
 
+    removeAllClassNames(className) {
+        let el = document.getElementsByClassName(className);
+        el[0].classList.remove('active-itm');
+        if (el[0]) this.removeAllClassNames(className);
+    }
+
     render() {
         return (
             <div>
@@ -65,14 +71,24 @@ class Register extends React.Component {
                                     <div className="item-amount">Amount</div>
                                 </div>
                             </div>
-                            <ItemToCheck items={this.props.items} key={this.props.items.name} />
+                            <ItemToCheck
+                                items={this.props.items}
+                                key={this.props.items.name}
+                                updateOrderedItems={this.props.updateOrderedItems}
+                            />
                         </div>
                         <div className="total-prices-box">
                             <TotalPrice items={this.props.items} />
                         </div>
                         <div className="display-buttons-container ">
-                            <button className="btn-top" onClick={this.props.voidCheck}>
-                                Cancel
+                            <button
+                                className="btn-top"
+                                onClick={e => {
+                                    this.props.voidCheck(this.props.items);
+                                    this.removeAllClassNames('active-itm');
+                                }}
+                            >
+                                Delete
                             </button>
                             <button className="btn-top">More</button>
                             <button className="btn-top">Send</button>
