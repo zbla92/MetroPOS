@@ -7,6 +7,7 @@ export class Checkout extends Component {
         super(props);
 
         this.enterAmount = this.enterAmount.bind(this);
+        this.enterPresetAmount = this.enterPresetAmount.bind(this);
         this.delDigit = this.delDigit.bind(this);
         this.delAll = this.delAll.bind(this);
         this.addTip = this.addTip.bind(this);
@@ -23,9 +24,20 @@ export class Checkout extends Component {
     }
 
     enterAmount(e) {
-        this.setState({
-            tendered: this.state.tendered + e.target.innerHTML
-        });
+        if (this.state.tendered.length < 7) {
+            this.setState({
+                tendered: this.state.tendered + e.target.innerHTML
+            });
+        }
+    }
+
+    enterPresetAmount(e) {
+        let amount = (parseInt(this.state.tendered) || 0) + parseInt(e.target.value);
+        if (this.state.tendered.length < 7) {
+            this.setState({
+                tendered: amount.toString()
+            });
+        }
     }
 
     delDigit() {
@@ -124,7 +136,7 @@ export class Checkout extends Component {
                             <button type="button" className="checkout-btn" onClick={this.enterAmount}>
                                 7
                             </button>
-                            <button type="button" className="checkout-btn">
+                            <button type="button" className="checkout-btn" value="500" onClick={this.enterPresetAmount}>
                                 $5.00
                             </button>
                             <button type="button" className="checkout-btn" onClick={this.enterAmount}>
@@ -136,7 +148,12 @@ export class Checkout extends Component {
                             <button type="button" className="checkout-btn" onClick={this.enterAmount}>
                                 4
                             </button>
-                            <button type="button" className="checkout-btn">
+                            <button
+                                type="button"
+                                className="checkout-btn"
+                                value="1000"
+                                onClick={this.enterPresetAmount}
+                            >
                                 $10.00
                             </button>
                             <button type="button" className="checkout-btn" onClick={this.enterAmount}>
@@ -148,7 +165,12 @@ export class Checkout extends Component {
                             <button type="button" className="checkout-btn" onClick={this.enterAmount}>
                                 1
                             </button>
-                            <button type="button" className="checkout-btn">
+                            <button
+                                type="button"
+                                className="checkout-btn"
+                                value="2000"
+                                onClick={this.enterPresetAmount}
+                            >
                                 $20.00
                             </button>
                             <button type="button" className="checkout-btn" onClick={this.delAll}>
@@ -161,7 +183,7 @@ export class Checkout extends Component {
                                 Del
                             </button>
                             <button type="button" className="checkout-btn">
-                                TIP
+                                Exact Cash
                             </button>
                         </div>
                         <div className="checkout-tender">
