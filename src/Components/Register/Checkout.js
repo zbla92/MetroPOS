@@ -10,7 +10,7 @@ export class Checkout extends Component {
         this.enterPresetAmount = this.enterPresetAmount.bind(this);
         this.delDigit = this.delDigit.bind(this);
         this.delAll = this.delAll.bind(this);
-        this.addTip = this.addTip.bind(this);
+        this.toggleClass = this.toggleClass.bind(this);
         this.state = {
             totalValue: document.getElementById('total-value').innerHTML,
             taxValue: document.getElementById('total-tax').innerHTML,
@@ -52,10 +52,11 @@ export class Checkout extends Component {
         });
     }
 
-    addTip(e) {
-        this.setState({
-            tip: this.state.tip + e.target.value
-        });
+    // reused from RenderItemToCheck
+    toggleClass(el, className) {
+        if (el) {
+            el.classList.toggle(className);
+        }
     }
 
     // coded by milanblaz from here
@@ -200,7 +201,14 @@ export class Checkout extends Component {
                             <button type="button" className="bottom-btn" id="receipt-btn">
                                 PRINT RECEIPT
                             </button>
-                            <button type="button" className="bottom-btn" id="tip-btn">
+                            <button
+                                type="button"
+                                className="bottom-btn"
+                                id="tip-btn"
+                                onClick={e => {
+                                    return this.toggleClass(e.target, 'active-tip');
+                                }}
+                            >
                                 TIP
                             </button>
                             <button type="button" className="bottom-btn" id="random-btn">

@@ -138,6 +138,10 @@
     outline: none;
 }
 
+.active-tip {
+    background: green;
+}
+
 .bottom-btn:active {
     background-color: #4d4d4d;
     color: rgb(204, 202, 202);
