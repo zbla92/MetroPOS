@@ -42,6 +42,7 @@ class App extends React.Component {
         });
     }
 
+    //------------ Setting Ordered Items so they dont delete everytime emp logs out
     getCurrentIndexOfObject(objArray, newObj) {
         for (let i = 0; i < objArray.length; i++) {
             if (newObj.name === objArray[i].name) {
@@ -52,7 +53,6 @@ class App extends React.Component {
         return -1;
     }
 
-    //------------ Setting Ordered Items so they dont delete everytime emp logs out
     setOrderedItem(objArray, newObj) {
         const currentIndex = this.getCurrentIndexOfObject(objArray, newObj);
         let setter = objArray;
@@ -66,10 +66,16 @@ class App extends React.Component {
         }
     }
 
+    updateOrderedItems = objArray => {
+        this.setState({ orderedItems: objArray });
+    };
+
     //------ Clear transaction ------//
-    voidCheck() {
+    voidCheck(listOfItems) {
+        let itemsHolder = listOfItems;
+        const result = itemsHolder.filter(itemsHolder => itemsHolder.flagged === false);
         this.setState({
-            orderedItems: []
+            orderedItems: result
         });
     }
 
@@ -106,6 +112,7 @@ class App extends React.Component {
                         items={this.state.orderedItems}
                         voidCheck={this.voidCheck}
                         loggedInEmp={this.state.loggedInEmp}
+                        updateOrderedItems={this.updateOrderedItems}
                     />
                 </div>
             );
