@@ -31,8 +31,10 @@ class Register extends React.Component {
 
     removeAllClassNames(className) {
         let el = document.getElementsByClassName(className);
-        el[0].classList.remove('active-itm');
-        if (el[0]) this.removeAllClassNames(className);
+        if (el.length > 0) {
+            el[0].classList.remove('active-itm');
+            if (el[0]) this.removeAllClassNames(className);
+        }
     }
 
     render() {
