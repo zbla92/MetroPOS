@@ -14,8 +14,17 @@ function RenderItemToCheck({ name, qty, price, amount, id, items, updateOrderedI
     function flagItemInState(e, updateOrderedItems) {
         let listOfItems = items;
         const id = e.id.slice(4);
-        listOfItems[id - 1].flagged = true;
+        if (!listOfItems[id - 1].flagged) {
+            listOfItems[id - 1].flagged = true;
+        } else listOfItems[id - 1].flagged = false;
+
         updateOrderedItems(listOfItems);
+    }
+
+    function toggleClass(el, className) {
+        if (el) {
+            el.classList.toggle(className);
+        }
     }
 
     return (
@@ -25,7 +34,7 @@ function RenderItemToCheck({ name, qty, price, amount, id, items, updateOrderedI
             onClick={e => {
                 let item = checkForId(e);
                 flagItemInState(item, updateOrderedItems);
-                item.classList.toggle('active-itm');
+                toggleClass(item, 'active-itm');
             }}
         >
             <div className="item-bdy-name">{name}</div>
