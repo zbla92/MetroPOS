@@ -107,6 +107,7 @@
 
 .checkout-tender {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
     height: 18vh;
@@ -142,9 +143,9 @@
     color: rgb(204, 202, 202);
 }
 
-#tender-btn {
+#excash-btn {
     background-color: #b58833;
 }
-#tender-btn:active {
+#excash-btn:active {
     background-color: #9b7530;
 }

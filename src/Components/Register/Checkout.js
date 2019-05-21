@@ -26,7 +26,7 @@ export class Checkout extends Component {
     enterAmount(e) {
         if (this.state.tendered.length < 7) {
             this.setState({
-                tendered: this.state.tendered + e.target.innerHTML
+                tendered: this.state.tendered.concat(e.target.textContent)
             });
         }
     }
@@ -182,7 +182,7 @@ export class Checkout extends Component {
                             <button type="button" className="checkout-btn" onClick={this.delDigit}>
                                 Del
                             </button>
-                            <button type="button" className="checkout-btn">
+                            <button type="button" className="checkout-btn" id="excash-btn">
                                 Exact Cash
                             </button>
                         </div>
@@ -199,6 +199,12 @@ export class Checkout extends Component {
                             </button>
                             <button type="button" className="bottom-btn" id="receipt-btn">
                                 PRINT RECEIPT
+                            </button>
+                            <button type="button" className="bottom-btn" id="tip-btn">
+                                TIP
+                            </button>
+                            <button type="button" className="bottom-btn" id="random-btn">
+                                RANDOM
                             </button>
                         </div>
                     </div>
