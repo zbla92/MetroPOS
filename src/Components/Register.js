@@ -37,6 +37,15 @@ class Register extends React.Component {
         }
     }
 
+    scrollToBottom = (id) => {
+        const div = document.getElementById(id);
+        div.scrollTop = div.scrollHeight - div.clientHeight;
+    }
+
+    componentDidUpdate(){
+        this.scrollToBottom('item-injection-place')
+    }
+
     render() {
         return (
             <div>

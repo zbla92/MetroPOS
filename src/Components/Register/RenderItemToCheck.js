@@ -25,7 +25,8 @@ function RenderItemToCheck({ name, qty, price, amount, id, items, updateOrderedI
             el.classList.toggle(className);
         }
     }
-
+    
+    
     return (
         <div
             id={`itm-${id}`}
@@ -44,5 +45,6 @@ function RenderItemToCheck({ name, qty, price, amount, id, items, updateOrderedI
             </div>
         </div>
     );
+    
 }
 export default RenderItemToCheck;
