@@ -114,6 +114,7 @@ class Register extends React.Component {
                                     goCheckout={this.goCheckout}
                                     checkItems={this.props.items}
                                     loggedInEmp={this.props.loggedInEmp}
+                                    updateOrderedItems={this.props.updateOrderedItems}
                                 />
                             ) : null}
                         </div>
