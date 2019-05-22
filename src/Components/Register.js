@@ -37,15 +37,6 @@ class Register extends React.Component {
         }
     }
 
-    scrollToBottom = (id) => {
-        const div = document.getElementById(id);
-        div.scrollTop = div.scrollHeight - div.clientHeight;
-    }
-
-    componentDidUpdate(){
-        this.scrollToBottom('item-injection-place')
-    }
-
     render() {
         return (
             <div>
@@ -83,13 +74,12 @@ class Register extends React.Component {
                                 </div>
                             </div>
                         </div>
-                        <div  id="item-injection-place" className="item-container" >
-
+                        <div id="item-injection-place" className="item-container">
                             <ItemToCheck
                                 items={this.props.items}
                                 key={this.props.items.name}
                                 updateOrderedItems={this.props.updateOrderedItems}
-                                />
+                            />
                         </div>
                         <div className="total-prices-box">
                             <TotalPrice items={this.props.items} />

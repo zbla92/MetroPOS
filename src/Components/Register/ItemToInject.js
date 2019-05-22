@@ -9,15 +9,20 @@ function ItemToInject({ name, image, price, setOrderedItem, items }) {
         qty: 1,
         flagged: false
     };
+    // Async scroll function to scroll the check display to the bottom  all the time as you ring the items
+    const scrollToBottom = id => {
+        setTimeout(() => {
+            const div = document.getElementById(id);
+            div.scrollTop = div.scrollHeight - div.clientHeight;
+        }, 1);
+    };
 
-   
-
-    
     return (
         <div
             className="img-container"
             onClick={() => {
                 setOrderedItem(items, arr);
+                scrollToBottom('item-injection-place');
             }}
         >
             <div className="img-div">

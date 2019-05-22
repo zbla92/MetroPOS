@@ -10,6 +10,7 @@
     background-color: rgba(0, 0, 0, 0.281);
     border-radius: 1px;
     color: rgba(255, 255, 255, 0.788);
+    overflow: hidden;
 }
 
 .active-itm {

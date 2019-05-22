@@ -12,7 +12,6 @@ function ItemToCheck({ items, updateOrderedItems }) {
         amount = amount.toFixed(2);
         price = price.toFixed(2);
 
-
         return (
             <RenderItemToCheck
                 key={id}
