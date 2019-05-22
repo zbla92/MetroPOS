@@ -82,6 +82,10 @@ export class Checkout extends Component {
         });
     }
 
+    clearCurrentItems(func){
+        const  emptyArr= [];
+        func(emptyArr);
+    }
 
     postToServer(object) {
         let url = 'http://localhost:3001/checks';
@@ -195,7 +199,7 @@ export class Checkout extends Component {
                                 id="tender-btn"
                                 onClick={e => {
                                     this.postToServer(this.state.checkToImport);
-                                    (this.props.updateOrderedItems([]))
+                                    this.clearCurrentItems(this.props.updateOrderedItems)
                                 }}
                             >
                                 TENDER
