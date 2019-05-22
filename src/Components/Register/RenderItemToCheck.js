@@ -1,7 +1,6 @@
 import React from 'react';
 
 function RenderItemToCheck({ name, qty, price, amount, id, items, updateOrderedItems }) {
-    console.log(items);
     //UnspaghettyTheCode function call
     function checkForId(e) {
         if (e.target.parentNode.parentNode.id.length > 1 && e.target.parentNode.parentNode.id.length < 10) {

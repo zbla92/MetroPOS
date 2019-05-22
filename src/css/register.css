@@ -110,7 +110,7 @@ body {
 }
 /*Items header*/
 .item-container {
-    height: 60vh;
+    height: 55vh;
     overflow: scroll;
 }
 .item-container::-webkit-scrollbar {
@@ -182,19 +182,19 @@ body {
 
 .submenu-selection-container {
     width: 69vw;
-    margin-left: 30.5vw;
+    padding-left: 0.9vw;
     height: 14vh;
     margin-top: 1vh;
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
+    justify-content: center
+    
 }
 
 .submenu-selection-container > button {
     margin: 0 0.1vw;
+    min-width: 7.3vw
+
 }
-.button-row {
-    margin-top: 0.2vh;
-    margin-left: 0.5vw;
-    margin-right: 0.5vw;
-}
+

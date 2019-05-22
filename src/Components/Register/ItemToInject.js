@@ -9,11 +9,20 @@ function ItemToInject({ name, image, price, setOrderedItem, items }) {
         qty: 1,
         flagged: false
     };
+
+    const scrollToBottom = (id) => {
+        const div = document.getElementById(id);
+        div.scrollTop = div.scrollHeight - div.clientHeight;
+        console.log()
+    }
+
+    
     return (
         <div
             className="img-container"
             onClick={() => {
                 setOrderedItem(items, arr);
+                scrollToBottom('item-injection-place')
             }}
         >
             <div className="img-div">

@@ -64,7 +64,7 @@ class Register extends React.Component {
                             <button className="btn-top">Delivery</button>
                             <button className="btn-top">Number</button>
                         </div>
-                        <div id="item-injection-place" className="item-container">
+                        <div className="item-container-header">
                             <div className="item-list-header">
                                 <div className="item-name">Item</div>
                                 <div className="item-info">
@@ -73,11 +73,14 @@ class Register extends React.Component {
                                     <div className="item-amount">Amount</div>
                                 </div>
                             </div>
+                        </div>
+                        <div  id="item-injection-place" className="item-container" >
+
                             <ItemToCheck
                                 items={this.props.items}
                                 key={this.props.items.name}
                                 updateOrderedItems={this.props.updateOrderedItems}
-                            />
+                                />
                         </div>
                         <div className="total-prices-box">
                             <TotalPrice items={this.props.items} />
