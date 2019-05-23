@@ -10,9 +10,8 @@ function RenderItemToCheck({ name, qty, price, amount, id, items, updateOrderedI
         } else return document.getElementById(e.target.id);
     }
 
-    function flagItemInState(e, updateOrderedItems) {
+    function flagItemInState(id, updateOrderedItems) {
         let listOfItems = items;
-        const id = e.id.slice(4);
         if (!listOfItems[id - 1].flagged) {
             listOfItems[id - 1].flagged = true;
         } else listOfItems[id - 1].flagged = false;
@@ -25,15 +24,14 @@ function RenderItemToCheck({ name, qty, price, amount, id, items, updateOrderedI
             el.classList.toggle(className);
         }
     }
-    
-    
+
     return (
         <div
             id={`itm-${id}`}
             className="item-bdy-list"
             onClick={e => {
                 let item = checkForId(e);
-                flagItemInState(item, updateOrderedItems);
+                flagItemInState(id, updateOrderedItems);
                 toggleClass(item, 'active-itm');
             }}
         >
@@ -45,6 +43,5 @@ function RenderItemToCheck({ name, qty, price, amount, id, items, updateOrderedI
             </div>
         </div>
     );
-    
 }
 export default RenderItemToCheck;

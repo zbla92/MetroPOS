@@ -1,4 +1,4 @@
-import '../../css/itemToInject.css';
+import './itemToInject.css';
 import React from 'react';
 
 function ItemToInject({ name, image, price, setOrderedItem, items }) {

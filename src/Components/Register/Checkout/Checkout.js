@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import '../../css/checkout.css';
+import './checkout.css';
 
 export class Checkout extends Component {
     constructor(props) {
@@ -61,18 +61,14 @@ export class Checkout extends Component {
 
     // coded by milanblaz from here
     componentDidMount() {
-        //Parsing total value of the check
-        const totalValue = document.getElementById('total-value').innerHTML;
-        const taxValue = document.getElementById('total-tax').innerHTML;
-
         // Building object to inject
         this.createObj(
             this.props.checkItems,
             this.state.id,
-            totalValue,
+            this.state.totalValue,
             'amex',
             this.props.loggedInEmp[0].name,
-            taxValue
+            this.state.taxValue
         );
 
         this.state.checkItems = this.props.checkItems;
@@ -82,8 +78,8 @@ export class Checkout extends Component {
         });
     }
 
-    clearCurrentItems(func){
-        const  emptyArr= [];
+    clearCurrentItems(func) {
+        const emptyArr = [];
         func(emptyArr);
     }
 
@@ -199,7 +195,7 @@ export class Checkout extends Component {
                                 id="tender-btn"
                                 onClick={e => {
                                     this.postToServer(this.state.checkToImport);
-                                    this.clearCurrentItems(this.props.updateOrderedItems)
+                                    // this.clearCurrentItems(this.props.updateOrderedItems)
                                 }}
                             >
                                 TENDER

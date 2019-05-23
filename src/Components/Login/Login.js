@@ -1,24 +1,20 @@
-import '../css/Login.css';
-import img from '../css/imgs/back.png';
+import './Login.css';
+import img from './img/back.png';
 import React, { useState } from 'react';
-import Clock from './Clock';
-import employees from '../data/emps/people.json';
+import Clock from '../Clock';
+import employees from '../../data/emps/people.json';
 
 function Login({ mainMenu, setLoggedInEmp }) {
     const [keyCode, setKeyCode] = useState('');
     let [dot, setDot] = useState(1);
 
     const logIn = () => {
-        let loggedIn = employees.emp.filter(
-            emp => emp.id === parseInt(keyCode)
-        );
+        let loggedIn = employees.emp.filter(emp => emp.id === parseInt(keyCode));
         setLoggedInEmp(loggedIn);
         if (!loggedIn.length) {
             setKeyCode('');
             setDot(1);
-            const allDots = document
-                .querySelector('.middle-dots')
-                .getElementsByTagName('span');
+            const allDots = document.querySelector('.middle-dots').getElementsByTagName('span');
             for (let i = 0; i < allDots.length; i++) {
                 allDots[i].classList.add('animated', 'flash', 'fast');
                 allDots[i].style.color = '#b33a3a';
@@ -38,9 +34,7 @@ function Login({ mainMenu, setLoggedInEmp }) {
     const codeEntry = e => {
         if (keyCode.length < 4) {
             setKeyCode(keyCode.concat(e.target.textContent));
-            let nthDot = document.querySelector(
-                `.middle-dots span:nth-child(${dot})`
-            );
+            let nthDot = document.querySelector(`.middle-dots span:nth-child(${dot})`);
             nthDot.classList.add('middle-dots-full');
             nthDot.style.color = '#659787';
             setDot(dot + 1);
@@ -50,9 +44,7 @@ function Login({ mainMenu, setLoggedInEmp }) {
     const delEntry = () => {
         if (dot > 1) {
             setKeyCode(keyCode.slice(0, keyCode.length - 1));
-            let nthDot = document.querySelector(
-                `.middle-dots span:nth-child(${dot - 1})`
-            );
+            let nthDot = document.querySelector(`.middle-dots span:nth-child(${dot - 1})`);
             nthDot.classList.remove('middle-dots-full');
             nthDot.style.color = '#c0c0c0';
             setDot(dot - 1);
@@ -106,21 +98,13 @@ function Login({ mainMenu, setLoggedInEmp }) {
                 <button type="button" className="btn-login" onClick={codeEntry}>
                     9
                 </button>
-                <button
-                    type="button"
-                    className="btn-login btn-back"
-                    onClick={delEntry}
-                >
+                <button type="button" className="btn-login btn-back" onClick={delEntry}>
                     <img className="back-btn" src={img} alt="" />
                 </button>
                 <button type="button" className="btn-login" onClick={codeEntry}>
                     0
                 </button>
-                <button
-                    type="button"
-                    className="btn-login btn-go"
-                    onClick={logIn}
-                >
+                <button type="button" className="btn-login btn-go" onClick={logIn}>
                     <div className="btn-go-overlay">
                         <i className="chevron right icon arrow-icon" />
                     </div>

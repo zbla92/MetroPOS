@@ -122,8 +122,8 @@
     background-color: #161617;
     color: #e9e9e9;
     font-size: 150%;
-    border: 1px solid #6b6b6b;
-    border-radius: 5px;
+    border: 1px solid #6b6b6baf;
+    border-radius: 1px;
     outline: none;
 }
 
@@ -149,6 +149,7 @@
 
 #excash-btn {
     background-color: #b58833;
+    font-size: 2.5vh;
 }
 #excash-btn:active {
     background-color: #9b7530;

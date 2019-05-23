@@ -1,6 +1,6 @@
-import '../../css/loadSubmenu.css';
+import './loadSubmenu.css';
 import React from 'react';
-import ItemToInject from './ItemToInject';
+import ItemToInject from './ItemToInject/ItemToInject';
 
 const LoadSubmenu = ({ submenuName, setOrderedItem, items }) => {
     // Ovdje sam radio destructuring na props

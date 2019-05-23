@@ -1,8 +1,7 @@
 import React from 'react';
-import Login from './Login';
-import MainMenu from './MainMenu';
-import Register from './Register';
-import FloatingScreen from './FloatingScreen';
+import Login from './Login/Login';
+import MainMenu from './MainMenu/MainMenu';
+import Register from './Register/Register';
 
 class App extends React.Component {
     constructor(props) {
@@ -114,12 +113,6 @@ class App extends React.Component {
                         loggedInEmp={this.state.loggedInEmp}
                         updateOrderedItems={this.updateOrderedItems}
                     />
-                </div>
-            );
-        } else if (this.state.loadedComponent === 'FloatingScreen') {
-            return (
-                <div>
-                    <FloatingScreen />
                 </div>
             );
         }

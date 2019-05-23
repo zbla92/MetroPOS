@@ -1,12 +1,12 @@
-import '../css/register.css';
+import './register.css';
 import React from 'react';
-import Clock from './Clock';
-import submenu from '../data/menus/menu.json';
-import TotalPrice from './Register/TotalPrice';
-import LoadSubmenu from './Register/LoadSubmenu';
-import MenuButtons from './Register/MenuButtons';
-import ItemToCheck from './Register/ItemToCheck';
-import Checkout from './Register/Checkout';
+import Clock from '../Clock';
+import submenu from '../../data/menus/menu.json';
+import TotalPrice from './TotalPrice/TotalPrice';
+import LoadSubmenu from './LoadSubmenu/LoadSubmenu';
+import MenuButtons from './MenuButtons/MenuButtons';
+import ItemToCheck from './ItemToCheck/ItemToCheck';
+import Checkout from './Checkout/Checkout';
 
 class Register extends React.Component {
     constructor(props) {

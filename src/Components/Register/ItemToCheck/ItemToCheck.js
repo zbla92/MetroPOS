@@ -1,6 +1,6 @@
 import React from 'react';
-import RenderItemToCheck from './RenderItemToCheck';
-import '../../css/itemToCheck.css';
+import RenderItemToCheck from './RenderItemToCheck/RenderItemToCheck';
+import './itemToCheck.css';
 
 function ItemToCheck({ items, updateOrderedItems }) {
     const renderList = items.map(e => {
