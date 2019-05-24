@@ -110,7 +110,7 @@ export class Checkout extends Component {
                 <div className="checkout-container">
                     <div className="checkout-header">
                         <div>
-                            <i className="x icon cancel-icon" onClick={this.props.goCheckout} />
+                            <i className="x icon cancel-icon" onClick={this.props.closeCheckout} />
                         </div>
                     </div>
                     <div className="checkout-body">
@@ -195,7 +195,7 @@ export class Checkout extends Component {
                                 id="tender-btn"
                                 onClick={e => {
                                     this.postToServer(this.state.checkToImport);
-                                    // this.clearCurrentItems(this.props.updateOrderedItems)
+                                    this.clearCurrentItems(this.props.updateOrderedItems);
                                 }}
                             >
                                 TENDER

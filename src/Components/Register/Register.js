@@ -11,23 +11,22 @@ import Checkout from './Checkout/Checkout';
 class Register extends React.Component {
     constructor(props) {
         super(props);
-
-        this.setActiveMenu = this.setActiveMenu.bind(this);
-        this.goCheckout = this.goCheckout.bind(this);
         this.state = { activeMenu: Object.values(submenu)[4], checkoutOpen: false };
     }
 
-    setActiveMenu(e) {
+    setActiveMenu = e => {
         this.setState({ activeMenu: e });
-    }
+    };
 
-    goCheckout() {
-        this.props.items.length > 0
-            ? this.state.checkoutOpen
-                ? this.setState({ checkoutOpen: false })
-                : this.setState({ checkoutOpen: true })
-            : console.log('ring some items motherfucker');
-    }
+    goCheckout = () => {
+        if (this.props.items.length > 0) this.setState({ checkoutOpen: true });
+    };
+
+    closeCheckout = () => {
+        this.setState({
+            checkoutOpen: false
+        });
+    };
 
     removeAllClassNames(className) {
         let el = document.getElementsByClassName(className);
@@ -102,6 +101,7 @@ class Register extends React.Component {
                             {this.state.checkoutOpen ? (
                                 <Checkout
                                     goCheckout={this.goCheckout}
+                                    closeCheckout={this.closeCheckout}
                                     checkItems={this.props.items}
                                     loggedInEmp={this.props.loggedInEmp}
                                     updateOrderedItems={this.props.updateOrderedItems}
