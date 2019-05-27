@@ -61,6 +61,7 @@ export class Checkout extends Component {
 
     // coded by milanblaz from here
     componentDidMount() {
+        this.props.getAllOpenedChecks();
         // Building object to inject
         this.createObj(
             this.props.checkItems,
@@ -71,7 +72,7 @@ export class Checkout extends Component {
             this.state.taxValue
         );
 
-        this.state.checkItems = this.props.checkItems;
+        this.setState({ checkItems: this.props.checkItems });
         let url = 'http://localhost:3001/checks';
         axios.get(url).then(res => {
             this.setState({ checks: res.data, id: res.data.length });
@@ -85,9 +86,14 @@ export class Checkout extends Component {
 
     postToServer(object) {
         let url = 'http://localhost:3001/checks';
-        axios.post(url, object).then(res => {
-            console.log(res.data + 'has been posted');
-        });
+        axios
+            .post(url, object)
+            .then(res => {
+                this.clearCurrentItems(this.props.updateOrderedItems);
+            })
+            .catch(error => {
+                return alert('Authorization failed, contact support.');
+            });
     }
 
     createObj(itemList, id, total = 0.0, tenderOption = 'Cash', closedBy = 'Jane Doe') {
@@ -110,7 +116,13 @@ export class Checkout extends Component {
                 <div className="checkout-container">
                     <div className="checkout-header">
                         <div>
-                            <i className="x icon cancel-icon" onClick={this.props.closeCheckout} />
+                            <i
+                                className="x icon cancel-icon"
+                                onClick={e => {
+                                    this.props.closeCheckout();
+                                    this.props.getAllOpenedChecks();
+                                }}
+                            />
                         </div>
                     </div>
                     <div className="checkout-body">
@@ -195,7 +207,6 @@ export class Checkout extends Component {
                                 id="tender-btn"
                                 onClick={e => {
                                     this.postToServer(this.state.checkToImport);
-                                    this.clearCurrentItems(this.props.updateOrderedItems);
                                 }}
                             >
                                 TENDER

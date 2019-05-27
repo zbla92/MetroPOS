@@ -1,0 +1,30 @@
+.tables {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(20, 20, 20, 0.924);
+    color: rgb(228, 228, 228);
+    font-size: 7vh;
+    z-index: 999;
+}
+.exit-tables {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.table-injection-place {
+    margin-top: 10vh;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.table-container {
+    padding-top: 2vh;
+    min-width: 20vw;
+    font-size: 4vh;
+}

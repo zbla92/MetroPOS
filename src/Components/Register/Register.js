@@ -1,5 +1,7 @@
 import './register.css';
 import React from 'react';
+import axios from 'axios';
+
 import Clock from '../Clock';
 import submenu from '../../data/menus/menu.json';
 import TotalPrice from './TotalPrice/TotalPrice';
@@ -7,11 +9,21 @@ import LoadSubmenu from './LoadSubmenu/LoadSubmenu';
 import MenuButtons from './MenuButtons/MenuButtons';
 import ItemToCheck from './ItemToCheck/ItemToCheck';
 import Checkout from './Checkout/Checkout';
+import Tables from './Tables/Tables';
 
 class Register extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { activeMenu: Object.values(submenu)[4], checkoutOpen: false };
+        this.state = {
+            activeMenu: Object.values(submenu)[4],
+            checkoutOpen: false,
+            tablesOpen: false,
+            openedTables: []
+        };
+    }
+
+    componentDidMount() {
+        this.getAllOpenedChecks();
     }
 
     setActiveMenu = e => {
@@ -22,19 +34,42 @@ class Register extends React.Component {
         if (this.props.items.length > 0) this.setState({ checkoutOpen: true });
     };
 
+    goTables = () => {
+        console.log('activated');
+        if (this.state.tablesOpen) {
+            this.setState({ tablesOpen: false });
+        } else {
+            this.setState({ tablesOpen: true });
+        }
+    };
+
+    listenTables = () => {
+        if (this.state.tablesOpen) {
+            return <Tables openedTables={this.state.openedTables} updateOrderedItems={this.props.updateOrderedItems} />;
+        }
+    };
+
     closeCheckout = () => {
         this.setState({
             checkoutOpen: false
         });
     };
 
-    removeAllClassNames(className) {
+    removeAllClassNames = className => {
         let el = document.getElementsByClassName(className);
         if (el.length > 0) {
             el[0].classList.remove('active-itm');
             if (el[0]) this.removeAllClassNames(className);
         }
-    }
+    };
+
+    getAllOpenedChecks = () => {
+        let url = 'http://localhost:3001/checks';
+        axios.get(url).then(res => {
+            this.setState({ openedTables: res.data });
+            console.log('updated');
+        });
+    };
 
     render() {
         return (
@@ -61,7 +96,15 @@ class Register extends React.Component {
                             <button className="btn-top">To go</button>
                             <button className="btn-top">Tab</button>
                             <button className="btn-top">Delivery</button>
-                            <button className="btn-top">Number</button>
+                            <button
+                                className="btn-top"
+                                onClick={e => {
+                                    this.goTables();
+                                }}
+                            >
+                                Number
+                                {this.listenTables()}
+                            </button>
                         </div>
                         <div className="item-container-header">
                             <div className="item-list-header">
@@ -105,6 +148,7 @@ class Register extends React.Component {
                                     checkItems={this.props.items}
                                     loggedInEmp={this.props.loggedInEmp}
                                     updateOrderedItems={this.props.updateOrderedItems}
+                                    getAllOpenedChecks={this.getAllOpenedChecks}
                                 />
                             ) : null}
                         </div>
