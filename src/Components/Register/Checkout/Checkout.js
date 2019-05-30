@@ -11,8 +11,6 @@ export class Checkout extends Component {
         this.delDigit = this.delDigit.bind(this);
         this.delAll = this.delAll.bind(this);
         this.toggleClass = this.toggleClass.bind(this);
-        this.putToServer = this.putToServer.bind(this);
-        this.postToServer = this.postToServer.bind(this);
         this.state = {
             totalValue: document.getElementById('total-value').innerHTML,
             taxValue: document.getElementById('total-tax').innerHTML,
@@ -67,9 +65,16 @@ export class Checkout extends Component {
         this.props.getAllOpenedChecks();
         this.setState({ checkItems: this.props.checkItems, checks: this.props.openedTables });
         // Building object to inject
-        this.createObj(this.props.checkItems, this.state.id, this.state.totalValue, 'amex', this.props.loggedInEmp[0].name, this.state.taxValue );
-        
-        this.fetchChecks = (this.state.url);
+        this.createObj(
+            this.props.checkItems,
+            this.state.id,
+            this.state.totalValue,
+            'amex',
+            this.props.loggedInEmp[0].name,
+            this.state.taxValue
+        );
+
+        this.fetchChecks = this.state.url;
     }
 
     // fetchChecks(url){
@@ -84,7 +89,7 @@ export class Checkout extends Component {
     }
 
     //Pushing new  check that will gain new ID on server side
-    postToServer(object){
+    postToServer = object => {
         let url = 'http://localhost:3001/checks';
         axios
             .post(url, object)
@@ -94,27 +99,28 @@ export class Checkout extends Component {
             .catch(error => {
                 return alert('Authorization failed, contact support.');
             });
-    }
+    };
     // Updating check that was already pushed to server
-    putToServer = (object) => {
+    putToServer = object => {
         let url = `http://localhost:3001/checks/${this.state.id}`;
-        axios.put(url, object)
-        .then(res => {
-            this.clearCurrentItems(this.props.updateOrderedItems);
-        })
-        .catch(error => {
-            return alert("Authorization failed, contact support bruh!")
-        })
-    }
+        axios
+            .put(url, object)
+            .then(res => {
+                this.clearCurrentItems(this.props.updateOrderedItems);
+            })
+            .catch(error => {
+                return alert('Authorization failed, contact support bruh!');
+            });
+    };
 
     //Decidiing whather we need to push or post check
-    pushOrPost = (object, numberofOpenedChecks, pushObj, postObj) =>{
-        if(object.id <= numberofOpenedChecks){
-           postObj(object)
-        }else if(object.id > numberofOpenedChecks){
-            pushObj(object)
+    pushOrPost = (object, numberofOpenedChecks, pushObj, postObj) => {
+        if (object.id <= numberofOpenedChecks) {
+            postObj(object);
+        } else if (object.id > numberofOpenedChecks) {
+            pushObj(object);
         }
-    }
+    };
 
     createObj(itemList, id, total = 0.0, tenderOption = 'Cash', closedBy = 'Jane Doe') {
         this.setState({
@@ -129,6 +135,16 @@ export class Checkout extends Component {
     }
 
     // coded by milanblaz to here
+
+    //Delete after testings-----------------------------------------
+    child1 = () => {
+        console.log('child1');
+    };
+    child2 = () => {
+        console.log('child2');
+    };
+
+    //---------------------------------------------------------------
 
     render() {
         return (
@@ -226,7 +242,12 @@ export class Checkout extends Component {
                                 className="bottom-btn"
                                 id="tender-btn"
                                 onClick={e => {
-                                    this.pushOrPost(this.state.checkToImport, this.state.checks.length, this.pushObj, this.postToServer)
+                                    this.pushOrPost(
+                                        this.state.checkToImport,
+                                        this.state.checks.length,
+                                        this.postToServer,
+                                        this.putToServer
+                                    );
                                 }}
                             >
                                 TENDER
