@@ -51,11 +51,13 @@ class Register extends React.Component {
     //If State tablesOpen is True - Tables componenet will mount
     listenTables = () => {
         if (this.state.tablesOpen) {
-            return <Tables 
-                    openedTables={this.state.openedTables} 
-                    updateOrderedItems={this.props.updateOrderedItems} 
-                    setCheckID={this.props.setCheckID} 
-                    />;
+            return (
+                <Tables
+                    openedTables={this.state.openedTables}
+                    updateOrderedItems={this.props.updateOrderedItems}
+                    setCheckID={this.props.setCheckID}
+                />
+            );
         }
     };
 
@@ -79,7 +81,7 @@ class Register extends React.Component {
     getAllOpenedChecks = () => {
         let url = 'http://localhost:3001/checks';
         axios.get(url).then(res => {
-            this.setState({ openedTables: res.data, newCheckID: res.data.length + 1});
+            this.setState({ openedTables: res.data, newCheckID: res.data.length + 1 });
             console.log('updated');
         });
     };
@@ -97,7 +99,10 @@ class Register extends React.Component {
                                 <button className="logout-btn" onClick={this.props.logging}>
                                     Logout
                                 </button>
-                                <p className="check-id"><i className="file alternate icon" />{this.props.checkID}</p>
+                                <p className="check-id">
+                                    <i className="file alternate icon" />
+                                    {this.props.checkID}
+                                </p>
                             </div>
                         </div>
                         <div className="info-logo">Metro POS</div>
@@ -110,8 +115,7 @@ class Register extends React.Component {
                     <div className="main-left-container floater-left">
                         <div className="display-buttons-container">
                             <button className="btn-top">To go</button>
-                            <button 
-                            className="btn-top" >Tab</button>
+                            <button className="btn-top">Tab</button>
                             <button className="btn-top">Delivery</button>
                             <button
                                 className="btn-top"
@@ -169,6 +173,7 @@ class Register extends React.Component {
                                     updateCheckID={this.props.updateCheckID}
                                     checkID={this.props.checkID}
                                     openedTables={this.state.openedTables}
+                                    reRend={this.reRend}
                                 />
                             ) : null}
                         </div>

@@ -22,8 +22,8 @@ class App extends React.Component {
         };
     }
     //----------------------- Methods to manipulate components loading / unloading-------//
-    componentDidMount(){
-       this.updateCheckID()
+    componentDidMount() {
+        this.updateCheckID();
     }
 
     // Login Component controller
@@ -72,22 +72,21 @@ class App extends React.Component {
             this.setState({ orderedItems: setter });
         }
     }
-//-----------------------------------------------------//
-    // Method used to completely change ordered items. 
+    //-----------------------------------------------------//
+    // Method used to completely change ordered items.
     updateOrderedItems = objArray => {
         this.setState({ orderedItems: objArray });
     };
 
-    
     updateCheckID = () => {
-        axios.get('http://localhost:3001/checks')
-        .then(res => {
-            this.setState({ checkID: res.data.length + 1 })
-        })
-    }
-    setCheckID = (id) => {
-        this.setState({ checkID: id })
-    }
+        axios.get('http://localhost:3001/checks').then(res => {
+            this.setState({ checkID: res.data.length + 1 });
+            console.log(res.data.length + 1);
+        });
+    };
+    setCheckID = id => {
+        this.setState({ checkID: id });
+    };
 
     //------ Clear transaction ------//
     voidCheck(listOfItems) {

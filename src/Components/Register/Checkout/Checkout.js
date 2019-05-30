@@ -136,16 +136,6 @@ export class Checkout extends Component {
 
     // coded by milanblaz to here
 
-    //Delete after testings-----------------------------------------
-    child1 = () => {
-        console.log('child1');
-    };
-    child2 = () => {
-        console.log('child2');
-    };
-
-    //---------------------------------------------------------------
-
     render() {
         return (
             <div className="screen-overlay">
@@ -157,6 +147,7 @@ export class Checkout extends Component {
                                 onClick={e => {
                                     this.props.closeCheckout();
                                     this.props.getAllOpenedChecks();
+                                    this.props.updateCheckID();
                                 }}
                             />
                         </div>
@@ -176,65 +167,75 @@ export class Checkout extends Component {
                                 <div className="totals-tip">$5.00</div>
                             </div>
                         </div>
-                        <div className="checkout-keypad">
-                            <button type="button" className="checkout-btn" onClick={this.enterAmount}>
-                                9
-                            </button>
-                            <button type="button" className="checkout-btn" onClick={this.enterAmount}>
-                                8
-                            </button>
-                            <button type="button" className="checkout-btn" onClick={this.enterAmount}>
-                                7
-                            </button>
-                            <button type="button" className="checkout-btn" value="500" onClick={this.enterPresetAmount}>
-                                $5.00
-                            </button>
-                            <button type="button" className="checkout-btn" onClick={this.enterAmount}>
-                                6
-                            </button>
-                            <button type="button" className="checkout-btn" onClick={this.enterAmount}>
-                                5
-                            </button>
-                            <button type="button" className="checkout-btn" onClick={this.enterAmount}>
-                                4
-                            </button>
-                            <button
-                                type="button"
-                                className="checkout-btn"
-                                value="1000"
-                                onClick={this.enterPresetAmount}
-                            >
-                                $10.00
-                            </button>
-                            <button type="button" className="checkout-btn" onClick={this.enterAmount}>
-                                3
-                            </button>
-                            <button type="button" className="checkout-btn" onClick={this.enterAmount}>
-                                2
-                            </button>
-                            <button type="button" className="checkout-btn" onClick={this.enterAmount}>
-                                1
-                            </button>
-                            <button
-                                type="button"
-                                className="checkout-btn"
-                                value="2000"
-                                onClick={this.enterPresetAmount}
-                            >
-                                $20.00
-                            </button>
-                            <button type="button" className="checkout-btn" onClick={this.delAll}>
-                                C
-                            </button>
-                            <button type="button" className="checkout-btn" onClick={this.enterAmount}>
-                                0
-                            </button>
-                            <button type="button" className="checkout-btn" onClick={this.delDigit}>
-                                Del
-                            </button>
-                            <button type="button" className="checkout-btn" id="excash-btn">
-                                Exact Cash
-                            </button>
+                        <div className="mid-checkout-container">
+                            <div className="checkout-keypad">
+                                <button type="button" className="checkout-btn" onClick={this.enterAmount}>
+                                    9
+                                </button>
+                                <button type="button" className="checkout-btn" onClick={this.enterAmount}>
+                                    8
+                                </button>
+                                <button type="button" className="checkout-btn" onClick={this.enterAmount}>
+                                    7
+                                </button>
+                                <button
+                                    type="button"
+                                    className="checkout-btn"
+                                    value="500"
+                                    onClick={this.enterPresetAmount}
+                                >
+                                    $5.00
+                                </button>
+                                <button type="button" className="checkout-btn" onClick={this.enterAmount}>
+                                    6
+                                </button>
+                                <button type="button" className="checkout-btn" onClick={this.enterAmount}>
+                                    5
+                                </button>
+                                <button type="button" className="checkout-btn" onClick={this.enterAmount}>
+                                    4
+                                </button>
+                                <button
+                                    type="button"
+                                    className="checkout-btn"
+                                    value="1000"
+                                    onClick={this.enterPresetAmount}
+                                >
+                                    $10.00
+                                </button>
+                                <button type="button" className="checkout-btn" onClick={this.enterAmount}>
+                                    3
+                                </button>
+                                <button type="button" className="checkout-btn" onClick={this.enterAmount}>
+                                    2
+                                </button>
+                                <button type="button" className="checkout-btn" onClick={this.enterAmount}>
+                                    1
+                                </button>
+                                <button
+                                    type="button"
+                                    className="checkout-btn"
+                                    value="2000"
+                                    onClick={this.enterPresetAmount}
+                                >
+                                    $20.00
+                                </button>
+                                <button type="button" className="checkout-btn" onClick={this.delAll}>
+                                    C
+                                </button>
+                                <button type="button" className="checkout-btn" onClick={this.enterAmount}>
+                                    0
+                                </button>
+                                <button type="button" className="checkout-btn" onClick={this.delDigit}>
+                                    Del
+                                </button>
+                                <button type="button" className="checkout-btn" id="excash-btn">
+                                    Exact Cash
+                                </button>
+                            </div>
+                            <div className="tender-container">
+                                <button>tender</button>
+                            </div>
                         </div>
                         <div className="checkout-tender">
                             <button
@@ -253,7 +254,7 @@ export class Checkout extends Component {
                                 TENDER
                             </button>
                             <button type="button" className="bottom-btn" id="receipt-btn">
-                                PRINT RECEIPT
+                                PRINT
                             </button>
                             <button
                                 type="button"
