@@ -1,0 +1,56 @@
+{
+  "checks": [
+    {
+      "id": 1,
+      "closedBy": "Jane Doe",
+      "tenderOption": "amex",
+      "items": [
+        {
+          "name": "Quinoa Black Bean Burgers",
+          "image": "http://static.food2fork.com/9679903713.jpg",
+          "price": 14.99,
+          "qty": 1,
+          "flagged": false
+        }
+      ],
+      "total": "14.99"
+    },
+    {
+      "id": 2,
+      "closedBy": "Jane Doe",
+      "tenderOption": "amex",
+      "items": [
+        {
+          "name": "Ultimate Veggie Burger",
+          "image": "http://static.food2fork.com/ultimateveggieburgerrecipe49ac.jpg",
+          "price": 9.49,
+          "qty": 2,
+          "flagged": false
+        }
+      ],
+      "total": "18.98"
+    },
+    {
+      "id": 3,
+      "closedBy": "Jane Doe",
+      "tenderOption": "amex",
+      "items": [
+        {
+          "name": "Ultimate Veggie Burger",
+          "image": "http://static.food2fork.com/ultimateveggieburgerrecipe49ac.jpg",
+          "price": 9.49,
+          "qty": 6,
+          "flagged": false
+        },
+        {
+          "name": "Black Bean Burger",
+          "image": "http://static.food2fork.com/507107991f.jpg",
+          "price": 5.99,
+          "qty": 20,
+          "flagged": false
+        }
+      ],
+      "total": "176.74"
+    }
+  ]
+}

@@ -2,6 +2,7 @@ import React from 'react';
 import Login from './Login/Login';
 import MainMenu from './MainMenu/MainMenu';
 import Register from './Register/Register';
+import axios from 'axios';
 
 class App extends React.Component {
     constructor(props) {
@@ -16,9 +17,15 @@ class App extends React.Component {
         this.state = {
             loadedComponent: 'Register',
             orderedItems: [],
-            loggedInEmp: ' '
+            loggedInEmp: ' ',
+            checkID: 0
         };
     }
+    //----------------------- Methods to manipulate components loading / unloading-------//
+    componentDidMount(){
+       this.updateCheckID()
+    }
+
     // Login Component controller
     logging() {
         this.setState({
@@ -42,6 +49,7 @@ class App extends React.Component {
     }
 
     //------------ Setting Ordered Items so they dont delete everytime emp logs out
+    // Aleksej Todorovic contributed to this method
     getCurrentIndexOfObject(objArray, newObj) {
         for (let i = 0; i < objArray.length; i++) {
             if (newObj.name === objArray[i].name) {
@@ -64,10 +72,22 @@ class App extends React.Component {
             this.setState({ orderedItems: setter });
         }
     }
-
+//-----------------------------------------------------//
+    // Method used to completely change ordered items. 
     updateOrderedItems = objArray => {
         this.setState({ orderedItems: objArray });
     };
+
+    
+    updateCheckID = () => {
+        axios.get('http://localhost:3001/checks')
+        .then(res => {
+            this.setState({ checkID: res.data.length + 1 })
+        })
+    }
+    setCheckID = (id) => {
+        this.setState({ checkID: id })
+    }
 
     //------ Clear transaction ------//
     voidCheck(listOfItems) {
@@ -112,6 +132,9 @@ class App extends React.Component {
                         voidCheck={this.voidCheck}
                         loggedInEmp={this.state.loggedInEmp}
                         updateOrderedItems={this.updateOrderedItems}
+                        checkID={this.state.checkID}
+                        updateCheckID={this.updateCheckID}
+                        setCheckID={this.setCheckID}
                     />
                 </div>
             );

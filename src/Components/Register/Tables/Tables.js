@@ -10,7 +10,7 @@ export default class Tables extends React.Component {
     renderChecks(arrayOfChecks, updateOrderedItems) {
         if (arrayOfChecks.length > 0) {
             const result = arrayOfChecks.map(e => {
-                return <RenderTables updateOrderedItems={updateOrderedItems} table={e} key={e.id} />;
+                return <RenderTables updateOrderedItems={updateOrderedItems} table={e} key={e.id} setCheckID={this.props.setCheckID} />;
             });
             return result;
         }

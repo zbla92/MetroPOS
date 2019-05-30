@@ -41,7 +41,7 @@ body {
 }
 .logout-btn-container {
     padding-left: 1vw;
-    min-width: 9vw;
+    min-width: 30vw;
 }
 .logedin-user {
     display: flex;
@@ -50,7 +50,7 @@ body {
     font-size: 1.8vh;
     font-weight: 500;
     color: #d4d4d4;
-    min-width: 9vw
+    min-width: 30vw
 }
 
 .logout-btn {
@@ -70,7 +70,17 @@ body {
 
 .info-logo {
     font-size: 3vh;
-    color: #f1f1f1a1;
+    color: #f1f1f167;
+}
+
+.left-info-container{
+    display: flex;
+}
+.check-id{
+    font-size: 2.2vh;
+    padding-left: 2vw;
+    color: #ffffff71;
+    padding-top: 0.4vh;    
 }
 /***************Bottom  CONTAINER******************/
 .bottom-wide-container {

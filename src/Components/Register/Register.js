@@ -18,24 +18,29 @@ class Register extends React.Component {
             activeMenu: Object.values(submenu)[4],
             checkoutOpen: false,
             tablesOpen: false,
-            openedTables: []
+            openedTables: [],
+            newCheckID: -1
         };
     }
 
+    // calling methors on mounting register
     componentDidMount() {
+        // Fetching opened checks from server DB
         this.getAllOpenedChecks();
     }
 
+    // Setting active menu, on submenu click, state will change causing chain reaction to render selected submenu
     setActiveMenu = e => {
         this.setState({ activeMenu: e });
     };
 
+    // Mounting Checout component
     goCheckout = () => {
         if (this.props.items.length > 0) this.setState({ checkoutOpen: true });
     };
 
+    // This will change state that will trigger Table componenet to mount
     goTables = () => {
-        console.log('activated');
         if (this.state.tablesOpen) {
             this.setState({ tablesOpen: false });
         } else {
@@ -43,18 +48,25 @@ class Register extends React.Component {
         }
     };
 
+    //If State tablesOpen is True - Tables componenet will mount
     listenTables = () => {
         if (this.state.tablesOpen) {
-            return <Tables openedTables={this.state.openedTables} updateOrderedItems={this.props.updateOrderedItems} />;
+            return <Tables 
+                    openedTables={this.state.openedTables} 
+                    updateOrderedItems={this.props.updateOrderedItems} 
+                    setCheckID={this.props.setCheckID} 
+                    />;
         }
     };
 
+    // method to close unload checkout component
     closeCheckout = () => {
         this.setState({
             checkoutOpen: false
         });
     };
 
+    // removing all items with class  "className"
     removeAllClassNames = className => {
         let el = document.getElementsByClassName(className);
         if (el.length > 0) {
@@ -63,10 +75,11 @@ class Register extends React.Component {
         }
     };
 
+    //fetching opened checks from server db and storing in state of register component as openedtables, and newCheckID is ID for check that is available to be posted to server
     getAllOpenedChecks = () => {
         let url = 'http://localhost:3001/checks';
         axios.get(url).then(res => {
-            this.setState({ openedTables: res.data });
+            this.setState({ openedTables: res.data, newCheckID: res.data.length + 1});
             console.log('updated');
         });
     };
@@ -80,9 +93,12 @@ class Register extends React.Component {
                     </div>
                     <div className="info-panel">
                         <div className="logout-btn-container">
-                            <button className="logout-btn" onClick={this.props.logging}>
-                                Logout
-                            </button>
+                            <div className="left-info-container">
+                                <button className="logout-btn" onClick={this.props.logging}>
+                                    Logout
+                                </button>
+                                <p className="check-id"><i className="file alternate icon" />{this.props.checkID}</p>
+                            </div>
                         </div>
                         <div className="info-logo">Metro POS</div>
                         <div className="logedin-user">
@@ -94,7 +110,8 @@ class Register extends React.Component {
                     <div className="main-left-container floater-left">
                         <div className="display-buttons-container">
                             <button className="btn-top">To go</button>
-                            <button className="btn-top">Tab</button>
+                            <button 
+                            className="btn-top" >Tab</button>
                             <button className="btn-top">Delivery</button>
                             <button
                                 className="btn-top"
@@ -149,6 +166,9 @@ class Register extends React.Component {
                                     loggedInEmp={this.props.loggedInEmp}
                                     updateOrderedItems={this.props.updateOrderedItems}
                                     getAllOpenedChecks={this.getAllOpenedChecks}
+                                    updateCheckID={this.props.updateCheckID}
+                                    checkID={this.props.checkID}
+                                    openedTables={this.state.openedTables}
                                 />
                             ) : null}
                         </div>
