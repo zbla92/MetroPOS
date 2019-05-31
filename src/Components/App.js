@@ -103,6 +103,25 @@ class App extends React.Component {
             loggedInEmp: e
         });
     }
+      //------- Time And Date methods -------//
+    getTime = () => {
+        const date = new Date()
+        const h = this.renderTime(date.getHours());
+        const m = this.renderTime(date.getMinutes());
+        return `${h}:${m}`
+    }
+
+    getDate = () => {
+        const date = new Date();
+        const y = date.getFullYear();
+        const m = date.getMonth();
+        const d = date.getDay();
+        return `${y} / ${m} / ${d}`
+    }
+
+    renderTime(e) {
+        return e > 9 ? e : `0` + e;
+    }
 
     render() {
         if (this.state.loadedComponent === 'Login') {
@@ -134,6 +153,7 @@ class App extends React.Component {
                         checkID={this.state.checkID}
                         updateCheckID={this.updateCheckID}
                         setCheckID={this.setCheckID}
+                        getTime={this.getTime}
                     />
                 </div>
             );

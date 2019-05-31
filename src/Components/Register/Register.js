@@ -82,7 +82,6 @@ class Register extends React.Component {
         let url = 'http://localhost:3001/checks';
         axios.get(url).then(res => {
             this.setState({ openedTables: res.data, newCheckID: res.data.length + 1 });
-            console.log('updated');
         });
     };
 
@@ -174,6 +173,7 @@ class Register extends React.Component {
                                     checkID={this.props.checkID}
                                     openedTables={this.state.openedTables}
                                     reRend={this.reRend}
+                                    getTime={this.props.getTime}
                                 />
                             ) : null}
                         </div>

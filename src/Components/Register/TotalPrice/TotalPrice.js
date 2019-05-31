@@ -29,7 +29,7 @@ function TotalPrice({ items }) {
                 <div className="total-value">{subtotal}</div>
             </div>
             <div className="discount-container">
-                <div className="total-label">Discount:</div>
+                <div className="total-label">Tip:</div>
                 <div className="total-value">0.00</div>
             </div>
             <div className="tax-container">

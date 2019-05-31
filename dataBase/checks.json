@@ -11,9 +11,31 @@
           "price": 14.99,
           "qty": 1,
           "flagged": false
+        },
+        {
+          "name": "Vegetarian Lentil Burgers",
+          "image": "http://static.food2fork.com/lentilburgerrecipe_07405f.jpg",
+          "price": 4.99,
+          "qty": 1,
+          "flagged": false
+        },
+        {
+          "name": "Ultimate Veggie Burger",
+          "image": "http://static.food2fork.com/ultimateveggieburgerrecipe49ac.jpg",
+          "price": 9.49,
+          "qty": 1,
+          "flagged": false
+        },
+        {
+          "name": "Black Bean Burger",
+          "image": "http://static.food2fork.com/507107991f.jpg",
+          "price": 5.99,
+          "qty": 1,
+          "flagged": false
         }
       ],
-      "total": "14.99"
+      "total": "35.46",
+      "time": "08:07"
     },
     {
       "id": 2,
@@ -21,14 +43,50 @@
       "tenderOption": "amex",
       "items": [
         {
+          "name": "Vegetarian Lentil Burgers",
+          "image": "http://static.food2fork.com/lentilburgerrecipe_07405f.jpg",
+          "price": 4.99,
+          "qty": 1,
+          "flagged": false
+        },
+        {
           "name": "Ultimate Veggie Burger",
           "image": "http://static.food2fork.com/ultimateveggieburgerrecipe49ac.jpg",
           "price": 9.49,
-          "qty": 2,
+          "qty": 1,
+          "flagged": false
+        },
+        {
+          "name": "Black Bean Burger",
+          "image": "http://static.food2fork.com/507107991f.jpg",
+          "price": 5.99,
+          "qty": 1,
+          "flagged": false
+        },
+        {
+          "name": "Bacon Wrapped Burger",
+          "image": "http://static.food2fork.com/CheddarJalapenoChickenBurgerswithGuacamole4fdb.jpg",
+          "price": 6.99,
+          "qty": 1,
+          "flagged": false
+        },
+        {
+          "name": "Juicy Lucy Burger",
+          "image": "http://static.food2fork.com/29721_RecipeImage_620x413_juicy_lucy_burger380a3.jpg",
+          "price": 5,
+          "qty": 1,
+          "flagged": false
+        },
+        {
+          "name": "Fantastic Chicken Burgers ",
+          "image": "http://static.food2fork.com/68378250aa.jpg",
+          "price": 10.99,
+          "qty": 1,
           "flagged": false
         }
       ],
-      "total": "18.98"
+      "total": "43.45",
+      "time": "08:07"
     },
     {
       "id": 3,
@@ -36,21 +94,52 @@
       "tenderOption": "amex",
       "items": [
         {
-          "name": "Ultimate Veggie Burger",
-          "image": "http://static.food2fork.com/ultimateveggieburgerrecipe49ac.jpg",
-          "price": 9.49,
-          "qty": 6,
+          "name": "Tofu Burger ",
+          "image": "http://static.food2fork.com/tofu_burger_recipe7c06.jpg",
+          "price": 7.99,
+          "qty": 2,
           "flagged": false
         },
         {
-          "name": "Black Bean Burger",
-          "image": "http://static.food2fork.com/507107991f.jpg",
+          "name": "Pepperoni Pizza Burger",
+          "image": "http://static.food2fork.com/pizzaburgera5bd.jpg",
           "price": 5.99,
-          "qty": 20,
+          "qty": 1,
+          "flagged": false
+        },
+        {
+          "name": "Hawaiian Pork Burger",
+          "image": "http://static.food2fork.com/hawaiianporkburgera300x2006feebb1c.jpg",
+          "price": 8,
+          "qty": 1,
+          "flagged": false
+        },
+        {
+          "name": "Mediterranean Lamb Burger",
+          "image": "http://static.food2fork.com/29723_mediterranean_lamb_burger_620fa1a.jpg",
+          "price": 12,
+          "qty": 1,
           "flagged": false
         }
       ],
-      "total": "176.74"
+      "total": "41.97",
+      "time": "08:07"
+    },
+    {
+      "id": 4,
+      "closedBy": "Jane Doe",
+      "tenderOption": "amex",
+      "items": [
+        {
+          "name": "Quinoa Black Bean Burgers",
+          "image": "http://static.food2fork.com/9679903713.jpg",
+          "price": 14.99,
+          "qty": 1,
+          "flagged": false
+        }
+      ],
+      "total": "14.99",
+      "time": "08:09"
     }
   ]
 }
