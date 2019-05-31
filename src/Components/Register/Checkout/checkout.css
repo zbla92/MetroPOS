@@ -181,7 +181,8 @@ box-shadow: 0px 0px 7px 1px rgba(70, 69, 69, 0.103);
 }
 .tender-container-heading{
     font-size: 2.7vh;
-    padding-bottom: 7.32vh;
+    padding-bottom: 4.32vh;
+    margin-top: 3vh;
     color: #b1b3b5
 
 }

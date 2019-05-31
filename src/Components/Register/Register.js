@@ -19,7 +19,8 @@ class Register extends React.Component {
             checkoutOpen: false,
             tablesOpen: false,
             openedTables: [],
-            newCheckID: -1
+            newCheckID: -1,
+            allTables: []
         };
     }
 
@@ -81,7 +82,14 @@ class Register extends React.Component {
     getAllOpenedChecks = () => {
         let url = 'http://localhost:3001/checks';
         axios.get(url).then(res => {
-            this.setState({ openedTables: res.data, newCheckID: res.data.length + 1 });
+            let openedChecks = []
+            res.data.map(e => {
+                if(!e.closedBy){
+                    openedChecks.push(e)
+                }
+                return -1
+            })
+            this.setState({ openedTables: openedChecks, allTables:res.data ,newCheckID: res.data.length + 1 });
         });
     };
 
@@ -174,6 +182,7 @@ class Register extends React.Component {
                                     openedTables={this.state.openedTables}
                                     reRend={this.reRend}
                                     getTime={this.props.getTime}
+                                    allTables={this.state.allTables}
                                 />
                             ) : null}
                         </div>

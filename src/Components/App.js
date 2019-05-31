@@ -15,7 +15,7 @@ class App extends React.Component {
         this.loadRegister = this.loadRegister.bind(this);
         this.floatingLogo = this.floatingLogo.bind(this);
         this.state = {
-            loadedComponent: 'Register',
+            loadedComponent: 'Login',
             orderedItems: [],
             loggedInEmp: ' ',
             checkID: 0

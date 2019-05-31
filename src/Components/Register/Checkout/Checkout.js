@@ -70,7 +70,6 @@ export class Checkout extends Component {
             this.state.id,
             this.state.totalValue,
             'amex',
-            this.props.loggedInEmp[0].name,
             this.state.taxValue
         );
 
@@ -108,19 +107,18 @@ export class Checkout extends Component {
     };
 
     //Decidiing whather we need to push or post check
-    pushOrPost = (object, numberofOpenedChecks, pushObj, postObj) => {
-        if (object.id <= numberofOpenedChecks) {
+    pushOrPost = (object, allTables, pushObj, postObj) => {
+        if (object.id <= allTables) {
             postObj(object);
-        } else if (object.id > numberofOpenedChecks) {
+        } else if (object.id > allTables) {
             pushObj(object);
         }
     };
 
-    createObj(itemList, id, total = 0.0, tenderOption = 'Cash', closedBy = 'Jane Doe') {
+    createObj(itemList, id, total = 0.0, tenderOption = 'Cash') {
         this.setState({
             checkToImport: {
                 id: id,
-                closedBy: closedBy,
                 tenderOption: tenderOption,
                 items: itemList,
                 total: total,
@@ -129,6 +127,12 @@ export class Checkout extends Component {
         });
     }
 
+    addClosedByToCheck(empName, currentObj){
+        let newObj = currentObj;
+        newObj.closedBy = empName;
+        this.setState({ checkToImport: newObj })
+    }
+    
     // coded by milanblaz to here
 
     render() {
@@ -202,7 +206,7 @@ export class Checkout extends Component {
                                 onClick={e => {
                                     this.pushOrPost(
                                         this.state.checkToImport,
-                                        this.state.checks.length,
+                                        this.props.allTables.length,
                                         this.postToServer,
                                         this.putToServer
                                     );
@@ -210,7 +214,19 @@ export class Checkout extends Component {
                             >
                                 SAVE
                             </button>
-                            <button type="button" className="bottom-btn" id="checkout-btn-close">
+                            <button type="button" 
+                                    className="bottom-btn" 
+                                    id="checkout-btn-close" 
+                                    onClick={e => {
+                                        this.addClosedByToCheck(this.props.loggedInEmp[0].name, this.state.checkToImport);
+                                        this.pushOrPost(
+                                            this.state.checkToImport,
+                                            this.props.allTables.length,
+                                            this.postToServer,
+                                            this.putToServer
+                                        );
+                                    }}
+                                    >
                                 CLOSE
                             </button>
                         </div>
@@ -218,22 +234,23 @@ export class Checkout extends Component {
                     </div>
                     <div className="right-checkout-container">
                         <div className="tender-container tender-cash">
-                            <div className="tender-container-heading"><i class="money bill alternate outline icon"></i> Cash</div>
-                            <button><i class="dollar sign icon"></i> 5</button>
-                            <button><i class="dollar sign icon"></i> 10</button>
-                            <button><i class="dollar sign icon"></i> 20</button>
-                            <button> <i class="dollar sign icon"></i> 50</button>
-                            <button><i class="dollar sign icon"></i> 100</button>
+                            <div className="tender-container-heading"><i className="money bill alternate outline icon"></i> Cash</div>
+                            <button><i className="dollar sign icon"></i> 5</button>
+                            <button><i className="dollar sign icon"></i> 10</button>
+                            <button><i className="dollar sign icon"></i> 20</button>
+                            <button> <i className="dollar sign icon"></i> 50</button>
+                            <button><i className="dollar sign icon"></i> 100</button>
+                            <button>Exact Cash </button>
                         </div>
                         <div className="tender-container tender-cc">
-                            <div className="tender-container-heading"><i class="credit card outline icon"></i> Credit</div>
+                            <div className="tender-container-heading"><i className="credit card outline icon"></i> Credit</div>
                             <button>Visa</button>
                             <button>Master Card</button>
                             <button>Amex</button>
-                            <button>Discover</button><button>tender</button>
+                            <button>Discover</button>
                         </div>
                         <div className="tender-container tender-discounts">
-                        <div className="tender-container-heading"><i class="handshake icon"></i> Discount</div>
+                        <div className="tender-container-heading"><i className="handshake icon"></i> Discount</div>
                             <button>House Account</button>
                             <button>10%</button>
                             <button>20%</button>

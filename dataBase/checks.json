@@ -2,30 +2,8 @@
   "checks": [
     {
       "id": 1,
-      "closedBy": "Jane Doe",
       "tenderOption": "amex",
       "items": [
-        {
-          "name": "Quinoa Black Bean Burgers",
-          "image": "http://static.food2fork.com/9679903713.jpg",
-          "price": 14.99,
-          "qty": 1,
-          "flagged": false
-        },
-        {
-          "name": "Vegetarian Lentil Burgers",
-          "image": "http://static.food2fork.com/lentilburgerrecipe_07405f.jpg",
-          "price": 4.99,
-          "qty": 1,
-          "flagged": false
-        },
-        {
-          "name": "Ultimate Veggie Burger",
-          "image": "http://static.food2fork.com/ultimateveggieburgerrecipe49ac.jpg",
-          "price": 9.49,
-          "qty": 1,
-          "flagged": false
-        },
         {
           "name": "Black Bean Burger",
           "image": "http://static.food2fork.com/507107991f.jpg",
@@ -34,12 +12,12 @@
           "flagged": false
         }
       ],
-      "total": "35.46",
-      "time": "08:07"
+      "total": "5.99",
+      "time": "00:28",
+      "closedBy": "Blazara Blejzic"
     },
     {
       "id": 2,
-      "closedBy": "Jane Doe",
       "tenderOption": "amex",
       "items": [
         {
@@ -48,86 +26,94 @@
           "price": 4.99,
           "qty": 1,
           "flagged": false
-        },
+        }
+      ],
+      "total": "4.99",
+      "time": "00:30",
+      "closedBy": "Blazara Blejzic"
+    },
+    {
+      "id": 3,
+      "tenderOption": "amex",
+      "items": [
         {
-          "name": "Ultimate Veggie Burger",
-          "image": "http://static.food2fork.com/ultimateveggieburgerrecipe49ac.jpg",
-          "price": 9.49,
-          "qty": 1,
+          "name": "Vegetarian Lentil Burgers",
+          "image": "http://static.food2fork.com/lentilburgerrecipe_07405f.jpg",
+          "price": 4.99,
+          "qty": 2,
           "flagged": false
-        },
+        }
+      ],
+      "total": "9.98",
+      "time": "00:29",
+      "closedBy": "Blazara Blejzic"
+    },
+    {
+      "id": 4,
+      "tenderOption": "amex",
+      "items": [
         {
           "name": "Black Bean Burger",
           "image": "http://static.food2fork.com/507107991f.jpg",
           "price": 5.99,
           "qty": 1,
           "flagged": false
-        },
+        }
+      ],
+      "total": "5.99",
+      "time": "00:40",
+      "closedBy": "Blazara Blejzic"
+    },
+    {
+      "id": 5,
+      "tenderOption": "amex",
+      "items": [
         {
-          "name": "Bacon Wrapped Burger",
-          "image": "http://static.food2fork.com/CheddarJalapenoChickenBurgerswithGuacamole4fdb.jpg",
+          "name": "Turkey Burger",
+          "image": "http://static.food2fork.com/6661337708.jpg",
           "price": 6.99,
-          "qty": 1,
-          "flagged": false
-        },
-        {
-          "name": "Juicy Lucy Burger",
-          "image": "http://static.food2fork.com/29721_RecipeImage_620x413_juicy_lucy_burger380a3.jpg",
-          "price": 5,
-          "qty": 1,
-          "flagged": false
-        },
-        {
-          "name": "Fantastic Chicken Burgers ",
-          "image": "http://static.food2fork.com/68378250aa.jpg",
-          "price": 10.99,
           "qty": 1,
           "flagged": false
         }
       ],
-      "total": "43.45",
-      "time": "08:07"
+      "total": "6.99",
+      "time": "00:40",
+      "closedBy": "Blazara Blejzic"
     },
     {
-      "id": 3,
-      "closedBy": "Jane Doe",
+      "id": 6,
       "tenderOption": "amex",
       "items": [
         {
           "name": "Tofu Burger ",
           "image": "http://static.food2fork.com/tofu_burger_recipe7c06.jpg",
           "price": 7.99,
-          "qty": 2,
-          "flagged": false
-        },
-        {
-          "name": "Pepperoni Pizza Burger",
-          "image": "http://static.food2fork.com/pizzaburgera5bd.jpg",
-          "price": 5.99,
-          "qty": 1,
-          "flagged": false
-        },
-        {
-          "name": "Hawaiian Pork Burger",
-          "image": "http://static.food2fork.com/hawaiianporkburgera300x2006feebb1c.jpg",
-          "price": 8,
-          "qty": 1,
-          "flagged": false
-        },
-        {
-          "name": "Mediterranean Lamb Burger",
-          "image": "http://static.food2fork.com/29723_mediterranean_lamb_burger_620fa1a.jpg",
-          "price": 12,
           "qty": 1,
           "flagged": false
         }
       ],
-      "total": "41.97",
-      "time": "08:07"
+      "total": "7.99",
+      "time": "00:40",
+      "closedBy": "Blazara Blejzic"
     },
     {
-      "id": 4,
-      "closedBy": "Jane Doe",
+      "id": 7,
+      "tenderOption": "amex",
+      "items": [
+        {
+          "name": "Ultimate Veggie Burger",
+          "image": "http://static.food2fork.com/ultimateveggieburgerrecipe49ac.jpg",
+          "price": 9.49,
+          "qty": 1,
+          "flagged": false
+        }
+      ],
+      "total": "9.49",
+      "time": "00:35",
+      "closedBy": "Blazara Blejzic"
+    },
+    {
+      "id": 8,
       "tenderOption": "amex",
       "items": [
         {
@@ -139,7 +125,88 @@
         }
       ],
       "total": "14.99",
-      "time": "08:09"
+      "time": "00:40",
+      "closedBy": "Blazara Blejzic"
+    },
+    {
+      "id": 9,
+      "tenderOption": "amex",
+      "items": [
+        {
+          "name": "Vegetarian Lentil Burgers",
+          "image": "http://static.food2fork.com/lentilburgerrecipe_07405f.jpg",
+          "price": 4.99,
+          "qty": 1,
+          "flagged": false
+        }
+      ],
+      "total": "4.99",
+      "time": "00:40",
+      "closedBy": "Blazara Blejzic"
+    },
+    {
+      "id": 10,
+      "tenderOption": "amex",
+      "items": [
+        {
+          "name": "Black Bean Burger",
+          "image": "http://static.food2fork.com/507107991f.jpg",
+          "price": 5.99,
+          "qty": 1,
+          "flagged": false
+        }
+      ],
+      "total": "5.99",
+      "time": "00:41",
+      "closedBy": "Blazara Blejzic"
+    },
+    {
+      "id": 11,
+      "tenderOption": "amex",
+      "items": [
+        {
+          "name": "Ultimate Veggie Burger",
+          "image": "http://static.food2fork.com/ultimateveggieburgerrecipe49ac.jpg",
+          "price": 9.49,
+          "qty": 1,
+          "flagged": false
+        }
+      ],
+      "total": "9.49",
+      "time": "00:41",
+      "closedBy": "Blazara Blejzic"
+    },
+    {
+      "id": 12,
+      "tenderOption": "amex",
+      "items": [
+        {
+          "name": "Bacon Wrapped Burger",
+          "image": "http://static.food2fork.com/CheddarJalapenoChickenBurgerswithGuacamole4fdb.jpg",
+          "price": 6.99,
+          "qty": 1,
+          "flagged": false
+        }
+      ],
+      "total": "6.99",
+      "time": "00:41",
+      "closedBy": "Blazara Blejzic"
+    },
+    {
+      "id": 13,
+      "tenderOption": "amex",
+      "items": [
+        {
+          "name": "Quinoa Black Bean Burgers",
+          "image": "http://static.food2fork.com/9679903713.jpg",
+          "price": 14.99,
+          "qty": 1,
+          "flagged": false
+        }
+      ],
+      "total": "14.99",
+      "time": "00:41",
+      "closedBy": "Blazara Blejzic"
     }
   ]
 }
