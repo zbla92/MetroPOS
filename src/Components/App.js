@@ -81,7 +81,6 @@ class App extends React.Component {
     updateCheckID = () => {
         axios.get('http://localhost:3001/checks').then(res => {
             this.setState({ checkID: res.data.length + 1 });
-            console.log(res.data.length + 1);
         });
     };
     setCheckID = id => {
