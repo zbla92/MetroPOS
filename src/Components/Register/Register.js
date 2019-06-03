@@ -122,7 +122,7 @@ class Register extends React.Component {
                     <div className="main-left-container floater-left">
                         <div className="display-buttons-container">
                             <button className="btn-top">To go</button>
-                            <button className="btn-top">Tab</button>
+                            <button className="btn-top">Dine In</button>
                             <button className="btn-top">Delivery</button>
                             <button
                                 className="btn-top"
@@ -130,7 +130,7 @@ class Register extends React.Component {
                                     this.goTables();
                                 }}
                             >
-                                Number
+                                Opened
                                 {this.listenTables()}
                             </button>
                         </div>

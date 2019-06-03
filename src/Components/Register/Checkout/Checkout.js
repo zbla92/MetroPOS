@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import './checkout.css';
 
+import TenderLoader from './TenderLoader/TenderLoader'
+
 export class Checkout extends Component {
     constructor(props) {
         super(props);
 
         this.enterAmount = this.enterAmount.bind(this);
-        this.enterPresetAmount = this.enterPresetAmount.bind(this);
         this.delDigit = this.delDigit.bind(this);
         this.delAll = this.delAll.bind(this);
         this.toggleClass = this.toggleClass.bind(this);
@@ -25,21 +26,27 @@ export class Checkout extends Component {
     }
 
     enterAmount(e) {
-        if (this.state.tendered.length < 7) {
+        if (this.state.tendered.length < 16) {
             this.setState({
                 tendered: this.state.tendered.concat(e.target.textContent)
             });
         }
     }
 
-    enterPresetAmount(e) {
-        let amount = (parseInt(this.state.tendered) || 0) + parseInt(e.target.value);
-        if (this.state.tendered.length < 7) {
-            this.setState({
-                tendered: amount.toString()
-            });
-        }
+    tipFormatter = (amount) => {
+    let reformatted = amount;
+    reformatted = reformatted.slice(0, reformatted.length -2) + '.' + reformatted.slice(reformatted.length - 2);
+        if(reformatted.length <= 1){
+            return "00" + reformatted + "00"
+        }else if(reformatted.length <= 2){
+            return "00.0" + reformatted.slice(1);
+        }else if(reformatted.length <= 3){
+            return "00"+ reformatted;
+        }else if(reformatted.length <= 4){
+            return "0" + reformatted;
+        } else return reformatted;
     }
+
 
     delDigit() {
         this.setState({
@@ -155,8 +162,7 @@ export class Checkout extends Component {
                     <div className="checkout-body">
                         <div className="checkout-totals">
                             <div className="totals-box">
-                                <div className="totals-box-description">Tip amount:</div>
-                                <div className="totals-balance-due">${this.state.totalValue}</div>
+                                <TenderLoader  tipFormatter={this.tipFormatter} tendered={this.state.tendered}/>
                             </div>
                             
                         </div>
@@ -188,7 +194,7 @@ export class Checkout extends Component {
                                 <button type="button" className="checkout-btn" onClick={this.enterAmount}>
                                     9
                                 </button>
-                                <button type="button" className="checkout-btn" onClick={this.delAll}>
+                                <button type="button" className="checkout-btn" onClick={e => {this.delDigit()}}>
                                     C
                                 </button>
                                 <button type="button" className="checkout-btn" onClick={this.enterAmount}>
@@ -235,9 +241,9 @@ export class Checkout extends Component {
                     <div className="right-checkout-container">
                         <div className="tender-container tender-cash">
                             <div className="tender-container-heading"><i className="money bill alternate outline icon"></i> Cash</div>
-                            <button><i className="dollar sign icon"></i> 5</button>
-                            <button><i className="dollar sign icon"></i> 10</button>
-                            <button><i className="dollar sign icon"></i> 20</button>
+                            <button id="5-cash" className="tender-button"><i className="dollar sign icon"></i> 5</button>
+                            <button id="10-cash" className="tender-button"><i className="dollar sign icon"></i> 10</button>
+                            <button id="20-cash" className="tender-button"><i className="dollar sign icon"></i> 20</button>
                             <button> <i className="dollar sign icon"></i> 50</button>
                             <button><i className="dollar sign icon"></i> 100</button>
                             <button>Exact Cash </button>
