@@ -21,7 +21,7 @@ class Register extends React.Component {
             openedTables: [],
             newCheckID: -1,
             allTables: [],
-            tendered: '',
+            tip: 0.00
         };
     }
 
@@ -71,41 +71,14 @@ class Register extends React.Component {
             checkoutOpen: false
         });
     };
-
-    enterAmount = (e) => {
-        if (this.state.tendered.length < 16) {
-            this.setState({
-                tendered: this.state.tendered.concat(e.target.textContent)
-            });
-        }
-    }
-
-    tipFormatter = (amount) => {
+    
+    tipFormatter = (amount ) => {
     let reformatted = amount;
-    reformatted = reformatted.slice(0, reformatted.length -2) + '.' + reformatted.slice(reformatted.length - 2);
-        if(reformatted.length <= 1){
-            return "00" + reformatted + "00"
-        }else if(reformatted.length <= 2){
-            return "00.0" + reformatted.slice(1);
-        }else if(reformatted.length <= 3){
-            return "00"+ reformatted;
-        }else if(reformatted.length <= 4){
-            return "0" + reformatted;
-        } else return reformatted;
+        if(reformatted.length > 0){
+            return parseFloat(reformatted) / 100
+        }else return '0.00'
     }
-
-
-    delDigit = () => {
-        this.setState({
-            tendered: this.state.tendered.substring(0, this.state.tendered.length - 1)
-        });
-    }
-
-    delAll = () => {
-        this.setState({
-            tendered: ''
-        });
-    }
+    
 
     // removing all items with class  "className"
     removeAllClassNames = className => {
@@ -221,10 +194,7 @@ class Register extends React.Component {
                                     reRend={this.reRend}
                                     getTime={this.props.getTime}
                                     allTables={this.state.allTables}
-                                    enterAmount={this.enterAmount}
                                     tipFormatter={this.tipFormatter}
-                                    tendered = {this.state.tendered}
-                                    delDigit = {this.delDigit}
                                 />
                             ) : null}
                         </div>

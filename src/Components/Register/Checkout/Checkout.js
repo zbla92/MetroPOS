@@ -16,20 +16,11 @@ export class Checkout extends Component {
             checks: [],
             checkItems: [],
             checkToImport: {},
-            url: `http://localhost:3001/checks`
+            url: `http://localhost:3001/checks`,
+            tendered: '',
         };
     }
-
-
-
-    // reused from RenderItemToCheck
-    toggleClass(el, className) {
-        if (el) {
-            el.classList.toggle(className);
-        }
-    }
-
-    // coded by milanblaz from here
+    
     componentDidMount() {
         this.props.getAllOpenedChecks();
         this.setState({ checkItems: this.props.checkItems, checks: this.props.openedTables});
@@ -43,6 +34,40 @@ export class Checkout extends Component {
         );
 
         this.fetchChecks = this.state.url;
+    }
+//------------------------------------------------------
+    getTipAmount = (e) => {
+        this.setState({ tip: parseFloat(e) })
+    }
+
+
+    enterAmount = (e) => {
+        if (this.state.tendered.length < 16) {
+            this.setState({
+                tendered: this.state.tendered.concat(e.target.textContent)
+            });
+        }
+    }
+
+
+
+    delDigit = () => {
+        this.setState({
+            tendered: this.state.tendered.substring(0, this.state.tendered.length - 1)
+        });
+    }
+
+    delAll = () => {
+        this.setState({
+            tendered: ''
+        });
+    }
+//------------------------------------------------------
+    // reused from RenderItemToCheck
+    toggleClass(el, className) {
+        if (el) {
+            el.classList.toggle(className);
+        }
     }
 
     clearCurrentItems(func) {
@@ -62,6 +87,7 @@ export class Checkout extends Component {
                 return alert('Authorization failed, contact support.');
             });
     };
+
     // Updating check that was already pushed to server
     putToServer = object => {
         let url = `http://localhost:3001/checks/${this.state.id}`;
@@ -102,6 +128,15 @@ export class Checkout extends Component {
         this.setState({ checkToImport: newObj })
     }
     
+    //---- Adding OK button functionalities: ----------------//
+    doYourThang = (e) => {
+        if(e.length > 0){
+            this.props.getTipAmount(e)
+            console.log("get the thangs")
+        }
+    }
+
+
     // coded by milanblaz to here
 
     render() {
@@ -124,45 +159,45 @@ export class Checkout extends Component {
                     <div className="checkout-body">
                         <div className="checkout-totals">
                             <div className="totals-box">
-                                <TenderLoader  tipFormatter={this.props.tipFormatter} tendered={this.props.tendered}/>
+                                <TenderLoader  tipFormatter={this.props.tipFormatter} tendered={this.state.tendered}/>
                             </div>
                             
                         </div>
                             <div className="checkout-keypad">
-                                <button type="button" className="checkout-btn" onClick={this.props.enterAmount}>
+                                <button type="button" className="checkout-btn" onClick={this.enterAmount}>
                                     1
                                 </button>
-                                <button type="button" className="checkout-btn" onClick={this.props.enterAmount}>
+                                <button type="button" className="checkout-btn" onClick={this.enterAmount}>
                                     2
                                 </button>
-                                <button type="button" className="checkout-btn" onClick={this.props.enterAmount}>
+                                <button type="button" className="checkout-btn" onClick={this.enterAmount}>
                                     3
                                 </button>
-                                <button type="button" className="checkout-btn" onClick={this.props.enterAmount}>
+                                <button type="button" className="checkout-btn" onClick={this.enterAmount}>
                                     4
                                 </button>
-                                <button type="button" className="checkout-btn" onClick={this.props.enterAmount}>
+                                <button type="button" className="checkout-btn" onClick={this.enterAmount}>
                                     5
                                 </button>
-                                <button type="button" className="checkout-btn" onClick={this.props.enterAmount}>
+                                <button type="button" className="checkout-btn" onClick={this.enterAmount}>
                                     6
                                 </button>
-                                <button type="button" className="checkout-btn" onClick={this.props.enterAmount}>
+                                <button type="button" className="checkout-btn" onClick={this.enterAmount}>
                                     7
                                 </button>
-                                <button type="button" className="checkout-btn" onClick={this.props.enterAmount}>
+                                <button type="button" className="checkout-btn" onClick={this.enterAmount}>
                                     8
                                 </button>
-                                <button type="button" className="checkout-btn" onClick={this.props.enterAmount}>
+                                <button type="button" className="checkout-btn" onClick={this.enterAmount}>
                                     9
                                 </button>
-                                <button type="button" className="checkout-btn" onClick={e => { this.props.delDigit() } }>
+                                <button type="button" className="checkout-btn" onClick={e => { this.delDigit() } }>
                                     C
                                 </button>
-                                <button type="button" className="checkout-btn" onClick={this.props.enterAmount}>
+                                <button type="button" className="checkout-btn" onClick={this.enterAmount}>
                                     0
                                 </button>
-                                <button type="button" id="checkout-btn-ok" className="checkout-btn" onClick={this.props.enterAmount}>
+                                <button type="button" id="checkout-btn-ok" className="checkout-btn" onClick={e => {this.doYourThang(this.tendered)}}>
                                     OK
                                 </button>
                             </div>
