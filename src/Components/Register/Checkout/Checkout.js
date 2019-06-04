@@ -8,15 +8,10 @@ export class Checkout extends Component {
     constructor(props) {
         super(props);
 
-        this.enterAmount = this.enterAmount.bind(this);
-        this.delDigit = this.delDigit.bind(this);
-        this.delAll = this.delAll.bind(this);
-        this.toggleClass = this.toggleClass.bind(this);
         this.state = {
             totalValue: document.getElementById('total-value').innerHTML,
             taxValue: document.getElementById('total-tax').innerHTML,
             id: this.props.checkID,
-            tendered: '',
             tip: 0.0,
             checks: [],
             checkItems: [],
@@ -25,40 +20,7 @@ export class Checkout extends Component {
         };
     }
 
-    enterAmount(e) {
-        if (this.state.tendered.length < 16) {
-            this.setState({
-                tendered: this.state.tendered.concat(e.target.textContent)
-            });
-        }
-    }
 
-    tipFormatter = (amount) => {
-    let reformatted = amount;
-    reformatted = reformatted.slice(0, reformatted.length -2) + '.' + reformatted.slice(reformatted.length - 2);
-        if(reformatted.length <= 1){
-            return "00" + reformatted + "00"
-        }else if(reformatted.length <= 2){
-            return "00.0" + reformatted.slice(1);
-        }else if(reformatted.length <= 3){
-            return "00"+ reformatted;
-        }else if(reformatted.length <= 4){
-            return "0" + reformatted;
-        } else return reformatted;
-    }
-
-
-    delDigit() {
-        this.setState({
-            tendered: this.state.tendered.substring(0, this.state.tendered.length - 1)
-        });
-    }
-
-    delAll() {
-        this.setState({
-            tendered: ''
-        });
-    }
 
     // reused from RenderItemToCheck
     toggleClass(el, className) {
@@ -162,45 +124,45 @@ export class Checkout extends Component {
                     <div className="checkout-body">
                         <div className="checkout-totals">
                             <div className="totals-box">
-                                <TenderLoader  tipFormatter={this.tipFormatter} tendered={this.state.tendered}/>
+                                <TenderLoader  tipFormatter={this.props.tipFormatter} tendered={this.props.tendered}/>
                             </div>
                             
                         </div>
                             <div className="checkout-keypad">
-                                <button type="button" className="checkout-btn" onClick={this.enterAmount}>
+                                <button type="button" className="checkout-btn" onClick={this.props.enterAmount}>
                                     1
                                 </button>
-                                <button type="button" className="checkout-btn" onClick={this.enterAmount}>
+                                <button type="button" className="checkout-btn" onClick={this.props.enterAmount}>
                                     2
                                 </button>
-                                <button type="button" className="checkout-btn" onClick={this.enterAmount}>
+                                <button type="button" className="checkout-btn" onClick={this.props.enterAmount}>
                                     3
                                 </button>
-                                <button type="button" className="checkout-btn" onClick={this.enterAmount}>
+                                <button type="button" className="checkout-btn" onClick={this.props.enterAmount}>
                                     4
                                 </button>
-                                <button type="button" className="checkout-btn" onClick={this.enterAmount}>
+                                <button type="button" className="checkout-btn" onClick={this.props.enterAmount}>
                                     5
                                 </button>
-                                <button type="button" className="checkout-btn" onClick={this.enterAmount}>
+                                <button type="button" className="checkout-btn" onClick={this.props.enterAmount}>
                                     6
                                 </button>
-                                <button type="button" className="checkout-btn" onClick={this.enterAmount}>
+                                <button type="button" className="checkout-btn" onClick={this.props.enterAmount}>
                                     7
                                 </button>
-                                <button type="button" className="checkout-btn" onClick={this.enterAmount}>
+                                <button type="button" className="checkout-btn" onClick={this.props.enterAmount}>
                                     8
                                 </button>
-                                <button type="button" className="checkout-btn" onClick={this.enterAmount}>
+                                <button type="button" className="checkout-btn" onClick={this.props.enterAmount}>
                                     9
                                 </button>
-                                <button type="button" className="checkout-btn" onClick={e => {this.delDigit()}}>
+                                <button type="button" className="checkout-btn" onClick={e => { this.props.delDigit() } }>
                                     C
                                 </button>
-                                <button type="button" className="checkout-btn" onClick={this.enterAmount}>
+                                <button type="button" className="checkout-btn" onClick={this.props.enterAmount}>
                                     0
                                 </button>
-                                <button type="button" id="checkout-btn-ok" className="checkout-btn" onClick={this.enterAmount}>
+                                <button type="button" id="checkout-btn-ok" className="checkout-btn" onClick={this.props.enterAmount}>
                                     OK
                                 </button>
                             </div>
