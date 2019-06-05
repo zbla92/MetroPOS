@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import './checkout.css';
 
-import TenderLoader from './TenderLoader/TenderLoader'
+import TenderLoader from './TenderLoader/TenderLoader';
 
 export class Checkout extends Component {
     constructor(props) {
@@ -17,52 +17,40 @@ export class Checkout extends Component {
             checkItems: [],
             checkToImport: {},
             url: `http://localhost:3001/checks`,
-            tendered: '',
+            tendered: ''
         };
     }
-    
+
     componentDidMount() {
+        // Getting all opened checks
         this.props.getAllOpenedChecks();
-        this.setState({ checkItems: this.props.checkItems, checks: this.props.openedTables});
+        this.setState({ checkItems: this.props.checkItems, checks: this.props.openedTables });
         // Building object to inject
-        this.createObj(
-            this.props.checkItems,
-            this.state.id,
-            this.state.totalValue,
-            'amex',
-            this.state.taxValue
-        );
+        this.createObj(this.props.checkItems, this.state.id, this.state.totalValue, 'amex', this.props.tip);
 
         this.fetchChecks = this.state.url;
     }
-//------------------------------------------------------
-    getTipAmount = (e) => {
-        this.setState({ tip: parseFloat(e) })
-    }
-
-
-    enterAmount = (e) => {
+    //------------------------------------------------------
+    enterAmount = e => {
         if (this.state.tendered.length < 16) {
             this.setState({
                 tendered: this.state.tendered.concat(e.target.textContent)
             });
         }
-    }
-
-
+    };
 
     delDigit = () => {
         this.setState({
             tendered: this.state.tendered.substring(0, this.state.tendered.length - 1)
         });
-    }
+    };
 
     delAll = () => {
         this.setState({
             tendered: ''
         });
-    }
-//------------------------------------------------------
+    };
+    //------------------------------------------------------
     // reused from RenderItemToCheck
     toggleClass(el, className) {
         if (el) {
@@ -122,20 +110,28 @@ export class Checkout extends Component {
         });
     }
 
-    addClosedByToCheck(empName, currentObj){
+    addClosedByToCheck(element, currentObj) {
         let newObj = currentObj;
-        newObj.closedBy = empName;
-        this.setState({ checkToImport: newObj })
+        newObj.closedBy = element;
+        this.setState({ checkToImport: newObj });
     }
-    
-    //---- Adding OK button functionalities: ----------------//
-    doYourThang = (e) => {
-        if(e.length > 0){
-            this.props.getTipAmount(e)
-            console.log("get the thangs")
-        }
+    addTipToCheck(element, currentObj) {
+        let newObj = currentObj;
+        newObj.tip = element;
+        this.setState({ checkToImport: newObj });
     }
 
+    //---- Adding OK button functionalities: ----------------//
+    doYourThang = e => {
+        try {
+            if (e.length > 0) {
+                this.props.getTipAmount(this.props.tipFormatter(e));
+                console.log('get the thangs');
+            }
+        } catch (err) {
+            console.log(err);
+        }
+    };
 
     // coded by milanblaz to here
 
@@ -144,25 +140,26 @@ export class Checkout extends Component {
             <div className="screen-overlay">
                 <div className="checkout-container">
                     <div className="left-checkout-container">
-                    <div className="checkout-header">
-                        <div>
-                            <i
-                                className="x icon cancel-icon"
-                                onClick={e => {
-                                    this.props.closeCheckout();
-                                    this.props.getAllOpenedChecks();
-                                    this.props.updateCheckID();
-                                }}
-                            />
-                        </div>
-                    </div>
-                    <div className="checkout-body">
-                        <div className="checkout-totals">
-                            <div className="totals-box">
-                                <TenderLoader  tipFormatter={this.props.tipFormatter} tendered={this.state.tendered}/>
+                        <div className="checkout-header">
+                            <div>
+                                <i
+                                    className="x icon cancel-icon"
+                                    onClick={e => {
+                                        this.props.closeCheckout();
+                                        this.clearCurrentItems(this.props.updateOrderedItems);
+                                    }}
+                                />
                             </div>
-                            
                         </div>
+                        <div className="checkout-body">
+                            <div className="checkout-totals">
+                                <div className="totals-box">
+                                    <TenderLoader
+                                        tipFormatter={this.props.tipFormatter}
+                                        tendered={this.state.tendered}
+                                    />
+                                </div>
+                            </div>
                             <div className="checkout-keypad">
                                 <button type="button" className="checkout-btn" onClick={this.enterAmount}>
                                     1
@@ -191,69 +188,107 @@ export class Checkout extends Component {
                                 <button type="button" className="checkout-btn" onClick={this.enterAmount}>
                                     9
                                 </button>
-                                <button type="button" className="checkout-btn" onClick={e => { this.delDigit() } }>
+                                <button
+                                    type="button"
+                                    className="checkout-btn"
+                                    onClick={e => {
+                                        this.delDigit();
+                                    }}
+                                >
                                     C
                                 </button>
                                 <button type="button" className="checkout-btn" onClick={this.enterAmount}>
                                     0
                                 </button>
-                                <button type="button" id="checkout-btn-ok" className="checkout-btn" onClick={e => {this.doYourThang(this.tendered)}}>
+                                <button
+                                    type="button"
+                                    id="checkout-btn-ok"
+                                    className="checkout-btn"
+                                    onClick={e => {
+                                        this.doYourThang(parseFloat(this.state.tendered).toFixed(2));
+                                    }}
+                                >
                                     OK
                                 </button>
                             </div>
-                        <div className="checkout-tender">
-                            <button
-                                type="button"
-                                className="bottom-btn"
-                                id="tender-btn"
-                                onClick={e => {
-                                    this.pushOrPost(
-                                        this.state.checkToImport,
-                                        this.props.allTables.length,
-                                        this.postToServer,
-                                        this.putToServer
-                                    );
-                                }}
-                            >
-                                SAVE
-                            </button>
-                            <button type="button" 
-                                    className="bottom-btn" 
-                                    id="checkout-btn-close" 
+                            <div className="checkout-tender">
+                                <button
+                                    type="button"
+                                    className="bottom-btn"
+                                    id="tender-btn"
                                     onClick={e => {
-                                        this.addClosedByToCheck(this.props.loggedInEmp[0].name, this.state.checkToImport);
+                                        this.addTipToCheck(this.props.tip, this.state.checkToImport);
                                         this.pushOrPost(
                                             this.state.checkToImport,
                                             this.props.allTables.length,
                                             this.postToServer,
                                             this.putToServer
                                         );
+                                        this.props.closeCheckout();
                                     }}
-                                    >
-                                CLOSE
-                            </button>
+                                >
+                                    SAVE
+                                </button>
+                                <button
+                                    type="button"
+                                    className="bottom-btn"
+                                    id="checkout-btn-close"
+                                    onClick={e => {
+                                        this.addClosedByToCheck(
+                                            this.props.loggedInEmp[0].name,
+                                            this.state.checkToImport
+                                        );
+                                        this.addTipToCheck(this.props.tip, this.state.checkToImport);
+                                        this.pushOrPost(
+                                            this.state.checkToImport,
+                                            this.props.allTables.length,
+                                            this.postToServer,
+                                            this.putToServer
+                                        );
+                                        this.props.closeCheckout();
+                                    }}
+                                >
+                                    CLOSE
+                                </button>
+                            </div>
                         </div>
-                    </div>
                     </div>
                     <div className="right-checkout-container">
                         <div className="tender-container tender-cash">
-                            <div className="tender-container-heading"><i className="money bill alternate outline icon"></i> Cash</div>
-                            <button id="5-cash" className="tender-button"><i className="dollar sign icon"></i> 5</button>
-                            <button id="10-cash" className="tender-button"><i className="dollar sign icon"></i> 10</button>
-                            <button id="20-cash" className="tender-button"><i className="dollar sign icon"></i> 20</button>
-                            <button> <i className="dollar sign icon"></i> 50</button>
-                            <button><i className="dollar sign icon"></i> 100</button>
+                            <div className="tender-container-heading">
+                                <i className="money bill alternate outline icon" /> Cash
+                            </div>
+                            <button id="5-cash" className="tender-button">
+                                <i className="dollar sign icon" /> 5
+                            </button>
+                            <button id="10-cash" className="tender-button">
+                                <i className="dollar sign icon" /> 10
+                            </button>
+                            <button id="20-cash" className="tender-button">
+                                <i className="dollar sign icon" /> 20
+                            </button>
+                            <button>
+                                {' '}
+                                <i className="dollar sign icon" /> 50
+                            </button>
+                            <button>
+                                <i className="dollar sign icon" /> 100
+                            </button>
                             <button>Exact Cash </button>
                         </div>
                         <div className="tender-container tender-cc">
-                            <div className="tender-container-heading"><i className="credit card outline icon"></i> Credit</div>
+                            <div className="tender-container-heading">
+                                <i className="credit card outline icon" /> Credit
+                            </div>
                             <button>Visa</button>
                             <button>Master Card</button>
                             <button>Amex</button>
                             <button>Discover</button>
                         </div>
                         <div className="tender-container tender-discounts">
-                        <div className="tender-container-heading"><i className="handshake icon"></i> Discount</div>
+                            <div className="tender-container-heading">
+                                <i className="handshake icon" /> Discount
+                            </div>
                             <button>House Account</button>
                             <button>10%</button>
                             <button>20%</button>

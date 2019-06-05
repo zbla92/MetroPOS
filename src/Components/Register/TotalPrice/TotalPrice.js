@@ -1,7 +1,7 @@
 import './totalPrice.css';
 import React from 'react';
 
-function TotalPrice({ items }) {
+function TotalPrice({ items, tip }) {
     let total = 0;
     let tax = 0;
     let subtotal = 0;
@@ -19,8 +19,8 @@ function TotalPrice({ items }) {
     subtotal = total - tax;
 
     tax = tax.toFixed(2);
-    total = total.toFixed(2);
     subtotal = subtotal.toFixed(2);
+    total = (total + parseFloat(tip)).toFixed(2);
 
     return (
         <div>
@@ -30,7 +30,7 @@ function TotalPrice({ items }) {
             </div>
             <div className="discount-container">
                 <div className="total-label">Tip:</div>
-                <div className="total-value">0.00</div>
+                <div className="total-value">{tip}</div>
             </div>
             <div className="tax-container">
                 <div className="total-label">Tax:</div>

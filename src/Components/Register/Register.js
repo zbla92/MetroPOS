@@ -10,6 +10,7 @@ import MenuButtons from './MenuButtons/MenuButtons';
 import ItemToCheck from './ItemToCheck/ItemToCheck';
 import Checkout from './Checkout/Checkout';
 import Tables from './Tables/Tables';
+import { isNumber } from 'util';
 
 class Register extends React.Component {
     constructor(props) {
@@ -21,7 +22,7 @@ class Register extends React.Component {
             openedTables: [],
             newCheckID: -1,
             allTables: [],
-            tip: 0.00
+            tip: 0.0
         };
     }
 
@@ -70,15 +71,27 @@ class Register extends React.Component {
         this.setState({
             checkoutOpen: false
         });
+        // Moving this action on top of the stack so everything can be first pushed to the json Server - once it is on the server  Updating check ID as well as getting all opened talbes will performed
+        setTimeout(e => {
+            this.getAllOpenedChecks();
+            this.props.updateCheckID();
+        }, 200);
     };
-    
-    tipFormatter = (amount ) => {
-    let reformatted = amount;
-        if(reformatted.length > 0){
-            return parseFloat(reformatted) / 100
-        }else return '0.00'
-    }
-    
+
+    getTipAmount = e => {
+        if (e > 0) {
+            this.setState({ tip: e });
+        } else {
+            this.setState({ tip: 0.0 });
+        }
+    };
+
+    tipFormatter = amount => {
+        let reformatted = amount;
+        if (reformatted.length > 0) {
+            return (parseFloat(reformatted) / 100).toFixed(2);
+        } else return (0).toFixed(2);
+    };
 
     // removing all items with class  "className"
     removeAllClassNames = className => {
@@ -93,14 +106,14 @@ class Register extends React.Component {
     getAllOpenedChecks = () => {
         let url = 'http://localhost:3001/checks';
         axios.get(url).then(res => {
-            let openedChecks = []
+            let openedChecks = [];
             res.data.map(e => {
-                if(!e.closedBy){
-                    openedChecks.push(e)
+                if (!e.closedBy) {
+                    openedChecks.push(e);
                 }
-                return -1
-            })
-            this.setState({ openedTables: openedChecks, allTables:res.data ,newCheckID: res.data.length + 1 });
+                return -1;
+            });
+            this.setState({ openedTables: openedChecks, allTables: res.data, newCheckID: res.data.length + 1 });
         });
     };
 
@@ -163,7 +176,7 @@ class Register extends React.Component {
                             />
                         </div>
                         <div className="total-prices-box">
-                            <TotalPrice items={this.props.items} />
+                            <TotalPrice items={this.props.items} tip={this.state.tip} />
                         </div>
                         <div className="display-buttons-container ">
                             <button
@@ -195,6 +208,8 @@ class Register extends React.Component {
                                     getTime={this.props.getTime}
                                     allTables={this.state.allTables}
                                     tipFormatter={this.tipFormatter}
+                                    getTipAmount={this.getTipAmount}
+                                    tip={this.state.tip}
                                 />
                             ) : null}
                         </div>
