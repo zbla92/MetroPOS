@@ -1,5 +1,5 @@
 .img-container {
-    height: 20vh;
+    height: 19.5vh;
     width: 13.3vw;
 }
 
@@ -28,10 +28,10 @@
 .img-overlay {
     position: relative;
     background-color: #00000091;
-    color: white;
+    color: #e7e7e7;
     z-index: 996;
     height: 40%;
-    margin-top: -7.9vh;
+    margin-top: -7.7vh;
     width: 98%;
     padding: 0 20%;
     text-align: center;
@@ -39,10 +39,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    -webkit-box-shadow: 0px -4px 15px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px -4px 15px 0px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px -4px 15px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px -5px 15px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px -5px 15px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px -5px 15px 0px rgba(0, 0, 0, 0.75);
 }
 .img-overlay:hover {
     cursor: pointer;
+}
+
+.img-overlay > p{
+    padding: 0;
+    min-width: 9vw
 }

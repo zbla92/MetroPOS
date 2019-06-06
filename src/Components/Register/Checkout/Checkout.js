@@ -17,7 +17,8 @@ export class Checkout extends Component {
             checkItems: [],
             checkToImport: {},
             url: `http://localhost:3001/checks`,
-            tendered: ''
+            tendered: '',
+            tenderSelector: "tip"
         };
     }
 
@@ -122,11 +123,14 @@ export class Checkout extends Component {
     }
 
     //---- Adding OK button functionalities: ----------------//
+    tenderComponentsetter = (e) => {
+        this.setState({ tenderSelector: e })
+    }
+
     doYourThang = e => {
         try {
             if (e.length > 0) {
                 this.props.getTipAmount(this.props.tipFormatter(e));
-                console.log('TIP executed');
             }
         } catch (err) {
             console.log(err);
@@ -157,6 +161,7 @@ export class Checkout extends Component {
                                     <TenderLoader
                                         tipFormatter={this.props.tipFormatter}
                                         tendered={this.state.tendered}
+                                        tenderSelector={this.state.tenderSelector}
                                     />
                                 </div>
                             </div>
@@ -258,32 +263,31 @@ export class Checkout extends Component {
                             <div className="tender-container-heading">
                                 <i className="money bill alternate outline icon" /> Cash
                             </div>
-                            <button id="5-cash" className="tender-button">
+                            <button id="5-cash" className="tender-button" onClick={e => {this.tenderComponentsetter("cash")}}>
                                 <i className="dollar sign icon" /> 5
                             </button>
-                            <button id="10-cash" className="tender-button">
+                            <button id="10-cash" className="tender-button" onClick={e => {this.tenderComponentsetter("cash")}}>
                                 <i className="dollar sign icon" /> 10
                             </button>
-                            <button id="20-cash" className="tender-button">
+                            <button id="20-cash" className="tender-button" onClick={e => {this.tenderComponentsetter("cash")}}>
                                 <i className="dollar sign icon" /> 20
                             </button>
-                            <button>
-                                {' '}
+                            <button onClick={e => {this.tenderComponentsetter("cash")}}>
                                 <i className="dollar sign icon" /> 50
                             </button>
-                            <button>
+                            <button onClick={e => {this.tenderComponentsetter("cash")}}>
                                 <i className="dollar sign icon" /> 100
                             </button>
-                            <button>Exact Cash </button>
+                            <button onClick={e => {this.tenderComponentsetter("cash")}}>Exact Cash </button>
                         </div>
                         <div className="tender-container tender-cc">
                             <div className="tender-container-heading">
                                 <i className="credit card outline icon" /> Credit
                             </div>
-                            <button>Visa</button>
-                            <button>Master Card</button>
-                            <button>Amex</button>
-                            <button>Discover</button>
+                            <button onClick={e => {this.tenderComponentsetter("credit")}}>Visa</button>
+                            <button onClick={e => {this.tenderComponentsetter("credit")}}>Master Card</button>
+                            <button onClick={e => {this.tenderComponentsetter("credit")}}>Amex</button>
+                            <button onClick={e => {this.tenderComponentsetter("credit")}}>Discover</button>
                         </div>
                         <div className="tender-container tender-discounts">
                             <div className="tender-container-heading">

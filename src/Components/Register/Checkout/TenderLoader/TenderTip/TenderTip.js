@@ -2,6 +2,8 @@ import './tenderTip.css'
 import React from 'react';
 
 export default function TenderTip({ tendered, tipFormatter }) {
+
+
     return(
         <div>
             <div className="totals-box-description">Tip Amount:</div>

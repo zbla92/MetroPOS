@@ -242,6 +242,22 @@
       "time": "03:37",
       "closedBy": "Clementine Bauch",
       "tip": "5.00"
+    },
+    {
+      "id": 8,
+      "tenderOption": "amex",
+      "items": [
+        {
+          "name": "Ultimate Veggie Burger",
+          "image": "http://static.food2fork.com/ultimateveggieburgerrecipe49ac.jpg",
+          "price": 9.49,
+          "qty": 1,
+          "flagged": false
+        }
+      ],
+      "total": "9.49",
+      "time": "04:40",
+      "tip": "10.00"
     }
   ]
 }

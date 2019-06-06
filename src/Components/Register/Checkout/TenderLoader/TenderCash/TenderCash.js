@@ -2,6 +2,6 @@ import React from 'react';
 
 export default function TenderCash() {
     return(
-        <div></div>
+        <div>Cash</div>
     );
 }

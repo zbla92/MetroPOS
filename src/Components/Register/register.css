@@ -186,6 +186,7 @@ body {
     margin-left: 30.5vw;
     height: 78.6vh;
     overflow: scroll;
+    padding-top: 1.1vh;
 }
 
 .submenu-injection-container::-webkit-scrollbar {
