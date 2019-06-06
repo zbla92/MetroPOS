@@ -10,7 +10,6 @@ import MenuButtons from './MenuButtons/MenuButtons';
 import ItemToCheck from './ItemToCheck/ItemToCheck';
 import Checkout from './Checkout/Checkout';
 import Tables from './Tables/Tables';
-import { isNumber } from 'util';
 
 class Register extends React.Component {
     constructor(props) {
@@ -51,6 +50,7 @@ class Register extends React.Component {
         }
     };
 
+    //METHODS USED BY TABLE MAINLY -------------------------------
     //If State tablesOpen is True - Tables componenet will mount
     listenTables = () => {
         if (this.state.tablesOpen) {
@@ -59,17 +59,22 @@ class Register extends React.Component {
                     openedTables={this.state.openedTables}
                     updateOrderedItems={this.props.updateOrderedItems}
                     setCheckID={this.props.setCheckID}
+                    updateTip={this.updateTip}
                 />
             );
         }
     };
 
+    updateTip = (e) => {
+        this.setState({ tip:e })
+    }
     //METHODS USED BY CHECKOUT MAINLY -------------------------------
 
     // method to close unload checkout component
     closeCheckout = () => {
         this.setState({
-            checkoutOpen: false
+            checkoutOpen: false,
+            tip: 0.0
         });
         // Moving this action on top of the stack so everything can be first pushed to the json Server - once it is on the server  Updating check ID as well as getting all opened talbes will performed
         setTimeout(e => {

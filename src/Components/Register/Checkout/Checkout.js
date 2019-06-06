@@ -126,7 +126,7 @@ export class Checkout extends Component {
         try {
             if (e.length > 0) {
                 this.props.getTipAmount(this.props.tipFormatter(e));
-                console.log('get the thangs');
+                console.log('TIP executed');
             }
         } catch (err) {
             console.log(err);
