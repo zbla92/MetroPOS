@@ -77,10 +77,10 @@ class Register extends React.Component {
             tip: 0.0
         });
         // Moving this action on top of the stack so everything can be first pushed to the json Server - once it is on the server  Updating check ID as well as getting all opened talbes will performed
-        setTimeout(e => {
-            this.getAllOpenedChecks();
-            this.props.updateCheckID();
-        }, 200);
+        // setTimeout(e => {
+        //     this.getAllOpenedChecks();
+        //     this.props.updateCheckID();
+        // }, 200);
     };
 
     getTipAmount = e => {
@@ -116,9 +116,9 @@ class Register extends React.Component {
                 if (!e.closedBy) {
                     openedChecks.push(e);
                 }
-                return -1;
+                return -1
             });
-            this.setState({ openedTables: openedChecks, allTables: res.data, newCheckID: res.data.length + 1 });
+            this.setState({ openedTables: openedChecks, allTables: res.data});
         });
     };
 
@@ -157,6 +157,7 @@ class Register extends React.Component {
                                 className="btn-top"
                                 onClick={e => {
                                     this.goTables();
+                                    this.getAllOpenedChecks();
                                 }}
                             >
                                 Opened

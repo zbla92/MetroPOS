@@ -9,10 +9,8 @@ export class Checkout extends Component {
         super(props);
 
         this.state = {
-            totalValue: document.getElementById('total-value').innerHTML,
-            taxValue: document.getElementById('total-tax').innerHTML,
             id: this.props.checkID,
-            tip: 0.0,
+            creditCard: '',
             checks: [],
             checkItems: [],
             checkToImport: {},
@@ -23,28 +21,35 @@ export class Checkout extends Component {
     }
 
     componentDidMount() {
+        const totalValue = document.getElementById('total-value').innerHTML
         // Getting all opened checks
         this.props.getAllOpenedChecks();
         this.setState({ checkItems: this.props.checkItems, checks: this.props.openedTables });
         // Building object to inject
-        this.createObj(this.props.checkItems, this.state.id, this.state.totalValue, 'amex', this.props.tip);
+        this.createObj(this.props.checkItems, this.state.id, totalValue, 'amex', this.props.tip);
 
         this.fetchChecks = this.state.url;
     }
     //------------------------------------------------------
     enterAmount = e => {
-        if (this.state.tendered.length < 16) {
+        if (this.state.tenderSelector === 'tip' && this.state.tendered.length < 6) {
             this.setState({
                 tendered: this.state.tendered.concat(e.target.textContent)
             });
+        }else if(this.state.tenderSelector === 'creditCard'){
+            this.setState({ creditCard: this.state.creditCard.concat(e.target.textContent) })
         }
     };
 
     delDigit = () => {
-        this.setState({
+        if(this.state.tenderSelector === 'tip'){
+            console.log(this.state.tenderSelector)
+            this.setState({
             tendered: this.state.tendered.substring(0, this.state.tendered.length - 1)
-        });
+            });
+        }
     };
+
 
     delAll = () => {
         this.setState({
@@ -97,6 +102,12 @@ export class Checkout extends Component {
         } else if (object.id > allTables) {
             pushObj(object);
         }
+        setTimeout(e => {
+            this.props.getAllOpenedChecks();
+        }, 1);
+        setTimeout(e => {
+            this.props.updateCheckID();
+        }, 1);
     };
 
     createObj(itemList, id, total = 0.0, tenderOption = 'Cash') {
@@ -129,8 +140,10 @@ export class Checkout extends Component {
 
     doYourThang = e => {
         try {
-            if (e.length > 0) {
+            if (this.state.tenderSelector === 'tip') {
                 this.props.getTipAmount(this.props.tipFormatter(e));
+            }else if(this.state.tenderSelector === 'creditCard'){
+                //Push CC number
             }
         } catch (err) {
             console.log(err);
@@ -162,6 +175,7 @@ export class Checkout extends Component {
                                         tipFormatter={this.props.tipFormatter}
                                         tendered={this.state.tendered}
                                         tenderSelector={this.state.tenderSelector}
+                                        tipAmount={this.props.tip}
                                     />
                                 </div>
                             </div>
