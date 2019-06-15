@@ -5,75 +5,41 @@
       "tenderOption": "amex",
       "items": [
         {
-          "name": "Ultimate Veggie Burger",
-          "image": "http://static.food2fork.com/ultimateveggieburgerrecipe49ac.jpg",
-          "price": 9.49,
-          "qty": 1,
-          "flagged": false
-        },
-        {
-          "name": "Vegetarian Lentil Burgers",
-          "image": "http://static.food2fork.com/lentilburgerrecipe_07405f.jpg",
-          "price": 4.99,
-          "qty": 1,
-          "flagged": false
-        },
-        {
-          "name": "Quinoa Black Bean Burgers",
-          "image": "http://static.food2fork.com/9679903713.jpg",
-          "price": 14.99,
+          "name": "Juicy Lucy Burger",
+          "image": "http://static.food2fork.com/29721_RecipeImage_620x413_juicy_lucy_burger380a3.jpg",
+          "price": 5,
           "qty": 1,
           "flagged": false
         }
       ],
-      "total": "29.47",
-      "time": "21:54",
+      "total": "5.00",
+      "time": "23:19",
+      "creditCard": "0812222244455888",
       "closedBy": "Leanne Graham",
-      "tip": 0
+      "tip": "0.06"
     },
     {
       "id": 2,
       "tenderOption": "amex",
       "items": [
         {
-          "name": "Ultimate Veggie Burger",
-          "image": "http://static.food2fork.com/ultimateveggieburgerrecipe49ac.jpg",
-          "price": 9.49,
-          "qty": 1,
-          "flagged": false
-        },
-        {
-          "name": "Vegetarian Lentil Burgers",
-          "image": "http://static.food2fork.com/lentilburgerrecipe_07405f.jpg",
-          "price": 4.99,
-          "qty": 1,
-          "flagged": false
-        },
-        {
-          "name": "Quinoa Black Bean Burgers",
-          "image": "http://static.food2fork.com/9679903713.jpg",
-          "price": 14.99,
+          "name": "Turkey Burger",
+          "image": "http://static.food2fork.com/6661337708.jpg",
+          "price": 6.99,
           "qty": 1,
           "flagged": false
         }
       ],
-      "total": "29.47",
-      "time": "22:13",
-      "closedBy": "Clementine Bauch",
-      "tip": 0
+      "total": "26.99",
+      "time": "04:14",
+      "closedBy": "Leanne Graham",
+      "tip": "20.00"
     },
     {
       "id": 3,
       "tenderOption": "amex",
       "items": [
         {
-          "name": "Ultimate Veggie Burger",
-          "image": "http://static.food2fork.com/ultimateveggieburgerrecipe49ac.jpg",
-          "price": 9.49,
-          "qty": 1,
-          "flagged": false
-        },
-        {
           "name": "Vegetarian Lentil Burgers",
           "image": "http://static.food2fork.com/lentilburgerrecipe_07405f.jpg",
           "price": 4.99,
@@ -81,13 +47,47 @@
           "flagged": false
         }
       ],
-      "total": "22.48",
-      "time": "22:12",
-      "closedBy": "Clementine Bauch",
-      "tip": "8.00"
+      "total": "6.99",
+      "time": "04:14",
+      "closedBy": "Leanne Graham",
+      "tip": "2.00"
     },
     {
       "id": 4,
+      "tenderOption": "amex",
+      "items": [
+        {
+          "name": "Ultimate Veggie Burger",
+          "image": "http://static.food2fork.com/ultimateveggieburgerrecipe49ac.jpg",
+          "price": 9.49,
+          "qty": 1,
+          "flagged": false
+        }
+      ],
+      "total": "9.79",
+      "time": "04:14",
+      "closedBy": "Leanne Graham",
+      "tip": "0.30"
+    },
+    {
+      "id": 5,
+      "tenderOption": "amex",
+      "items": [
+        {
+          "name": "Juicy Lucy Burger",
+          "image": "http://static.food2fork.com/29721_RecipeImage_620x413_juicy_lucy_burger380a3.jpg",
+          "price": 5,
+          "qty": 1,
+          "flagged": false
+        }
+      ],
+      "total": "8.00",
+      "time": "04:14",
+      "closedBy": "Leanne Graham",
+      "tip": "3.00"
+    },
+    {
+      "id": 6,
       "tenderOption": "amex",
       "items": [
         {
@@ -96,21 +96,11 @@
           "price": 14.99,
           "qty": 1,
           "flagged": false
-        }
-      ],
-      "total": "14.99",
-      "time": "22:01",
-      "closedBy": "Clementine Bauch",
-      "tip": 0
-    },
-    {
-      "id": 5,
-      "tenderOption": "amex",
-      "items": [
+        },
         {
-          "name": "Quinoa Black Bean Burgers",
-          "image": "http://static.food2fork.com/9679903713.jpg",
-          "price": 14.99,
+          "name": "Vegetarian Lentil Burgers",
+          "image": "http://static.food2fork.com/lentilburgerrecipe_07405f.jpg",
+          "price": 4.99,
           "qty": 1,
           "flagged": false
         },
@@ -118,51 +108,41 @@
           "name": "Juicy Lucy Burger",
           "image": "http://static.food2fork.com/29721_RecipeImage_620x413_juicy_lucy_burger380a3.jpg",
           "price": 5,
+          "qty": 2,
+          "flagged": false
+        },
+        {
+          "name": "Fantastic Chicken Burgers ",
+          "image": "http://static.food2fork.com/68378250aa.jpg",
+          "price": 10.99,
           "qty": 1,
           "flagged": false
         },
         {
-          "name": "Vegetarian Lentil Burgers",
-          "image": "http://static.food2fork.com/lentilburgerrecipe_07405f.jpg",
-          "price": 4.99,
+          "name": "Tofu Burger ",
+          "image": "http://static.food2fork.com/tofu_burger_recipe7c06.jpg",
+          "price": 7.99,
           "qty": 1,
           "flagged": false
         }
       ],
-      "total": "24.98",
-      "time": "22:14",
+      "total": "79.04",
+      "time": "04:14",
       "closedBy": "Leanne Graham",
-      "tip": 0
-    },
-    {
-      "id": 6,
-      "tenderOption": "amex",
-      "items": [
-        {
-          "name": "Ultimate Veggie Burger",
-          "image": "http://static.food2fork.com/ultimateveggieburgerrecipe49ac.jpg",
-          "price": 9.49,
-          "qty": 1,
-          "flagged": false
-        },
-        {
-          "name": "Quinoa Black Bean Burgers",
-          "image": "http://static.food2fork.com/9679903713.jpg",
-          "price": 14.99,
-          "qty": 1,
-          "flagged": false
-        }
-      ],
-      "total": "24.48",
-      "time": "22:09",
-      "closedBy": "Leanne Graham",
-      "tip": 0
+      "tip": "30.08"
     },
     {
       "id": 7,
       "tenderOption": "amex",
       "items": [
         {
+          "name": "Vegetarian Lentil Burgers",
+          "image": "http://static.food2fork.com/lentilburgerrecipe_07405f.jpg",
+          "price": 4.99,
+          "qty": 1,
+          "flagged": false
+        },
+        {
           "name": "Quinoa Black Bean Burgers",
           "image": "http://static.food2fork.com/9679903713.jpg",
           "price": 14.99,
@@ -170,545 +150,86 @@
           "flagged": false
         }
       ],
-      "total": "14.99",
-      "time": "22:12",
-      "closedBy": "Clementine Bauch",
-      "tip": 0
+      "total": "25.98",
+      "time": "01:07",
+      "closedBy": "Leanne Graham",
+      "tip": "6.00"
     },
     {
       "id": 8,
       "tenderOption": "amex",
       "items": [
         {
-          "name": "Quinoa Black Bean Burgers",
-          "image": "http://static.food2fork.com/9679903713.jpg",
-          "price": 14.99,
+          "name": "Mediterranean Lamb Burger",
+          "image": "http://static.food2fork.com/29723_mediterranean_lamb_burger_620fa1a.jpg",
+          "price": 12,
+          "qty": 1,
+          "flagged": false
+        },
+        {
+          "name": "Grilled Pizza",
+          "image": "http://static.food2fork.com/howtogrillpizzad300x20086a60e1b.jpg",
+          "price": 22.99,
+          "qty": 3,
+          "flagged": false
+        },
+        {
+          "name": "Breakfast pizza",
+          "image": "http://static.food2fork.com/4683_MEDIUM544c.jpg",
+          "price": 23,
+          "qty": 3,
+          "flagged": false
+        },
+        {
+          "name": "PW’s Favorite Pizza",
+          "image": "http://static.food2fork.com/4364270576_302751a2a4f3c1.jpg",
+          "price": 23,
+          "qty": 6,
+          "flagged": false
+        },
+        {
+          "name": "Peach Mozzarella Pizza",
+          "image": "http://static.food2fork.com/peachbasilpizza6c7de.jpg",
+          "price": 23,
+          "qty": 3,
+          "flagged": false
+        },
+        {
+          "name": "Pizza Quesadillas",
+          "image": "http://static.food2fork.com/Pizza2BQuesadillas2B2528aka2BPizzadillas25292B5002B834037bf306b.jpg",
+          "price": 17.49,
+          "qty": 3,
+          "flagged": false
+        },
+        {
+          "name": "Strawberry Pizza",
+          "image": "http://static.food2fork.com/strawberrybasilbalsamicpizzarecipe703d.jpg",
+          "price": 16,
           "qty": 1,
           "flagged": false
         }
       ],
-      "total": "14.99",
-      "time": "22:14",
+      "total": "427.44",
+      "time": "00:24",
       "closedBy": "Leanne Graham",
-      "tip": 0
+      "tip": "2.00"
     },
     {
       "id": 9,
       "tenderOption": "amex",
       "items": [
         {
-          "name": "Quinoa Black Bean Burgers",
-          "image": "http://static.food2fork.com/9679903713.jpg",
-          "price": 14.99,
+          "name": "Juicy Lucy Burger",
+          "image": "http://static.food2fork.com/29721_RecipeImage_620x413_juicy_lucy_burger380a3.jpg",
+          "price": 5,
           "qty": 1,
           "flagged": false
         }
       ],
-      "total": "14.99",
-      "time": "22:14",
+      "total": "5.00",
+      "time": "00:40",
       "closedBy": "Leanne Graham",
-      "tip": 0
-    },
-    {
-      "id": 10,
-      "tenderOption": "amex",
-      "items": [
-        {
-          "name": "Quinoa Black Bean Burgers",
-          "image": "http://static.food2fork.com/9679903713.jpg",
-          "price": 14.99,
-          "qty": 1,
-          "flagged": false
-        }
-      ],
-      "total": "14.99",
-      "time": "22:12",
-      "closedBy": "Clementine Bauch",
-      "tip": 0
-    },
-    {
-      "id": 11,
-      "tenderOption": "amex",
-      "items": [
-        {
-          "name": "Vegetarian Lentil Burgers",
-          "image": "http://static.food2fork.com/lentilburgerrecipe_07405f.jpg",
-          "price": 4.99,
-          "qty": 1,
-          "flagged": false
-        }
-      ],
-      "total": "4.99",
-      "time": "22:14",
-      "closedBy": "Leanne Graham",
-      "tip": 0
-    },
-    {
-      "id": 12,
-      "tenderOption": "amex",
-      "items": [
-        {
-          "name": "Quinoa Black Bean Burgers",
-          "image": "http://static.food2fork.com/9679903713.jpg",
-          "price": 14.99,
-          "qty": 1,
-          "flagged": false
-        }
-      ],
-      "total": "14.99",
-      "time": "22:12",
-      "closedBy": "Clementine Bauch",
-      "tip": 0
-    },
-    {
-      "id": 13,
-      "tenderOption": "amex",
-      "items": [
-        {
-          "name": "Quinoa Black Bean Burgers",
-          "image": "http://static.food2fork.com/9679903713.jpg",
-          "price": 14.99,
-          "qty": 1,
-          "flagged": false
-        },
-        {
-          "name": "Vegetarian Lentil Burgers",
-          "image": "http://static.food2fork.com/lentilburgerrecipe_07405f.jpg",
-          "price": 4.99,
-          "qty": 1,
-          "flagged": false
-        },
-        {
-          "name": "Ultimate Veggie Burger",
-          "image": "http://static.food2fork.com/ultimateveggieburgerrecipe49ac.jpg",
-          "price": 9.49,
-          "qty": 1,
-          "flagged": false
-        }
-      ],
-      "total": "29.47",
-      "time": "22:15",
-      "closedBy": "Leanne Graham",
-      "tip": 0
-    },
-    {
-      "id": 14,
-      "tenderOption": "amex",
-      "items": [
-        {
-          "name": "Quinoa Black Bean Burgers",
-          "image": "http://static.food2fork.com/9679903713.jpg",
-          "price": 14.99,
-          "qty": 1,
-          "flagged": false
-        }
-      ],
-      "total": "14.99",
-      "time": "22:15",
-      "closedBy": "Leanne Graham",
-      "tip": 0
-    },
-    {
-      "id": 15,
-      "tenderOption": "amex",
-      "items": [
-        {
-          "name": "Quinoa Black Bean Burgers",
-          "image": "http://static.food2fork.com/9679903713.jpg",
-          "price": 14.99,
-          "qty": 1,
-          "flagged": false
-        }
-      ],
-      "total": "14.99",
-      "time": "22:15",
-      "closedBy": "Leanne Graham",
-      "tip": 0
-    },
-    {
-      "id": 16,
-      "tenderOption": "amex",
-      "items": [
-        {
-          "name": "Quinoa Black Bean Burgers",
-          "image": "http://static.food2fork.com/9679903713.jpg",
-          "price": 14.99,
-          "qty": 1,
-          "flagged": false
-        }
-      ],
-      "total": "14.99",
-      "time": "22:15",
-      "closedBy": "Leanne Graham",
-      "tip": 0
-    },
-    {
-      "id": 17,
-      "tenderOption": "amex",
-      "items": [
-        {
-          "name": "Quinoa Black Bean Burgers",
-          "image": "http://static.food2fork.com/9679903713.jpg",
-          "price": 14.99,
-          "qty": 1,
-          "flagged": false
-        }
-      ],
-      "total": "14.99",
-      "time": "22:15",
-      "closedBy": "Leanne Graham",
-      "tip": 0
-    },
-    {
-      "id": 18,
-      "tenderOption": "amex",
-      "items": [
-        {
-          "name": "Quinoa Black Bean Burgers",
-          "image": "http://static.food2fork.com/9679903713.jpg",
-          "price": 14.99,
-          "qty": 1,
-          "flagged": false
-        }
-      ],
-      "total": "14.99",
-      "time": "22:15",
-      "closedBy": "Leanne Graham",
-      "tip": 0
-    },
-    {
-      "id": 19,
-      "tenderOption": "amex",
-      "items": [
-        {
-          "name": "Quinoa Black Bean Burgers",
-          "image": "http://static.food2fork.com/9679903713.jpg",
-          "price": 14.99,
-          "qty": 1,
-          "flagged": false
-        }
-      ],
-      "total": "14.99",
-      "time": "22:15",
-      "closedBy": "Leanne Graham",
-      "tip": 0
-    },
-    {
-      "id": 20,
-      "tenderOption": "amex",
-      "items": [
-        {
-          "name": "Quinoa Black Bean Burgers",
-          "image": "http://static.food2fork.com/9679903713.jpg",
-          "price": 14.99,
-          "qty": 1,
-          "flagged": false
-        }
-      ],
-      "total": "14.99",
-      "time": "22:20",
-      "closedBy": "Leanne Graham",
-      "tip": 0
-    },
-    {
-      "id": 21,
-      "tenderOption": "amex",
-      "items": [
-        {
-          "name": "Quinoa Black Bean Burgers",
-          "image": "http://static.food2fork.com/9679903713.jpg",
-          "price": 14.99,
-          "qty": 1,
-          "flagged": false
-        }
-      ],
-      "total": "14.99",
-      "time": "22:19",
-      "closedBy": "Leanne Graham",
-      "tip": 0
-    },
-    {
-      "id": 22,
-      "tenderOption": "amex",
-      "items": [
-        {
-          "name": "Quinoa Black Bean Burgers",
-          "image": "http://static.food2fork.com/9679903713.jpg",
-          "price": 14.99,
-          "qty": 1,
-          "flagged": false
-        }
-      ],
-      "total": "14.99",
-      "time": "22:21",
-      "closedBy": "Leanne Graham",
-      "tip": 0
-    },
-    {
-      "id": 23,
-      "tenderOption": "amex",
-      "items": [
-        {
-          "name": "Quinoa Black Bean Burgers",
-          "image": "http://static.food2fork.com/9679903713.jpg",
-          "price": 14.99,
-          "qty": 1,
-          "flagged": false
-        }
-      ],
-      "total": "14.99",
-      "time": "22:20",
-      "closedBy": "Leanne Graham",
-      "tip": 0
-    },
-    {
-      "id": 24,
-      "tenderOption": "amex",
-      "items": [
-        {
-          "name": "Quinoa Black Bean Burgers",
-          "image": "http://static.food2fork.com/9679903713.jpg",
-          "price": 14.99,
-          "qty": 1,
-          "flagged": false
-        }
-      ],
-      "total": "14.99",
-      "time": "22:20",
-      "closedBy": "Leanne Graham",
-      "tip": 0
-    },
-    {
-      "id": 25,
-      "tenderOption": "amex",
-      "items": [
-        {
-          "name": "Quinoa Black Bean Burgers",
-          "image": "http://static.food2fork.com/9679903713.jpg",
-          "price": 14.99,
-          "qty": 1,
-          "flagged": false
-        }
-      ],
-      "total": "14.99",
-      "time": "00:15",
-      "closedBy": "Leanne Graham",
-      "tip": 0
-    },
-    {
-      "id": 26,
-      "tenderOption": "amex",
-      "items": [
-        {
-          "name": "Quinoa Black Bean Burgers",
-          "image": "http://static.food2fork.com/9679903713.jpg",
-          "price": 14.99,
-          "qty": 1,
-          "flagged": false
-        }
-      ],
-      "total": "14.99",
-      "time": "22:21",
-      "closedBy": "Leanne Graham",
-      "tip": 0
-    },
-    {
-      "id": 27,
-      "tenderOption": "amex",
-      "items": [
-        {
-          "name": "Quinoa Black Bean Burgers",
-          "image": "http://static.food2fork.com/9679903713.jpg",
-          "price": 14.99,
-          "qty": 1,
-          "flagged": false
-        }
-      ],
-      "total": "14.99",
-      "time": "22:19",
-      "closedBy": "Leanne Graham",
-      "tip": 0
-    },
-    {
-      "id": 28,
-      "tenderOption": "amex",
-      "items": [
-        {
-          "name": "Quinoa Black Bean Burgers",
-          "image": "http://static.food2fork.com/9679903713.jpg",
-          "price": 14.99,
-          "qty": 1,
-          "flagged": false
-        }
-      ],
-      "total": "14.99",
-      "time": "00:15",
-      "closedBy": "Leanne Graham",
-      "tip": 0
-    },
-    {
-      "id": 29,
-      "tenderOption": "amex",
-      "items": [
-        {
-          "name": "Quinoa Black Bean Burgers",
-          "image": "http://static.food2fork.com/9679903713.jpg",
-          "price": 14.99,
-          "qty": 1,
-          "flagged": false
-        }
-      ],
-      "total": "14.99",
-      "time": "00:15",
-      "closedBy": "Leanne Graham",
-      "tip": "0.80"
-    },
-    {
-      "id": 30,
-      "tenderOption": "amex",
-      "items": [
-        {
-          "name": "Quinoa Black Bean Burgers",
-          "image": "http://static.food2fork.com/9679903713.jpg",
-          "price": 14.99,
-          "qty": 1,
-          "flagged": false
-        }
-      ],
-      "total": "14.99",
-      "time": "00:16",
-      "closedBy": "Leanne Graham",
-      "tip": 0
-    },
-    {
-      "id": 31,
-      "tenderOption": "amex",
-      "items": [
-        {
-          "name": "Quinoa Black Bean Burgers",
-          "image": "http://static.food2fork.com/9679903713.jpg",
-          "price": 14.99,
-          "qty": 1,
-          "flagged": false
-        }
-      ],
-      "total": "14.99",
-      "time": "00:16",
-      "closedBy": "Leanne Graham",
-      "tip": 0
-    },
-    {
-      "id": 32,
-      "tenderOption": "amex",
-      "items": [
-        {
-          "name": "Quinoa Black Bean Burgers",
-          "image": "http://static.food2fork.com/9679903713.jpg",
-          "price": 14.99,
-          "qty": 1,
-          "flagged": false
-        }
-      ],
-      "total": "14.99",
-      "time": "00:15",
-      "closedBy": "Leanne Graham",
-      "tip": 0
-    },
-    {
-      "id": 33,
-      "tenderOption": "amex",
-      "items": [
-        {
-          "name": "Quinoa Black Bean Burgers",
-          "image": "http://static.food2fork.com/9679903713.jpg",
-          "price": 14.99,
-          "qty": 1,
-          "flagged": false
-        }
-      ],
-      "total": "14.99",
-      "time": "00:21",
-      "closedBy": "Leanne Graham",
-      "tip": 0
-    },
-    {
-      "id": 34,
-      "tenderOption": "amex",
-      "items": [
-        {
-          "name": "Vegetarian Lentil Burgers",
-          "image": "http://static.food2fork.com/lentilburgerrecipe_07405f.jpg",
-          "price": 4.99,
-          "qty": 1,
-          "flagged": false
-        },
-        {
-          "name": "Quinoa Black Bean Burgers",
-          "image": "http://static.food2fork.com/9679903713.jpg",
-          "price": 14.99,
-          "qty": 1,
-          "flagged": false
-        }
-      ],
-      "total": "27.98",
-      "time": "00:21",
-      "closedBy": "Leanne Graham",
-      "tip": 0
-    },
-    {
-      "id": 35,
-      "tenderOption": "amex",
-      "items": [
-        {
-          "name": "Quinoa Black Bean Burgers",
-          "image": "http://static.food2fork.com/9679903713.jpg",
-          "price": 14.99,
-          "qty": 1,
-          "flagged": false
-        }
-      ],
-      "total": "14.99",
-      "time": "00:21",
-      "closedBy": "Leanne Graham",
-      "tip": 0
-    },
-    {
-      "id": 36,
-      "tenderOption": "amex",
-      "items": [
-        {
-          "name": "Black Bean Burger",
-          "image": "http://static.food2fork.com/507107991f.jpg",
-          "price": 5.99,
-          "qty": 2,
-          "flagged": false
-        },
-        {
-          "name": "Vegetarian Lentil Burgers",
-          "image": "http://static.food2fork.com/lentilburgerrecipe_07405f.jpg",
-          "price": 4.99,
-          "qty": 3,
-          "flagged": false
-        },
-        {
-          "name": "Ultimate Veggie Burger",
-          "image": "http://static.food2fork.com/ultimateveggieburgerrecipe49ac.jpg",
-          "price": 9.49,
-          "qty": 5,
-          "flagged": false
-        },
-        {
-          "name": "Quinoa Black Bean Burgers",
-          "image": "http://static.food2fork.com/9679903713.jpg",
-          "price": 14.99,
-          "qty": 1,
-          "flagged": false
-        }
-      ],
-      "total": "89.39",
-      "time": "00:21",
-      "closedBy": "Leanne Graham",
-      "tip": 0
+      "tip": "0.90"
     }
   ]
 }

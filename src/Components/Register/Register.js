@@ -65,9 +65,9 @@ class Register extends React.Component {
         }
     };
 
-    updateTip = (e) => {
-        this.setState({ tip:e })
-    }
+    updateTip = e => {
+        this.setState({ tip: e });
+    };
     //METHODS USED BY CHECKOUT MAINLY -------------------------------
 
     // method to close unload checkout component
@@ -116,9 +116,9 @@ class Register extends React.Component {
                 if (!e.closedBy) {
                     openedChecks.push(e);
                 }
-                return -1
+                return -1;
             });
-            this.setState({ openedTables: openedChecks, allTables: res.data});
+            this.setState({ openedTables: openedChecks, allTables: res.data });
         });
     };
 

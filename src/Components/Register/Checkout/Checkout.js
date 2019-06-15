@@ -16,12 +16,13 @@ export class Checkout extends Component {
             checkToImport: {},
             url: `http://localhost:3001/checks`,
             tendered: '',
-            tenderSelector: "tip"
+            tenderSelector: 'tip',
+            benjaminSize: 0
         };
     }
 
     componentDidMount() {
-        const totalValue = document.getElementById('total-value').innerHTML
+        const totalValue = document.getElementById('total-value').innerHTML;
         // Getting all opened checks
         this.props.getAllOpenedChecks();
         this.setState({ checkItems: this.props.checkItems, checks: this.props.openedTables });
@@ -36,20 +37,26 @@ export class Checkout extends Component {
             this.setState({
                 tendered: this.state.tendered.concat(e.target.textContent)
             });
-        }else if(this.state.tenderSelector === 'creditCard'){
-            this.setState({ creditCard: this.state.creditCard.concat(e.target.textContent) })
-        }
-    };
-
-    delDigit = () => {
-        if(this.state.tenderSelector === 'tip'){
-            console.log(this.state.tenderSelector)
+        } else if (this.state.tenderSelector === 'creditCard' && this.state.creditCard.length < 16) {
             this.setState({
-            tendered: this.state.tendered.substring(0, this.state.tendered.length - 1)
+                creditCard: this.state.creditCard.concat(e.target.textContent)
             });
         }
     };
 
+    delDigit = () => {
+        // If TIP component is ACTIVE C button is deleting TIP amount digits
+        if (this.state.tenderSelector === 'tip') {
+            this.setState({
+                tendered: this.state.tendered.substring(0, this.state.tendered.length - 1)
+            });
+            // If CreditCard component is ACTIVE C button is deleting CC number  digit
+        } else if (this.state.tenderSelector === 'creditCard') {
+            this.setState({
+                creditCard: this.state.creditCard.substring(0, this.state.creditCard.length - 1)
+            });
+        }
+    };
 
     delAll = () => {
         this.setState({
@@ -122,6 +129,7 @@ export class Checkout extends Component {
         });
     }
 
+    //----------------------------------- Adding new properties to the check that will later be pushed to the server
     addClosedByToCheck(element, currentObj) {
         let newObj = currentObj;
         newObj.closedBy = element;
@@ -132,25 +140,46 @@ export class Checkout extends Component {
         newObj.tip = element;
         this.setState({ checkToImport: newObj });
     }
-
-    //---- Adding OK button functionalities: ----------------//
-    tenderComponentsetter = (e) => {
-        this.setState({ tenderSelector: e })
+    addCCtoCheck(element, currentObj) {
+        let newObj = currentObj;
+        newObj.creditCard = element;
+        this.setState({ checkToImport: newObj });
     }
+    addCashToCheck(element, currentObj) {
+        let newObj = currentObj;
+        newObj.cash = element;
+        this.setState({ checkToImport: newObj });
+    }
+
+    //--------------------------------------------------------------------------------------------------------------
+
+    tenderComponentsetter = e => {
+        this.setState({ tenderSelector: e });
+    };
 
     doYourThang = e => {
         try {
             if (this.state.tenderSelector === 'tip') {
                 this.props.getTipAmount(this.props.tipFormatter(e));
-            }else if(this.state.tenderSelector === 'creditCard'){
-                //Push CC number
+            } else if (this.state.tenderSelector === 'creditCard') {
+                // Check if CC is valid
+                // Allow cashier to save the check if CC is valid
+                console.log('Authorization complete');
+                this.addCCtoCheck(this.state.creditCard, this.state.checkToImport);
+            } else if (this.state.tenderSelector === 'cash') {
+                console.log('OPEN DRAWER');
+                this.addCashToCheck(document.getElementById('total-value').innerHTML, this.state.checkToImport);
             }
         } catch (err) {
             console.log(err);
         }
     };
 
-    // coded by milanblaz to here
+    stateSetter = value => {
+        this.setState({ benjaminSize: value });
+    };
+
+    //----------General Purpose Methods -------------------//
 
     render() {
         return (
@@ -176,6 +205,8 @@ export class Checkout extends Component {
                                         tendered={this.state.tendered}
                                         tenderSelector={this.state.tenderSelector}
                                         tipAmount={this.props.tip}
+                                        benjaminSize={this.state.benjaminSize}
+                                        creditCard={this.state.creditCard}
                                     />
                                 </div>
                             </div>
@@ -277,31 +308,95 @@ export class Checkout extends Component {
                             <div className="tender-container-heading">
                                 <i className="money bill alternate outline icon" /> Cash
                             </div>
-                            <button id="5-cash" className="tender-button" onClick={e => {this.tenderComponentsetter("cash")}}>
+                            <button
+                                id="5-cash"
+                                className="tender-button"
+                                onClick={e => {
+                                    this.tenderComponentsetter('cash');
+                                    this.stateSetter(5);
+                                }}
+                            >
                                 <i className="dollar sign icon" /> 5
                             </button>
-                            <button id="10-cash" className="tender-button" onClick={e => {this.tenderComponentsetter("cash")}}>
+                            <button
+                                id="10-cash"
+                                className="tender-button"
+                                onClick={e => {
+                                    this.tenderComponentsetter('cash');
+                                    this.stateSetter(10);
+                                }}
+                            >
                                 <i className="dollar sign icon" /> 10
                             </button>
-                            <button id="20-cash" className="tender-button" onClick={e => {this.tenderComponentsetter("cash")}}>
+                            <button
+                                id="20-cash"
+                                className="tender-button"
+                                onClick={e => {
+                                    this.tenderComponentsetter('cash');
+                                    this.stateSetter(20);
+                                }}
+                            >
                                 <i className="dollar sign icon" /> 20
                             </button>
-                            <button onClick={e => {this.tenderComponentsetter("cash")}}>
+                            <button
+                                onClick={e => {
+                                    this.tenderComponentsetter('cash');
+                                    this.stateSetter(50);
+                                }}
+                            >
                                 <i className="dollar sign icon" /> 50
                             </button>
-                            <button onClick={e => {this.tenderComponentsetter("cash")}}>
+                            <button
+                                onClick={e => {
+                                    this.tenderComponentsetter('cash');
+                                    this.stateSetter(100);
+                                }}
+                            >
                                 <i className="dollar sign icon" /> 100
                             </button>
-                            <button onClick={e => {this.tenderComponentsetter("cash")}}>Exact Cash </button>
+                            <button
+                                onClick={e => {
+                                    this.tenderComponentsetter('cash');
+                                    this.stateSetter(
+                                        parseFloat(document.getElementById('total-value').innerHTML) + this.props.tip
+                                    );
+                                }}
+                            >
+                                Exact Cash
+                            </button>
                         </div>
                         <div className="tender-container tender-cc">
                             <div className="tender-container-heading">
                                 <i className="credit card outline icon" /> Credit
                             </div>
-                            <button onClick={e => {this.tenderComponentsetter("credit")}}>Visa</button>
-                            <button onClick={e => {this.tenderComponentsetter("credit")}}>Master Card</button>
-                            <button onClick={e => {this.tenderComponentsetter("credit")}}>Amex</button>
-                            <button onClick={e => {this.tenderComponentsetter("credit")}}>Discover</button>
+                            <button
+                                onClick={e => {
+                                    this.tenderComponentsetter('creditCard');
+                                }}
+                            >
+                                Visa
+                            </button>
+                            <button
+                                onClick={e => {
+                                    this.tenderComponentsetter('creditCard');
+                                }}
+                            >
+                                Master Card
+                            </button>
+                            <button
+                                onClick={e => {
+                                    this.tenderComponentsetter('creditCard');
+                                }}
+                            >
+                                Amex
+                            </button>
+                            <button
+                                onClick={e => {
+                                    this.tenderComponentsetter('creditCard');
+                                }}
+                            >
+                                Discover
+                            </button>
                         </div>
                         <div className="tender-container tender-discounts">
                             <div className="tender-container-heading">
