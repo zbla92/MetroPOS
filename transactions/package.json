@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "json-server -p 3004 -w checks.json"
+    "start": "json-server -p 3001 -w checks.json"
   },
   "author": "",
   "license": "ISC",

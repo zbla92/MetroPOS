@@ -195,7 +195,7 @@ export class Checkout extends Component {
                                     className="x icon cancel-icon"
                                     onClick={e => {
                                         this.props.closeCheckout();
-                                        this.clearCurrentItems(this.props.updateOrderedItems);
+                                        //this.clearCurrentItems(this.props.updateOrderedItems);
                                     }}
                                 />
                             </div>

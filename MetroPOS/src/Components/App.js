@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Link, Route } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 
 import Login from './Login/Login';
 import MainMenu from './MainMenu/MainMenu';
@@ -147,7 +147,7 @@ class App extends React.Component {
                 <Route
                     exact
                     path="/Register"
-                    component={props => (
+                    render={() => (
                         <Register
                             logging={this.logging}
                             setOrderedItem={this.setOrderedItem}
