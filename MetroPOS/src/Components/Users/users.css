@@ -1,5 +1,5 @@
 .Users {
-    background-color: rgb(239, 244, 253);
+    background-color: rgb(255, 255, 255);
     height: 100vh;
     width: 100vw;
     color: rgb(247, 244, 244);
@@ -33,4 +33,26 @@
     border: 2px solid red;
     color: white;
     width: 79vw;
+}
+
+.users-left-btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20vh;
+}
+
+.users-button {
+    border: none;
+    min-width: 13vw;
+    min-height: 7vh;
+    background-color: #1fbeb1;
+    color: rgba(255, 255, 255, 0.932);
+    font-size: 2.2vh;
+}
+.users-left-totals-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 5vh;
+    color: black;
+    font-size: 2.3vh;
 }

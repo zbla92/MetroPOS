@@ -14,8 +14,19 @@ class Users extends React.Component {
                     <div className="users_top_logo">Info</div>
                 </div>
                 <div className="users_bottom">
-                    <div className="users_left_panel">left side</div>
-                    <div className="users_list_panel">right side</div>
+                    <div className="users_left_panel">
+                        <div className="users-left-btn-container">
+                            <button className="users-button">Create new employee</button>
+                        </div>
+                    </div>
+                    <div className="users_list_panel">
+                        <div className="users_list_header">
+                            <div className="ui icon input">
+                                <input type="text" placeholder="Search users..." />
+                                <i className="circular search link icon" />
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         );
