@@ -86,7 +86,7 @@ class App extends React.Component {
     };
 
     updateCheckID = async () => {
-        const response = await transaction.get('/');
+        const response = await transaction.get('/checks');
         this.setState({ checkID: response.data.length + 1 });
     };
     setCheckID = id => {
@@ -134,7 +134,7 @@ class App extends React.Component {
                 <Route
                     exact
                     path="/"
-                    component={props => (
+                    render={() => (
                         <Login
                             mainMenu={this.mainMenu}
                             loggedInEmp={this.state.loggedInEmp}

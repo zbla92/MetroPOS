@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+import checks from '../../../apis/checks';
 import './checkout.css';
 
 import TenderLoader from './TenderLoader/TenderLoader';
@@ -14,7 +14,6 @@ export class Checkout extends Component {
             checks: [],
             checkItems: [],
             checkToImport: {},
-            url: `http://localhost:3001/checks`,
             tendered: '',
             tenderSelector: 'tip',
             benjaminSize: 0
@@ -28,8 +27,6 @@ export class Checkout extends Component {
         this.setState({ checkItems: this.props.checkItems, checks: this.props.openedTables });
         // Building object to inject
         this.createObj(this.props.checkItems, this.state.id, totalValue, 'amex', this.props.tip);
-
-        this.fetchChecks = this.state.url;
     }
     //------------------------------------------------------
     enterAmount = e => {
@@ -78,30 +75,13 @@ export class Checkout extends Component {
 
     //Pushing new  check that will gain new ID on server side
     postToServer = object => {
-        let url = 'http://localhost:3001/checks';
-        axios
-            .post(url, object)
-            .then(res => {
-                this.clearCurrentItems(this.props.updateOrderedItems);
-            })
-            .catch(error => {
-                return alert('Authorization failed, contact support.');
-            });
-        console.log('post');
+        checks.post('/checks', object).catch(error => alert(error + ' Please contact your support!'));
+        this.clearCurrentItems(this.props.updateOrderedItems);
     };
 
-    // Updating check that was already pushed to server
     putToServer = object => {
-        let url = `http://localhost:3001/checks/${this.state.id}`;
-        axios
-            .put(url, object)
-            .then(res => {
-                this.clearCurrentItems(this.props.updateOrderedItems);
-            })
-            .catch(error => {
-                return alert('Authorization failed, contact support bruh!');
-            });
-        console.log('put');
+        checks.put(`/checks/${this.state.id}`, object).catch(error => alert(error + ' Please contact your support'));
+        this.clearCurrentItems(this.props.updateOrderedItems);
     };
 
     //Decidiing whather we need to push or post check
@@ -280,7 +260,7 @@ export class Checkout extends Component {
                                         this.props.closeCheckout();
                                     }}
                                 >
-                                    SAVE
+                                    Save check
                                 </button>
                                 <button
                                     type="button"
@@ -301,7 +281,7 @@ export class Checkout extends Component {
                                         this.props.closeCheckout();
                                     }}
                                 >
-                                    CLOSE
+                                    Close check
                                 </button>
                             </div>
                         </div>

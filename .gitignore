@@ -5,6 +5,7 @@
 .pnp.js
 /MetroPOS/node_modules
 /api/node_modules
+/transactions/node_modules
 
 
 
@@ -15,7 +16,7 @@
 /build
 
 # misc
-/transactions/node_modules
+/transactions/checks.json
 .DS_Store
 .env.local
 .env.development.local

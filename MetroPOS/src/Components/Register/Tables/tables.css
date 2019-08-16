@@ -25,6 +25,15 @@
 
 .table-container {
     padding-top: 2vh;
+    padding-bottom: 2vh;
     min-width: 20vw;
     font-size: 4vh;
+}
+.tables-heading {
+    margin-top: 30px;
+    border-bottom: 2px solid rgb(63, 159, 184);
+    margin-left: 42vw;
+    margin-right: 42vw;
+    padding-bottom: 10px;
+    font-size: 38px;
 }

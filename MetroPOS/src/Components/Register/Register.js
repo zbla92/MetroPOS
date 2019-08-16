@@ -4,7 +4,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 import Clock from '../Clock';
-import submenu from '../../data/menus/menu.json';
+import fetchSubmenus from '../../apis/menus';
 import TotalPrice from './TotalPrice/TotalPrice';
 import LoadSubmenu from './LoadSubmenu/LoadSubmenu';
 import MenuButtons from './MenuButtons/MenuButtons';
@@ -16,13 +16,14 @@ class Register extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            activeMenu: Object.values(submenu)[4],
+            activeMenu: '',
             checkoutOpen: false,
             tablesOpen: false,
             openedTables: [],
             newCheckID: -1,
             allTables: [],
-            tip: 0.0
+            tip: 0.0,
+            menus: ''
         };
     }
 
@@ -30,6 +31,7 @@ class Register extends React.Component {
     componentDidMount() {
         // Fetching opened checks from server DB
         this.getAllOpenedChecks();
+        this.fetchAllMenus();
     }
 
     // Setting active menu, on submenu click, state will change causing chain reaction to render selected submenu
@@ -120,6 +122,17 @@ class Register extends React.Component {
                 return -1;
             });
             this.setState({ openedTables: openedChecks, allTables: res.data.length });
+        });
+    };
+
+    // Fetching all menus from axios instance that is created in apis fodler ~ it needs to run at 3002 port
+    fetchAllMenus = async () => {
+        const response = await fetchSubmenus.get('/menus');
+        this.setState({
+            menus: response.data
+        });
+        this.setState({
+            activeMenu: Object.values(this.state.menus)[4]
         });
     };
 
@@ -230,7 +243,7 @@ class Register extends React.Component {
                             items={this.props.items}
                         />
                         <div className="submenu-selection-container">
-                            <MenuButtons setActiveMenu={this.setActiveMenu} />
+                            <MenuButtons setActiveMenu={this.setActiveMenu} menus={this.state.menus} />
                         </div>
                     </div>
                 </div>
