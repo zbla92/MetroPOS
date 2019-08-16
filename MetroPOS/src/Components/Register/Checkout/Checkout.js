@@ -87,6 +87,7 @@ export class Checkout extends Component {
             .catch(error => {
                 return alert('Authorization failed, contact support.');
             });
+        console.log('post');
     };
 
     // Updating check that was already pushed to server
@@ -100,10 +101,12 @@ export class Checkout extends Component {
             .catch(error => {
                 return alert('Authorization failed, contact support bruh!');
             });
+        console.log('put');
     };
 
     //Decidiing whather we need to push or post check
     pushOrPost = (object, allTables, pushObj, postObj) => {
+        console.log(object.id + '   ' + allTables);
         if (object.id <= allTables) {
             postObj(object);
         } else if (object.id > allTables) {
@@ -270,7 +273,7 @@ export class Checkout extends Component {
                                         this.addTipToCheck(this.props.tip, this.state.checkToImport);
                                         this.pushOrPost(
                                             this.state.checkToImport,
-                                            this.props.allTables.length,
+                                            this.props.allTables,
                                             this.postToServer,
                                             this.putToServer
                                         );
@@ -291,7 +294,7 @@ export class Checkout extends Component {
                                         this.addTipToCheck(this.props.tip, this.state.checkToImport);
                                         this.pushOrPost(
                                             this.state.checkToImport,
-                                            this.props.allTables.length,
+                                            this.props.allTables,
                                             this.postToServer,
                                             this.putToServer
                                         );

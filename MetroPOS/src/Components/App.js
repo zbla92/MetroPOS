@@ -1,57 +1,63 @@
 import React from 'react';
+import { BrowserRouter, Link, Route } from 'react-router-dom';
 
 import Login from './Login/Login';
 import MainMenu from './MainMenu/MainMenu';
 import Register from './Register/Register';
-import axios from 'axios';
+import Users from './Users';
+import employeeList from '../apis/employees';
+import transaction from '../apis/checks';
 
 class App extends React.Component {
     constructor(props) {
         super(props);
-        this.setOrderedItem = this.setOrderedItem.bind(this);
-        this.setLoggedInEmp = this.setLoggedInEmp.bind(this);
-        this.voidCheck = this.voidCheck.bind(this);
-        this.logging = this.logging.bind(this);
-        this.mainMenu = this.mainMenu.bind(this);
-        this.loadRegister = this.loadRegister.bind(this);
-        this.floatingLogo = this.floatingLogo.bind(this);
         this.state = {
             loadedComponent: 'Login',
             orderedItems: [],
             loggedInEmp: ' ',
-            checkID: 0
+            checkID: 0,
+            employeeList: ''
         };
     }
     //----------------------- Methods to manipulate components loading / unloading-------//
     componentDidMount() {
         this.updateCheckID();
+        this.getListOfEmps();
     }
 
+    //get list of employees from the server so login can work
+    getListOfEmps = async () => {
+        const response = await employeeList.get('/employees');
+        this.setState({
+            employeeList: response.data
+        });
+    };
+
     // Login Component controller
-    logging() {
+    logging = () => {
         this.setState({
             loadedComponent: 'Login'
         });
-    }
-    mainMenu() {
+    };
+    mainMenu = () => {
         this.setState({
             loadedComponent: 'mainMenu'
         });
-    }
-    loadRegister() {
+    };
+    loadRegister = () => {
         this.setState({
             loadedComponent: 'Register'
         });
-    }
-    floatingLogo() {
+    };
+    floatingLogo = () => {
         this.setState({
             loadedComponent: 'FloatingScreen'
         });
-    }
+    };
 
     //------------ Setting Ordered Items so they dont delete everytime emp logs out
     // Aleksej Todorovic contributed to this method
-    getCurrentIndexOfObject(objArray, newObj) {
+    getCurrentIndexOfObject = (objArray, newObj) => {
         for (let i = 0; i < objArray.length; i++) {
             if (newObj.name === objArray[i].name) {
                 return i;
@@ -59,9 +65,9 @@ class App extends React.Component {
         }
 
         return -1;
-    }
+    };
 
-    setOrderedItem(objArray, newObj) {
+    setOrderedItem = (objArray, newObj) => {
         const currentIndex = this.getCurrentIndexOfObject(objArray, newObj);
         let setter = objArray;
 
@@ -72,37 +78,36 @@ class App extends React.Component {
             setter.push(newObj);
             this.setState({ orderedItems: setter });
         }
-    }
+    };
     //-----------------------------------------------------//
     // Method used to completely change ordered items.
     updateOrderedItems = objArray => {
         this.setState({ orderedItems: objArray });
     };
 
-    updateCheckID = () => {
-        axios.get('http://localhost:3001/checks').then(res => {
-            this.setState({ checkID: res.data.length + 1 });
-        });
+    updateCheckID = async () => {
+        const response = await transaction.get('/');
+        this.setState({ checkID: response.data.length + 1 });
     };
     setCheckID = id => {
         this.setState({ checkID: id });
     };
 
     //------ Clear transaction ------//
-    voidCheck(listOfItems) {
+    voidCheck = listOfItems => {
         let itemsHolder = listOfItems;
         const result = itemsHolder.filter(itemsHolder => itemsHolder.flagged === false);
         this.setState({
             orderedItems: result
         });
-    }
+    };
 
     //------- Set logged in employee -------//
-    setLoggedInEmp(e) {
+    setLoggedInEmp = e => {
         this.setState({
             loggedInEmp: e
         });
-    }
+    };
     //------- Time And Date methods -------//
     getTime = () => {
         const date = new Date();
@@ -124,40 +129,42 @@ class App extends React.Component {
     }
 
     render() {
-        if (this.state.loadedComponent === 'Login') {
-            return (
-                <div>
-                    <Login
-                        mainMenu={this.mainMenu}
-                        loggedInEmp={this.state.loggedInEmp}
-                        setLoggedInEmp={this.setLoggedInEmp}
-                    />
-                </div>
-            );
-        } else if (this.state.loadedComponent === 'mainMenu') {
-            return (
-                <div>
-                    <MainMenu loadRegister={this.loadRegister} />
-                </div>
-            );
-        } else if (this.state.loadedComponent === 'Register') {
-            return (
-                <div>
-                    <Register
-                        logging={this.logging}
-                        setOrderedItem={this.setOrderedItem}
-                        items={this.state.orderedItems}
-                        voidCheck={this.voidCheck}
-                        loggedInEmp={this.state.loggedInEmp}
-                        updateOrderedItems={this.updateOrderedItems}
-                        checkID={this.state.checkID}
-                        updateCheckID={this.updateCheckID}
-                        setCheckID={this.setCheckID}
-                        getTime={this.getTime}
-                    />
-                </div>
-            );
-        }
+        return (
+            <BrowserRouter>
+                <Route
+                    exact
+                    path="/"
+                    component={props => (
+                        <Login
+                            mainMenu={this.mainMenu}
+                            loggedInEmp={this.state.loggedInEmp}
+                            setLoggedInEmp={this.setLoggedInEmp}
+                            employeesList={this.state.employeeList}
+                        />
+                    )}
+                />
+                <Route exact path="/MainMenu" component={MainMenu} />
+                <Route
+                    exact
+                    path="/Register"
+                    component={props => (
+                        <Register
+                            logging={this.logging}
+                            setOrderedItem={this.setOrderedItem}
+                            items={this.state.orderedItems}
+                            voidCheck={this.voidCheck}
+                            loggedInEmp={this.state.loggedInEmp}
+                            updateOrderedItems={this.updateOrderedItems}
+                            checkID={this.state.checkID}
+                            updateCheckID={this.updateCheckID}
+                            setCheckID={this.setCheckID}
+                            getTime={this.getTime}
+                        />
+                    )}
+                />
+                <Route exact path="/Users" component={Users} />
+            </BrowserRouter>
+        );
     }
 }
 export default App;

@@ -1,6 +1,7 @@
 import './register.css';
 import React from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 import Clock from '../Clock';
 import submenu from '../../data/menus/menu.json';
@@ -118,7 +119,7 @@ class Register extends React.Component {
                 }
                 return -1;
             });
-            this.setState({ openedTables: openedChecks, allTables: res.data });
+            this.setState({ openedTables: openedChecks, allTables: res.data.length });
         });
     };
 
@@ -132,9 +133,11 @@ class Register extends React.Component {
                     <div className="info-panel">
                         <div className="logout-btn-container">
                             <div className="left-info-container">
-                                <button className="logout-btn" onClick={this.props.logging}>
-                                    Logout
-                                </button>
+                                <Link to="/MainMenu">
+                                    <button className="logout-btn" onClick={this.props.logging}>
+                                        Logout
+                                    </button>
+                                </Link>
                                 <p className="check-id">
                                     <i className="file alternate icon" />
                                     {this.props.checkID}
