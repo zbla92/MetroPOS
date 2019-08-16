@@ -14,4 +14,4 @@ MetroPOS - built using React
 	The reason why I havent updated project in last couple of weeks is because I am reformatting code to use redux.
 	
 
-![Screenshot](./screenshots/Checkout.png)
+![Screenshot](/screenshots/Checkout.PNG)
