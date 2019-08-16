@@ -5,6 +5,7 @@
 .pnp.js
 /MetroPOS/node_modules
 /api/node_modules
+/transactions/node_modules
 
 
 # testing
