@@ -5,6 +5,7 @@
       "tenderOption": "amex",
       "items": [
         {
+<<<<<<< HEAD:transactions/checks.json
           "name": "Cauliflower pizza crust",
           "image": "http://static.food2fork.com/BBQChickenPizzawithCauliflowerCrust5004699695624ce.jpg",
           "price": 21.01,
@@ -57,20 +58,34 @@
           "name": "Coffee",
           "image": "https://steemitimages.com/DQmTqTfyngMmCHzDGwjvDBe92xMFgB2Pr12AsAmFQxhqz5R/0.jpg",
           "price": 2.49,
+=======
+          "name": "Juicy Lucy Burger",
+          "image": "http://static.food2fork.com/29721_RecipeImage_620x413_juicy_lucy_burger380a3.jpg",
+          "price": 5,
+>>>>>>> 3a07d353ec72310ae2d0c3eba9594b3d907229f1:dataBase/checks.json
           "qty": 1,
           "flagged": false
         }
       ],
+<<<<<<< HEAD:transactions/checks.json
       "total": "174.59",
       "time": "11:18",
       "closedBy": "Blazara Blejzic",
       "tip": "2.00"
+=======
+      "total": "5.00",
+      "time": "23:19",
+      "creditCard": "0812222244455888",
+      "closedBy": "Leanne Graham",
+      "tip": "0.06"
+>>>>>>> 3a07d353ec72310ae2d0c3eba9594b3d907229f1:dataBase/checks.json
     },
     {
       "id": 2,
       "tenderOption": "amex",
       "items": [
         {
+<<<<<<< HEAD:transactions/checks.json
           "name": "Dr. Pepper",
           "image": "https://cdn1.bigcommerce.com/server600/99si0d/products/6356/images/47550/Dr-Pepper-Fragrance-Oil__56127.1457389391.1280.1280.jpg?c=2",
           "price": 1.89,
@@ -81,20 +96,33 @@
           "name": "Coffee",
           "image": "https://steemitimages.com/DQmTqTfyngMmCHzDGwjvDBe92xMFgB2Pr12AsAmFQxhqz5R/0.jpg",
           "price": 2.49,
+=======
+          "name": "Turkey Burger",
+          "image": "http://static.food2fork.com/6661337708.jpg",
+          "price": 6.99,
+>>>>>>> 3a07d353ec72310ae2d0c3eba9594b3d907229f1:dataBase/checks.json
           "qty": 1,
           "flagged": false
         }
       ],
+<<<<<<< HEAD:transactions/checks.json
       "total": "4.38",
       "time": "06:50",
       "closedBy": "Blazara Blejzic",
       "tip": 0
+=======
+      "total": "26.99",
+      "time": "04:14",
+      "closedBy": "Leanne Graham",
+      "tip": "20.00"
+>>>>>>> 3a07d353ec72310ae2d0c3eba9594b3d907229f1:dataBase/checks.json
     },
     {
       "id": 3,
       "tenderOption": "amex",
       "items": [
         {
+<<<<<<< HEAD:transactions/checks.json
           "name": "Dr. Pepper",
           "image": "https://cdn1.bigcommerce.com/server600/99si0d/products/6356/images/47550/Dr-Pepper-Fragrance-Oil__56127.1457389391.1280.1280.jpg?c=2",
           "price": 1.89,
@@ -105,20 +133,33 @@
           "name": "Juice",
           "image": "https://s3.envato.com/files/197444971/preview.jpg",
           "price": 3,
+=======
+          "name": "Vegetarian Lentil Burgers",
+          "image": "http://static.food2fork.com/lentilburgerrecipe_07405f.jpg",
+          "price": 4.99,
+>>>>>>> 3a07d353ec72310ae2d0c3eba9594b3d907229f1:dataBase/checks.json
           "qty": 1,
           "flagged": false
         }
       ],
+<<<<<<< HEAD:transactions/checks.json
       "total": "4.89",
       "time": "06:50",
       "closedBy": "Blazara Blejzic",
       "tip": 0
+=======
+      "total": "6.99",
+      "time": "04:14",
+      "closedBy": "Leanne Graham",
+      "tip": "2.00"
+>>>>>>> 3a07d353ec72310ae2d0c3eba9594b3d907229f1:dataBase/checks.json
     },
     {
       "id": 4,
       "tenderOption": "amex",
       "items": [
         {
+<<<<<<< HEAD:transactions/checks.json
           "name": "Vegetarian Lentil Burgers",
           "image": "http://static.food2fork.com/lentilburgerrecipe_07405f.jpg",
           "price": 4.99,
@@ -129,6 +170,11 @@
           "name": "Quinoa Black Bean Burgers",
           "image": "http://static.food2fork.com/9679903713.jpg",
           "price": 14.99,
+=======
+          "name": "Ultimate Veggie Burger",
+          "image": "http://static.food2fork.com/ultimateveggieburgerrecipe49ac.jpg",
+          "price": 9.49,
+>>>>>>> 3a07d353ec72310ae2d0c3eba9594b3d907229f1:dataBase/checks.json
           "qty": 1,
           "flagged": false
         },
@@ -161,16 +207,24 @@
           "flagged": false
         }
       ],
+<<<<<<< HEAD:transactions/checks.json
       "total": "322.71",
       "time": "06:50",
       "closedBy": "Blazara Blejzic",
       "tip": "80.00"
+=======
+      "total": "9.79",
+      "time": "04:14",
+      "closedBy": "Leanne Graham",
+      "tip": "0.30"
+>>>>>>> 3a07d353ec72310ae2d0c3eba9594b3d907229f1:dataBase/checks.json
     },
     {
       "id": 5,
       "tenderOption": "amex",
       "items": [
         {
+<<<<<<< HEAD:transactions/checks.json
           "name": "Ultimate Veggie Burger",
           "image": "http://static.food2fork.com/ultimateveggieburgerrecipe49ac.jpg",
           "price": 9.49,
@@ -178,11 +232,14 @@
           "flagged": false
         },
         {
+=======
+>>>>>>> 3a07d353ec72310ae2d0c3eba9594b3d907229f1:dataBase/checks.json
           "name": "Juicy Lucy Burger",
           "image": "http://static.food2fork.com/29721_RecipeImage_620x413_juicy_lucy_burger380a3.jpg",
           "price": 5,
           "qty": 1,
           "flagged": false
+<<<<<<< HEAD:transactions/checks.json
         },
         {
           "name": "Burger Deluxe",
@@ -231,12 +288,21 @@
       "time": "06:51",
       "closedBy": "Blazara Blejzic",
       "tip": "90.00"
+=======
+        }
+      ],
+      "total": "8.00",
+      "time": "04:14",
+      "closedBy": "Leanne Graham",
+      "tip": "3.00"
+>>>>>>> 3a07d353ec72310ae2d0c3eba9594b3d907229f1:dataBase/checks.json
     },
     {
       "id": 6,
       "tenderOption": "amex",
       "items": [
         {
+<<<<<<< HEAD:transactions/checks.json
           "name": "Grilled Pizza",
           "image": "http://static.food2fork.com/howtogrillpizzad300x20086a60e1b.jpg",
           "price": 22.99,
@@ -422,10 +488,16 @@
           "name": "Grilled Pizza",
           "image": "http://static.food2fork.com/howtogrillpizzad300x20086a60e1b.jpg",
           "price": 22.99,
+=======
+          "name": "Quinoa Black Bean Burgers",
+          "image": "http://static.food2fork.com/9679903713.jpg",
+          "price": 14.99,
+>>>>>>> 3a07d353ec72310ae2d0c3eba9594b3d907229f1:dataBase/checks.json
           "qty": 1,
           "flagged": false
         },
         {
+<<<<<<< HEAD:transactions/checks.json
           "name": "Peach Mozzarella Pizza",
           "image": "http://static.food2fork.com/peachbasilpizza6c7de.jpg",
           "price": 23,
@@ -460,6 +532,8 @@
       "tenderOption": "amex",
       "items": [
         {
+=======
+>>>>>>> 3a07d353ec72310ae2d0c3eba9594b3d907229f1:dataBase/checks.json
           "name": "Vegetarian Lentil Burgers",
           "image": "http://static.food2fork.com/lentilburgerrecipe_07405f.jpg",
           "price": 4.99,
@@ -467,6 +541,7 @@
           "flagged": false
         },
         {
+<<<<<<< HEAD:transactions/checks.json
           "name": "Quinoa Black Bean Burgers",
           "image": "http://static.food2fork.com/9679903713.jpg",
           "price": 14.99,
@@ -716,12 +791,21 @@
       "id": 26,
       "tenderOption": "amex",
       "items": [
+=======
+          "name": "Juicy Lucy Burger",
+          "image": "http://static.food2fork.com/29721_RecipeImage_620x413_juicy_lucy_burger380a3.jpg",
+          "price": 5,
+          "qty": 2,
+          "flagged": false
+        },
+>>>>>>> 3a07d353ec72310ae2d0c3eba9594b3d907229f1:dataBase/checks.json
         {
-          "name": "Quinoa Black Bean Burgers",
-          "image": "http://static.food2fork.com/9679903713.jpg",
-          "price": 14.99,
+          "name": "Fantastic Chicken Burgers ",
+          "image": "http://static.food2fork.com/68378250aa.jpg",
+          "price": 10.99,
           "qty": 1,
           "flagged": false
+<<<<<<< HEAD:transactions/checks.json
         }
       ],
       "total": "14.99",
@@ -744,17 +828,29 @@
           "name": "Fantastic Chicken Burgers ",
           "image": "http://static.food2fork.com/68378250aa.jpg",
           "price": 10.99,
+=======
+        },
+        {
+          "name": "Tofu Burger ",
+          "image": "http://static.food2fork.com/tofu_burger_recipe7c06.jpg",
+          "price": 7.99,
+>>>>>>> 3a07d353ec72310ae2d0c3eba9594b3d907229f1:dataBase/checks.json
           "qty": 1,
           "flagged": false
         }
       ],
+<<<<<<< HEAD:transactions/checks.json
       "total": "15.98",
       "time": "15:07",
+=======
+      "total": "79.04",
+      "time": "04:14",
+>>>>>>> 3a07d353ec72310ae2d0c3eba9594b3d907229f1:dataBase/checks.json
       "closedBy": "Leanne Graham",
-      "tip": 0
+      "tip": "30.08"
     },
     {
-      "id": 28,
+      "id": 7,
       "tenderOption": "amex",
       "items": [
         {
@@ -763,6 +859,7 @@
           "price": 4.99,
           "qty": 1,
           "flagged": false
+<<<<<<< HEAD:transactions/checks.json
         }
       ],
       "total": "4.99",
@@ -774,6 +871,9 @@
       "id": 29,
       "tenderOption": "amex",
       "items": [
+=======
+        },
+>>>>>>> 3a07d353ec72310ae2d0c3eba9594b3d907229f1:dataBase/checks.json
         {
           "name": "Quinoa Black Bean Burgers",
           "image": "http://static.food2fork.com/9679903713.jpg",
@@ -782,16 +882,24 @@
           "flagged": false
         }
       ],
+<<<<<<< HEAD:transactions/checks.json
       "total": "14.99",
       "time": "07:28",
       "closedBy": "Leanne Graham",
       "tip": 0
+=======
+      "total": "25.98",
+      "time": "01:07",
+      "closedBy": "Leanne Graham",
+      "tip": "6.00"
+>>>>>>> 3a07d353ec72310ae2d0c3eba9594b3d907229f1:dataBase/checks.json
     },
     {
-      "id": 30,
+      "id": 8,
       "tenderOption": "amex",
       "items": [
         {
+<<<<<<< HEAD:transactions/checks.json
           "name": "Ultimate Veggie Burger",
           "image": "http://static.food2fork.com/ultimateveggieburgerrecipe49ac.jpg",
           "price": 9.49,
@@ -804,14 +912,29 @@
           "price": 4.99,
           "qty": 1,
           "flagged": true
-        },
-        {
-          "name": "Quinoa Black Bean Burgers",
-          "image": "http://static.food2fork.com/9679903713.jpg",
-          "price": 14.99,
+=======
+          "name": "Mediterranean Lamb Burger",
+          "image": "http://static.food2fork.com/29723_mediterranean_lamb_burger_620fa1a.jpg",
+          "price": 12,
           "qty": 1,
           "flagged": false
         },
+        {
+          "name": "Grilled Pizza",
+          "image": "http://static.food2fork.com/howtogrillpizzad300x20086a60e1b.jpg",
+          "price": 22.99,
+          "qty": 3,
+          "flagged": false
+>>>>>>> 3a07d353ec72310ae2d0c3eba9594b3d907229f1:dataBase/checks.json
+        },
+        {
+          "name": "Breakfast pizza",
+          "image": "http://static.food2fork.com/4683_MEDIUM544c.jpg",
+          "price": 23,
+          "qty": 3,
+          "flagged": false
+        },
+<<<<<<< HEAD:transactions/checks.json
         {
           "name": "Juicy Lucy Burger",
           "image": "http://static.food2fork.com/29721_RecipeImage_620x413_juicy_lucy_burger380a3.jpg",
@@ -870,14 +993,38 @@
       "id": 33,
       "tenderOption": "amex",
       "items": [
+=======
         {
-          "name": "Quinoa Black Bean Burgers",
-          "image": "http://static.food2fork.com/9679903713.jpg",
-          "price": 14.99,
+          "name": "PW’s Favorite Pizza",
+          "image": "http://static.food2fork.com/4364270576_302751a2a4f3c1.jpg",
+          "price": 23,
+          "qty": 6,
+          "flagged": false
+        },
+        {
+          "name": "Peach Mozzarella Pizza",
+          "image": "http://static.food2fork.com/peachbasilpizza6c7de.jpg",
+          "price": 23,
+          "qty": 3,
+          "flagged": false
+        },
+        {
+          "name": "Pizza Quesadillas",
+          "image": "http://static.food2fork.com/Pizza2BQuesadillas2B2528aka2BPizzadillas25292B5002B834037bf306b.jpg",
+          "price": 17.49,
+          "qty": 3,
+          "flagged": false
+        },
+>>>>>>> 3a07d353ec72310ae2d0c3eba9594b3d907229f1:dataBase/checks.json
+        {
+          "name": "Strawberry Pizza",
+          "image": "http://static.food2fork.com/strawberrybasilbalsamicpizzarecipe703d.jpg",
+          "price": 16,
           "qty": 1,
           "flagged": false
         }
       ],
+<<<<<<< HEAD:transactions/checks.json
       "total": "14.99",
       "time": "07:33",
       "closedBy": "Blazara Blejzic",
@@ -891,14 +1038,36 @@
           "name": "Vegetarian Lentil Burgers",
           "image": "http://static.food2fork.com/lentilburgerrecipe_07405f.jpg",
           "price": 4.99,
+=======
+      "total": "427.44",
+      "time": "00:24",
+      "closedBy": "Leanne Graham",
+      "tip": "2.00"
+    },
+    {
+      "id": 9,
+      "tenderOption": "amex",
+      "items": [
+        {
+          "name": "Juicy Lucy Burger",
+          "image": "http://static.food2fork.com/29721_RecipeImage_620x413_juicy_lucy_burger380a3.jpg",
+          "price": 5,
+>>>>>>> 3a07d353ec72310ae2d0c3eba9594b3d907229f1:dataBase/checks.json
           "qty": 1,
           "flagged": false
         }
       ],
+<<<<<<< HEAD:transactions/checks.json
       "total": "4.99",
       "time": "07:34",
       "closedBy": "Blazara Blejzic",
       "tip": 0
+=======
+      "total": "5.00",
+      "time": "00:40",
+      "closedBy": "Leanne Graham",
+      "tip": "0.90"
+>>>>>>> 3a07d353ec72310ae2d0c3eba9594b3d907229f1:dataBase/checks.json
     }
   ]
 }
