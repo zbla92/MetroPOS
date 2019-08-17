@@ -1,58 +1,113 @@
 .Users {
-    background-color: rgb(255, 255, 255);
-    height: 100vh;
-    width: 100vw;
-    color: rgb(247, 244, 244);
+	background-color: rgb(238, 238, 238);
+	height: 100vh;
+	width: 100vw;
 }
 
 /*********USERS TOP  BAR*************/
 .users_top {
-    width: 100vw;
-    height: 8vh;
-    display: inline-flex;
-    padding-left: 3vw;
-    padding-right: 3vw;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #1fbeb1;
+	width: 100vw;
+	height: 8vh;
+	display: inline-flex;
+	padding-left: 3vw;
+	padding-right: 3vw;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #1fbeb1;
+	color: rgb(247, 244, 244);
 }
 
 .users_bottom {
-    display: flex;
+	display: flex;
 }
 
 .users_left_panel {
-    height: 92vh;
-    border: 2px solid green;
-    color: red;
-    width: 21vw;
+	height: 92vh;
+	color: red;
+	width: 21vw;
 }
 
 .users_list_panel {
-    height: 92vh;
-    border: 2px solid red;
-    color: white;
-    width: 79vw;
+	height: 92vh;
+	width: 79vw;
 }
 
 .users-left-btn-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20vh;
+	display: flex;
+	justify-content: center;
+	margin-top: 20vh;
 }
 
 .users-button {
-    border: none;
-    min-width: 13vw;
-    min-height: 7vh;
-    background-color: #1fbeb1;
-    color: rgba(255, 255, 255, 0.932);
-    font-size: 2.2vh;
+	border: none;
+	min-width: 13vw;
+	min-height: 7vh;
+	background-color: #1fbeb1;
+	color: rgba(255, 255, 255, 0.932);
+	font-size: 2.2vh;
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+	box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
 }
 .users-left-totals-container {
-    display: flex;
-    justify-content: center;
-    padding-top: 5vh;
-    color: black;
-    font-size: 2.3vh;
+	display: flex;
+	justify-content: center;
+	padding-top: 5vh;
+	color: black;
+	font-size: 2.3vh;
+}
+
+/**********Users list header**************/
+.users_list_header {
+	margin: 5vh 5vw 2vw 3vh;
+}
+
+.input {
+	min-width: 35vw !important;
+}
+.users_navigation_list {
+	color: #1fbeb1;
+	font-size: 2vh;
+	display: inline-flex;
+	margin-left: 4vw;
+}
+.users_navigation_list > li {
+	float: right;
+	list-style-type: none;
+	margin-left: 3vw;
+}
+
+/************Injection place for user render elements*****************/
+.users_list_injection_place {
+	height: 77vh;
+	padding: 5vh 5vw 5vh 2vw;
+	overflow: scroll;
+}
+.users_list_injection_place::-webkit-scrollbar {
+	display: none;
+}
+
+/************ User list render component styles *************/
+
+.users_user_container {
+	width: 71.4vw;
+	height: 8vh;
+	background-color: rgb(252, 252, 252);
+	border-radius: 1px;
+	margin-top: 3px;
+	display: inline-flex;
+	align-items: center;
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+	box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+.users_user_container > div {
+	margin: 0px 5vh;
+	font-size: 2.6vh;
+	color: rgb(86, 126, 101);
+	font-family: cursive;
+}
+.users_list_action_bntns {
+	padding-left: 21vw;
 }
