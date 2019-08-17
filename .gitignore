@@ -22,7 +22,7 @@
 .env.development.local
 .env.test.local
 .env.production.local
-db.json
+
 
 
 npm-debug.log*
