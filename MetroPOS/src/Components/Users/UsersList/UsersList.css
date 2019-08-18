@@ -1,0 +1,32 @@
+.users_user_container {
+	width: 71.4vw;
+	height: 8vh;
+	background-color: rgb(252, 252, 252);
+	border-radius: 1px;
+	margin-top: 3px;
+	display: inline-flex;
+	align-items: center;
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+	box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+.users_user_container > div {
+	margin: 0px 5vh;
+	font-size: 2.6vh;
+	color: rgb(86, 126, 101);
+	font-family: cursive;
+}
+.users_list_action_bntns {
+	padding-left: 15vw;
+}
+
+.users_list_name {
+	min-width: 15vw;
+	text-align-last: left;
+}
+
+.users_list_id {
+	min-width: 7vw;
+	text-align: center;
+}

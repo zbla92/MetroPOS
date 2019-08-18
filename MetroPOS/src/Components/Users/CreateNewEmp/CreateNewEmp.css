@@ -1,0 +1,28 @@
+.CreateNewEmp_container {
+	top: 8vh;
+	position: absolute;
+	height: 93vh;
+	width: 100vw;
+	z-index: 999;
+	overflow: hidden;
+	background-color: rgba(0, 0, 0, 0.568);
+}
+.CreateNewEmp_content_container {
+	width: 60vw;
+	height: 79vh;
+	margin-left: 20vw;
+	margin-top: 5vh;
+	background-color: white;
+	overflow: hidden;
+	display: inline-flex;
+}
+.CreateNewEmp_left {
+	width: 30%;
+	height: 100%;
+	border: 2px solid green;
+}
+.CreateNewEmp_right {
+	width: 70%;
+	height: 100%;
+	border: 2px solid red;
+}

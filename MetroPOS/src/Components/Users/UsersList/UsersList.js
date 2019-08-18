@@ -1,25 +1,23 @@
-import React from 'react'
-import './UsersList.css'
-import employees from '../../../apis/employees'
+import React from 'react';
+import './UsersList.css';
 
-const UsersList = () => {
-  const response = employees
-    .get('/employees')
-    .catch(err => alert(err + ' Something went wrong!'))
-  // const renderEmps = map.empList
+const UsersList = ({ employeesList }) => {
+	const renderEmps = employeesList.map(e => {
+		return (
+			<div className="users_user_container" key={e.id}>
+				<div className="users_list_name">{e.name}</div>
+				<div className="users_list_id">{e.id}</div>
+				<div className="users_list_action_bntns">
+					<ul className="users_navigation_list">
+						<li>Edit</li>
+						<li>Delete</li>
+					</ul>
+				</div>
+			</div>
+		);
+	});
 
-  return (
-    <div className='users_user_container'>
-      <div className='users_list_name'>Milan Blaz</div>
-      <div className='users_list_id'>1200</div>
-      <div className='users_list_action_bntns'>
-        <ul className='users_navigation_list'>
-          <li>Edit</li>
-          <li>Delete</li>
-        </ul>
-      </div>
-    </div>
-  )
-}
+	return <div>{renderEmps}</div>;
+};
 
-export default UsersList
+export default UsersList;
