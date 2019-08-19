@@ -480,7 +480,8 @@
         }
       ],
       "total": "14.99",
-      "time": "14:46",
+      "time": "21:54",
+      "closedBy": "Leanne Graham",
       "tip": 0
     },
     {
@@ -496,7 +497,8 @@
         }
       ],
       "total": "14.99",
-      "time": "14:46",
+      "time": "21:54",
+      "closedBy": "Leanne Graham",
       "tip": 0
     },
     {
@@ -512,7 +514,8 @@
         }
       ],
       "total": "14.99",
-      "time": "14:46",
+      "time": "21:54",
+      "closedBy": "Leanne Graham",
       "tip": 0
     },
     {
@@ -530,6 +533,30 @@
       "total": "10.99",
       "time": "14:46",
       "closedBy": "Milan Blaz",
+      "tip": 0
+    },
+    {
+      "id": 30,
+      "tenderOption": "amex",
+      "items": [
+        {
+          "name": "Black Bean Burger",
+          "image": "http://static.food2fork.com/507107991f.jpg",
+          "price": 5.99,
+          "qty": 1,
+          "flagged": false
+        },
+        {
+          "name": "Ultimate Veggie Burger",
+          "image": "http://static.food2fork.com/ultimateveggieburgerrecipe49ac.jpg",
+          "price": 9.49,
+          "qty": 1,
+          "flagged": false
+        }
+      ],
+      "total": "15.48",
+      "time": "11:33",
+      "closedBy": "Leanne Graham",
       "tip": 0
     }
   ]
