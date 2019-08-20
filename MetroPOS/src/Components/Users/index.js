@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './users.css';
 import UsersList from './UsersList/UsersList';
 import CreateNewEmp from './CreateNewEmp/CreateNewEmp';
@@ -7,18 +8,33 @@ import CreateNewEmp from './CreateNewEmp/CreateNewEmp';
 // look of loaded users component - differnet colors but pretty much that is it   https://cdn.dribbble.com/users/76870/screenshots/906356/list.png
 
 class Users extends React.Component {
+	state = { createNewEmployee: false };
+
+	renderCreateNewEmp = () => {
+		this.setState({ createNewEmployee: !this.state.createNewEmployee });
+	};
+
 	render() {
 		return (
 			<div className="Users">
 				<div className="users_top">
-					<div className="users_top_logo">LOGO</div>
+					<div className="users_top_logo">
+						<Link to="/MainMenu">
+							<button className="ui button">
+								<i class="chevron left icon" />
+								Back
+							</button>
+						</Link>
+					</div>
 					<div className="users_top_logo">Employee Configuration</div>
 					<div className="users_top_logo">Info</div>
 				</div>
 				<div className="users_bottom">
 					<div className="users_left_panel">
 						<div className="users-left-btn-container">
-							<button className="users-button">Create new employee</button>
+							<button className="users-button" onClick={this.renderCreateNewEmp}>
+								Create new employee
+							</button>
 						</div>
 					</div>
 					<div className="users_list_panel">
@@ -38,7 +54,13 @@ class Users extends React.Component {
 						</div>
 					</div>
 				</div>
-				<CreateNewEmp />
+				{this.state.createNewEmployee ? (
+					<CreateNewEmp
+						renderCreateNewEmp={this.renderCreateNewEmp}
+						employeesList={this.props.employeesList}
+						getListOfEmps={this.props.getListOfEmps}
+					/>
+				) : null}
 			</div>
 		);
 	}

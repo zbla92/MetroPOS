@@ -14,143 +14,253 @@
       "phone": "1-770-736-8031 x56442"
     },
     {
-      "id": 2000,
-      "name": "Ervin Howell",
-      "username": "Antonette",
-      "email": "Shanna@melissa.tv",
-      "address": {
-        "street": "Victor Plains",
-        "suite": "Suite 879",
-        "city": "Wisokyburgh",
-        "zipcode": "90566-7771"
-      },
-      "phone": "010-692-6593 x09125"
-    },
-    {
-      "id": 3000,
-      "name": "Clementine Bauch",
-      "username": "Samantha",
-      "email": "Nathan@yesenia.net",
-      "address": {
-        "street": "Douglas Extension",
-        "suite": "Suite 847",
-        "city": "McKenziehaven",
-        "zipcode": "59590-4157"
-      },
-      "phone": "1-463-123-4447"
-    },
-    {
-      "id": 4000,
-      "name": "Patricia Lebsack",
-      "username": "Karianne",
-      "email": "Julianne.OConner@kory.org",
-      "address": {
-        "street": "Hoeger Mall",
-        "suite": "Apt. 692",
-        "city": "South Elvis",
-        "zipcode": "53919-4257"
-      },
-      "phone": "493-170-9623 x156"
-    },
-    {
-      "id": 5000,
-      "name": "Latica Lebsack",
-      "username": "Karianne",
-      "email": "Julianne.OConner@kory.org",
-      "address": {
-        "street": "Hoeger Mall",
-        "suite": "Apt. 692",
-        "city": "South Elvis",
-        "zipcode": "53919-4257"
-      },
-      "phone": "493-170-9623 x156"
-    },
-    {
-      "id": 1001,
       "name": "Milan Blaz",
-      "username": "mblaz",
-      "email": "milanblaz@live.com",
+      "id": 1212,
       "address": {
-        "street": "Grove Street",
-        "suite": "639",
         "city": "Banja Luka",
-        "zipcode": "78000"
+        "street": "Dragana Bubica",
+        "suite": "123"
       },
-      "phone": "-"
+      "email": "milanblaz2580456@gmal.com",
+      "phoneNumber": "066 612493"
     },
     {
-      "id": 1002,
-      "name": "Leanne Graham",
-      "username": "Bret",
-      "email": "Sincere@april.biz",
+      "name": "sda",
+      "id": 3243,
       "address": {
-        "street": "Kulas Light",
-        "suite": "Apt. 556",
-        "city": "Gwenborough",
-        "zipcode": "92998-3874"
+        "city": "sad",
+        "street": "asd",
+        "suite": "324"
       },
-      "phone": "1-770-736-8031 x56442"
+      "email": "asda@asdsad.sadcsad",
+      "phoneNumber": "asdasdasdasdasda"
     },
     {
-      "id": 2002,
-      "name": "Ervin Howell",
-      "username": "Antonette",
-      "email": "Shanna@melissa.tv",
+      "name": "Viktor Blaz",
+      "id": 2000,
       "address": {
-        "street": "Victor Plains",
-        "suite": "Suite 879",
-        "city": "Wisokyburgh",
-        "zipcode": "90566-7771"
+        "city": "Banja Luka",
+        "street": "",
+        "suite": ""
       },
-      "phone": "010-692-6593 x09125"
+      "email": "viktorblaz@live.com",
+      "phoneNumber": "66 6124932"
     },
     {
-      "id": 3002,
-      "name": "Clementine Bauch",
-      "username": "Samantha",
-      "email": "Nathan@yesenia.net",
-      "address": {
-        "street": "Douglas Extension",
-        "suite": "Suite 847",
-        "city": "McKenziehaven",
-        "zipcode": "59590-4157"
-      },
-      "phone": "1-463-123-4447"
-    },
-    {
-      "id": 4002,
-      "name": "Patricia Lebsack",
-      "username": "Karianne",
-      "email": "Julianne.OConner@kory.org",
-      "address": {
-        "street": "Hoeger Mall",
-        "suite": "Apt. 692",
-        "city": "South Elvis",
-        "zipcode": "53919-4257"
-      },
-      "phone": "493-170-9623 x156"
-    },
-    {
-      "id": 5002,
-      "name": "Latica Lebsack",
-      "username": "Karianne",
-      "email": "Julianne.OConner@kory.org",
-      "address": {
-        "street": "Hoeger Mall",
-        "suite": "Apt. 692",
-        "city": "South Elvis",
-        "zipcode": "53919-4257"
-      },
-      "phone": "493-170-9623 x156"
-    },
-    {
-      "name": "Una Stojakovic",
-      "id": 1234,
+      "name": "Una Blaz",
+      "id": 3000,
+      "role": "Driver",
       "address": {
         "city": "Banja Luka",
         "street": "Dragana Bubica 18",
-        "suite": "41"
-      }
+        "suite": "123"
+      },
+      "email": "unablaz@gmail.com",
+      "phoneNumber": "0644414441"
+    },
+    {
+      "name": "Nemanja Mirkovic",
+      "id": 9999,
+      "role": "Shift Lead",
+      "address": {
+        "city": "Laktasi",
+        "street": "",
+        "suite": ""
+      },
+      "email": "nemanja@mirkoic.com",
+      "phoneNumber": "001122020203432"
+    },
+    {
+      "name": "Jovan Govan",
+      "id": 1215,
+      "role": "Driver",
+      "address": {
+        "city": "Gradiska",
+        "street": "",
+        "suite": ""
+      },
+      "email": "gradiska@je.com",
+      "phoneNumber": "1212324324234"
+    },
+    {
+      "name": "Petar Blaz",
+      "id": 1240,
+      "role": "Shift Lead",
+      "address": {
+        "city": "Banja Luka",
+        "street": "",
+        "suite": ""
+      },
+      "email": "petarrblaz@live.com",
+      "phoneNumber": "065123456"
+    },
+    {
+      "name": "as",
+      "id": 2344,
+      "role": "Bartender",
+      "address": {
+        "city": "Banja Luka",
+        "street": "",
+        "suite": ""
+      },
+      "email": "milanblaz2580456@gmal.com",
+      "phoneNumber": "asdasdasdasdasda"
+    },
+    {
+      "name": "wqe",
+      "id": 1342,
+      "role": "Bartender",
+      "address": {
+        "city": "Banja Luka",
+        "street": "",
+        "suite": ""
+      },
+      "email": "milanblaz2580456@gmal.com",
+      "phoneNumber": "66 612493"
+    },
+    {
+      "name": "Milan Blaz",
+      "id": 4002,
+      "role": "Manager",
+      "address": {
+        "city": "Banja Luka",
+        "street": "",
+        "suite": ""
+      },
+      "email": "milanblaz2580456@gmal.com",
+      "phoneNumber": "66 612493"
+    },
+    {
+      "name": "Viktor Blaz",
+      "id": 2222,
+      "role": "Bartender",
+      "address": {
+        "city": "Banja Luka",
+        "street": "",
+        "suite": ""
+      },
+      "email": "milanblaz2580456@gmal.com",
+      "phoneNumber": "66 612493"
+    },
+    {
+      "name": "Una Blaz",
+      "id": 4455,
+      "role": "Bartender",
+      "address": {
+        "city": "Banja Luka",
+        "street": "",
+        "suite": ""
+      },
+      "email": "milanblaz2580456@gmal.com",
+      "phoneNumber": "66 612493"
+    },
+    {
+      "name": "Milan Blaz",
+      "id": 9000,
+      "role": "Bartender",
+      "address": {
+        "city": "Banja Luka",
+        "street": "Dragana Bubica",
+        "suite": ""
+      },
+      "email": "milanblaz2580456@gmal.com",
+      "phoneNumber": "66 612493"
+    },
+    {
+      "name": "jovana korica",
+      "id": 2212,
+      "role": "Manager",
+      "address": {
+        "city": "Banja Luka",
+        "street": "",
+        "suite": ""
+      },
+      "email": "milanblaz2580456@gmal.com",
+      "phoneNumber": "66 612493"
+    },
+    {
+      "name": "Milan Blaz",
+      "id": 3232,
+      "role": "Manager",
+      "address": {
+        "city": "Banja Luka",
+        "street": "",
+        "suite": ""
+      },
+      "email": "milanblaz2580456@gmal.com",
+      "phoneNumber": "66 612493"
+    },
+    {
+      "name": "A ko si ti jebemu kru?",
+      "id": 3544,
+      "role": "Shift Lead",
+      "address": {
+        "city": "Banja Luka",
+        "street": "",
+        "suite": ""
+      },
+      "email": "milanblaz2580456@gmal.com",
+      "phoneNumber": "66 612493"
+    },
+    {
+      "name": "Milan",
+      "id": 4541,
+      "role": "Shift Lead",
+      "address": {
+        "city": "Banja Luka",
+        "street": "",
+        "suite": ""
+      },
+      "email": "milanblaz2580456@gmal.com",
+      "phoneNumber": "66 612493"
+    },
+    {
+      "name": "231dfasd",
+      "id": 7421,
+      "role": "Bartender",
+      "address": {
+        "city": "Banja Luka",
+        "street": "",
+        "suite": ""
+      },
+      "email": "milanblaz2580456@gmal.com",
+      "phoneNumber": "66 612493"
+    },
+    {
+      "name": "Milan Blaz",
+      "id": 4618,
+      "role": "Driver",
+      "address": {
+        "city": "Banja Luka",
+        "street": "",
+        "suite": ""
+      },
+      "email": "milanblaz2580456@gmal.com",
+      "phoneNumber": "66 612493"
+    },
+    {
+      "name": "ovaj ce radit ja kontam",
+      "id": 6969,
+      "role": "Bartender",
+      "address": {
+        "city": "Banja Luka",
+        "street": "",
+        "suite": ""
+      },
+      "email": "viktorblaz@live.com",
+      "phoneNumber": "66 612493"
+    },
+    {
+      "name": "Da li ce i ovaj radit",
+      "id": 9696,
+      "role": "Driver",
+      "address": {
+        "city": "Banja Luka",
+        "street": "Dragana Bubica",
+        "suite": ""
+      },
+      "email": "viktorblaz@live.com",
+      "phoneNumber": "66 612493"
     }
   ],
   "menus": {
