@@ -8,7 +8,6 @@ import Clock from '../Clock';
 function Login({ history, setLoggedInEmp, employeesList }) {
 	const [keyCode, setKeyCode] = useState('');
 	let [dot, setDot] = useState(1);
-	let [loggedIn, setloggedIn] = useState(false);
 
 	const logIn = empList => {
 		let loggedIn = empList.filter(emp => emp.id === parseInt(keyCode));

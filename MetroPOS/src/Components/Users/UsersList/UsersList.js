@@ -1,7 +1,13 @@
 import React from 'react';
 import './UsersList.css';
+import employees from '../../../apis/employees';
 
-const UsersList = ({ employeesList }) => {
+const UsersList = ({ employeesList, getListOfEmps }) => {
+	async function deleteEmployee(id) {
+		await employees.delete(`/employees/${id}`);
+		getListOfEmps();
+	}
+
 	const renderEmps = employeesList.map(e => {
 		return (
 			<div className="users_user_container" key={e.id}>
@@ -9,8 +15,10 @@ const UsersList = ({ employeesList }) => {
 				<div className="users_list_id">{e.id}</div>
 				<div className="users_list_action_bntns">
 					<ul className="users_navigation_list">
-						<li>Edit</li>
-						<li>Delete</li>
+						<li data-id={e.id}>Edit</li>
+						<li data-id={e.id} onClick={e => deleteEmployee(e.target.dataset.id)}>
+							Delete
+						</li>
 					</ul>
 				</div>
 			</div>

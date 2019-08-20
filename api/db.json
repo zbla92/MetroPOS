@@ -15,125 +15,8 @@
     },
     {
       "name": "Milan Blaz",
-      "id": 1212,
-      "address": {
-        "city": "Banja Luka",
-        "street": "Dragana Bubica",
-        "suite": "123"
-      },
-      "email": "milanblaz2580456@gmal.com",
-      "phoneNumber": "066 612493"
-    },
-    {
-      "name": "sda",
-      "id": 3243,
-      "address": {
-        "city": "sad",
-        "street": "asd",
-        "suite": "324"
-      },
-      "email": "asda@asdsad.sadcsad",
-      "phoneNumber": "asdasdasdasdasda"
-    },
-    {
-      "name": "Viktor Blaz",
-      "id": 2000,
-      "address": {
-        "city": "Banja Luka",
-        "street": "",
-        "suite": ""
-      },
-      "email": "viktorblaz@live.com",
-      "phoneNumber": "66 6124932"
-    },
-    {
-      "name": "Una Blaz",
-      "id": 3000,
-      "role": "Driver",
-      "address": {
-        "city": "Banja Luka",
-        "street": "Dragana Bubica 18",
-        "suite": "123"
-      },
-      "email": "unablaz@gmail.com",
-      "phoneNumber": "0644414441"
-    },
-    {
-      "name": "Nemanja Mirkovic",
-      "id": 9999,
-      "role": "Shift Lead",
-      "address": {
-        "city": "Laktasi",
-        "street": "",
-        "suite": ""
-      },
-      "email": "nemanja@mirkoic.com",
-      "phoneNumber": "001122020203432"
-    },
-    {
-      "name": "Jovan Govan",
-      "id": 1215,
-      "role": "Driver",
-      "address": {
-        "city": "Gradiska",
-        "street": "",
-        "suite": ""
-      },
-      "email": "gradiska@je.com",
-      "phoneNumber": "1212324324234"
-    },
-    {
-      "name": "Petar Blaz",
-      "id": 1240,
-      "role": "Shift Lead",
-      "address": {
-        "city": "Banja Luka",
-        "street": "",
-        "suite": ""
-      },
-      "email": "petarrblaz@live.com",
-      "phoneNumber": "065123456"
-    },
-    {
-      "name": "as",
-      "id": 2344,
-      "role": "Bartender",
-      "address": {
-        "city": "Banja Luka",
-        "street": "",
-        "suite": ""
-      },
-      "email": "milanblaz2580456@gmal.com",
-      "phoneNumber": "asdasdasdasdasda"
-    },
-    {
-      "name": "wqe",
-      "id": 1342,
-      "role": "Bartender",
-      "address": {
-        "city": "Banja Luka",
-        "street": "",
-        "suite": ""
-      },
-      "email": "milanblaz2580456@gmal.com",
-      "phoneNumber": "66 612493"
-    },
-    {
-      "name": "Milan Blaz",
       "id": 4002,
       "role": "Manager",
-      "address": {
-        "city": "Banja Luka",
-        "street": "",
-        "suite": ""
-      },
-      "email": "milanblaz2580456@gmal.com",
-      "phoneNumber": "66 612493"
-    },
-    {
-      "name": "Viktor Blaz",
-      "id": 2222,
-      "role": "Bartender",
       "address": {
         "city": "Banja Luka",
         "street": "",
@@ -191,18 +74,6 @@
       "phoneNumber": "66 612493"
     },
     {
-      "name": "A ko si ti jebemu kru?",
-      "id": 3544,
-      "role": "Shift Lead",
-      "address": {
-        "city": "Banja Luka",
-        "street": "",
-        "suite": ""
-      },
-      "email": "milanblaz2580456@gmal.com",
-      "phoneNumber": "66 612493"
-    },
-    {
       "name": "Milan",
       "id": 4541,
       "role": "Shift Lead",
@@ -218,18 +89,6 @@
       "name": "231dfasd",
       "id": 7421,
       "role": "Bartender",
-      "address": {
-        "city": "Banja Luka",
-        "street": "",
-        "suite": ""
-      },
-      "email": "milanblaz2580456@gmal.com",
-      "phoneNumber": "66 612493"
-    },
-    {
-      "name": "Milan Blaz",
-      "id": 4618,
-      "role": "Driver",
       "address": {
         "city": "Banja Luka",
         "street": "",

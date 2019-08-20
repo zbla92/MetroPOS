@@ -90,3 +90,8 @@ body {
 	display: none;
 	overflow: hidden;
 }
+
+.users_navigation_filter_active {
+	padding-bottom: 4px;
+	border-bottom: 2px solid grey;
+}

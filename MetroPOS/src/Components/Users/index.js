@@ -21,7 +21,7 @@ class Users extends React.Component {
 					<div className="users_top_logo">
 						<Link to="/MainMenu">
 							<button className="ui button">
-								<i class="chevron left icon" />
+								<i className="chevron left icon" />
 								Back
 							</button>
 						</Link>
@@ -44,13 +44,16 @@ class Users extends React.Component {
 								<i className="circular search link icon" />
 							</div>
 							<ul className="users_navigation_list">
-								<li>View All</li>
-								<li>View Active</li>
-								<li>View Transferred</li>
+								<li className="users_navigation_filter_active">View All</li>
+								<li className="">View Active</li>
+								<li className="">View Transferred</li>
 							</ul>
 						</div>
 						<div className="users_list_injection_place">
-							<UsersList employeesList={this.props.employeesList} />
+							<UsersList
+								employeesList={this.props.employeesList}
+								getListOfEmps={this.props.getListOfEmps}
+							/>
 						</div>
 					</div>
 				</div>

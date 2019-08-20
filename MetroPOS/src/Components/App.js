@@ -28,7 +28,6 @@ class App extends React.Component {
 	// get list of employees from the server so login can work
 	getListOfEmps = async () => {
 		const response = await employeeList.get('/employees');
-		console.log(response.data);
 		this.setState({
 			employeeList: response.data
 		});
