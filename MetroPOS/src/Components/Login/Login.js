@@ -53,7 +53,7 @@ function Login({ history, setLoggedInEmp, employeesList }) {
 	};
 
 	return (
-		<div className="main-container">
+		<div className="main-container animated fadeIn ">
 			<div className="header-container">
 				<div className="header-logo">Metro POS</div>
 				<div className="header-clock">
@@ -72,7 +72,7 @@ function Login({ history, setLoggedInEmp, employeesList }) {
 				</div>
 			</div>
 			<div className="keypad-container">
-				<button type="button" className="btn-login" onClick={codeEntry}>
+				<button type="button" className="btn-login " onClick={codeEntry}>
 					1
 				</button>
 				<button type="button" className="btn-login" onClick={codeEntry}>

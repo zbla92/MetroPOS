@@ -242,7 +242,7 @@ class Register extends React.Component {
                             setOrderedItem={this.props.setOrderedItem}
                             items={this.props.items}
                         />
-                        <div className="submenu-selection-container">
+                        <div className="submenu-selection-container ">
                             <MenuButtons setActiveMenu={this.setActiveMenu} menus={this.state.menus} />
                         </div>
                     </div>

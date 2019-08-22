@@ -1,6 +1,7 @@
 import React from 'react';
 import './UsersList.css';
 import employees from '../../../apis/employees';
+import CreateNewEmployee from '../CreateNewEmp/CreateNewEmp';
 
 const UsersList = ({ employeesList, getListOfEmps }) => {
 	async function deleteEmployee(id) {

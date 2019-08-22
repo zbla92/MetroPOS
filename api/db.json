@@ -1,125 +1,28 @@
 {
   "employees": [
     {
+      "name": "Milan Blaz",
       "id": 1000,
-      "name": "Leanne Graham",
-      "username": "Bret",
-      "email": "Sincere@april.biz",
-      "address": {
-        "street": "Kulas Light",
-        "suite": "Apt. 556",
-        "city": "Gwenborough",
-        "zipcode": "92998-3874"
-      },
-      "phone": "1-770-736-8031 x56442"
-    },
-    {
-      "name": "Milan Blaz",
-      "id": 4002,
       "role": "Manager",
-      "address": {
-        "city": "Banja Luka",
-        "street": "",
-        "suite": ""
-      },
-      "email": "milanblaz2580456@gmal.com",
-      "phoneNumber": "66 612493"
-    },
-    {
-      "name": "Una Blaz",
-      "id": 4455,
-      "role": "Bartender",
-      "address": {
-        "city": "Banja Luka",
-        "street": "",
-        "suite": ""
-      },
-      "email": "milanblaz2580456@gmal.com",
-      "phoneNumber": "66 612493"
-    },
-    {
-      "name": "Milan Blaz",
-      "id": 9000,
-      "role": "Bartender",
       "address": {
         "city": "Banja Luka",
         "street": "Dragana Bubica",
-        "suite": ""
+        "suite": "18"
       },
       "email": "milanblaz2580456@gmal.com",
       "phoneNumber": "66 612493"
     },
     {
-      "name": "jovana korica",
-      "id": 2212,
+      "name": "Viktor Blaz",
+      "id": 1001,
       "role": "Manager",
-      "address": {
-        "city": "Banja Luka",
-        "street": "",
-        "suite": ""
-      },
-      "email": "milanblaz2580456@gmal.com",
-      "phoneNumber": "66 612493"
-    },
-    {
-      "name": "Milan Blaz",
-      "id": 3232,
-      "role": "Manager",
-      "address": {
-        "city": "Banja Luka",
-        "street": "",
-        "suite": ""
-      },
-      "email": "milanblaz2580456@gmal.com",
-      "phoneNumber": "66 612493"
-    },
-    {
-      "name": "Milan",
-      "id": 4541,
-      "role": "Shift Lead",
-      "address": {
-        "city": "Banja Luka",
-        "street": "",
-        "suite": ""
-      },
-      "email": "milanblaz2580456@gmal.com",
-      "phoneNumber": "66 612493"
-    },
-    {
-      "name": "231dfasd",
-      "id": 7421,
-      "role": "Bartender",
-      "address": {
-        "city": "Banja Luka",
-        "street": "",
-        "suite": ""
-      },
-      "email": "milanblaz2580456@gmal.com",
-      "phoneNumber": "66 612493"
-    },
-    {
-      "name": "ovaj ce radit ja kontam",
-      "id": 6969,
-      "role": "Bartender",
-      "address": {
-        "city": "Banja Luka",
-        "street": "",
-        "suite": ""
-      },
-      "email": "viktorblaz@live.com",
-      "phoneNumber": "66 612493"
-    },
-    {
-      "name": "Da li ce i ovaj radit",
-      "id": 9696,
-      "role": "Driver",
       "address": {
         "city": "Banja Luka",
         "street": "Dragana Bubica",
-        "suite": ""
+        "suite": "18"
       },
       "email": "viktorblaz@live.com",
-      "phoneNumber": "66 612493"
+      "phoneNumber": "000111222"
     }
   ],
   "menus": {

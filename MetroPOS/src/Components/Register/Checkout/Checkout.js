@@ -167,7 +167,7 @@ export class Checkout extends Component {
     render() {
         return (
             <div className="screen-overlay">
-                <div className="checkout-container">
+                <div className="checkout-container animated fadeInUp">
                     <div className="left-checkout-container">
                         <div className="checkout-header">
                             <div>

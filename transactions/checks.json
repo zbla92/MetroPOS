@@ -1,3 +1,320 @@
 {
-  "checks": []
+  "checks": [
+    {
+      "id": 1,
+      "tenderOption": "amex",
+      "items": [
+        {
+          "name": "Peanut Butter Cup",
+          "image": "http://static.food2fork.com/865698830b.jpg",
+          "price": 6.5,
+          "qty": 1,
+          "flagged": false
+        },
+        {
+          "name": "Ultimate chocolate cake",
+          "image": "http://static.food2fork.com/3092_MEDIUMf610.jpg",
+          "price": 9.99,
+          "qty": 1,
+          "flagged": false
+        },
+        {
+          "name": "Nikki",
+          "image": "http://static.food2fork.com/healthy_cookies4ee3.jpg",
+          "price": 5,
+          "qty": 1,
+          "flagged": false
+        },
+        {
+          "name": "Cream Bundt Cake",
+          "image": "http://static.food2fork.com/ChocolateSourCreamBundtCake46887.jpg",
+          "price": 14.99,
+          "qty": 1,
+          "flagged": false
+        }
+      ],
+      "total": "36.48",
+      "time": "09:26",
+      "creditCard": "1122365478998521",
+      "closedBy": "Milan Blaz",
+      "tip": 0
+    },
+    {
+      "id": 2,
+      "tenderOption": "amex",
+      "items": [
+        {
+          "name": "Strawberry Angel Food Dessert",
+          "image": "http://static.food2fork.com/189466e93.jpg",
+          "price": 7.49,
+          "qty": 1,
+          "flagged": false
+        }
+      ],
+      "total": "7.49",
+      "time": "09:27",
+      "closedBy": "Milan Blaz",
+      "tip": 0
+    },
+    {
+      "id": 3,
+      "tenderOption": "amex",
+      "items": [
+        {
+          "name": "Ultimate chocolate cake",
+          "image": "http://static.food2fork.com/3092_MEDIUMf610.jpg",
+          "price": 9.99,
+          "qty": 1,
+          "flagged": false
+        }
+      ],
+      "total": "9.99",
+      "time": "09:27",
+      "closedBy": "Milan Blaz",
+      "tip": 0
+    },
+    {
+      "id": 4,
+      "tenderOption": "amex",
+      "items": [
+        {
+          "name": "Quinoa Black Bean Burgers",
+          "image": "http://static.food2fork.com/9679903713.jpg",
+          "price": 14.99,
+          "qty": 4,
+          "flagged": false
+        },
+        {
+          "name": "Juicy Lucy Burger",
+          "image": "http://static.food2fork.com/29721_RecipeImage_620x413_juicy_lucy_burger380a3.jpg",
+          "price": 5,
+          "qty": 1,
+          "flagged": false
+        },
+        {
+          "name": "Tofu Burger ",
+          "image": "http://static.food2fork.com/tofu_burger_recipe7c06.jpg",
+          "price": 7.99,
+          "qty": 1,
+          "flagged": false
+        }
+      ],
+      "total": "72.95",
+      "time": "13:13",
+      "closedBy": "Milan Blaz",
+      "tip": 0
+    },
+    {
+      "id": 5,
+      "tenderOption": "amex",
+      "items": [
+        {
+          "name": "Vegetarian Lentil Burgers",
+          "image": "http://static.food2fork.com/lentilburgerrecipe_07405f.jpg",
+          "price": 4.99,
+          "qty": 2,
+          "flagged": false
+        }
+      ],
+      "total": "9.98",
+      "time": "13:13",
+      "closedBy": "Milan Blaz",
+      "tip": 0
+    },
+    {
+      "id": 6,
+      "tenderOption": "amex",
+      "items": [
+        {
+          "name": "Quinoa Black Bean Burgers",
+          "image": "http://static.food2fork.com/9679903713.jpg",
+          "price": 14.99,
+          "qty": 1,
+          "flagged": false
+        }
+      ],
+      "total": "14.99",
+      "time": "13:13",
+      "closedBy": "Milan Blaz",
+      "tip": "8.00"
+    },
+    {
+      "id": 7,
+      "tenderOption": "amex",
+      "items": [
+        {
+          "name": "Quinoa Black Bean Burgers",
+          "image": "http://static.food2fork.com/9679903713.jpg",
+          "price": 14.99,
+          "qty": 1,
+          "flagged": false
+        }
+      ],
+      "total": "14.99",
+      "time": "13:14",
+      "creditCard": "1254585866546566",
+      "closedBy": "Milan Blaz",
+      "tip": 0
+    },
+    {
+      "id": 8,
+      "tenderOption": "amex",
+      "items": [
+        {
+          "name": "Ultimate Veggie Burger",
+          "image": "http://static.food2fork.com/ultimateveggieburgerrecipe49ac.jpg",
+          "price": 9.49,
+          "qty": 1,
+          "flagged": false
+        },
+        {
+          "name": "Vegetarian Lentil Burgers",
+          "image": "http://static.food2fork.com/lentilburgerrecipe_07405f.jpg",
+          "price": 4.99,
+          "qty": 2,
+          "flagged": false
+        }
+      ],
+      "total": "19.47",
+      "time": "20:47",
+      "closedBy": "Milan Blaz",
+      "tip": 0
+    },
+    {
+      "id": 9,
+      "tenderOption": "amex",
+      "items": [
+        {
+          "name": "Vegetarian Lentil Burgers",
+          "image": "http://static.food2fork.com/lentilburgerrecipe_07405f.jpg",
+          "price": 4.99,
+          "qty": 4,
+          "flagged": false
+        },
+        {
+          "name": "Juicy Lucy Burger",
+          "image": "http://static.food2fork.com/29721_RecipeImage_620x413_juicy_lucy_burger380a3.jpg",
+          "price": 5,
+          "qty": 1,
+          "flagged": false
+        },
+        {
+          "name": "Fantastic Chicken Burgers ",
+          "image": "http://static.food2fork.com/68378250aa.jpg",
+          "price": 10.99,
+          "qty": 1,
+          "flagged": true
+        },
+        {
+          "name": "Quinoa Black Bean Burgers",
+          "image": "http://static.food2fork.com/9679903713.jpg",
+          "price": 14.99,
+          "qty": 2,
+          "flagged": false
+        },
+        {
+          "name": "Mediterranean Lamb Burger",
+          "image": "http://static.food2fork.com/29723_mediterranean_lamb_burger_620fa1a.jpg",
+          "price": 12,
+          "qty": 1,
+          "flagged": false
+        },
+        {
+          "name": "Cheddar Burger",
+          "image": "http://static.food2fork.com/mare_cheddarburgerswithbalsamiconionsandchipotleketchup_01_v052c.jpg",
+          "price": 8,
+          "qty": 1,
+          "flagged": true
+        },
+        {
+          "name": "Grilled Pizza",
+          "image": "http://static.food2fork.com/howtogrillpizzad300x20086a60e1b.jpg",
+          "price": 22.99,
+          "qty": 1,
+          "flagged": false
+        },
+        {
+          "name": "Breakfast pizza",
+          "image": "http://static.food2fork.com/4683_MEDIUM544c.jpg",
+          "price": 23,
+          "qty": 1,
+          "flagged": false
+        },
+        {
+          "name": "PW’s Favorite Pizza",
+          "image": "http://static.food2fork.com/4364270576_302751a2a4f3c1.jpg",
+          "price": 23,
+          "qty": 1,
+          "flagged": false
+        },
+        {
+          "name": "Avocado  Pizza",
+          "image": "http://static.food2fork.com/Avocado2Band2BFried2BEgg2BBreakfast2BPizza2B5002B296294dcea8a.jpg",
+          "price": 19.5,
+          "qty": 1,
+          "flagged": false
+        },
+        {
+          "name": "Pepperoni Pizza Burgers",
+          "image": "http://static.food2fork.com/pizzaburgera5bd.jpg",
+          "price": 12,
+          "qty": 1,
+          "flagged": true
+        },
+        {
+          "name": "Thai Chicken Pizza",
+          "image": "http://static.food2fork.com/Thai2BChicken2BPizza2Bwith2BSweet2BChili2BSauce2B5002B435581bcf578.jpg",
+          "price": 26,
+          "qty": 1,
+          "flagged": false
+        },
+        {
+          "name": "Taco Quesadilla Pizzas",
+          "image": "http://static.food2fork.com/Taco2BQuesadilla2BPizza2B5002B4417a4755e35.jpg",
+          "price": 23,
+          "qty": 1,
+          "flagged": true
+        },
+        {
+          "name": "Sweet Potato Kale Pizza",
+          "image": "http://static.food2fork.com/sweetpotatokalepizza2c6db.jpg",
+          "price": 22.19,
+          "qty": 1,
+          "flagged": false
+        },
+        {
+          "name": "Pizza Quesadillas",
+          "image": "http://static.food2fork.com/Pizza2BQuesadillas2B2528aka2BPizzadillas25292B5002B834037bf306b.jpg",
+          "price": 17.49,
+          "qty": 1,
+          "flagged": false
+        },
+        {
+          "name": "Cauliflower pizza crust",
+          "image": "http://static.food2fork.com/BBQChickenPizzawithCauliflowerCrust5004699695624ce.jpg",
+          "price": 21.01,
+          "qty": 3,
+          "flagged": false
+        },
+        {
+          "name": "Caramelized Onion Pizza",
+          "image": "http://static.food2fork.com/4420552280_bb575420043571.jpg",
+          "price": 21,
+          "qty": 2,
+          "flagged": true
+        },
+        {
+          "name": "Cesar's Salad",
+          "image": "https://i3-img.7tv.de/pis/ezone/4533qgELB38wdEB0AB1fHPDQCtTDCJ4UYl_Ic-IXCoYylZ0mXauk1M9wuU4rv5_rLEYRvbq7E9XZDDfMHZWh6xm0ZycUvSmJIa8sKUgIhn2BlAcSYNBd7ghNW_QXS7X-rNaOmdXLxT1IVBEdfjPqbAtJL_4yfx4q7Hb-UywGJm1-bJSWJ_wZ8f9i0-kTpOESK9WxNs2qI03nq-Ie6AG0Q4cNAxomnac/profile:mag-996x562",
+          "price": 9.69,
+          "qty": 19,
+          "flagged": false
+        }
+      ],
+      "total": "564.24",
+      "time": "20:47",
+      "closedBy": "Milan Blaz",
+      "tip": 0
+    }
+  ]
 }
