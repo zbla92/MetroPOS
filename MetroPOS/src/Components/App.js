@@ -4,6 +4,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import Login from './Login/Login';
 import MainMenu from './MainMenu/MainMenu';
 import Register from './Register/Register';
+import Inventory from './Inventory';
 import Users from './Users';
 import employeeList from '../apis/employees';
 import transaction from '../apis/checks';
@@ -12,7 +13,6 @@ class App extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			loadedComponent: 'Login',
 			orderedItems: [],
 			loggedInEmp: ' ',
 			checkID: 0,
@@ -30,28 +30,6 @@ class App extends React.Component {
 		const response = await employeeList.get('/employees');
 		this.setState({
 			employeeList: response.data
-		});
-	};
-
-	// Login Component controller
-	logging = () => {
-		this.setState({
-			loadedComponent: 'Login'
-		});
-	};
-	mainMenu = () => {
-		this.setState({
-			loadedComponent: 'mainMenu'
-		});
-	};
-	loadRegister = () => {
-		this.setState({
-			loadedComponent: 'Register'
-		});
-	};
-	floatingLogo = () => {
-		this.setState({
-			loadedComponent: 'FloatingScreen'
 		});
 	};
 
@@ -167,6 +145,7 @@ class App extends React.Component {
 					path="/Users"
 					render={() => <Users employeesList={this.state.employeeList} getListOfEmps={this.getListOfEmps} />}
 				/>
+				<Route exact path="/Inventory" render={() => <Inventory />} />
 			</BrowserRouter>
 		);
 	}

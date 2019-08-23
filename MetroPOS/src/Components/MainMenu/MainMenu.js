@@ -38,12 +38,14 @@ const MainMenu = ({ loadRegister }) => {
 				</div>
 				<div className="three column row">
 					<div className="column">
-						<button className="register-btn">
-							<span className="inventory-icon">
-								<i className="boxes icon" />
-							</span>
-							<h3>Inventory</h3>
-						</button>
+						<Link to="/Inventory">
+							<button className="register-btn">
+								<span className="inventory-icon">
+									<i className="boxes icon" />
+								</span>
+								<h3>Inventory</h3>
+							</button>
+						</Link>
 					</div>
 					<div className="column">
 						<button className="register-btn">

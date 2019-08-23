@@ -1,0 +1,21 @@
+body {
+	overflow: hidden;
+}
+.Inventory {
+	background-color: rgb(238, 238, 238);
+	height: 100vh;
+	width: 100vw;
+}
+
+/*********inventory TOP  BAR*************/
+.inventory_top {
+	width: 100vw;
+	height: 8vh;
+	display: inline-flex;
+	padding-left: 3vw;
+	padding-right: 3vw;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #1fbeb1;
+	color: rgb(247, 244, 244);
+}

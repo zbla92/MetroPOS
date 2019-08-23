@@ -7,7 +7,6 @@ function MakeThatButton({ setActiveMenu, btnName, id, submenu }) {
 			className={`btn-top animated fadeIn`}
 			onClick={e => {
 				setActiveMenu(submenu);
-				e.target.className = ' btn-top animated pulse';
 			}}
 		>
 			{btnName}

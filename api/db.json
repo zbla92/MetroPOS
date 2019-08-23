@@ -1,18 +1,6 @@
 {
   "employees": [
     {
-      "name": "Milan Blaz",
-      "id": 1000,
-      "role": "Manager",
-      "address": {
-        "city": "Banja Luka",
-        "street": "Dragana Bubica",
-        "suite": "18"
-      },
-      "email": "milanblaz2580456@gmal.com",
-      "phoneNumber": "66 612493"
-    },
-    {
       "name": "Viktor Blaz",
       "id": 1001,
       "role": "Manager",
@@ -23,6 +11,18 @@
       },
       "email": "viktorblaz@live.com",
       "phoneNumber": "000111222"
+    },
+    {
+      "name": "Una Blaz",
+      "id": 1000,
+      "role": "Shift Lead",
+      "address": {
+        "city": "Banja Luka",
+        "street": "Dragana Bubica",
+        "suite": "41"
+      },
+      "email": "unaStojakovic@gmail.com",
+      "phoneNumber": "06644114441"
     }
   ],
   "menus": {

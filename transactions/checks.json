@@ -315,6 +315,415 @@
       "time": "20:47",
       "closedBy": "Milan Blaz",
       "tip": 0
+    },
+    {
+      "id": 10,
+      "tenderOption": "amex",
+      "items": [
+        {
+          "name": "Quinoa Black Bean Burgers",
+          "image": "http://static.food2fork.com/9679903713.jpg",
+          "price": 14.99,
+          "qty": 1,
+          "flagged": false
+        },
+        {
+          "name": "Fantastic Chicken Burgers ",
+          "image": "http://static.food2fork.com/68378250aa.jpg",
+          "price": 10.99,
+          "qty": 1,
+          "flagged": false
+        },
+        {
+          "name": "Mediterranean Lamb Burger",
+          "image": "http://static.food2fork.com/29723_mediterranean_lamb_burger_620fa1a.jpg",
+          "price": 12,
+          "qty": 1,
+          "flagged": false
+        },
+        {
+          "name": "Cheddar Burger",
+          "image": "http://static.food2fork.com/mare_cheddarburgerswithbalsamiconionsandchipotleketchup_01_v052c.jpg",
+          "price": 8,
+          "qty": 1,
+          "flagged": false
+        },
+        {
+          "name": "Mayer Lemon Burger",
+          "image": "http://static.food2fork.com/3597299dbe.jpg",
+          "price": 8.5,
+          "qty": 1,
+          "flagged": false
+        },
+        {
+          "name": "Chorizo Chile Burger ",
+          "image": "http://static.food2fork.com/29725_pork_chorizo_chile_burger_620ee6b.jpg",
+          "price": 8,
+          "qty": 1,
+          "flagged": false
+        },
+        {
+          "name": "Burger Deluxe",
+          "image": "http://static.food2fork.com/thebaburgerdeluxe646ba96.jpg",
+          "price": 4.99,
+          "qty": 1,
+          "flagged": false
+        },
+        {
+          "name": "Tofu Burger ",
+          "image": "http://static.food2fork.com/tofu_burger_recipe7c06.jpg",
+          "price": 7.99,
+          "qty": 1,
+          "flagged": false
+        },
+        {
+          "name": "Juicy Lucy Burger",
+          "image": "http://static.food2fork.com/29721_RecipeImage_620x413_juicy_lucy_burger380a3.jpg",
+          "price": 5,
+          "qty": 1,
+          "flagged": false
+        },
+        {
+          "name": "Vegetarian Lentil Burgers",
+          "image": "http://static.food2fork.com/lentilburgerrecipe_07405f.jpg",
+          "price": 4.99,
+          "qty": 1,
+          "flagged": false
+        },
+        {
+          "name": "Ultimate Veggie Burger",
+          "image": "http://static.food2fork.com/ultimateveggieburgerrecipe49ac.jpg",
+          "price": 9.49,
+          "qty": 1,
+          "flagged": false
+        },
+        {
+          "name": "Turkey Burger",
+          "image": "http://static.food2fork.com/6661337708.jpg",
+          "price": 6.99,
+          "qty": 1,
+          "flagged": false
+        },
+        {
+          "name": "Mini Burger",
+          "image": "http://static.food2fork.com/4124619927.jpg",
+          "price": 1.99,
+          "qty": 1,
+          "flagged": false
+        },
+        {
+          "name": "Cracking Burger",
+          "image": "http://static.food2fork.com/7_1_1350663561_lrgf1c4.jpg",
+          "price": 8,
+          "qty": 1,
+          "flagged": false
+        },
+        {
+          "name": "Supreme Pizza Burgers",
+          "image": "http://static.food2fork.com/burger53be.jpg",
+          "price": 7.99,
+          "qty": 1,
+          "flagged": false
+        },
+        {
+          "name": "Mexican Bean Burger",
+          "image": "http://static.food2fork.com/9978_MEDIUM0908.jpg",
+          "price": 11.39,
+          "qty": 1,
+          "flagged": true
+        },
+        {
+          "name": "Pepperoni Pizza Burger",
+          "image": "http://static.food2fork.com/pizzaburgera5bd.jpg",
+          "price": 5.99,
+          "qty": 1,
+          "flagged": true
+        },
+        {
+          "name": "Bacon Wrapped Burger",
+          "image": "http://static.food2fork.com/CheddarJalapenoChickenBurgerswithGuacamole4fdb.jpg",
+          "price": 6.99,
+          "qty": 1,
+          "flagged": true
+        },
+        {
+          "name": "Black Bean Burger",
+          "image": "http://static.food2fork.com/507107991f.jpg",
+          "price": 5.99,
+          "qty": 1,
+          "flagged": true
+        }
+      ],
+      "total": "150.27",
+      "time": "22:47",
+      "closedBy": "Viktor Blaz",
+      "tip": 0
+    },
+    {
+      "id": 11,
+      "tenderOption": "amex",
+      "items": [
+        {
+          "name": "Quinoa Black Bean Burgers",
+          "image": "http://static.food2fork.com/9679903713.jpg",
+          "price": 14.99,
+          "qty": 1,
+          "flagged": false
+        }
+      ],
+      "total": "14.99",
+      "time": "22:47",
+      "closedBy": "Viktor Blaz",
+      "tip": 0
+    },
+    {
+      "id": 12,
+      "tenderOption": "amex",
+      "items": [
+        {
+          "name": "Quinoa Black Bean Burgers",
+          "image": "http://static.food2fork.com/9679903713.jpg",
+          "price": 14.99,
+          "qty": 1,
+          "flagged": false
+        }
+      ],
+      "total": "14.99",
+      "time": "22:47",
+      "closedBy": "Viktor Blaz",
+      "tip": 0
+    },
+    {
+      "id": 13,
+      "tenderOption": "amex",
+      "items": [
+        {
+          "name": "Quinoa Black Bean Burgers",
+          "image": "http://static.food2fork.com/9679903713.jpg",
+          "price": 14.99,
+          "qty": 1,
+          "flagged": false
+        }
+      ],
+      "total": "14.99",
+      "time": "22:47",
+      "closedBy": "Viktor Blaz",
+      "tip": 0
+    },
+    {
+      "id": 14,
+      "tenderOption": "amex",
+      "items": [
+        {
+          "name": "Black Bean Burger",
+          "image": "http://static.food2fork.com/507107991f.jpg",
+          "price": 5.99,
+          "qty": 1,
+          "flagged": false
+        },
+        {
+          "name": "Ultimate Veggie Burger",
+          "image": "http://static.food2fork.com/ultimateveggieburgerrecipe49ac.jpg",
+          "price": 9.49,
+          "qty": 1,
+          "flagged": false
+        },
+        {
+          "name": "Vegetarian Lentil Burgers",
+          "image": "http://static.food2fork.com/lentilburgerrecipe_07405f.jpg",
+          "price": 4.99,
+          "qty": 1,
+          "flagged": false
+        }
+      ],
+      "total": "20.47",
+      "time": "17:17",
+      "closedBy": "Una Blaz",
+      "tip": 0
+    },
+    {
+      "id": 15,
+      "tenderOption": "amex",
+      "items": [
+        {
+          "name": "Vegetarian Lentil Burgers",
+          "image": "http://static.food2fork.com/lentilburgerrecipe_07405f.jpg",
+          "price": 4.99,
+          "qty": 1,
+          "flagged": false
+        }
+      ],
+      "total": "4.99",
+      "time": "17:17",
+      "closedBy": "Una Blaz",
+      "tip": 0
+    },
+    {
+      "id": 16,
+      "tenderOption": "amex",
+      "items": [
+        {
+          "name": "Ultimate Veggie Burger",
+          "image": "http://static.food2fork.com/ultimateveggieburgerrecipe49ac.jpg",
+          "price": 9.49,
+          "qty": 1,
+          "flagged": false
+        },
+        {
+          "name": "Turkey Burger",
+          "image": "http://static.food2fork.com/6661337708.jpg",
+          "price": 6.99,
+          "qty": 1,
+          "flagged": false
+        },
+        {
+          "name": "Juicy Lucy Burger",
+          "image": "http://static.food2fork.com/29721_RecipeImage_620x413_juicy_lucy_burger380a3.jpg",
+          "price": 5,
+          "qty": 1,
+          "flagged": false
+        },
+        {
+          "name": "Tofu Burger ",
+          "image": "http://static.food2fork.com/tofu_burger_recipe7c06.jpg",
+          "price": 7.99,
+          "qty": 1,
+          "flagged": false
+        },
+        {
+          "name": "Mediterranean Lamb Burger",
+          "image": "http://static.food2fork.com/29723_mediterranean_lamb_burger_620fa1a.jpg",
+          "price": 12,
+          "qty": 1,
+          "flagged": false
+        },
+        {
+          "name": "Vietnameese Banh Mi Salad",
+          "image": "http://static.food2fork.com/IMG_28181180x1807551.jpg",
+          "price": 11,
+          "qty": 1,
+          "flagged": false
+        },
+        {
+          "name": "Strawberry Avocado Salad",
+          "image": "http://static.food2fork.com/2490037c37.jpg",
+          "price": 11,
+          "qty": 1,
+          "flagged": false
+        },
+        {
+          "name": "Bacon Ranch Pasta Salad",
+          "image": "http://static.food2fork.com/580466da88.jpg",
+          "price": 5,
+          "qty": 1,
+          "flagged": false
+        },
+        {
+          "name": "NY Style Chopped Salad",
+          "image": "http://static.food2fork.com/choppedsalad7709.jpg",
+          "price": 5,
+          "qty": 1,
+          "flagged": false
+        },
+        {
+          "name": "Ginger Steak Salad",
+          "image": "http://static.food2fork.com/3327439142_56c49630a69bee.jpg",
+          "price": 19.8,
+          "qty": 1,
+          "flagged": false
+        }
+      ],
+      "total": "93.27",
+      "time": "18:49",
+      "closedBy": "Una Blaz",
+      "tip": 0
+    },
+    {
+      "id": 17,
+      "tenderOption": "amex",
+      "items": [
+        {
+          "name": "Vegetarian Lentil Burgers",
+          "image": "http://static.food2fork.com/lentilburgerrecipe_07405f.jpg",
+          "price": 4.99,
+          "qty": 2,
+          "flagged": false
+        },
+        {
+          "name": "Quinoa Black Bean Burgers",
+          "image": "http://static.food2fork.com/9679903713.jpg",
+          "price": 14.99,
+          "qty": 1,
+          "flagged": false
+        },
+        {
+          "name": "Turkey Burger",
+          "image": "http://static.food2fork.com/6661337708.jpg",
+          "price": 6.99,
+          "qty": 1,
+          "flagged": false
+        },
+        {
+          "name": "Fantastic Chicken Burgers ",
+          "image": "http://static.food2fork.com/68378250aa.jpg",
+          "price": 10.99,
+          "qty": 1,
+          "flagged": false
+        }
+      ],
+      "total": "42.95",
+      "time": "18:53",
+      "closedBy": "Una Blaz",
+      "tip": "1000.00"
+    },
+    {
+      "id": 18,
+      "tenderOption": "amex",
+      "items": [
+        {
+          "name": "Black Bean Burger",
+          "image": "http://static.food2fork.com/507107991f.jpg",
+          "price": 5.99,
+          "qty": 1,
+          "flagged": false
+        },
+        {
+          "name": "Ultimate Veggie Burger",
+          "image": "http://static.food2fork.com/ultimateveggieburgerrecipe49ac.jpg",
+          "price": 9.49,
+          "qty": 1,
+          "flagged": false
+        },
+        {
+          "name": "Vegetarian Lentil Burgers",
+          "image": "http://static.food2fork.com/lentilburgerrecipe_07405f.jpg",
+          "price": 4.99,
+          "qty": 1,
+          "flagged": false
+        }
+      ],
+      "total": "20.47",
+      "time": "18:53",
+      "creditCard": "4441285556663322",
+      "closedBy": "Una Blaz",
+      "tip": 0
+    },
+    {
+      "id": 19,
+      "tenderOption": "amex",
+      "items": [
+        {
+          "name": "Ultimate Veggie Burger",
+          "image": "http://static.food2fork.com/ultimateveggieburgerrecipe49ac.jpg",
+          "price": 9.49,
+          "qty": 1,
+          "flagged": true
+        }
+      ],
+      "total": "9.49",
+      "time": "19:01",
+      "closedBy": "Una Blaz",
+      "tip": 0
     }
   ]
 }
