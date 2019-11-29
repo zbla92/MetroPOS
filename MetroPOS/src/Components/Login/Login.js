@@ -5,51 +5,74 @@ import { withRouter } from 'react-router-dom';
 
 import Clock from '../Clock';
 
+// const Login = (history, setLoggedInEmp, employeesList) => {};
+
 function Login({ history, setLoggedInEmp, employeesList }) {
 	const [keyCode, setKeyCode] = useState('');
 	let [dot, setDot] = useState(1);
 
+	// Method compares entered keycode to database values and saves the logged in employee to App state
 	const logIn = empList => {
 		let loggedIn = empList.filter(emp => emp.id === parseInt(keyCode));
 		setLoggedInEmp(loggedIn);
+
+		// If no employee is found that matches the entered keycode, reset the component state
 		if (!loggedIn.length) {
 			setKeyCode('');
 			setDot(1);
-			const allDots = document.querySelector('.middle-dots').getElementsByTagName('span');
-			for (let i = 0; i < allDots.length; i++) {
-				allDots[i].classList.add('animated', 'flash', 'fast');
-				allDots[i].style.color = '#b33a3a';
-			}
+			dotsRedFlash();
+		} else {
+			history.push('/MainMenu');
+		}
+	};
 
+	// Method adds digits to component state
+	const codeEntry = e => {
+		if (keyCode.length < 4) {
+			setKeyCode(keyCode.concat(e.target.textContent));
+			setDot(dot + 1);
+			dotGreenFill();
+		}
+	};
+
+	// Method removes digits from component state
+	const delEntry = () => {
+		if (dot > 1) {
+			setKeyCode(keyCode.slice(0, keyCode.length - 1));
+			setDot(dot - 1);
+			dotGreenFillClear();
+		}
+	};
+
+	/* ---------- UI (visual) methods ---------- */
+
+	// Method provides red dots flash animation when incorrect keycode is attempted
+	const dotsRedFlash = () => {
+		const allDots = document.querySelector('.middle-dots').getElementsByTagName('span');
+		for (let i = 0; i < allDots.length; i++) {
+			allDots[i].classList.add('animated', 'flash', 'fast');
+			allDots[i].style.color = '#b33a3a';
 			setTimeout(() => {
 				for (let i = 0; i < allDots.length; i++) {
 					allDots[i].style.color = '#c0c0c0';
 					allDots[i].classList = '';
 				}
 			}, 800);
-		} else {
-			history.push('/MainMenu');
 		}
 	};
 
-	const codeEntry = e => {
-		if (keyCode.length < 4) {
-			setKeyCode(keyCode.concat(e.target.textContent));
-			let nthDot = document.querySelector(`.middle-dots span:nth-child(${dot})`);
-			nthDot.classList.add('middle-dots-full');
-			nthDot.style.color = '#659787';
-			setDot(dot + 1);
-		}
+	// Method provides green fill animation as keycode digits are being entered
+	const dotGreenFill = () => {
+		let nthDot = document.querySelector(`.middle-dots span:nth-child(${dot})`);
+		nthDot.classList.add('middle-dots-full');
+		nthDot.style.color = '#659787';
 	};
 
-	const delEntry = () => {
-		if (dot > 1) {
-			setKeyCode(keyCode.slice(0, keyCode.length - 1));
-			let nthDot = document.querySelector(`.middle-dots span:nth-child(${dot - 1})`);
-			nthDot.classList.remove('middle-dots-full');
-			nthDot.style.color = '#c0c0c0';
-			setDot(dot - 1);
-		}
+	// Method removes green fill as clear button is being pressed
+	const dotGreenFillClear = () => {
+		let nthDot = document.querySelector(`.middle-dots span:nth-child(${dot - 1})`);
+		nthDot.classList.remove('middle-dots-full');
+		nthDot.style.color = '#c0c0c0';
 	};
 
 	return (

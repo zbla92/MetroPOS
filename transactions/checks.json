@@ -724,6 +724,31 @@
       "time": "19:01",
       "closedBy": "Una Blaz",
       "tip": 0
+    },
+    {
+      "id": 20,
+      "tenderOption": "amex",
+      "items": [
+        {
+          "name": "Quinoa Black Bean Burgers",
+          "image": "http://static.food2fork.com/9679903713.jpg",
+          "price": 14.99,
+          "qty": 1,
+          "flagged": false
+        },
+        {
+          "name": "Vegetarian Lentil Burgers",
+          "image": "http://static.food2fork.com/lentilburgerrecipe_07405f.jpg",
+          "price": 4.99,
+          "qty": 1,
+          "flagged": false
+        }
+      ],
+      "total": "19.98",
+      "time": "22:08",
+      "creditCard": "5555555555555555",
+      "closedBy": "Una Blaz",
+      "tip": 0
     }
   ]
 }
