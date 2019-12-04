@@ -5,8 +5,6 @@ import { withRouter } from 'react-router-dom';
 
 import Clock from '../Clock';
 
-// const Login = (history, setLoggedInEmp, employeesList) => {};
-
 function Login({ history, setLoggedInEmp, employeesList }) {
 	const [keyCode, setKeyCode] = useState('');
 	let [dot, setDot] = useState(1);

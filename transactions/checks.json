@@ -749,6 +749,22 @@
       "creditCard": "5555555555555555",
       "closedBy": "Una Blaz",
       "tip": 0
+    },
+    {
+      "id": 21,
+      "tenderOption": "amex",
+      "items": [
+        {
+          "name": "Coke",
+          "image": "https://i.pinimg.com/280x280_RS/c0/46/d0/c046d0dfa2e9830992151920364399ab.jpg",
+          "price": 1.99,
+          "qty": 4,
+          "flagged": true
+        }
+      ],
+      "total": "7.96",
+      "time": "17:01",
+      "tip": "5.00"
     }
   ]
 }
