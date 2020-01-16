@@ -2,9 +2,9 @@
 
 MetroPOS - built using React
 
-	npm install
-	json-server --watch dataBase/checks.json --port 3001
-	npm start
+	from api/ run: npm start
+	from transactions/ run: npm start
+	from MetroPOS/ run: npm start
 	
 	Log in using EMP 1000
 	select Register
